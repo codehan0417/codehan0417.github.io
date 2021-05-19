@@ -320,7 +320,7 @@ header .side-nav .mobile-head img {
 }
 
 header .side-nav .mobile-head .logo-name {
-    margin-top: -30px;
+    /* margin-top: 30px; */
     padding-left: 10px;
     font-size: 1.5rem;
 }
@@ -370,7 +370,7 @@ header .side-nav .social-link {
 
 .cover-btns {
     position: relative;
-    top: 10vh;
+    top: 20vh;
     text-align: center;
 }
 
@@ -390,9 +390,9 @@ header .side-nav .social-link {
 .cover-btns a:hover {
     border: 1px solid #83bac2;
     background-color: #87b5bb80;
-    box-shadow: 0 14px 26px -12px rgba(233, 30, 99, 0.42),
+    box-shadow: 0 14px 26px -12px rgba(209, 199, 203, 0.42),
     0 4px 23px 0 rgba(0, 0, 0, 0.12),
-    0 8px 10px -5px rgba(233, 30, 99, 0.2);
+    0 8px 10px -5px rgba(150, 190, 214, 0.466);
 }
 
 .cover-btns a i {
@@ -575,10 +575,12 @@ header .go-back i {
 }
 
 .bg-cover .title {
-    font-size: 4rem;
+    font-size: 3.5rem;
     line-height: 1.2em;
     margin-bottom: 20px;
     position: relative;
+    
+    
 }
 
 .bg-cover .description {
