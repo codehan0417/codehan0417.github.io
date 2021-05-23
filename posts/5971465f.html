@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="java概述">
+    <meta name="keywords" content="web服务器之Tomcat, java mysql javascript jdbc javaweb">
     <meta name="description" content="世界不停转动，直到我们相逢">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>java概述 | doNow</title>
+    <title>web服务器之Tomcat | doNow</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -224,12 +224,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/codehan045/imags/img/tomcat.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">java概述</h1>
+                    <h1 class="description center-align post-title">web服务器之Tomcat</h1>
                 </div>
             </div>
         </div>
@@ -345,8 +345,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/java/">
-                                <span class="chip bg-color">java</span>
+                            <a href="/tags/Tomcat/">
+                                <span class="chip bg-color">Tomcat</span>
                             </a>
                         
                     </div>
@@ -357,8 +357,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/java%E5%9F%BA%E7%A1%80/" class="post-category">
-                                java基础
+                            <a href="/categories/web/" class="post-category">
+                                web
                             </a>
                         
                     </div>
@@ -370,28 +370,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-18
+                    2021-05-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-20
+                    2021-05-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    574
+                    869
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -416,107 +416,127 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="java帝国的诞生"><a href="#java帝国的诞生" class="headerlink" title="java帝国的诞生"></a>java帝国的诞生</h2><h3 id="C-amp-C"><a href="#C-amp-C" class="headerlink" title="C &amp; C++"></a>C &amp; C++</h3><ul>
-<li>1972年C诞生<ul>
-<li>贴近硬件，运行极快，效率高</li>
-<li>操作系统，编译器，数据库，网络系统</li>
-<li>指针和内存管理</li>
-</ul>
+                <h3 id="1-常用的Web服务器"><a href="#1-常用的Web服务器" class="headerlink" title="1. 常用的Web服务器"></a>1. 常用的Web服务器</h3><ul>
+<li><p>Tomcat  ：由Apache组织提供的web服务器，提供对jsp、Servlet的支持，一种轻量级的javaWeb容器，应用最为广泛（免费）</p>
 </li>
-<li>1982年C++诞生<ul>
-<li>面向对象</li>
-<li>兼容C</li>
-<li>圆形领域、游戏等</li>
-</ul>
+<li><p>jboss：遵从javaEE规范，纯EJB服务器（免费）</p>
+</li>
+<li><p>GlassFish:  Oracle公司开发，商业服务器，产品级质量（应用较少）</p>
+</li>
+<li><p>Resin ：CAUCHO公司产品 ，对servlet和JSP提供良好的支持。性能优良（收费，应用较多）</p>
+</li>
+<li><p>WebLogic：Oracle公司的产品，目前应用最广泛的Web服务器，支持JavaEE规范，适合大项目（收费，适合大公司）</p>
 </li>
 </ul>
-<h2 id="java特性和优势"><a href="#java特性和优势" class="headerlink" title="java特性和优势"></a>java特性和优势</h2><ul>
-<li>简单性</li>
-<li>面向对象</li>
-<li>可移植性 跨平台性 虚拟机</li>
-<li>Write Once ,Run Anywhere</li>
-<li>高性能</li>
-<li>分布式</li>
-<li>动态性 反射机制</li>
-<li>多线程</li>
-<li>安全性</li>
-<li>健壮性</li>
+<h3 id="2-Tomcat服务器的-使用"><a href="#2-Tomcat服务器的-使用" class="headerlink" title="2. Tomcat服务器的 使用"></a>2. Tomcat服务器的 使用</h3><h3 id="2-1-安装"><a href="#2-1-安装" class="headerlink" title="2.1 安装"></a>2.1 安装</h3><p>找到需要的Tomcat版本的zip压缩包，解压到相应的安装目录</p>
+<p>附：Tomcat7.0 ,8.0,8.5 请自行下载</p>
+<p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1w3YJIWUkcDu6DSKzMfd7qQ">百度网盘Tomcat</a><br>提取码：y5z6 </p>
+<h3 id="2-2-目录结构"><a href="#2-2-目录结构" class="headerlink" title="2.2 目录结构"></a>2.2 目录结构</h3><ul>
+<li>bin                         专门用来存放 Tomcat 服务器的可执行程序</li>
+<li>conf                       专门用来存放 Tocmat 服务器的配置文件</li>
+<li>lib                           专门用来存放 Tomcat 服务器的 jar 包</li>
+<li>logs                        专门用来存放 Tomcat 服务器运行时输出的日记信息</li>
+<li>temp                      专门用来存放 Tomcdat 运行时产生的临时数据</li>
+<li>webapps                专门用来存放部署的 Web 工程。</li>
+<li>work                       是 Tomcat 工作时的目录，用来存放 Tomcat 运行时 jsp 翻译为                                 Servlet 的源码，和 Sessio</li>
 </ul>
-<h2 id="Java三大版本"><a href="#Java三大版本" class="headerlink" title="Java三大版本"></a>Java三大版本</h2><ul>
-<li>JavaSE :标准版 (桌面程序，控制台开发。。。)</li>
-<li>JavaME:嵌入式开发</li>
-<li>JavaEE:E企业级开发（web端，服务器开发。。）</li>
+<h3 id="2-3-Tomcat服务器的启动"><a href="#2-3-Tomcat服务器的启动" class="headerlink" title="2.3 Tomcat服务器的启动"></a>2.3 Tomcat服务器的启动</h3><h4 id="2-3-1-方式一"><a href="#2-3-1-方式一" class="headerlink" title="2.3.1 方式一"></a>2.3.1 方式一</h4><p>找到 Tomcat 目录下的 bin 目录下的 startup.bat 文件，双击，就可以启动 Tomcat 服务器。</p>
+<h4 id="2-3-2-方式二"><a href="#2-3-2-方式二" class="headerlink" title="2.3.2 方式二"></a>2.3.2 方式二</h4><ol>
+<li><p>打开命令行 </p>
+</li>
+<li><p>cd 到 你的 Tomcat 的 bin 目录下 </p>
+<ul>
+<li><p>方式一 进入bin目录  在下图所在位置输入cmd 直接进入</p>
+<p><img src="/medias/loading.gif" data-original="C:\Users\16852\AppData\Roaming\Typora\typora-user-images\1621696145110.png" alt="1621696145110"></p>
+</li>
+<li><p>方式二</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/2021-05-22_231447.png">    </p>
+</li>
 </ul>
-<h2 id="JDK，JRE-JVM"><a href="#JDK，JRE-JVM" class="headerlink" title="JDK，JRE , JVM"></a>JDK，JRE , JVM</h2><ul>
-<li>JVM:Java虚拟机</li>
-<li>JRE:Java的运行环境 jre=JVM+类库</li>
-<li>JDK: Java开发工具 jdk=jre+开发工具（编译工具 Javac.exe 打包工具 jar.exe)</li>
-<li>简单而言：使用JDK开发完成的Java程序，交给JRE去运行</li>
-</ul>
-<h2 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h2><h3 id="卸载jdK"><a href="#卸载jdK" class="headerlink" title="卸载jdK"></a>卸载jdK</h3><ol>
-<li>删除Java的安装目录</li>
-<li>删除JAVA_HOME</li>
-<li>删除path下关于Java的目录</li>
-<li>java-version 命令行输入</li>
+</li>
+<li><p>敲入启动命令： catalina run</p>
+</li>
 </ol>
-<h3 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h3><ol>
-<li><p>百度搜索JDK8 找到下载地址</p>
+<h4 id="2-3-3-测试Tomcat服务器启动成功"><a href="#2-3-3-测试Tomcat服务器启动成功" class="headerlink" title="2.3.3 测试Tomcat服务器启动成功"></a>2.3.3 测试Tomcat服务器启动成功</h4><ul>
+<li><p>打开浏览器，在浏览器地址栏中输入以下地址测试：<br>1、<a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080</a><br>2、<a target="_blank" rel="noopener" href="http://127.0.0.1:8080/">http://127.0.0.1:8080</a><br>3、http://真实 ip:8080</p>
 </li>
-<li><p>同意协议</p>
+<li><p>出现以下界面，说明启动成功</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210522232611.png" alt="tomcat登陆成功"></p>
 </li>
-<li><p>下载电脑对应的版本</p>
-</li>
-<li><p>双击安装</p>
-</li>
-<li><p><strong>记住安装的路径</strong></p>
-</li>
-<li><p>配置环境变量</p>
+<li><p>常见的启动失败现象及原因，</p>
+<p>现象：双击startup.bat文件，会出现一个小黑窗口一闪而过</p>
+<p>原因：JAVA_HOME环境变量未配置好</p>
+<ul>
+<li><p>配置JAVA_HOME环境变量</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210523094233.png"></p>
+<p><strong>注</strong>: </p>
 <ol>
-<li>我的电脑–&gt;右键–&gt;属性<ol>
-<li>环境变量–&gt;JAVA_HOME</li>
-<li>配置path变量</li>
+<li><strong>JAVA_HOME</strong> 必须全大写</li>
+<li><strong>JAVA_HOME</strong> 中间必须是下划线</li>
+<li><strong>JAVA_HOME</strong>配置路径只需要配置到jdk安装目录</li>
 </ol>
 </li>
-</ol>
-</li>
-<li><p>测试JDK是否安装成功</p>
-</li>
-<li><p>打开cmd</p>
-<ol start="2">
-<li>输入java -version</li>
-</ol>
-</li>
-</ol>
-<h2 id="hello-World第一个Java程序"><a href="#hello-World第一个Java程序" class="headerlink" title="hello World第一个Java程序"></a>hello World第一个Java程序</h2><ol>
-<li>新建一个文件夹，存放代码</li>
-<li>新建一个Java文件<ul>
-<li>文件后缀名为.java</li>
-<li>Hello.java</li>
-<li>[注意点]：系统可能没有显示后缀名，需要手动打开</li>
 </ul>
 </li>
-<li>编写代码</li>
+</ul>
+<h3 id="2-4-Tomcat-的停止"><a href="#2-4-Tomcat-的停止" class="headerlink" title="2.4 Tomcat 的停止"></a>2.4 Tomcat 的停止</h3><ol>
+<li>关闭tomcat服务器窗口（黑框）</li>
+<li>找到Tomcat的bin目录下的shutdown.bat双击，就可以停止Tomcat服务器</li>
 </ol>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Hello</span><span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<ol>
-<li>编译javac java文件，生成 .class文件</li>
-<li>运行class文件，java class文件</li>
+<h3 id="2-5修改Tomcat的端口号"><a href="#2-5修改Tomcat的端口号" class="headerlink" title="2.5修改Tomcat的端口号"></a>2.5修改Tomcat的端口号</h3><ul>
+<li><strong>mysql</strong>  默认端口号是 3306</li>
+<li><strong>Tomcat</strong>  默认端口号是 8080</li>
+<li><strong>HTTP</strong>  协议默认的端口号是  80</li>
+</ul>
+<hr>
+<blockquote>
+<p>修改：找到Tomcat目录下的conf  目录，找到server.xml配置文件</p>
+</blockquote>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210523101754.png"></p>
+<ul>
+<li>找到Connector标签，修改port属性为你需要的端口号，端口号范围：<strong>1 —  65535</strong></li>
+<li>修改完端口号，一定要重启Tomcat服务器才能生效</li>
+</ul>
+<h3 id="3-IDEA整合Tomcat服务器"><a href="#3-IDEA整合Tomcat服务器" class="headerlink" title="3.IDEA整合Tomcat服务器"></a>3.IDEA整合Tomcat服务器</h3><blockquote>
+<p>操作菜单如下： File–&gt;Settings–&gt;Build, Execution, Deployment –&gt;Application Servers</p>
+</blockquote>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210523103335.png"></p>
+<p>配置你的Tomcat安装目录</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210523103737.png"></p>
+<p>新建一个Module查看是不是配置成功</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210523104130.png"></p>
+<h3 id="4-IDEA中动态web工程的操作"><a href="#4-IDEA中动态web工程的操作" class="headerlink" title="4.IDEA中动态web工程的操作"></a>4.IDEA中动态web工程的操作</h3><ol>
+<li>创建一个module</li>
+<li>选择要创建的类型模块</li>
 </ol>
-<h3 id="可能出现的问题"><a href="#可能出现的问题" class="headerlink" title="可能出现的问题"></a>可能出现的问题</h3><ol>
-<li>每个单词的大小写不能出现问题，<strong>java是严格区分大小写的</strong></li>
-<li>尽量用英文</li>
-<li>文件名和类名必须保证一致，并且首字母大写</li>
-<li>符号使用了中文</li>
-<li>乱码，编码集错误，更改保存文件的编码集</li>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210523104758.png"></p>
+<ol start="3">
+<li><p>输入模块名，点击【Finish】完成创建</p>
+</li>
+<li><p>创建成功web目录结构</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210523105121.png"></p>
+</li>
 </ol>
-<h3 id="java程序运行机制"><a href="#java程序运行机制" class="headerlink" title="java程序运行机制"></a>java程序运行机制</h3><p>编译型：全部编译为机器语言，统一执行</p>
-<p>解释型：边解释边运行</p>
-<p>源程序 java文件 ——&gt;java编译器–&gt;字节码.class文件 –&gt;类加载器–&gt;字节码校验器—&gt;解释器—&gt;操作系统平台</p>
+<blockquote>
+<p>web工程结构介绍</p>
+</blockquote>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210523111147.png"></p>
+<h4 id="5-eclipse-整合Tomcat"><a href="#5-eclipse-整合Tomcat" class="headerlink" title="5.eclipse 整合Tomcat"></a>5.eclipse 整合Tomcat</h4><ol>
+<li><p>找到eclipse  window–&gt;Preferences–&gt;Server–&gt;Runtime Environm</p>
+<p> <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210523113100.png"></p>
+</li>
+<li><p>添加你的tomcat安装路径</p>
+</li>
+<li><p>打开Server窗口，新建Server</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210523113607.png"></p>
+<ol start="4">
+<li><p>右击所添加的Server,添加项目到此服务</p>
+</li>
+<li><p>在此Server上运行，右击项目中的页面文件，点击run as  ——&gt;Run on Server</p>
+</li>
+</ol>
+</li>
+</ol>
 
                 
             </div>
@@ -543,7 +563,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://codehan045.github.io/posts/5e4eda94.html">https://codehan045.github.io/posts/5e4eda94.html</a>
+                    <a href="https://codehan045.github.io/posts/5971465f.html">https://codehan045.github.io/posts/5971465f.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -581,8 +601,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/java/">
-                                    <span class="chip bg-color">java</span>
+                                <a href="/tags/Tomcat/">
+                                    <span class="chip bg-color">Tomcat</span>
                                 </a>
                             
                         </div>
@@ -1020,17 +1040,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/4abf35f0.html">
+                <a href="/posts/5971465f.html">
                     <div class="card-image">
                         
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/tomcat.jpg" class="responsive-img" alt="web服务器之Tomcat">
                         
-                        <img src="/medias/loading.gif" data-original="/medias/featureimages/3.jpg" class="responsive-img" alt="jdbc数据库连接方式迭代">
-                        
-                        <span class="card-title">jdbc数据库连接方式迭代</span>
+                        <span class="card-title">web服务器之Tomcat</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1040,26 +1060,27 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/" class="post-category">
-                                    数据库连接
+                            <a href="/categories/web/" class="post-category">
+                                    web
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/jdbc/">
-                        <span class="chip bg-color">jdbc</span>
+                    <a href="/tags/Tomcat/">
+                        <span class="chip bg-color">Tomcat</span>
                     </a>
                     
                 </div>
@@ -1073,31 +1094,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/f929.html">
+                <a href="/posts/ab56c92c.html">
                     <div class="card-image">
                         
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/images.jpg" class="responsive-img" alt="多线程详解">
                         
-                        <img src="/medias/loading.gif" data-original="/medias/featureimages/11.jpg" class="responsive-img" alt="盒子布局">
-                        
-                        <span class="card-title">盒子布局</span>
+                        <span class="card-title">多线程详解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            最全多线程基础详解
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-22
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80/" class="post-category">
-                                    静态网页布局
+                            <a href="/categories/java%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    java基础
                                 </a>
                             
                             
@@ -1107,8 +1127,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/html-css/">
-                        <span class="chip bg-color">html css</span>
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
                     </a>
                     
                 </div>
