@@ -33,9 +33,21 @@
       <link href="posts/c1b463a3.html"/>
       <url>posts/c1b463a3.html</url>
       
-        <content type="html"><![CDATA[<p>-</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="1-开发环境"><a href="#1-开发环境" class="headerlink" title="1.开发环境"></a>1.开发环境</h3><ul><li><p>操作系统∶Windows 7。</p></li><li><p>JDK环境∶ Java SE Development Kit （JDK） version 8。</p></li><li><p>Web服务器∶ Tomcat 8.0。</p></li><li><p>数据库∶ SQL Server数据库。</p></li></ul><h3 id="2-技术实现"><a href="#2-技术实现" class="headerlink" title="2. 技术实现"></a>2. 技术实现</h3><p>▶▶▏Ajax技术的应用         ▶▶▏Servlet的路由配置    </p><p>▶▶▏何上传文件                 ▶▶▏评论组件的实现</p><p>▶▶▏JavaBean的编写        ▶▶▏JSP高级语言</p><p>▶▶▏Eclipse的使用技巧     ▶▶▏SQL Server数据库的使用</p><h4 id="1-1-所需知识结构"><a href="#1-1-所需知识结构" class="headerlink" title="1.1 所需知识结构"></a>1.1 所需知识结构</h4><p><img src="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210611112623.png"></p><h3 id="2-业务流程"><a href="#2-业务流程" class="headerlink" title="2.业务流程"></a>2.业务流程</h3><p><img src="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210611112817.png"></p><h3 id="3-数据库设计"><a href="#3-数据库设计" class="headerlink" title="3.数据库设计"></a>3.数据库设计</h3><p><img src="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210611113122.png"></p><h3 id="4-界面效果展示"><a href="#4-界面效果展示" class="headerlink" title="4.界面效果展示"></a>4.界面效果展示</h3><p><img src="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210611113209.png"></p><p>​                                                                                        图4.1 网站首页</p><p><img src="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210611113323.png"></p><p>​                                                                                    图4.2 个人博客首页</p><p><img src="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210611113424.png"></p><p>​                                                                                        图4.3 博客登陆  </p><p><img src="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210611113518.png"></p><p>​                                                                                图博客4.4 文章列表页面</p>]]></content>
       
       
+      <categories>
+          
+          <category> web网站项目 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> program </tag>
+            
+        </tags>
       
     </entry>
     
