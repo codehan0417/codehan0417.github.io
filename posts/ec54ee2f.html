@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="jdbc数据库连接方式迭代, java mysql javascript jdbc javaweb">
+    <meta name="keywords" content="Photoshop, java mysql javascript jdbc javaweb">
     <meta name="description" content="世界不停转动，直到我们相逢">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>jdbc数据库连接方式迭代 | doNow</title>
+    <title>Photoshop | doNow</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -268,12 +268,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210706090524.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">jdbc数据库连接方式迭代</h1>
+                    <h1 class="description center-align post-title">Photoshop</h1>
                 </div>
             </div>
         </div>
@@ -389,8 +389,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/jdbc/">
-                                <span class="chip bg-color">jdbc</span>
+                            <a href="/tags/Photoshop/">
+                                <span class="chip bg-color">Photoshop</span>
                             </a>
                         
                     </div>
@@ -401,8 +401,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/" class="post-category">
-                                数据库连接
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                web前端
                             </a>
                         
                     </div>
@@ -414,21 +414,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-19
+                    2021-07-06
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-19
+                    2021-07-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    626
+                    737
                 </div>
                 
 
@@ -460,119 +460,57 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="jdbc数据库连接方式（迭代）"><a href="#jdbc数据库连接方式（迭代）" class="headerlink" title="jdbc数据库连接方式（迭代）"></a>jdbc数据库连接方式（迭代）</h2><h4 id="方式五为最终版本"><a href="#方式五为最终版本" class="headerlink" title="方式五为最终版本"></a>方式五为最终版本</h4><h3 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h3><pre class=" language-java"><code class="language-java">    <span class="token annotation punctuation">@Test</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> SQLException <span class="token punctuation">{</span>
-<span class="token comment" spellcheck="true">//        1.获取Driver的实现类对象</span>
-        Driver driver <span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">com<span class="token punctuation">.</span>mysql<span class="token punctuation">.</span>jdbc<span class="token punctuation">.</span>Driver</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//url:http://localhost:8080/gmail/key.jpg</span>
-<span class="token comment" spellcheck="true">//        jdbc:mysql:协议</span>
-<span class="token comment" spellcheck="true">//        localhost:ip地址</span>
-<span class="token comment" spellcheck="true">//        3306  默认mysql端口号</span>
-<span class="token comment" spellcheck="true">//        test:test数据库</span>
-        String                           url<span class="token operator">=</span><span class="token string">"jdbc:mysql://localhost:3306/test"</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//        将用户名和密码封装在Properties</span>
-        Properties info<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Properties</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        
-        info<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span><span class="token string">"user"</span><span class="token punctuation">,</span> <span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        info<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span><span class="token string">"password"</span><span class="token punctuation">,</span><span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        Connection con<span class="token operator">=</span>driver<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>info<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>con<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-</code></pre>
-<h3 id="方式二"><a href="#方式二" class="headerlink" title="方式二"></a>方式二</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//    方式二  对方式一的迭代</span>
-<span class="token comment" spellcheck="true">//    在如下的程序中不出现第三方的API,使程序具有更好的可移植性</span>
-    <span class="token annotation punctuation">@Test</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testConnections</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
-<span class="token comment" spellcheck="true">//    1.获取Driver实现类对象，使用反射</span>
-     Class <span class="token class-name">cla</span><span class="token operator">=</span>Class<span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span><span class="token string">"com.mysql.jdbc.Driver"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-     Driver driver<span class="token operator">=</span><span class="token punctuation">(</span>Driver<span class="token punctuation">)</span>cla<span class="token punctuation">.</span><span class="token function">newInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-     
-<span class="token comment" spellcheck="true">//     2.提供连接的数据库</span>
-     String url<span class="token operator">=</span><span class="token string">"jdbc:mysql://localhost:3306/test"</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//     3.提供连接需要的用户名和密码</span>
-     Properties info<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Properties</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-     info<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span><span class="token string">"user"</span><span class="token punctuation">,</span> <span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-     info<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span><span class="token string">"password"</span><span class="token punctuation">,</span> <span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//     4.获取连接</span>
-     Connection con<span class="token operator">=</span>driver<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> info<span class="token punctuation">)</span><span class="token punctuation">;</span>
-     System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>con<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-</code></pre>
-<h3 id="方式三"><a href="#方式三" class="headerlink" title="方式三"></a>方式三</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//    方式三：使用DriverManager替换Driver</span>
-    <span class="token annotation punctuation">@Test</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testConnection3</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
-        
-<span class="token comment" spellcheck="true">//        1.获取Driver 实现类对象</span>
-        Class <span class="token class-name">clazz</span><span class="token operator">=</span>Class<span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span><span class="token string">"com.mysql.jdbc.Driver"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        Driver driver<span class="token operator">=</span><span class="token punctuation">(</span>Driver<span class="token punctuation">)</span>clazz<span class="token punctuation">.</span><span class="token function">newInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        
-<span class="token comment" spellcheck="true">//        2.提供另外三个连接信息</span>
-        String url<span class="token operator">=</span><span class="token string">"jdbc:mysql://localhost:3306/test"</span><span class="token punctuation">;</span>
-        String user<span class="token operator">=</span><span class="token string">"root"</span><span class="token punctuation">;</span>
-        String password<span class="token operator">=</span><span class="token string">"root"</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//        注册驱动</span>
-        DriverManager<span class="token punctuation">.</span><span class="token function">registerDriver</span><span class="token punctuation">(</span>driver<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//        获取连接</span>
-        Connection con<span class="token operator">=</span>DriverManager<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>user<span class="token punctuation">,</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>con<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-</code></pre>
-<h3 id="方式四"><a href="#方式四" class="headerlink" title="方式四"></a>方式四</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//    方式四：可以只是加载驱动，不用显示的注册驱动了</span>
-    <span class="token annotation punctuation">@Test</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testConnection4</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
-<span class="token comment" spellcheck="true">//    1.提供三个连接的基本信息</span>
-        String url<span class="token operator">=</span><span class="token string">"jdbc:mysql://localhost:3306/test"</span><span class="token punctuation">;</span>
-        String user<span class="token operator">=</span><span class="token string">"root"</span><span class="token punctuation">;</span>
-        String password<span class="token operator">=</span><span class="token string">"root"</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//    2.加载Driver</span>
-        Class<span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span><span class="token string">"com.mysql.jdbc.Driver"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//        相较于方式三，可以省略如下操作</span>
-<span class="token comment" spellcheck="true">//        Driver driver=(Driver)clazz.newInstance();</span>
-<span class="token comment" spellcheck="true">//        注册驱动</span>
-<span class="token comment" spellcheck="true">//        DriverManager.registerDriver(driver);</span>
-<span class="token comment" spellcheck="true">//        为什么可以：</span>
-        
-        <span class="token comment" spellcheck="true">/*在MySQL的Driver实现类中声明了静态代码块来实现注册驱动
-         * 
-         */</span>
-<span class="token comment" spellcheck="true">//    3.获取连接</span>
-        Connection con<span class="token operator">=</span>DriverManager<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>user<span class="token punctuation">,</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>con<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-</code></pre>
-<h3 id="方式五（最终版本）"><a href="#方式五（最终版本）" class="headerlink" title="方式五（最终版本）"></a>方式五（最终版本）</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//    方式五：将数据库连接需要的4个信息</span>
-    <span class="token comment" spellcheck="true">/*
-     * 好处：
-     * 1.实现了数据与代码的分离，实现了解耦
-     * 2.如果需要修改配置文件信息，可以避免程序重新打包
-     */</span>
-    <span class="token annotation punctuation">@Test</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getConnection5</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
-<span class="token comment" spellcheck="true">//        1.读取配置文件中的4个基本信息</span>
-    InputStream is<span class="token operator">=</span> JdbcCreat1<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">.</span><span class="token function">getClassLoader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getResourceAsStream</span><span class="token punctuation">(</span><span class="token string">"jdbc.properties"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    Properties pro <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Properties</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    pro<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span>is<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    String user<span class="token operator">=</span>pro<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">"user"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    String password<span class="token operator">=</span>pro<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">"password"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    String url<span class="token operator">=</span>pro<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">"url"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    String driverClass<span class="token operator">=</span>pro<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">"driverClass"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//    2.加载驱动</span>
-    Class<span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span>driverClass<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//    3.获取连接</span>
-    Connection con <span class="token operator">=</span> DriverManager<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>user<span class="token punctuation">,</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>con<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+                <h1 id="Photoshop入门"><a href="#Photoshop入门" class="headerlink" title="Photoshop入门"></a>Photoshop入门</h1><h2 id="软件开发的流程"><a href="#软件开发的流程" class="headerlink" title="软件开发的流程"></a>软件开发的流程</h2><ol>
+<li><p>老板or产品经理——拿到需求，可行性分析，竞品分析，做出需求分析思维导图，设计低保真的原型图——跟客户沟通（定稿）</p>
+</li>
+<li><p>UI设计——根据产品经理的低保真原型图，设计出高保真的交互图——PSD原稿（Photoshop的源文件）</p>
+</li>
+<li><p>前端工程师——设计页面，设计动画，交互功能，数据渲染</p>
+</li>
+<li><p>后端工程师——架构选型，数据库的设计，业务逻辑设计，设计接口供前端调用（接口文档）</p>
+<p>三个团队同时需求分析，产品设计、任务分工、风险评估、开发时间（做好风险评估，甲方对接）</p>
+</li>
+<li><p>测试工程师——需求分析、需求评估、写测试用例、自动化脚本设计（一般用python）性能测试。</p>
+</li>
+<li><p>前端开发完成，后端未完成，前端需要模拟数据进行测试</p>
+</li>
+<li><p>前后端进行联调——完成整个项目的设计。</p>
+</li>
+<li><p>测试工程师——测试项目中bug——将bug交给开发——回归测试</p>
+</li>
+<li><p>上线（运维工程师）——网络环境的搭建，项目的维护上线，公司软件、硬件、网络、权限分配等等</p>
+</li>
+</ol>
+<h2 id="Photoshop介绍"><a href="#Photoshop介绍" class="headerlink" title="Photoshop介绍"></a>Photoshop介绍</h2><p>Photoshop是adobe公司开发一款图像处理软件，主要用于处理像素所构成的数字图像。</p>
+<p>像素：固定单位，一个小方块，屏幕分为很多小方块，很多发光点，一个发光点就是一个像素</p>
+<p>首选项配置：ctrl+k</p>
+<p>编辑——首选项——单位标尺</p>
+<h3 id="新建画布"><a href="#新建画布" class="headerlink" title="新建画布"></a>新建画布</h3><p>ctrl+n</p>
 <ul>
-<li><p>附带的配置文件</p>
-<pre class=" language-java"><code class="language-java">user<span class="token operator">=</span>root
-password<span class="token operator">=</span>root
-url<span class="token operator">=</span>jdbc<span class="token operator">:</span>mysql<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>localhost<span class="token operator">:</span><span class="token number">3306</span><span class="token operator">/</span>test
-driverClass<span class="token operator">=</span>com<span class="token punctuation">.</span>mysql<span class="token punctuation">.</span>jdbc<span class="token punctuation">.</span>Driver
-</code></pre>
+<li><p>分辨率：图像的清晰程度，分辨率越高，图片越清晰。</p>
+<ul>
+<li>72：一般用于电子屏幕的分辨率</li>
+<li>150：用于大型喷绘</li>
+<li>300：用于印刷品</li>
+</ul>
+</li>
+<li><p>颜色模式</p>
+<ul>
+<li>rgb：是以红red、绿green、蓝blue为基础色，通过三种颜色的混合来得出其他颜色，每种颜色可以是0~255；全为0是黑色，全为255为白色。</li>
+<li>CMYK：用于印刷品</li>
+<li>灰度：用黑色为基础色，不同的饱和度的黑色来显示图像，有中间过渡的灰色。</li>
+<li>位图：黑白图像，图像中只有黑色和白色。</li>
+</ul>
+<p>注意：如果画布无法填充颜色，将颜色模式调整为rgb模式（图像——模式+rgb）</p>
 </li>
 </ul>
+<h2 id="图层"><a href="#图层" class="headerlink" title="图层"></a>图层</h2><p>图层就是将图像拆分为多个模块，每个模块放一层</p>
+<p>特点：上方的图层会盖住下方的图层，透明图层可以看到下方的图层</p>
+<p>调整图层：通过鼠标左键点击图层进行拖拽，调整到对应的位置</p>
+<p>复制图层：ctrl+c和ctrl+v    或者 鼠标左键点击拖拽到创建新图层的图标上   或者  ctrl+j</p>
+<p>选择图层图像范围（载入选区）:ctrl+点击图层的缩略图</p>
+<p>取消选区：ctrl+D </p>
+<p>颜色填充：油漆桶    alt+delete填充前景色   ctrl+delete填充背景色</p>
 
                 
             </div>
@@ -599,7 +537,7 @@ driverClass<span class="token operator">=</span>com<span class="token punctuatio
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://codehan045.github.io/posts/4abf35f0.html">https://codehan045.github.io/posts/4abf35f0.html</a>
+                    <a href="https://codehan045.github.io/posts/ec54ee2f.html">https://codehan045.github.io/posts/ec54ee2f.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -637,8 +575,8 @@ driverClass<span class="token operator">=</span>com<span class="token punctuatio
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/jdbc/">
-                                    <span class="chip bg-color">jdbc</span>
+                                <a href="/tags/Photoshop/">
+                                    <span class="chip bg-color">Photoshop</span>
                                 </a>
                             
                         </div>
@@ -1076,46 +1014,47 @@ driverClass<span class="token operator">=</span>com<span class="token punctuatio
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/4a098468.html">
+                <a href="/posts/ec54ee2f.html">
                     <div class="card-image">
                         
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210706090524.png" class="responsive-img" alt="Photoshop">
                         
-                        <img src="/medias/loading.gif" data-original="/medias/featureimages/7.jpg" class="responsive-img" alt="MarkDown基本语法">
-                        
-                        <span class="card-title">MarkDown基本语法</span>
+                        <span class="card-title">Photoshop</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            markdown语法详解
+                            ps基本操作
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BC%96%E8%BE%91%E8%AF%AD%E6%B3%95/" class="post-category">
-                                    编辑语法
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/markdown/">
-                        <span class="chip bg-color">markdown</span>
+                    <a href="/tags/Photoshop/">
+                        <span class="chip bg-color">Photoshop</span>
                     </a>
                     
                 </div>
@@ -1129,31 +1068,31 @@ driverClass<span class="token operator">=</span>com<span class="token punctuatio
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/5e4eda94.html">
+                <a href="/posts/2eec1551.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/loading.gif" data-original="/medias/featureimages/0.jpg" class="responsive-img" alt="java概述">
+                        <img src="/medias/loading.gif" data-original="/medias/featureimages/3.jpg" class="responsive-img" alt="HTML">
                         
-                        <span class="card-title">java概述</span>
+                        <span class="card-title">HTML</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简要介绍java产生和发展
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-05
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/java%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    java基础
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
@@ -1163,8 +1102,8 @@ driverClass<span class="token operator">=</span>com<span class="token punctuatio
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
+                    <a href="/tags/html/">
+                        <span class="chip bg-color">html</span>
                     </a>
                     
                 </div>
