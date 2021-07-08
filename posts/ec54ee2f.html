@@ -421,21 +421,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-06
+                    2021-07-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    737
+                    2.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    10 分
                 </div>
                 
 
@@ -511,6 +511,186 @@
 <p>选择图层图像范围（载入选区）:ctrl+点击图层的缩略图</p>
 <p>取消选区：ctrl+D </p>
 <p>颜色填充：油漆桶    alt+delete填充前景色   ctrl+delete填充背景色</p>
+<h3 id="表情包的制作"><a href="#表情包的制作" class="headerlink" title="表情包的制作"></a>表情包的制作</h3><p>打开多张图片或者psd原稿，将图片或者psd拖拽到窗口栏上进行打开</p>
+<p>步骤：</p>
+<ol>
+<li>打开需要操作的表情包的图片</li>
+<li>去掉原有的五官：通过套索工具选区原有五官，按住delete或填充周边背景颜色去掉五官</li>
+<li>复制新的五官：找新五官图片上通过套索工具选取新五官，ctrl+c复制，再在表情包的图片上ctrl+v粘贴新五官（新五官需要创建一个新图层）</li>
+<li>新五官去色：ctrl+shift+U （图像——调整——去色）,可以将选中的图层里面内容变成灰色模式</li>
+<li>调整五官周边的过渡：ctrl+m（调整曲线），调整图像的对比度</li>
+<li>调整五官的大小和方向：ctrl+t（可以调整图层中图像的大小和方向），shift等比例缩放，鼠标移到定界框外面可以旋转图像，鼠标移入定界框中可以移动图像，鼠标移入定界框上可以调整图像的大小</li>
+<li>更改文字：先去掉原来图层上文本，使用文本工具新增文字</li>
+<li>文件——导出——导出为web所用格式</li>
+</ol>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/%E8%A1%A8%E6%83%85%E5%8C%85%E4%BD%9C%E4%B8%9A.jpg"></p>
+<h2 id="移动工具"><a href="#移动工具" class="headerlink" title="移动工具"></a>移动工具</h2><p>可以控制图层图像的移动显示位置</p>
+<p>自动选择是否勾选：如果勾选，会自动选择到鼠标点击的图像所在的图层；如果没有勾选，当前选中的图层，按住ctrl键也可以选择到鼠标选中的图像所在图层。</p>
+<h2 id="选区工具"><a href="#选区工具" class="headerlink" title="选区工具"></a>选区工具</h2><p>标尺：ctrl+r</p>
+<p>信息查看：窗口——信息</p>
+<p>选区默认不会重叠，不会叠加</p>
+<p>选区的加、减、交</p>
+<ul>
+<li>加：按住shift键可以添加选区到已有选区中</li>
+<li>减：按住alt键可以从已有选区中减去选中区域</li>
+<li>交：按住shift+alt键可以选中已有选区和新选区叠加的区域</li>
+</ul>
+<p>绘制正方形、正圆：按住shift绘制</p>
+<p>载入选区：ctrl+点击图层缩略图</p>
+<p>取消选区：ctrl+D</p>
+<p>选区反选：在选区中鼠标右键选择反向  ctrl+shift+i</p>
+<p>编辑选区：alt+s+t</p>
+<p>注意：</p>
+<ul>
+<li>在绘制过程中，可以按住空格键移动新选区</li>
+<li>编辑选区时，进行旋转，可以按住shift键按照15度进行旋转</li>
+</ul>
+<h3 id="微信图标的绘制"><a href="#微信图标的绘制" class="headerlink" title="微信图标的绘制"></a>微信图标的绘制</h3><ol>
+<li>新建画布，填充背景色</li>
+<li>绘制男朋友图层：使用选区工具和多边形套索工具绘制图形（注意：眼睛是镂空，眼睛区域减去选区）</li>
+<li>绘制女朋友图层：拷贝男朋友图层，ctrl+t 编辑图层，鼠标右键选择水平翻转，ctrl+T缩小</li>
+<li>男女朋友安全距离：选中女朋友图层，选择女朋友图层的选区（ctrl+点击缩略图），再到男朋友图层上减去多余的区域（按住delete删除），注意：眼睛区域需要加选进行删除</li>
+<li>安全距离的设置：将女朋友图层进行按照中心点等比例缩小（shift等比缩放，alt是按照中心点缩放），通过键盘的上下左右键进行微调。</li>
+<li>导出图片</li>
+</ol>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/wechat.jpg"></p>
+<h2 id="套索工具"><a href="#套索工具" class="headerlink" title="套索工具"></a>套索工具</h2><p>用于抠图</p>
+<ul>
+<li>套索工具——绘制不规则的选区</li>
+<li>多边形套索工具——绘制边缘为直线的不规则的区域</li>
+<li>磁性套索工具——自动识别对象的边缘，形成锚点和线，最终形成选区</li>
+</ul>
+<p>注意：一般进行抠图的操作，会将图片放大，图片更精准</p>
+<p>esc：删除所有的锚点</p>
+<h2 id="魔棒工具和快速选择工具"><a href="#魔棒工具和快速选择工具" class="headerlink" title="魔棒工具和快速选择工具"></a>魔棒工具和快速选择工具</h2><p>用于抠图</p>
+<ul>
+<li><p>快速选择工具：主要用于根据选中的区域的颜色来决定选区范围，色差比较大，选择的范围越精准</p>
+</li>
+<li><p>魔棒工具：将同种颜色建立选区，可以通过容差值调整选择范围</p>
+<p>容差值：指颜色的区分程度，容差值越大，选择的近似色越多，范围越广</p>
+</li>
+</ul>
+<p>注意：在选区相关的工具中，建立选区后，可以使用“选择并遮住”来调整选区的边缘，使边缘更加平滑</p>
+<h2 id="仿制图章工具"><a href="#仿制图章工具" class="headerlink" title="仿制图章工具"></a>仿制图章工具</h2><ul>
+<li><p>可以用来去水印</p>
+</li>
+<li><p>按照alt键进行取样，然后点击鼠标左键进行绘制（去水印）</p>
+</li>
+<li><p>以周边近似色为取样点进行填充</p>
+</li>
+<li><p>注意：</p>
+<p>对齐：勾选时默认以取样点为参考进行绘制，不勾选时，每次点击鼠标左键都是取样点取样的效果</p>
+</li>
+</ul>
+<h2 id="钢笔工具"><a href="#钢笔工具" class="headerlink" title="钢笔工具"></a>钢笔工具</h2><ul>
+<li>绘制图形，使用路径进行绘制，绘制完成之后，使用ctrl+enter转为选区</li>
+<li>新建锚点：鼠标左键点击</li>
+<li>绘制曲线：鼠标左键新建锚点时，按住不放进行拖拽可以绘制曲线，如果锚点新建完成，可以使用转换点工具进行点击锚点拖拽</li>
+<li>控制操纵杆：绘制过程中，按住alt键移入对应的操纵杆进行拖拽，绘制完成后，可以使用转换点工具进行控制</li>
+<li>取消后边的操作杆：绘制过程中，按住alt键点击锚点可以取消后边的操作杆（取消半边的操作杆）</li>
+<li>添加锚点和删除锚点</li>
+<li>注意：一旦转为选区，图形不能修改</li>
+</ul>
+<h3 id="抖音图标的绘制"><a href="#抖音图标的绘制" class="headerlink" title="抖音图标的绘制"></a>抖音图标的绘制</h3><ol>
+<li>新建画布，填充背景颜色</li>
+<li>使用钢笔工具绘制图标的形状（注意：绘制是路径），绘制完成后，按住ctrl+enter转为选区</li>
+<li>新建3个不同的图层，分别在选区中填充不同的颜色</li>
+<li>调整图层的位置和显示顺序</li>
+<li>导出</li>
+</ol>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/douyin1.jpg"></p>
+<h2 id="图片的认识"><a href="#图片的认识" class="headerlink" title="图片的认识"></a>图片的认识</h2><h3 id="图片的分类"><a href="#图片的分类" class="headerlink" title="图片的分类"></a>图片的分类</h3><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210708163650.png"></p>
+<h3 id="矢量图"><a href="#矢量图" class="headerlink" title="矢量图"></a>矢量图</h3><ul>
+<li>概念：是由点、线构成，是由计算机软件生成</li>
+<li>特点：<ul>
+<li>放大不会失真</li>
+<li>色彩单一，光影效果表达不到位</li>
+</ul>
+</li>
+<li>常见矢量图格式：svg、eps、ai等等</li>
+</ul>
+<h3 id="位图（点阵图）"><a href="#位图（点阵图）" class="headerlink" title="位图（点阵图）"></a>位图（点阵图）</h3><ul>
+<li>概念：是由一系列的像素点构成的图片，是一个个的小色块组成的图片</li>
+<li>Photoshop制作的图片都是位图</li>
+<li>特点：<ul>
+<li>放大会失真，会模糊出现锯齿状</li>
+<li>色彩丰富，光影效果表达到位</li>
+</ul>
+</li>
+<li>常见位图格式：jpg/jpeg、png、gif、webp、psd等等</li>
+</ul>
+<h3 id="图片的压缩模式"><a href="#图片的压缩模式" class="headerlink" title="图片的压缩模式"></a>图片的压缩模式</h3><h4 id="无损压缩"><a href="#无损压缩" class="headerlink" title="无损压缩"></a>无损压缩</h4><ul>
+<li>概念：将相同的色块（颜色）只保存一次，记录对应的位置，过渡的颜色单独进行记录，不会改变图片大小，因为读取图片时，会自动将色块填充上。</li>
+<li>特点：能够很好的保存图片的质量，但是这种方式不会改变文件的大小</li>
+<li>常见图片格式：png、gif</li>
+</ul>
+<h4 id="有损压缩"><a href="#有损压缩" class="headerlink" title="有损压缩"></a>有损压缩</h4><ul>
+<li>概念：将肉眼不可见或者不敏感的颜色（色块）删除，不影响图片的显示效果</li>
+<li>特点：可以改变图片的大小，但是会降低图片的质量</li>
+<li>常见图片格式：jpg/jpeg</li>
+</ul>
+<h3 id="常见的图片格式"><a href="#常见的图片格式" class="headerlink" title="常见的图片格式"></a>常见的图片格式</h3><h4 id="jpg-jpeg"><a href="#jpg-jpeg" class="headerlink" title="jpg/jpeg"></a>jpg/jpeg</h4><ul>
+<li>采用有损压缩</li>
+<li>压缩比比较高  40：1</li>
+<li>色彩比较丰富</li>
+<li>图片体积比较小</li>
+<li>不支持透明</li>
+</ul>
+<h4 id="png"><a href="#png" class="headerlink" title="png"></a>png</h4><ul>
+<li>支持透明</li>
+<li>采用无损压缩</li>
+<li>色彩相对较少</li>
+</ul>
+<h4 id="gif"><a href="#gif" class="headerlink" title="gif"></a>gif</h4><ul>
+<li>支持动画</li>
+<li>支持透明</li>
+<li>采用无损压缩</li>
+<li>色彩单一，只支持256种颜色</li>
+</ul>
+<h4 id="psd"><a href="#psd" class="headerlink" title="psd"></a>psd</h4><ul>
+<li>Photoshop的源文件</li>
+<li>文件体积一般都比较大，包含了图层、通道、滤镜等等信息</li>
+</ul>
+<h3 id="svg"><a href="#svg" class="headerlink" title="svg"></a>svg</h3><ul>
+<li>基于可扩展的标记语言，用于构建二维矢量图形的一种图片格式。</li>
+<li>文件体积比较大，耗内存</li>
+<li>一般用于logo</li>
+</ul>
+<h2 id="原稿切片"><a href="#原稿切片" class="headerlink" title="原稿切片"></a>原稿切片</h2><ul>
+<li><p>基于psd原稿进行切片</p>
+</li>
+<li><p>步骤</p>
+<ol>
+<li>分析psd原稿，确定哪些图片需要切片，哪些不需要切片</li>
+<li>进行切片，分析切什么格式图片</li>
+<li>文件——导出——存储为web所用格式</li>
+<li>调整切片的图片格式和名字</li>
+<li>点击存储，选择“所有用户切片”，保存到指定位置</li>
+</ol>
+</li>
+<li><p>注意：切片可能一次切不完，需要切多次</p>
+</li>
+<li><p>清除所有切片：视图——清除切片</p>
+</li>
+<li><p>清除所有参考线：视图——清除参考线</p>
+</li>
+</ul>
+<h2 id="雪碧图"><a href="#雪碧图" class="headerlink" title="雪碧图"></a>雪碧图</h2><p>又称为精灵图（css sprite），将多张图片组合在一起形成一张图片，可以减少请求服务器的次数，达到优化网页的效果</p>
+<p>步骤：</p>
+<ol>
+<li>新建透明的画布</li>
+<li>将所有的小图标添加到画布中，进行有序排列（方便代码的编写）</li>
+<li>可以使用裁剪工具裁剪图片的大小</li>
+<li>导出为png图片</li>
+</ol>
+<h2 id="切片的格式"><a href="#切片的格式" class="headerlink" title="切片的格式"></a>切片的格式</h2><ul>
+<li>logo，小图标切png格式</li>
+<li>产品图、banner图切jpg格式</li>
+</ul>
+<h2 id="网页优化方案"><a href="#网页优化方案" class="headerlink" title="网页优化方案"></a>网页优化方案</h2><ol>
+<li>合理使用图片的格式，通过减少文件体积来优化网页</li>
+<li>使用雪碧图技术，通过减少请求服务次数来优化网页</li>
+</ol>
 
                 
             </div>
@@ -1014,29 +1194,28 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/ec54ee2f.html">
+                <a href="/posts/2b0384e8.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210706090524.png" class="responsive-img" alt="Photoshop">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/htmlsign.jpg" class="responsive-img" alt="HTML标签">
                         
-                        <span class="card-title">Photoshop</span>
+                        <span class="card-title">HTML标签</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ps基本操作
+                            html常用标签详述
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-06
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-07
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1049,12 +1228,11 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Photoshop/">
-                        <span class="chip bg-color">Photoshop</span>
+                    <a href="/tags/html/">
+                        <span class="chip bg-color">html</span>
                     </a>
                     
                 </div>
@@ -1291,7 +1469,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">15.1k</span>
+                        class="white-color">21.1k</span>
             
             
             
