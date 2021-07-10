@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="while for">
+    <meta name="keywords" content="CSS文本样式及字体, java mysql javascript jdbc javaweb">
     <meta name="description" content="世界不停转动，直到我们相逢">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>java流程控制 | doNow</title>
+    <title>CSS文本样式及字体 | doNow</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -268,12 +268,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">java流程控制</h1>
+                    <h1 class="description center-align post-title">CSS文本样式及字体</h1>
                 </div>
             </div>
         </div>
@@ -389,8 +389,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/java/">
-                                <span class="chip bg-color">java</span>
+                            <a href="/tags/css%E6%96%87%E6%9C%AC%E5%AD%97%E4%BD%93/">
+                                <span class="chip bg-color">css文本字体</span>
                             </a>
                         
                     </div>
@@ -401,8 +401,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/java%E5%9F%BA%E7%A1%80/" class="post-category">
-                                java基础
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                web前端
                             </a>
                         
                     </div>
@@ -414,28 +414,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-20
+                    2021-07-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-20
+                    2021-07-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    862
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -460,202 +460,260 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-用户交互Scanner"><a href="#1-用户交互Scanner" class="headerlink" title="1.用户交互Scanner"></a>1.用户交互Scanner</h2><h3 id="Scannner-对象"><a href="#Scannner-对象" class="headerlink" title="Scannner 对象"></a>Scannner 对象</h3><ul>
-<li><p>我们可以通过Scanner 类获取用户的输入</p>
+                <h2 id="文本样式"><a href="#文本样式" class="headerlink" title="文本样式"></a>文本样式</h2><h3 id="text-align-文本的水平对齐"><a href="#text-align-文本的水平对齐" class="headerlink" title="text-align 文本的水平对齐"></a>text-align 文本的水平对齐</h3><ul>
+<li><p>可选值： </p>
+<ul>
+<li><p><code>left</code>：左侧对齐</p>
 </li>
-<li><p>基本语法</p>
-<pre class=" language-java"><code class="language-java">Scanner s<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<li><p><code>right</code>：右侧对齐</p>
+</li>
+<li><p><code>center</code>：居中对齐</p>
+</li>
+<li><p><code>justify</code>：两端对齐</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="vertical-align-设置元素垂直对齐的方式"><a href="#vertical-align-设置元素垂直对齐的方式" class="headerlink" title="vertical-align 设置元素垂直对齐的方式"></a>vertical-align 设置元素垂直对齐的方式</h3><ul>
+<li><p>可选值：</p>
+<ul>
+<li><p><code>baseline</code> 默认值 基线对齐</p>
+</li>
+<li><p><code> top</code>：顶部对齐</p>
+</li>
+<li><p><code> bottom</code>：底部对齐</p>
+</li>
+<li><p><code> middle</code>：居中对齐</p>
+</li>
+</ul>
+</li>
+<li><p>**注:**只针对于行内元素和行内块元素</p>
+</li>
+</ul>
+<h3 id="text-decoration-设置文本修饰"><a href="#text-decoration-设置文本修饰" class="headerlink" title="text-decoration 设置文本修饰"></a>text-decoration 设置文本修饰</h3><ul>
+<li><p>可选值： </p>
+<ul>
+<li><p><code>none</code>：默认值，什么都没有</p>
+</li>
+<li><p><code>underline</code> ：下划线</p>
+</li>
+<li><p><code>·overline</code>：上划线</p>
+</li>
+<li><p><code>line-through</code> 删除线</p>
+</li>
+</ul>
+</li>
+<li><p>可以为修饰设置样式</p>
+<ul>
+<li><code>text-decoration：underline red doteed;</code> <strong>注：ie不支持</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="white-space-设置网页如何处理空白"><a href="#white-space-设置网页如何处理空白" class="headerlink" title="white-space 设置网页如何处理空白"></a>white-space 设置网页如何处理空白</h3><ul>
+<li><p>可选值： </p>
+<ul>
+<li><p><code>normal</code> 正常</p>
+</li>
+<li><p><code>nowrap</code> :不换行</p>
+</li>
+<li><p><code>pre</code> : 保留空白/原格式</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="text-shadow-用来设置文本阴影"><a href="#text-shadow-用来设置文本阴影" class="headerlink" title="text-shadow:用来设置文本阴影"></a>text-shadow:用来设置文本阴影</h3><h3 id="text-indent-文本缩进"><a href="#text-indent-文本缩进" class="headerlink" title="text-indent:文本缩进"></a>text-indent:文本缩进</h3><h3 id="letter-spacing-字符间距"><a href="#letter-spacing-字符间距" class="headerlink" title="letter-spacing: 字符间距"></a>letter-spacing: 字符间距</h3><ul>
+<li>每一个汉字，和每一个字母都是一个字符</li>
+</ul>
+<h3 id="word-spacing-字间距（字以空格为分隔符）"><a href="#word-spacing-字间距（字以空格为分隔符）" class="headerlink" title="word-spacing: 字间距（字以空格为分隔符）"></a>word-spacing: 字间距（字以空格为分隔符）</h3><h3 id="text-transform-大小写转换"><a href="#text-transform-大小写转换" class="headerlink" title="text-transform: 大小写转换"></a>text-transform: 大小写转换</h3><h3 id="行高（line-height）：指定文字占有的实际高度"><a href="#行高（line-height）：指定文字占有的实际高度" class="headerlink" title="行高（line-height）：指定文字占有的实际高度"></a>行高（line-height）：指定文字占有的实际高度</h3><ul>
+<li><p> 可以用line-height来设置行高</p>
+</li>
+<li><p>行高可以直接指定一个大小（px,em) 也可直接为行高设置一个整数</p>
+</li>
+<li><p>如果是一个整数的话，行高将会是字体的指定倍数</p>
+</li>
+<li><p>字体框</p>
+<ul>
+<li>定义：就是字体存在的格子，设置font-size实际上就是设置字体框的高度</li>
+<li>行高会在字体框的上下平均分配</li>
+</ul>
+</li>
+<li><p>应用     </p>
+<ul>
+<li>可以将行高设置为高度一样的值，使单行的文字在一个元素中垂直居中</li>
+<li>行高经常还用来设置文字的行间距</li>
+</ul>
+</li>
+<li><p>行间距=行 减 字体大小</p>
+</li>
+</ul>
+<h2 id="设置文本省略号"><a href="#设置文本省略号" class="headerlink" title="设置文本省略号"></a>设置文本省略号</h2><pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.box2</span> </span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token property">width</span><span class="token punctuation">:</span><span class="token number">200</span>px<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/*不换行*/</span>
+ <span class="token property">white-space</span><span class="token punctuation">:</span>nowrap<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/* 裁剪掉溢出的文本*/</span>
+ <span class="token property">overflow</span><span class="token punctuation">:</span>hidden<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/* 文本裁剪，显示。。。*/</span>
+ <span class="token property">text-overflow</span><span class="token punctuation">:</span>ellipsis<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
-</li>
-<li><p>使用：</p>
+<h2 id="字体样式"><a href="#字体样式" class="headerlink" title="字体样式"></a>字体样式</h2><h3 id="color：用来设置字体的颜色"><a href="#color：用来设置字体的颜色" class="headerlink" title="color：用来设置字体的颜色"></a>color：用来设置字体的颜色</h3><h3 id="font-size：字体大小"><a href="#font-size：字体大小" class="headerlink" title="font-size：字体大小"></a>font-size：字体大小</h3><ul>
+<li><p>相关单位：</p>
 <ul>
-<li><p>通过Scanner类的next( ) 与 nextLine( ) 方法获取输入的字符串</p>
+<li><p>rem相当于根元素的一个font-size</p>
 </li>
-<li><p>在读取之前，一般需要使用hasNext() 与 hasNextLine() 判断是否还有输入的数据</p>
+<li><p>em相当于当前元素的一个font-size</p>
+</li>
+<li><p> 像素</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="font-family：字体族-字体样式"><a href="#font-family：字体族-字体样式" class="headerlink" title="font-family：字体族(字体样式)"></a>font-family：字体族(字体样式)</h3><ul>
+<li><p>可选值：</p>
 <ul>
-<li><p>next() </p>
+<li><p><code>serif</code> 衬线字体</p>
+</li>
+<li><p><code>sans-serif </code>非衬线字体</p>
+</li>
+<li><p><code> monospace</code> 等宽字体  </p>
+</li>
+<li><p>指定字体类别，浏览器会自动使用该类别下的字体  </p>
+</li>
+</ul>
+</li>
+<li><p><code>font-family:"courier New","courier",monospace;</code></p>
+</li>
+</ul>
+<p>​    **注：字体生效时优先使用第一个，第一个无法使用则使用第二个，以此类推 **</p>
+<h3 id="font-face：可以将服务器中的字体直接提供给用户使用"><a href="#font-face：可以将服务器中的字体直接提供给用户使用" class="headerlink" title="font-face：可以将服务器中的字体直接提供给用户使用"></a>font-face：可以将服务器中的字体直接提供给用户使用</h3><pre><code>```css
+@font-face{
+ font-family:'my-font';
+src:url("服务器中的字体路径"),
+url("服务器中的字体路径");  
+  }
+```
+</code></pre>
+<h3 id="字体风格"><a href="#字体风格" class="headerlink" title="字体风格"></a>字体风格</h3><h4 id="font-style"><a href="#font-style" class="headerlink" title="font-style"></a><code>font-style</code></h4><ul>
+<li><p>可选值：</p>
+<ul>
+<li><p><code>normal</code> 默认值，正常的</p>
+</li>
+<li><p><code>italic</code> 斜体</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="font-weight："><a href="#font-weight：" class="headerlink" title="font-weight："></a><code>font-weight</code>：</h4><ul>
+<li><p>可选值： </p>
+<ul>
+<li><p><code>normal </code>不加粗 默认值</p>
+</li>
+<li><p><code> bold</code> 加粗</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="字体的简写属性："><a href="#字体的简写属性：" class="headerlink" title="字体的简写属性："></a>字体的简写属性：</h3><ul>
+<li><p><code>font</code> 可以设置字体相关的所有属性</p>
+<ul>
+<li>语法：字体大小/行高 字体族</li>
+</ul>
+</li>
+<li><p>字体风格：</p>
+</li>
+<li></li>
+</ul>
+<h2 id="图标字体（iconfont）"><a href="#图标字体（iconfont）" class="headerlink" title="图标字体（iconfont）"></a>图标字体（iconfont）</h2><ul>
+<li>在网页中经常需要使用一些图标，可通过图片来引入图标， 但图片大小本身比较大，并且非常不灵活</li>
+</ul>
+<ul>
+<li>将图标直接设置为字体，通过font-face的形式进行引入</li>
+</ul>
+<h3 id="font-awesome图标字体"><a href="#font-awesome图标字体" class="headerlink" title="font awesome图标字体"></a>font awesome图标字体</h3><ul>
+<li><p>使用方式一</p>
 <ol>
-<li>一定要读取到有效字符后才可以结束输入</li>
-<li>对输入有效字符之前遇到的空白，next() 方法会自动将其去掉。</li>
-<li>对于输入有效字符之后的空白，作为结束符</li>
-<li>next() 不能得到带有空格的字符串</li>
+<li><p>将all.css引入到目录中</p>
+</li>
+<li><p>在html中直接使用类名来使用图标字体</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fas fa-bell<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+</code></pre>
+</li>
 </ol>
 </li>
-<li><p>nextLine()</p>
+<li><p>使用方式二</p>
+<p>通过伪元素来设置图标字体</p>
 <ol>
-<li>以Enter为结束符，此方法返回的是输入回车之前的所有字符</li>
-<li>可以获得空白</li>
+<li>找到设置的元素通过before 或after 选中</li>
+<li>在content中设置字体的编码</li>
+<li>设置字体样式</li>
 </ol>
 </li>
 </ul>
-<pre class=" language-java"><code class="language-java"> <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token comment" spellcheck="true">//创建一个扫描对象，接收键盘数据</span>
-      Scanner s<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"请输入数据："</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      
-          <span class="token comment" spellcheck="true">//使用nextLine()方式接收</span>
-          String str<span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"输出的内容为："</span><span class="token operator">+</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>        
-      <span class="token comment" spellcheck="true">//凡是属于IO流的类如果不关闭会一直占用资源，用完立即即关闭</span>
-      s<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-</code></pre>
+<h3 id="IcoMoon图标字体"><a href="#IcoMoon图标字体" class="headerlink" title="IcoMoon图标字体"></a>IcoMoon图标字体</h3><ul>
+<li><p>网址：<a target="_blank" rel="noopener" href="https://icomoon.io/">https://icomoon.io/</a></p>
 </li>
-</ul>
+<li><p>使用步骤</p>
+<ol>
+<li><p>打开网址，点击图中所示位置</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/icon1.png"></p>
 </li>
-</ul>
-<h2 id="2-顺序结构"><a href="#2-顺序结构" class="headerlink" title="2. 顺序结构"></a>2. 顺序结构</h2><ul>
-<li>java的基本结构就是顺序结构</li>
-</ul>
-<h2 id="3-选择结构"><a href="#3-选择结构" class="headerlink" title="3.选择结构"></a>3.选择结构</h2><ol>
-<li>多个选择表达式，之间没有交集的关系，判断语句声明在上下都无关紧要。</li>
-<li>包含关系，通常小范围声明在大范围的上面，否则范围小的无法被执行输出；</li>
-<li>可嵌套</li>
-<li>就近原则</li>
-</ol>
-<ul>
-<li><p>if单选择结构</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>表达式布尔型<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    执行语句
-<span class="token punctuation">}</span>
-</code></pre>
+<li><p>进入图中页面，选择所需要的图标字体</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/icon2.png"></p>
 </li>
-<li><p>if 双选择结构</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>表达式<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    执行语句<span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
-    执行语句<span class="token number">2</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<li><p>进入页面之后点击右下角Download下载压缩包</p>
 </li>
-<li><p>if 多选择结构</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>表达式<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    执行语句<span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>表达式<span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    执行语句<span class="token number">2</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>表达式<span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    执行语句<span class="token number">3</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-​``````````
-</code></pre>
+<li><p>将压缩包解压，找到文件中的fonts文件夹，将此文件夹放在要使用的网页的根目录下</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/icon3.png"></p>
 </li>
-<li><p>switch多选择结构(匹配某一个字符/字符串)</p>
-<ul>
-<li><p>结构</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">switch</span><span class="token punctuation">(</span>expression<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">case</span> value<span class="token operator">:</span>
-    语句<span class="token punctuation">;</span>
-    <span class="token keyword">break</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//可选</span>
-    <span class="token keyword">case</span> value<span class="token operator">:</span>
-    语句<span class="token punctuation">;</span>
-    <span class="token keyword">break</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//可选</span>
-    ···
-    <span class="token keyword">default</span><span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>可选
-    <span class="token comment" spellcheck="true">//语句</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<li><p>找到解压文件中的style.css 复制其中的 @font-face 中的内容添加到所需的页面中，如图</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/fonts.png"></p>
 </li>
-<li><p>switch语句中的变量类型可以为</p>
-<ul>
-<li><p>byte、short、int 或 char、枚举类型（jdk5.0新增）、string（jdk7.0新增)</p>
-</li>
-<li><p>从java SE 7开始 支持字符串 String 类型了</p>
-</li>
-<li><p>case 标签必须为字符串常量或字面量</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="4-循环结构"><a href="#4-循环结构" class="headerlink" title="4.循环结构"></a>4.循环结构</h2><h4 id="四要素"><a href="#四要素" class="headerlink" title="四要素"></a>四要素</h4><ol>
-<li>初始化条件</li>
-<li>循环条件</li>
-<li>循环体</li>
-<li>迭代条件</li>
-</ol>
-<ul>
-<li><p>while循环</p>
-<ul>
-<li><p>结构</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">while</span><span class="token punctuation">(</span>布尔表达式<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">//循环内容</span>
-<span class="token punctuation">}</span>
-</code></pre>
-</li>
-<li><p>布尔表达式为true，循环会一直执行下去</p>
-</li>
-</ul>
-</li>
-<li><p>do ···while循环</p>
-<ul>
-<li><p>至少执行一次循环体</p>
-</li>
-<li><p>结构</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">do</span><span class="token punctuation">{</span>
-<span class="token comment" spellcheck="true">//代码语句</span>
-<span class="token punctuation">}</span><span class="token keyword">while</span><span class="token punctuation">(</span>布尔表达式<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-</li>
-<li><p>while 与 do ···while 的区别</p>
-<ul>
-<li>while先判断后执行，do···while是先执行后判断</li>
-<li>do····while总是保证循环体至少执行一次</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>for 循环</p>
-<ul>
-<li><p>格式</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span>初始化<span class="token punctuation">;</span>布尔表达式；更新<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">//执行语句</span>
-<span class="token punctuation">}</span>
-</code></pre>
-</li>
-<li><p>嵌套for循环</p>
-<pre class=" language-java"><code class="language-java"> <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">&lt;=</span>i<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>j<span class="token operator">+</span><span class="token string">"*"</span><span class="token operator">+</span>i<span class="token operator">+</span><span class="token string">"="</span><span class="token operator">+</span>i<span class="token operator">*</span>j<span class="token operator">+</span><span class="token string">"\t"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<li><p>在页面中使用</p>
+<pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>X-UA-Compatible<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>IE<span class="token punctuation">=</span>edge<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style language-css">
+        <span class="token atrule"><span class="token rule">@font-face</span></span> <span class="token punctuation">{</span>
+            <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'icomoon'</span><span class="token punctuation">;</span>
+            <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('fonts/icomoon.eot?z9byv6')</span><span class="token punctuation">;</span>
+            <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('fonts/icomoon.eot?z9byv6#iefix')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'embedded-opentype'</span><span class="token punctuation">)</span>,
+                <span class="token url">url('fonts/icomoon.ttf?z9byv6')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span>,
+                <span class="token url">url('fonts/icomoon.woff?z9byv6')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span>,
+                <span class="token url">url('fonts/icomoon.svg?z9byv6#icomoon')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'svg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token property">font-weight</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span>
+            <span class="token property">font-style</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span>
+            <span class="token property">font-display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-</code></pre>
-<ul>
-<li><p>内层循环遍历一遍，只相当于外层循环执行循环体一次</p>
-</li>
-<li><p>外层循环控制行数，内层循环控制列数</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Java5中引入主要用于数组的增强 for 循环</p>
-<ul>
-<li><p>格式</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span>声明语句：表达式<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">//代码句子</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<ul>
-<li><p>声明语句：声明新的局部变量，该变量类型必须和数组元素的类型匹配</p>
-</li>
-<li><p>表达式：即要访问的数组名，或是返回值为数组的方法</p>
-</li>
-<li><p>示例</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> number<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">,</span><span class="token number">44</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token operator">:</span>number<span class="token punctuation">)</span><span class="token punctuation">{</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token selector">span </span><span class="token punctuation">{</span>
+            <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'icomoon'</span><span class="token punctuation">;</span>
+            <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">300</span>px<span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> saddlebrown<span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span> /
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 </code></pre>
 </li>
-</ul>
+<li><p>span标签中的内容，找到demo.html文件</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/fon.png"></p>
+</li>
+</ol>
 </li>
 </ul>
-</li>
-</ul>
-<h2 id="5-break-amp-continue"><a href="#5-break-amp-continue" class="headerlink" title="5.break &amp; continue"></a>5.break &amp; continue</h2><ul>
-<li>break 用于强行退出循环</li>
-<li>continue 用于终止某次循环过程</li>
+<h3 id="iconFont-阿里图标库"><a href="#iconFont-阿里图标库" class="headerlink" title="iconFont 阿里图标库"></a>iconFont 阿里图标库</h3><ul>
+<li>网址：<a target="_blank" rel="noopener" href="https://www.iconfont.cn/">https://www.iconfont.cn/</a></li>
 </ul>
 
                 
@@ -683,7 +741,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://codehan045.github.io/posts/561f6059.html">https://codehan045.github.io/posts/561f6059.html</a>
+                    <a href="https://codehan045.github.io/posts/9894b5b2.html">https://codehan045.github.io/posts/9894b5b2.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -721,8 +779,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/java/">
-                                    <span class="chip bg-color">java</span>
+                                <a href="/tags/css%E6%96%87%E6%9C%AC%E5%AD%97%E4%BD%93/">
+                                    <span class="chip bg-color">css文本字体</span>
                                 </a>
                             
                         </div>
@@ -1160,45 +1218,48 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/ab56c92c.html">
+                <a href="/posts/9894b5b2.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/images.jpg" class="responsive-img" alt="多线程详解">
                         
-                        <span class="card-title">多线程详解</span>
+                        <img src="/medias/loading.gif" data-original="/medias/featureimages/22.jpg" class="responsive-img" alt="CSS文本样式及字体">
+                        
+                        <span class="card-title">CSS文本样式及字体</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            最全多线程基础详解
+                            
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/java%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    java基础
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
+                    <a href="/tags/css%E6%96%87%E6%9C%AC%E5%AD%97%E4%BD%93/">
+                        <span class="chip bg-color">css文本字体</span>
                     </a>
                     
                 </div>
@@ -1212,12 +1273,12 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/fac754a7.html">
+                <a href="/posts/f4efe5d4.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/jdbccontect.jpg" class="responsive-img" alt="面向对象编程">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/float.jpg" class="responsive-img" alt="float浮动及高度塌陷问题">
                         
-                        <span class="card-title">面向对象编程</span>
+                        <span class="card-title">float浮动及高度塌陷问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1228,14 +1289,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/java%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    java基础
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
@@ -1245,8 +1306,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
+                    <a href="/tags/float/">
+                        <span class="chip bg-color">float</span>
                     </a>
                     
                 </div>
