@@ -428,14 +428,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
 
@@ -563,6 +563,33 @@
 <li><p>注意：内联、内部、外部样式同时作用在一个标签上时，优先级（权重）：内联的权重最大，在相同选择器时，内部和外部采用就近原则（离标签越近优先作用）</p>
 </li>
 </ul>
+<h2 id="拓展：link和-import的区别"><a href="#拓展：link和-import的区别" class="headerlink" title="**拓展：link和@import的区别"></a>**拓展：link和@import的区别</h2><ul>
+<li><p>link和@import都可以引入css文件，只是服务对象不同，link为整个网页服务，@import为css服务</p>
+</li>
+<li><p>语法：</p>
+<pre class=" language-html"><code class="language-html">b<span class="token comment" spellcheck="true">&lt;!-- 第一种，通过link标签引入css文件 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>css文件路径<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
+<span class="token comment" spellcheck="true">&lt;!-- 第二种，通过@import引入css文件，是css的语法 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style language-css">
+    <span class="token atrule"><span class="token rule">@import</span> <span class="token url">url(文件路径)</span><span class="token punctuation">;</span></span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+</code></pre>
+</li>
+<li><p>区别：</p>
+<ol>
+<li><p>link是一种标签，@import是css语法，是一种语法</p>
+</li>
+<li><p>link不仅仅可以引入的css文件，还可以引入其他文件，@import只能css文件</p>
+</li>
+<li><p>加载时间：link加载css文件，随着页面的加载而加载，@import等等页面加载完成之后再加载文件</p>
+</li>
+<li><p>兼容性：link的兼容性比@import好一些</p>
+</li>
+<li><p>通过JavaScript操作样式的时候，link引入的样式可以被操作，@import引入样式不能被js操作</p>
+</li>
+</ol>
+</li>
+</ul>
 <h2 id="网页中的单位"><a href="#网页中的单位" class="headerlink" title="网页中的单位"></a>网页中的单位</h2><h3 id="像素"><a href="#像素" class="headerlink" title="像素"></a>像素</h3><p>   百分比： 可将属性值设置为相对于其父元素属性的百分比</p>
 <p>   设置百分比，可以使子元素跟随父元素改变而改变</p>
 <h3 id="em"><a href="#em" class="headerlink" title="em"></a>em</h3><ul>
@@ -600,6 +627,14 @@
 <p>   #aabbcc -&gt; #abc</p>
 </li>
 </ul>
+<h2 id="网页优化方案"><a href="#网页优化方案" class="headerlink" title="网页优化方案"></a>网页优化方案</h2><ol>
+<li>合理使用图片可以优化网页</li>
+<li>使用雪碧图，通过减少服务器的请求，优化网页</li>
+<li>使用外部css文件，将其压缩，可以优化网页</li>
+<li>1px 的渐变背景平铺可以优化网页</li>
+<li>使用字体图标可以优化网页</li>
+<li>使用link引入css文件也可以网页</li>
+</ol>
 
                 
             </div>
@@ -1377,7 +1412,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">29.3k</span>
+                        class="white-color">30.8k</span>
             
             
             

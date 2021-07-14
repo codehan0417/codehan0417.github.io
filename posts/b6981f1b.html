@@ -421,21 +421,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-09
+                    2021-07-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    6 分
                 </div>
                 
 
@@ -617,28 +617,45 @@ html代码
 </code></pre>
 </li>
 </ul>
-<h4 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h4><ol>
-<li><p>选择含有指定属性的元素</p>
-<p>语法：</p>
-<pre class=" language-css"><code class="language-css">[属性名]
-</code></pre>
-</li>
-<li><p>选择含有指定属性和属性值的元素</p>
-<p>语法：</p>
-<pre><code>[属性名=属性值]
-</code></pre>
-</li>
-<li><p>选择属性值以指定值开头的元素</p>
-<p>语法：</p>
-<pre class=" language-css"><code class="language-css">[属性名^=属性值]
-</code></pre>
-</li>
-<li><p>选择属性值以指定值结尾的元素</p>
-<p>语法：</p>
-<pre class=" language-css"><code class="language-css">[属性名*=属性值]
-</code></pre>
-</li>
-</ol>
+<h4 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h4><ul>
+<li>根据标签上属性名或属性值找到对应的标签</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[属性名]</code></td>
+<td>用于选取带有指定属性的元素。</td>
+</tr>
+<tr>
+<td><code>[属性名=属性值]</code></td>
+<td>用于选取带有指定属性和值的元素。（精确匹配）</td>
+</tr>
+<tr>
+<td><code>[属性名*=属性值]</code></td>
+<td>匹配属性值中包含指定值的某个元素。（模糊匹配）</td>
+</tr>
+<tr>
+<td><code>[属性名~=属性值]</code></td>
+<td>用于选取属性值中包含指定词汇的元素。</td>
+</tr>
+<tr>
+<td><code>[属性名|=属性值]</code></td>
+<td>用于选取带有以指定值开头的属性值的元素，该值必须是整个单词。</td>
+</tr>
+<tr>
+<td><code>[属性名^=属性值]</code></td>
+<td>匹配属性值以指定值开头的每个元素。</td>
+</tr>
+<tr>
+<td><code>[属性名$=属性值]</code></td>
+<td>匹配属性值以指定值结尾的每个元素。</td>
+</tr>
+</tbody></table>
 <h2 id="伪类及伪元素"><a href="#伪类及伪元素" class="headerlink" title="伪类及伪元素"></a>伪类及伪元素</h2><h3 id="伪类（不存在的类，特殊的类）"><a href="#伪类（不存在的类，特殊的类）" class="headerlink" title="伪类（不存在的类，特殊的类）"></a>伪类（不存在的类，特殊的类）</h3><h4 id="一般使用"><a href="#一般使用" class="headerlink" title="一般使用"></a>一般使用</h4><ul>
 <li><p>含义:描述一个元素的特殊状态</p>
 </li>
@@ -666,19 +683,47 @@ html代码
 </li>
 <li><p> <code>:nth-of-type()</code>  同类型元素的第n个子元素</p>
 </li>
-</ol>
-<p>注 ：<strong>上述4，5，6 几个伪类的功能与1，2，3类似，不同点是4，5，6是在同类型元素中进行排序</strong></p>
-<ol start="7">
-<li><code>:not</code> 否定伪类，将符合条件的元素从选择器中去除</li>
+<li><p><code>:not</code> 否定伪类，将符合条件的元素从选择器中去除</p>
+</li>
 </ol>
 </li>
 </ul>
-<h4 id="a标签的伪类（独有）"><a href="#a标签的伪类（独有）" class="headerlink" title="a标签的伪类（独有）"></a>a标签的伪类（独有）</h4><ul>
-<li><code>:link</code> 用来表示没访问过的链接(正常的链接)</li>
-<li><code>:visited</code> 表示访问过的链接 （由于隐私原因，visited这个伪类只能修改链接的颜色</li>
-<li><code>:hover</code> 表示鼠标移入的状态</li>
-<li><code>:active</code>用来表示鼠标点击</li>
+<ol start="8">
+<li><code>:focus</code>向拥有键盘输入焦点的标签添加样式</li>
+</ol>
+<p>注 ：<strong>上述4，5，6 几个伪类的功能与1，2，3类似，不同点是4，5，6是在同类型元素中进行排序</strong></p>
+<h4 id="a标签的伪类"><a href="#a标签的伪类" class="headerlink" title="a标签的伪类"></a>a标签的伪类</h4><ul>
+<li><p><code>:link</code> 用来表示没访问过的链接(正常的链接) a标签独有</p>
+</li>
+<li><p><code>:visited</code> 表示访问过的链接 （由于隐私原因，visited这个伪类只能修改链接的颜色 a标签独有</p>
+</li>
+<li><p><code>:hover</code> 表示鼠标移入的状态</p>
+</li>
+<li><p><code>:active</code>用来表示鼠标点击</p>
+<pre class=" language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* 未被访问的超链接的样式 */</span>
+<span class="token selector">a<span class="token pseudo-class">:link</span> </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/* 被访问过的超链接的样式 */</span>
+<span class="token selector">a<span class="token pseudo-class">:visited</span> </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/* 鼠标移入超链接时，作用的样式 */</span>
+<span class="token comment" spellcheck="true">/* hover必须当中link和visited之后 */</span>
+<span class="token selector">a<span class="token pseudo-class">:hover</span> </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/* 超链接被点击时的样式，鼠标按住不放时样式 */</span>
+<span class="token comment" spellcheck="true">/* active必须放在hover之后 */</span>
+<span class="token selector">a<span class="token pseudo-class">:active</span> </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
 </ul>
+<blockquote>
+<p>注意：设置超链接的样式时，注意样式的作用顺序，hover必须放在link和visited之后，active必须放在hover之后（顺序：L-V-H-A）</p>
+</blockquote>
 <h3 id="伪元素选择器"><a href="#伪元素选择器" class="headerlink" title="伪元素选择器"></a>伪元素选择器</h3><h4 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h4><ul>
 <li>定义：表示页面中一些特殊的并不真实存在的元素（特殊的位置）</li>
 <li>语法格式：伪元素使用<code>：：</code>开头</li>
@@ -705,11 +750,11 @@ html代码
 </li>
 <li><p>选择器的权重   优先级从上到下逐渐降低</p>
 <pre class=" language-tex"><code class="language-tex">
-内联样式            1，0，0，0
-i d选择器            0，1，0，0
-类和伪类选择器       0，0，1，0
-元素选择器           0，0，0，1
-通配符选择器           0，0，0，0
+内联样式              1，0，0，0
+id选择器              0，1，0，0
+类和伪类选择器         0，0，1，0
+元素选择器            0，0，0，1
+通配符选择器          0，0，0，0
 继承的样式          没有优先级
 </code></pre>
 </li>
@@ -717,11 +762,15 @@ i d选择器            0，1，0，0
 </li>
 <li><p> 比较优先级时，需将所有的选择器的优先级相加，最后优先级越高，则越优先显示</p>
 </li>
-<li><p>分组选择器单独计算</p>
+<li><p>分组选择器单独计算 按位比较</p>
 </li>
 <li><p>选择器的累加不会超过其最大的数量级（类选择器再高也不会超过id选择器）</p>
 </li>
-<li><p> 可以在某一个样式后添加( ! important )则此样式会获得最高的优先级，甚至超过内联样式（一般不会使用）</p>
+<li><p>可以在某一个样式后添加( ! important )则此样式会获得最高的优先级，甚至超过内联样式（一般不会使用）</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">p </span><span class="token punctuation">{</span>
+  color：blue ! important <span class="token punctuation">;</span>   
+<span class="token punctuation">}</span>
+</code></pre>
 </li>
 </ul>
 
@@ -1502,7 +1551,7 @@ i d选择器            0，1，0，0
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">29.3k</span>
+                        class="white-color">30.8k</span>
             
             
             
