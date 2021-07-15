@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="markdown语法规则">
+    <meta name="keywords" content="flex弹性盒及弹性样式属性">
     <meta name="description" content="世界不停转动，直到我们相逢">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>MarkDown基本语法 | doNow</title>
+    <title>弹性盒模型flex | doNow</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -268,12 +268,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/codehan045/imags/img/flex.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">MarkDown基本语法</h1>
+                    <h1 class="description center-align post-title">弹性盒模型flex</h1>
                 </div>
             </div>
         </div>
@@ -389,8 +389,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/markdown/">
-                                <span class="chip bg-color">markdown</span>
+                            <a href="/tags/layout/">
+                                <span class="chip bg-color">layout</span>
                             </a>
                         
                     </div>
@@ -401,8 +401,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%BC%96%E8%BE%91%E8%AF%AD%E6%B3%95/" class="post-category">
-                                编辑语法
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                web前端
                             </a>
                         
                     </div>
@@ -414,28 +414,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-20
+                    2021-07-15
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-05
+                    2021-07-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    512
+                    787
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -460,148 +460,123 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h2><p>示例:</p>
-<pre class=" language-html"><code class="language-html"># 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-##### 六级标题
-快捷键：ctrl+1/2/3/4/5/6
-</code></pre>
-<p>效果如下：</p>
-<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h5 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h5><h2 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h2><ul>
-<li><p>加粗</p>
-<p><strong>helllo,world!</strong>  粗体两边加两个*</p>
+                <h1 id="弹性盒，伸缩盒-：flex"><a href="#弹性盒，伸缩盒-：flex" class="headerlink" title="弹性盒，伸缩盒 ：flex"></a>弹性盒，伸缩盒 ：flex</h1><h2 id="弹性盒模型"><a href="#弹性盒模型" class="headerlink" title="弹性盒模型"></a>弹性盒模型</h2><ul>
+<li><p> Css的又一种布局手段，主要用来代替浮动来完成页面的布局</p>
 </li>
-<li><p>斜体</p>
-<p><em>helllo,world!</em>     斜体两边加一个*</p>
-</li>
-<li><p>斜体加粗</p>
-<p><em><strong>helllo,world!</strong></em>   两边加三个*</p>
-</li>
-<li><p>删除线</p>
-<p><del>helllo,world!</del>   两边加两个~</p>
+<li><p>flex 可以使元素具有弹性，让元素可以随页面大小的改变而改变</p>
 </li>
 </ul>
-<h2 id="三、引用"><a href="#三、引用" class="headerlink" title="三、引用"></a>三、引用</h2><p>在引用的文字前加&gt;,引用可以嵌套，如加2个&gt;&gt;…n个</p>
-<p>示例：</p>
-<pre class=" language-html"><code class="language-html">>引用的内容
->>引用的内容
->>>>> 引用的内容
-</code></pre>
-<blockquote>
-<p>引用的内容</p>
-<blockquote>
-<p>引用的内容</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>引用的内容</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<h2 id="四、分割线"><a href="#四、分割线" class="headerlink" title="四、分割线"></a>四、分割线</h2><p>三个或三个以上的 - 或*都可以</p>
-<p>示例：</p>
-<pre class=" language-html"><code class="language-html">---
------
-***
-*****
-</code></pre>
-<p>效果如下：</p>
-<p>显示效果都一样</p>
-<hr>
-<hr>
-<hr>
-<hr>
-<h2 id="五、图片"><a href="#五、图片" class="headerlink" title="五、图片"></a>五、图片</h2><p>语法示例：</p>
-<pre class=" language-html"><code class="language-html">![图片名字](图片地址)
-![截图](C:\Users\hlr\Pictures\Saved Pictures\ChMlWl5hrNmIYramABUgQn9ogqQAANkvAHHF0EAFSBa744.jpg)
-</code></pre>
-<p>效果如下</p>
-<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/%E8%A1%A8%E6%83%85%E5%8C%85%E4%BD%9C%E4%B8%9A.jpg"></p>
-<h2 id="六、超链接"><a href="#六、超链接" class="headerlink" title="六、超链接"></a>六、超链接</h2><p>语法：</p>
-<pre class=" language-html"><code class="language-html">[超链接名称](超链接地址)
-</code></pre>
-<p>示例：</p>
-<pre class=" language-html"><code class="language-html">[百度](http://baidu.com)
-[简书](http://jianshu.com)
-</code></pre>
-<p>效果如下：</p>
-<p><a href="www.baidu.com">百度</a></p>
-<p><a target="_blank" rel="noopener" href="http://jianshu.com/">简书</a></p>
-<p><strong>注：</strong>Markdown本身语法不支持链接在新页面打开，有的平台可能不行，若想在新页面中打开可以用html语言的a标签代替</p>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>超链接地址<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>超链接名<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
-示例：
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://baidu.com<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>百度<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
-</code></pre>
-<h2 id="七、列表"><a href="#七、列表" class="headerlink" title="七、列表"></a>七、列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>语法：</p>
-<pre class=" language-html"><code class="language-html">- 列表内容
-+ 列表内容
-* 列表内容
-注：- + * 和内容之间都有一个空格
-    列表可嵌套
-</code></pre>
+<h3 id="弹性容器"><a href="#弹性容器" class="headerlink" title="弹性容器"></a>弹性容器</h3><ul>
+<li><p>要使用弹性盒必须将一个元素设置为弹性容器</p>
+</li>
+<li><p>通过<code>display</code>来设置弹性容器</p>
 <ul>
-<li>列表内容</li>
+<li><code>display：flex;</code>设置块级弹性容器</li>
+<li><code>display：inline-flex;</code> 行内弹性容器</li>
 </ul>
+</li>
+</ul>
+<h3 id="弹性元素"><a href="#弹性元素" class="headerlink" title="弹性元素"></a>弹性元素</h3><ul>
+<li>弹性容器的子元素是弹性元素(弹性项)</li>
+</ul>
+<blockquote>
+<p>一个元素可以同时是弹性容器和弹性元素</p>
+</blockquote>
+<h3 id="弹性容器的样式"><a href="#弹性容器的样式" class="headerlink" title="弹性容器的样式"></a>弹性容器的样式</h3><ul>
+<li><p> <code>flex-direction </code>: 指定弹性容器中弹性元素的排列方式</p>
+</li>
+<li><p>可选值：</p>
 <ul>
-<li>列表内容</li>
+<li><code>row</code> 默认值：弹性元素在容器中水平排列（左——&gt;右）</li>
+<li><code>row-reverse</code>  反向水平排列（右——&gt;左）</li>
+<li><code>column</code> 弹性元素纵向排列（自上而下）</li>
+<li><code>column-reverse</code> 反向纵向排列（自下而上）</li>
 </ul>
+</li>
+<li><p>主轴：弹性元素的排列方向</p>
+</li>
+<li><p>侧轴：与主轴的垂直方向</p>
+</li>
+<li><p><code>flex-wrap</code> 设置弹性元素是否在弹性容器中换行</p>
 <ul>
-<li>列表内容</li>
+<li>可选值：<ul>
+<li><code>nowrap</code>默认值元素不自动换行</li>
+<li><code>wrap</code> 元素沿辅轴方向自动换行</li>
+<li><code>wrap-reverse</code> 元素沿辅轴反方向换行</li>
 </ul>
-<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>语法：</p>
-<pre class=" language-html"><code class="language-html">1. 列表内容
-2. 列表内容
-3. 列表内容
-注： 数字.与内容之间有空格
-</code></pre>
-<ol>
-<li>列表内容</li>
-<li>列表内容</li>
-<li>列表内容</li>
-</ol>
-<h2 id="八、表格"><a href="#八、表格" class="headerlink" title="八、表格"></a>八、表格</h2><p>示例：</p>
-<pre class=" language-html"><code class="language-html">名字|性别|生日
---|--|--
-张三 | 男   | 2021 
-快捷键：ctrl+t
-</code></pre>
-<table>
-<thead>
-<tr>
-<th>名字</th>
-<th>性别</th>
-<th>生日</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>张三</td>
-<td>男</td>
-<td>2021</td>
-</tr>
-</tbody></table>
-<h2 id="九、代码"><a href="#九、代码" class="headerlink" title="九、代码"></a>九、代码</h2><p>语法</p>
-<p>单行代码:代码用  ` 包起来</p>
-<pre class=" language-html"><code class="language-html">`代码内容`
-</code></pre>
-<p>效果如下：</p>
-<p><code> 代码内容</code></p>
-<p>代码块：代码用三个 ` 包起来</p>
-<pre class=" language-java"><code class="language-java">​```
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">{</span>
-    
-<span class="token punctuation">}</span>
-​```
-</code></pre>
-<p>效果如下：</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">{</span>
-    
-<span class="token punctuation">}</span>
-</code></pre>
+</li>
+</ul>
+</li>
+<li><p><code>flex-flow</code>：wrap和direction简写属性，无顺序要求 </p>
+</li>
+<li><p><code>justify-content</code> :分配主轴上的空白空间（主轴上的元素如何排列）</p>
+<ul>
+<li>可选值：<ul>
+<li><code>flex-start</code> 元素沿主轴起边排列</li>
+<li><code>flex-end</code> 元素沿主轴终边排列</li>
+<li><code>space-around</code> 空白分布到元素两侧</li>
+<li><code>space-evenly</code> 空白分布到元素单侧（兼容性差）</li>
+<li><code>space-between</code> 空白均匀分布到元素间</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p> <code>align-items</code>  元素在辅轴上如何对齐</p>
+</li>
+<li><p>可选值：</p>
+</li>
+<li><p><code>stretch</code> 默认值 将元素长度设置为相同值（同一行）</p>
+</li>
+<li><p><code>flex-start</code> 元素不会拉伸，沿辅轴起边对齐</p>
+</li>
+<li><p><code>flex-end </code>  元素不会拉伸，沿辅轴终边对齐</p>
+</li>
+<li><p><code>center</code>   元素不会拉伸，沿辅轴居中对齐</p>
+</li>
+<li><p><code>baseline </code> 沿基线对齐</p>
+</li>
+<li><p><code>align-content</code> 辅轴空白空间的分布与<code>justify-content</code>用法相同</p>
+</li>
+<li><p> 对单个弹性元素进行设置</p>
+</li>
+<li><p><code>align-self</code>用来覆盖当前弹性元素上的<code>align-item</code></p>
+</li>
+</ul>
+<h3 id="弹性元素样式"><a href="#弹性元素样式" class="headerlink" title="弹性元素样式"></a>弹性元素样式</h3><ul>
+<li><p><code>flex-basis</code> 元素的基础长度，指的是元素在主轴上的基础长度</p>
+<ul>
+<li>主轴是横向 指元素的宽度</li>
+<li>主轴是纵向，指元素的高度</li>
+<li>默认值：<code>auto </code>表示参考元素自身的高度和宽度<ul>
+<li>若传递了一个具体数值，则以该值为准</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>flex-grow</code> ：指定弹性元素的伸展系数，按比例分</p>
+<ul>
+<li>当父元素有多余的空间时，会按照比例进行分配</li>
+<li>子元素如何伸展 0 不伸展</li>
+</ul>
+</li>
+<li><p><code>flex-shrink </code>指定弹性元素的收缩系数（计算比较复杂）</p>
+<ul>
+<li>当父元素不能容纳所有子元素，对元素进行收缩</li>
+<li>缩减多少是根据缩减系数和元素大小来计算的</li>
+</ul>
+</li>
+<li><p><code>flex</code> 可设置弹性元素的所有三个样式</p>
+<ul>
+<li>语法: flex 增长 缩减 基础长度</li>
+</ul>
+</li>
+</ul>
+<p>​            initial–(flex:0 1 auto)</p>
+<p>​            auto  –(flex:1 1 auto)</p>
+<p>​            none  –(flex:0 0 auto) 无弹性</p>
+<ul>
+<li><code>order</code> 决定弹性元素的排列顺序</li>
+</ul>
 
                 
             </div>
@@ -628,7 +603,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://codehan045.github.io/posts/4a098468.html">https://codehan045.github.io/posts/4a098468.html</a>
+                    <a href="https://codehan045.github.io/posts/807df34f.html">https://codehan045.github.io/posts/807df34f.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -666,8 +641,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/markdown/">
-                                    <span class="chip bg-color">markdown</span>
+                                <a href="/tags/layout/">
+                                    <span class="chip bg-color">layout</span>
                                 </a>
                             
                         </div>
@@ -1105,17 +1080,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/fd6cf457.html">
+                <a href="/posts/807df34f.html">
                     <div class="card-image">
                         
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/flex.jpg" class="responsive-img" alt="弹性盒模型flex">
                         
-                        <img src="/medias/loading.gif" data-original="/medias/featureimages/0.jpg" class="responsive-img" alt="java基础语法">
-                        
-                        <span class="card-title">java基础语法</span>
+                        <span class="card-title">弹性盒模型flex</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1125,26 +1100,27 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/java%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    java基础
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
+                    <a href="/tags/layout/">
+                        <span class="chip bg-color">layout</span>
                     </a>
                     
                 </div>
@@ -1158,13 +1134,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/4abf35f0.html">
+                <a href="/posts/293f1d94.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/loading.gif" data-original="/medias/featureimages/3.jpg" class="responsive-img" alt="jdbc数据库连接方式迭代">
+                        <img src="/medias/loading.gif" data-original="/medias/featureimages/10.jpg" class="responsive-img" alt="CSS过渡、动画、关键帧">
                         
-                        <span class="card-title">jdbc数据库连接方式迭代</span>
+                        <span class="card-title">CSS过渡、动画、关键帧</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1175,14 +1151,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-14
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/" class="post-category">
-                                    数据库连接
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
@@ -1192,8 +1168,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/jdbc/">
-                        <span class="chip bg-color">jdbc</span>
+                    <a href="/tags/css3/">
+                        <span class="chip bg-color">css3</span>
                     </a>
                     
                 </div>

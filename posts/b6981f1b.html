@@ -428,14 +428,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    2.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    8 分
                 </div>
                 
 
@@ -742,8 +742,51 @@ html代码
 <span class="token punctuation">}</span>
 </code></pre>
 <h2 id="选择器的权重及样式继承"><a href="#选择器的权重及样式继承" class="headerlink" title="选择器的权重及样式继承"></a>选择器的权重及样式继承</h2><h4 id="样式的继承"><a href="#样式的继承" class="headerlink" title="样式的继承"></a>样式的继承</h4><ul>
-<li>概念：我们为一个元素设置样式同时也会应用到它的后代元素上， 发生在祖先元素和后代元素之间。</li>
-<li>注：并不是所有的样式都会被继承，比如：背景相关的布局，定位属性，盒子模型属性</li>
+<li><p>概念：我们为一个元素设置样式同时也会应用到它的后代元素上， 发生在祖先元素和后代元素之间。</p>
+</li>
+<li><p>注：并不是所有的样式都会被继承</p>
+</li>
+<li><p>继承分为两种：</p>
+<ul>
+<li><p>自动继承：子元素不需要重复这个样式，可以自动从父元素上继承样式</p>
+</li>
+<li><p>手动继承：子元素通过重复设置这个样式，指定从父元素上继承样式；</p>
+<p>属性值设置为<code>inherit </code>：继承父元素的该属性的属性值</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="哪些属性可以自动继承"><a href="#哪些属性可以自动继承" class="headerlink" title="哪些属性可以自动继承"></a>哪些属性可以自动继承</h4><ul>
+<li><p>文本样式可以被自动继承</p>
+<ul>
+<li><code>color</code></li>
+<li><code>text-align</code></li>
+<li><code>line-height</code></li>
+<li><code>text-decoration</code></li>
+<li><code>letter-spacing</code></li>
+<li><code>word-spacing</code></li>
+<li><code>text-indent</code></li>
+<li><code>text-transform</code></li>
+</ul>
+</li>
+<li><p>font系统字体样式可以被自动继承</p>
+<ul>
+<li><code>font-family</code></li>
+<li><code>font-size</code></li>
+<li><code>font-weight</code></li>
+<li><code>font-style</code></li>
+</ul>
+</li>
+<li><p><code>list-style</code>属性可以让<code>li</code>标签自动从<code>ul</code>标签上自动继承</p>
+</li>
+<li><p>鼠标样式 <code>cursor</code> 可以被自动继承</p>
+<pre class=" language-css"><code class="language-css"><span class="token property">cursor</span> <span class="token punctuation">:</span> pointer <span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">/*抓手 */</span>
+</code></pre>
+</li>
+</ul>
+<h4 id="哪些属性不能被自动继承"><a href="#哪些属性不能被自动继承" class="headerlink" title="哪些属性不能被自动继承"></a>哪些属性不能被自动继承</h4><ul>
+<li><code>width</code>、<code>height</code> 、<code>margin</code>、<code> padding</code>、<code>border</code></li>
+<li>背景相关的布局，定位属性，盒子模型属性</li>
 </ul>
 <h4 id="选择器的权重"><a href="#选择器的权重" class="headerlink" title="选择器的权重"></a>选择器的权重</h4><ul>
 <li><p>问题来源：样式冲突,通过不同的选择器选中相同的元素，并为相同的样式设置不同的值时</p>
@@ -766,11 +809,38 @@ id选择器              0，1，0，0
 </li>
 <li><p>选择器的累加不会超过其最大的数量级（类选择器再高也不会超过id选择器）</p>
 </li>
-<li><p>可以在某一个样式后添加( ! important )则此样式会获得最高的优先级，甚至超过内联样式（一般不会使用）</p>
+<li><p>可以在某一个样式后添加( ! important )则此样式会获得最高的优先级，甚至超过内联样式（一般不会使用）不会遵循权重大小的计算，用多了样式没有规律，计算权重比较麻烦，维护性下降。慎用</p>
 <pre class=" language-css"><code class="language-css"><span class="token selector">p </span><span class="token punctuation">{</span>
   color：blue ! important <span class="token punctuation">;</span>   
 <span class="token punctuation">}</span>
 </code></pre>
+<h5 id="选择器的计算方案："><a href="#选择器的计算方案：" class="headerlink" title="选择器的计算方案："></a>选择器的计算方案：</h5><h6 id="加法运算"><a href="#加法运算" class="headerlink" title="加法运算"></a>加法运算</h6></li>
+<li><p>就是将所有的选择器的权重相加，对比大小</p>
+<ul>
+<li><p>内联样式默认值为1000</p>
+</li>
+<li><p>id选择器的权重为100</p>
+</li>
+<li><p>类（属性）选择器的权重为10</p>
+</li>
+<li><p>标签选择器的权重为1</p>
+</li>
+<li><p>继承的属性权重为0</p>
+</li>
+</ul>
+<blockquote>
+<p>将所有基础选择器的权重相加，进行大小对比，谁大权重更高，但是不满足满10进1 的规则</p>
+</blockquote>
+<h6 id="4个0"><a href="#4个0" class="headerlink" title="4个0"></a>4个0</h6><p>（0，0，0，0）</p>
+<ul>
+<li>第一个0：代表内联样式，有则为1，无则为0</li>
+<li>第二个0：代表id选择器的个数</li>
+<li>第三个0：代表类（属性）选择器的个数</li>
+<li>第四个0：代表标签选择器的个数</li>
+</ul>
+<blockquote>
+<p>从第一个0开始进行对比，值大的权重更高，如果相同，对比第二0，依次类推，如果最后一个0也相等，权重大小一样，后面的选择器会盖住前面选择器样式。</p>
+</blockquote>
 </li>
 </ul>
 
@@ -1551,7 +1621,7 @@ id选择器              0，1，0，0
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">30.8k</span>
+                        class="white-color">32.3k</span>
             
             
             
