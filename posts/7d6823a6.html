@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="jdbc数据库连接方式迭代, java mysql javascript jdbc javaweb">
+    <meta name="keywords" content="BFC、IFC">
     <meta name="description" content="世界不停转动，直到我们相逢">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>jdbc数据库连接方式迭代 | doNow</title>
+    <title>FC详解与应用 | doNow</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -268,12 +268,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/codehan0417/imags/img/bfc.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">jdbc数据库连接方式迭代</h1>
+                    <h1 class="description center-align post-title">FC详解与应用</h1>
                 </div>
             </div>
         </div>
@@ -389,8 +389,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/jdbc/">
-                                <span class="chip bg-color">jdbc</span>
+                            <a href="/tags/layout/">
+                                <span class="chip bg-color">layout</span>
                             </a>
                         
                     </div>
@@ -401,8 +401,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/" class="post-category">
-                                数据库连接
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                web前端
                             </a>
                         
                     </div>
@@ -414,28 +414,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-19
+                    2021-07-19
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-19
+                    2021-07-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    626
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    7 分
                 </div>
                 
 
@@ -460,118 +460,196 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="jdbc数据库连接方式（迭代）"><a href="#jdbc数据库连接方式（迭代）" class="headerlink" title="jdbc数据库连接方式（迭代）"></a>jdbc数据库连接方式（迭代）</h2><h4 id="方式五为最终版本"><a href="#方式五为最终版本" class="headerlink" title="方式五为最终版本"></a>方式五为最终版本</h4><h3 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h3><pre class=" language-java"><code class="language-java">    <span class="token annotation punctuation">@Test</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> SQLException <span class="token punctuation">{</span>
-<span class="token comment" spellcheck="true">//        1.获取Driver的实现类对象</span>
-        Driver driver <span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">com<span class="token punctuation">.</span>mysql<span class="token punctuation">.</span>jdbc<span class="token punctuation">.</span>Driver</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//url:http://localhost:8080/gmail/key.jpg</span>
-<span class="token comment" spellcheck="true">//        jdbc:mysql:协议</span>
-<span class="token comment" spellcheck="true">//        localhost:ip地址</span>
-<span class="token comment" spellcheck="true">//        3306  默认mysql端口号</span>
-<span class="token comment" spellcheck="true">//        test:test数据库</span>
-        String                           url<span class="token operator">=</span><span class="token string">"jdbc:mysql://localhost:3306/test"</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//        将用户名和密码封装在Properties</span>
-        Properties info<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Properties</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        
-        info<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span><span class="token string">"user"</span><span class="token punctuation">,</span> <span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        info<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span><span class="token string">"password"</span><span class="token punctuation">,</span><span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        Connection con<span class="token operator">=</span>driver<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>info<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>con<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-</code></pre>
-<h3 id="方式二"><a href="#方式二" class="headerlink" title="方式二"></a>方式二</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//    方式二  对方式一的迭代</span>
-<span class="token comment" spellcheck="true">//    在如下的程序中不出现第三方的API,使程序具有更好的可移植性</span>
-    <span class="token annotation punctuation">@Test</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testConnections</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
-<span class="token comment" spellcheck="true">//    1.获取Driver实现类对象，使用反射</span>
-     Class <span class="token class-name">cla</span><span class="token operator">=</span>Class<span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span><span class="token string">"com.mysql.jdbc.Driver"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-     Driver driver<span class="token operator">=</span><span class="token punctuation">(</span>Driver<span class="token punctuation">)</span>cla<span class="token punctuation">.</span><span class="token function">newInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-     
-<span class="token comment" spellcheck="true">//     2.提供连接的数据库</span>
-     String url<span class="token operator">=</span><span class="token string">"jdbc:mysql://localhost:3306/test"</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//     3.提供连接需要的用户名和密码</span>
-     Properties info<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Properties</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-     info<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span><span class="token string">"user"</span><span class="token punctuation">,</span> <span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-     info<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span><span class="token string">"password"</span><span class="token punctuation">,</span> <span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//     4.获取连接</span>
-     Connection con<span class="token operator">=</span>driver<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> info<span class="token punctuation">)</span><span class="token punctuation">;</span>
-     System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>con<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-</code></pre>
-<h3 id="方式三"><a href="#方式三" class="headerlink" title="方式三"></a>方式三</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//    方式三：使用DriverManager替换Driver</span>
-    <span class="token annotation punctuation">@Test</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testConnection3</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
-        
-<span class="token comment" spellcheck="true">//        1.获取Driver 实现类对象</span>
-        Class <span class="token class-name">clazz</span><span class="token operator">=</span>Class<span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span><span class="token string">"com.mysql.jdbc.Driver"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        Driver driver<span class="token operator">=</span><span class="token punctuation">(</span>Driver<span class="token punctuation">)</span>clazz<span class="token punctuation">.</span><span class="token function">newInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        
-<span class="token comment" spellcheck="true">//        2.提供另外三个连接信息</span>
-        String url<span class="token operator">=</span><span class="token string">"jdbc:mysql://localhost:3306/test"</span><span class="token punctuation">;</span>
-        String user<span class="token operator">=</span><span class="token string">"root"</span><span class="token punctuation">;</span>
-        String password<span class="token operator">=</span><span class="token string">"root"</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//        注册驱动</span>
-        DriverManager<span class="token punctuation">.</span><span class="token function">registerDriver</span><span class="token punctuation">(</span>driver<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//        获取连接</span>
-        Connection con<span class="token operator">=</span>DriverManager<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>user<span class="token punctuation">,</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>con<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-</code></pre>
-<h3 id="方式四"><a href="#方式四" class="headerlink" title="方式四"></a>方式四</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//    方式四：可以只是加载驱动，不用显示的注册驱动了</span>
-    <span class="token annotation punctuation">@Test</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testConnection4</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
-<span class="token comment" spellcheck="true">//    1.提供三个连接的基本信息</span>
-        String url<span class="token operator">=</span><span class="token string">"jdbc:mysql://localhost:3306/test"</span><span class="token punctuation">;</span>
-        String user<span class="token operator">=</span><span class="token string">"root"</span><span class="token punctuation">;</span>
-        String password<span class="token operator">=</span><span class="token string">"root"</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//    2.加载Driver</span>
-        Class<span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span><span class="token string">"com.mysql.jdbc.Driver"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//        相较于方式三，可以省略如下操作</span>
-<span class="token comment" spellcheck="true">//        Driver driver=(Driver)clazz.newInstance();</span>
-<span class="token comment" spellcheck="true">//        注册驱动</span>
-<span class="token comment" spellcheck="true">//        DriverManager.registerDriver(driver);</span>
-<span class="token comment" spellcheck="true">//        为什么可以：</span>
-        
-        <span class="token comment" spellcheck="true">/*在MySQL的Driver实现类中声明了静态代码块来实现注册驱动
-         * 
-         */</span>
-<span class="token comment" spellcheck="true">//    3.获取连接</span>
-        Connection con<span class="token operator">=</span>DriverManager<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>user<span class="token punctuation">,</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>con<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-</code></pre>
-<h3 id="方式五（最终版本）"><a href="#方式五（最终版本）" class="headerlink" title="方式五（最终版本）"></a>方式五（最终版本）</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//    方式五：将数据库连接需要的4个信息</span>
-    <span class="token comment" spellcheck="true">/*
-     * 好处：
-     * 1.实现了数据与代码的分离，实现了解耦
-     * 2.如果需要修改配置文件信息，可以避免程序重新打包
-     */</span>
-    <span class="token annotation punctuation">@Test</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getConnection5</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
-<span class="token comment" spellcheck="true">//        1.读取配置文件中的4个基本信息</span>
-    InputStream is<span class="token operator">=</span> JdbcCreat1<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">.</span><span class="token function">getClassLoader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getResourceAsStream</span><span class="token punctuation">(</span><span class="token string">"jdbc.properties"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    Properties pro <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Properties</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    pro<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span>is<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    String user<span class="token operator">=</span>pro<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">"user"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    String password<span class="token operator">=</span>pro<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">"password"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    String url<span class="token operator">=</span>pro<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">"url"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    String driverClass<span class="token operator">=</span>pro<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">"driverClass"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//    2.加载驱动</span>
-    Class<span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span>driverClass<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//    3.获取连接</span>
-    Connection con <span class="token operator">=</span> DriverManager<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>user<span class="token punctuation">,</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>con<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+                <p>-</p>
+<h1 id="FC"><a href="#FC" class="headerlink" title="FC"></a>FC</h1><p>在解释什么是BFC之前，我们需要先知道Box、Formatting Context的概念。</p>
+<h3 id="Box：css布局的基本单位"><a href="#Box：css布局的基本单位" class="headerlink" title="Box：css布局的基本单位"></a>Box：css布局的基本单位</h3><p>Box 是 CSS 布局的对象和基本单位， 直观点来说，就是一个页面是由很多个 Box 组成的。元素的类型和 display 属性，决定了这个 Box 的类型。 不同类型的 Box， 会参与不同的 Formatting Context（一个决定如何渲染文档的容器），因此Box内的元素会以不同的方式渲染。让我们看看有哪些盒子：</p>
 <ul>
-<li><p>附带的配置文件</p>
-<pre class=" language-java"><code class="language-java">user<span class="token operator">=</span>root
-password<span class="token operator">=</span>root
-url<span class="token operator">=</span>jdbc<span class="token operator">:</span>mysql<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>localhost<span class="token operator">:</span><span class="token number">3306</span><span class="token operator">/</span>test
-driverClass<span class="token operator">=</span>com<span class="token punctuation">.</span>mysql<span class="token punctuation">.</span>jdbc<span class="token punctuation">.</span>Driver
+<li><p>block-level box:display 属性为 block, list-item, table 的元素，会生成 block-level box。并且参与 block fomatting context；</p>
+</li>
+<li><p>inline-level box:display 属性为 inline, inline-block, inline-table 的元素，会生成 inline-level box。并且参与 inline formatting context；</p>
+</li>
+</ul>
+<h3 id="Formatting-Context"><a href="#Formatting-Context" class="headerlink" title="Formatting Context"></a>Formatting Context</h3><p>Formatting context 是 W3C CSS2.1 规范中的一个概念。它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。最常见的 Formatting context 有 Block fomatting context (简称BFC)和 Inline formatting context (简称IFC)。</p>
+<h2 id="BFC"><a href="#BFC" class="headerlink" title="BFC"></a>BFC</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><blockquote>
+<p>BFC（Block formatting context) 直译为”块级格式化（环境/上下文）。它是一个独立的渲染区域，其中的元素布局是不受外界的影响，并且在一个BFC中，块盒与行盒（行盒由一行中所有的内联元素所组成）都会垂直的沿着其父元素的边框排列。只有Block-level box 参与，它规定了内部的Block-level Box如何布局。</p>
+</blockquote>
+<h3 id="BFC的布局规则"><a href="#BFC的布局规则" class="headerlink" title="BFC的布局规则"></a>BFC的布局规则</h3><p><strong>W3C原文</strong><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210201114826.png"></p>
+<p><strong>翻译为中文</strong></p>
+<ul>
+<li>内部的box会垂直方向上，一个接着一个显示。（标准文档流）</li>
+<li>box垂直方向的距离由margin决定，属于同一个BFC 的两个相邻的盒子的margin会发生重叠。<ul>
+<li>如果两个盒子属于不同的BFC区域，盒子的margin不会发生重叠，外边距重叠问题的解决</li>
+</ul>
+</li>
+<li>每个元素的左外边缘（margin-left）,与包含块的左边相接触（对于从左往右排列的格式化，否则相反）；即使存在浮动也是如此，除非这个元素自己形成了一个新的BFC区域。</li>
+<li>BFC区域不会与float box重叠<ul>
+<li>可以让浮动元素和非浮动元素（BFC）可以同行显示，不会发生重叠</li>
+</ul>
+</li>
+<li>BFC区域就是页面上一个独立的容器，容器里面的子元素不会影响外面的元素，反之亦然；</li>
+<li>计算BFC区域的高度时，浮动元素也参与计算<ul>
+<li>可以解决子元素浮动，父元素高度塌陷问题</li>
+</ul>
+</li>
+</ul>
+<h3 id="如何创建BFC（成为BFC容器）"><a href="#如何创建BFC（成为BFC容器）" class="headerlink" title="如何创建BFC（成为BFC容器）"></a>如何创建BFC（成为BFC容器）</h3><ol>
+<li>float的值不为none（可选值：left，right）</li>
+<li>position的值不是static、relative(可选值：absolute、fixed、sticky)</li>
+<li>display的值为inline-block、table-cell、flex、table-caption、inline-flex</li>
+<li>overflow的值不是visible（可选值：hidden、scroll、auto)</li>
+</ol>
+<h3 id="BFC的应用"><a href="#BFC的应用" class="headerlink" title="BFC的应用"></a>BFC的应用</h3><ul>
+<li><p>场景一：每个元素的左外边缘（margin-left）,与包含块的左边相接触（对于从左往右排列的格式化，否则相反）；即使存在浮动也是如此，除非这个元素自己形成了一个新的BFC区域。</p>
+</li>
+<li><p>场景二：BFC区 域不会与float box重叠，可以用于实现三列布局</p>
+<ul>
+<li>三列布局：左右两边固定，中间自适应</li>
+</ul>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style language-css">
+    <span class="token selector"><span class="token class">.container</span></span><span class="token punctuation">{</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+        <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">1</span>px solid red<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector"><span class="token class">.left</span></span><span class="token punctuation">{</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+        <span class="token property">background-color</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
+        <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector"><span class="token class">.right</span></span><span class="token punctuation">{</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+        <span class="token property">background-color</span><span class="token punctuation">:</span> tomato<span class="token punctuation">;</span>
+        <span class="token property">float</span><span class="token punctuation">:</span> right<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector"><span class="token class">.center</span></span><span class="token punctuation">{</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">300</span>px<span class="token punctuation">;</span>
+        <span class="token property">background-color</span><span class="token punctuation">:</span> yellowgreen<span class="token punctuation">;</span>
+        <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>left<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>right<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>      
 </code></pre>
 </li>
+<li><p>场景三：计算BFC区域的高度时，浮动元素也参与计算</p>
+<ul>
+<li>可以解决子元素浮动，父元素高度塌陷的问题</li>
+</ul>
+<pre class=" language-html"><code class="language-html"><span class="token comment" spellcheck="true">&lt;!-- 计算BFC区域的高度时，浮动元素也参与计算 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style language-css">
+    <span class="token selector"><span class="token class">.container</span></span><span class="token punctuation">{</span>
+        <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">1</span>px solid red<span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">/* BFC容器 */</span>
+        <span class="token comment" spellcheck="true">/* overflow: hidden; */</span>
+        <span class="token comment" spellcheck="true">/* float: left; */</span>
+        <span class="token comment" spellcheck="true">/* position: absolute; */</span>
+        <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector"><span class="token class">.item</span></span><span class="token punctuation">{</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+        <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">1</span>px solid green<span class="token punctuation">;</span>
+        <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre>
+</li>
+<li><p>场景四：box垂直方向的距离由margin决定，属于同一个BFC 的两个相邻的盒子的margin会发生重叠。</p>
+<ul>
+<li>BFC区域可以用来解决margin重叠性问题，将其中一个盒子放进一个新的BFC容器里面</li>
+</ul>
+</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><strong>以上例子都体现了：</strong></p>
+<blockquote>
+<p>BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。</p>
+</blockquote>
+<ul>
+<li>因为BFC内部的元素和外部的元素绝对不会互相影响，因此， 当BFC外部存在浮动时，它不应该影响BFC内部Box的布局，BFC会通过变窄，而不与浮动有重叠。同样的，当BFC内部有浮动时，为了不影响外部元素的布局，BFC计算高度时会包括浮动的高度。避免margin重叠也是这样的一个道理。</li>
+</ul>
+<h2 id="IFC"><a href="#IFC" class="headerlink" title="IFC"></a>IFC</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><blockquote>
+<p>Inline Formating Context(行内格式化上下文)，简称IFC。</p>
+<p>指的是一行的区域的渲染规则，确定了一行中行级元素是如何进行排列，以及对齐方式</p>
+</blockquote>
+<h3 id="IFC区域的特点"><a href="#IFC区域的特点" class="headerlink" title="IFC区域的特点"></a>IFC区域的特点</h3><ul>
+<li><p>在IFC中，盒子水平放置，一个接着一个，从包含块的顶部开始</p>
+</li>
+<li><p>盒子间margin、padding在水平方向有效</p>
+</li>
+<li><p>这些盒子可以通过不同的方式进行对齐：可能通过底部和顶部进行对齐，通过基线进行对齐</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210719112922.png"></p>
+<ul>
+<li>绿色：顶线</li>
+<li>蓝色：中线</li>
+<li>红色：基线</li>
+<li>紫色：底线</li>
+</ul>
+</li>
+<li><p>行盒：IFC负责的矩形区域就叫行盒，指一行的渲染区域，每一行都有多个元素共同组成行盒（line box）</p>
+<ul>
+<li>行盒的宽度：有内容和包含块决定</li>
+<li>行盒的高度：由内部元素共同决定</li>
+</ul>
+</li>
+</ul>
+<h3 id="主要影响IFC布局（行盒高度）的css属性"><a href="#主要影响IFC布局（行盒高度）的css属性" class="headerlink" title="主要影响IFC布局（行盒高度）的css属性"></a>主要影响IFC布局（行盒高度）的css属性</h3><ul>
+<li><code>font-size</code>：不同的字体大小，会影响行盒的高度</li>
+<li><code>font-family</code>：不同的字体类型，会影响行盒的高度</li>
+<li><code>height | line-height</code>：不同的值都会影响行盒的高度</li>
+<li><code>vertical-align</code>：设置元素的对齐的方式，不同的方式也会影响行盒高度</li>
+</ul>
+<h4 id="font-size"><a href="#font-size" class="headerlink" title="font-size"></a>font-size</h4><ul>
+<li>不同的font-size会影响行盒的高度，取较大的那个值</li>
+</ul>
+<h4 id="font-family"><a href="#font-family" class="headerlink" title="font-family"></a>font-family</h4><ul>
+<li>不同的font-family会影响行盒的高度，原因在于，设计时默认了不同的字体有不同的高度</li>
+</ul>
+<h4 id="height-line-height"><a href="#height-line-height" class="headerlink" title="height | line-height"></a>height | line-height</h4><ul>
+<li><p><code>line-height</code>：指的是行高，行高指的是文本最高点到最低点区域。</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210719114155.png"></p>
+</li>
+<li><p><code>height | line-height</code>都会影响行盒的高度，值越大，行盒的高度越高</p>
+</li>
+</ul>
+<h4 id="vertical-align"><a href="#vertical-align" class="headerlink" title="vertical-align"></a>vertical-align</h4><ul>
+<li><p>设置行级元素的垂直对齐方式</p>
+<ul>
+<li><code>baseline</code>:默认值，基线对齐</li>
+<li><code>middle</code>：中线对齐</li>
+<li><code>top</code>：顶线对齐</li>
+<li><code>bottom</code>：底线对齐</li>
+</ul>
+</li>
+</ul>
+<h5 id="文本之间"><a href="#文本之间" class="headerlink" title="文本之间"></a>文本之间</h5><blockquote>
+<p>文字与文字之间的对齐方式，设置这个属性设置参考线，文本默认是 基线和其他元素对齐</p>
+</blockquote>
+<h5 id="文本和图片之间"><a href="#文本和图片之间" class="headerlink" title="文本和图片之间"></a>文本和图片之间</h5><blockquote>
+<p>文本和图片之间的对齐方式，文本默认是以基线和图片默认的底部进行对齐</p>
+</blockquote>
+<ul>
+<li>文字设置<code>vertical-align</code>：图片按照文本的对齐方式（参考线）来对齐</li>
+<li>图片设置<code>vertical-algin</code>：文本按照图片的对齐方式（参考线）来对齐</li>
+</ul>
+<h5 id="表格中文字垂直方向对齐方式"><a href="#表格中文字垂直方向对齐方式" class="headerlink" title="表格中文字垂直方向对齐方式"></a>表格中文字垂直方向对齐方式</h5><blockquote>
+<p>table中文本在垂直方向显示位置，设置单元格中文本在垂直方向的显示位置</p>
+</blockquote>
+<ul>
+<li><code>top</code>：单元格中文本顶对齐</li>
+<li><code>bottom</code>：单元格中文本底对齐</li>
+<li><code>middle</code>：默认，单元格中文本垂直方向上居中对齐</li>
 </ul>
 
                 
@@ -599,7 +677,7 @@ driverClass<span class="token operator">=</span>com<span class="token punctuatio
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://codehan045.github.io/posts/4abf35f0.html">https://codehan045.github.io/posts/4abf35f0.html</a>
+                    <a href="https://codehan045.github.io/posts/7d6823a6.html">https://codehan045.github.io/posts/7d6823a6.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -637,8 +715,8 @@ driverClass<span class="token operator">=</span>com<span class="token punctuatio
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/jdbc/">
-                                    <span class="chip bg-color">jdbc</span>
+                                <a href="/tags/layout/">
+                                    <span class="chip bg-color">layout</span>
                                 </a>
                             
                         </div>
@@ -1076,46 +1154,47 @@ driverClass<span class="token operator">=</span>com<span class="token punctuatio
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/4a098468.html">
+                <a href="/posts/7d6823a6.html">
                     <div class="card-image">
                         
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/bfc.webp" class="responsive-img" alt="FC详解与应用">
                         
-                        <img src="/medias/loading.gif" data-original="/medias/featureimages/7.jpg" class="responsive-img" alt="MarkDown基本语法">
-                        
-                        <span class="card-title">MarkDown基本语法</span>
+                        <span class="card-title">FC详解与应用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            markdown语法详解
+                            BFC详解及应用、IFC说明
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BC%96%E8%BE%91%E8%AF%AD%E6%B3%95/" class="post-category">
-                                    编辑语法
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/markdown/">
-                        <span class="chip bg-color">markdown</span>
+                    <a href="/tags/layout/">
+                        <span class="chip bg-color">layout</span>
                     </a>
                     
                 </div>
@@ -1129,31 +1208,30 @@ driverClass<span class="token operator">=</span>com<span class="token punctuatio
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/5e4eda94.html">
+                <a href="/posts/5d1648de.html">
                     <div class="card-image">
                         
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/phone.webp" class="responsive-img" alt="移动端基础">
                         
-                        <img src="/medias/loading.gif" data-original="/medias/featureimages/0.jpg" class="responsive-img" alt="java概述">
-                        
-                        <span class="card-title">java概述</span>
+                        <span class="card-title">移动端基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简要介绍java产生和发展
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-18
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/java%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    java基础
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
@@ -1163,8 +1241,8 @@ driverClass<span class="token operator">=</span>com<span class="token punctuatio
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
+                    <a href="/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">
+                        <span class="chip bg-color">移动端</span>
                     </a>
                     
                 </div>
