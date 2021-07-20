@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Servlet结构体系, java mysql javascript jdbc javaweb">
+    <meta name="keywords" content="CSS兼容、CSS hack代码、浏览器内核、网页解析">
     <meta name="description" content="世界不停转动，直到我们相逢">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Servlet结构体系 | doNow</title>
+    <title>CSS兼容 | doNow</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -268,12 +268,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/codehan045/imags/img/ser.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/codehan0417/imags/img/iecss.jfif')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Servlet结构体系</h1>
+                    <h1 class="description center-align post-title">CSS兼容</h1>
                 </div>
             </div>
         </div>
@@ -389,8 +389,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/servlet%E7%BB%93%E6%9E%84/">
-                                <span class="chip bg-color">servlet结构</span>
+                            <a href="/tags/CSS%E5%85%BC%E5%AE%B9/">
+                                <span class="chip bg-color">CSS兼容</span>
                             </a>
                         
                     </div>
@@ -401,8 +401,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/servlet/" class="post-category">
-                                servlet
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                web前端
                             </a>
                         
                     </div>
@@ -414,28 +414,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-25
+                    2021-07-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-25
+                    2021-07-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    779
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -460,122 +460,321 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="Servlet整个体系"><a href="#Servlet整个体系" class="headerlink" title="Servlet整个体系"></a>Servlet整个体系</h3><h3 id="1-Servlet结构分析"><a href="#1-Servlet结构分析" class="headerlink" title="1. Servlet结构分析"></a>1. Servlet结构分析</h3><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/Servlet1.png" alt="Servlet结构图"></p>
-<h3 id="2-ServletConfig-类"><a href="#2-ServletConfig-类" class="headerlink" title="2. ServletConfig 类"></a>2. ServletConfig 类</h3><ul>
-<li>Servlet程序的配置信息类</li>
-<li>Servlet 程序和 ServletConfig 对象都是由 Tomcat 负责创建，我们负责使用。 </li>
-<li>Servlet 程序默认是第一次访问的时候创建，ServletConfig 是每个 Servlet 程序创建时，就创建一个对应的 ServletConfig 对 象。 </li>
+                <p>-</p>
+<h1 id="CSS兼容"><a href="#CSS兼容" class="headerlink" title="CSS兼容"></a>CSS兼容</h1><h2 id="兼容性问题来源"><a href="#兼容性问题来源" class="headerlink" title="兼容性问题来源"></a>兼容性问题来源</h2><p>内核是浏览器中最底层、最核心的代码，决定了网页在浏览器如何解析的，网页时如何被加载的。</p>
+<p>不同的浏览器的有不同的内核，每种浏览器对相同的代码有不同的解析方式，最终结果不一样，这种情况就是兼容性问题。</p>
+<p>同一网页在不同浏览器下运行出现的结果不一样，就叫兼容。</p>
+<h3 id="浏览器内核"><a href="#浏览器内核" class="headerlink" title="浏览器内核"></a>浏览器内核</h3><ul>
+<li><p>不同的浏览器内核是不一样。</p>
+</li>
+<li><p>目前主流浏览器：chrome、firfox、opera、IE、safira等</p>
+</li>
+<li><p>国产浏览器：猎豹、360、QQ、搜狗、UC等等，</p>
+</li>
+<li><p>目前国内没有自己的内核，360浏览器推出双核：IE  trident和safira  的webkit 一起集成。</p>
+</li>
 </ul>
-<h4 id="2-1-ServletConfig-类的三大作用"><a href="#2-1-ServletConfig-类的三大作用" class="headerlink" title="2.1  ServletConfig 类的三大作用"></a>2.1  ServletConfig 类的三大作用</h4><ol>
-<li>可以获取Servlet的别名 servlet-name 的值</li>
-<li>获取初始化参数 init-param </li>
-<li>获取 ServletContext 对象 </li>
-</ol>
-<p>xml配置</p>
-<pre class=" language-xml"><code class="language-xml">    <span class="token comment" spellcheck="true">&lt;!--servlet 标签给Tomcat配置Servlet程序--></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet</span><span class="token punctuation">></span></span>
-        <span class="token comment" spellcheck="true">&lt;!--servlet-name 标签 servlet程序起一个别名（一般是类名）--></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-name</span><span class="token punctuation">></span></span>HelloServlet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-name</span><span class="token punctuation">></span></span>
-        <span class="token comment" spellcheck="true">&lt;!--servlet-class 是Servlet程序的全类名--></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-class</span><span class="token punctuation">></span></span>com.han.code.HelloServlet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-class</span><span class="token punctuation">></span></span>
-
-        <span class="token comment" spellcheck="true">&lt;!--init-param是初始化参数--></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>init-param</span><span class="token punctuation">></span></span>
-            <span class="token comment" spellcheck="true">&lt;!--参数名--></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>param-name</span><span class="token punctuation">></span></span>username<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>param-name</span><span class="token punctuation">></span></span>
-            <span class="token comment" spellcheck="true">&lt;!--参数值--></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>param-value</span><span class="token punctuation">></span></span>root<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>param-value</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>init-param</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>init-param</span><span class="token punctuation">></span></span>
-            <span class="token comment" spellcheck="true">&lt;!--参数名--></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>param-name</span><span class="token punctuation">></span></span>url<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>param-name</span><span class="token punctuation">></span></span>
-            <span class="token comment" spellcheck="true">&lt;!--参数值--></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>param-value</span><span class="token punctuation">></span></span>jdbc:mysql://localhost:3306/test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>param-value</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>init-param</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet</span><span class="token punctuation">></span></span>
-</code></pre>
-<p>java类获取</p>
-<pre class=" language-java"><code class="language-java">    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">init</span><span class="token punctuation">(</span>ServletConfig servletConfig<span class="token punctuation">)</span> <span class="token keyword">throws</span> ServletException <span class="token punctuation">{</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"2 init初始化方法"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//        1. 可以获取Servlet的别名 servlet-name 的值</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"HelloServlet类的别名为："</span><span class="token operator">+</span>servletConfig<span class="token punctuation">.</span><span class="token function">getServletName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//        2. 获取初始化参数 init-param</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"初始化参数Username的值为："</span><span class="token operator">+</span>servletConfig<span class="token punctuation">.</span><span class="token function">getInitParameter</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"初始化参数URL的值为："</span><span class="token operator">+</span>servletConfig<span class="token punctuation">.</span><span class="token function">getInitParameter</span><span class="token punctuation">(</span><span class="token string">"url"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//        3. 获取 ServletContext 对象</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>servletConfig<span class="token punctuation">.</span><span class="token function">getServletContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-</code></pre>
+<h3 id="内核的作用"><a href="#内核的作用" class="headerlink" title="内核的作用"></a>内核的作用</h3><ul>
+<li><p>解析网页</p>
 <ul>
-<li>在其他位置也可以使用ServletConfig </li>
+<li>HTML内容解析</li>
+<li>CSS解析</li>
+<li>js解析</li>
 </ul>
-<p>注：重写init方法后</p>
-<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Override</span>
-<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">init</span><span class="token punctuation">(</span>ServletConfig config<span class="token punctuation">)</span> <span class="token keyword">throws</span> ServletException <span class="token punctuation">{</span>
-  <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 重写之后一定要调用父类中的init(ServletConfig)操作</span>
-  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"重写了init方法"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<h3 id="3-ServletContext类"><a href="#3-ServletContext类" class="headerlink" title="3. ServletContext类"></a>3. ServletContext类</h3><h4 id="3-1-什么是ServletContext"><a href="#3-1-什么是ServletContext" class="headerlink" title="3.1 什么是ServletContext"></a>3.1 什么是ServletContext</h4><ol>
-<li>ServletContext 是一个接口， 它表示 Servlet 上下文对象</li>
-<li>一个web工程，只有一个ServletContext对象实例</li>
-<li>ServletContext对象是一个域对象</li>
-<li>ServletContext 是在web工程部署启动的时候创建，在web工程停止的时候销毁</li>
+</li>
+<li><p>内核有个重要的概念：渲染引擎</p>
+</li>
+<li><p>渲染引擎包含几部分：</p>
+<ol>
+<li>HTML解析器：会将html代码解析成一颗DOM树，上面每个节点就是对应的标签</li>
+<li>CSS解析器：将css样式计算出来，内存cpu一起工作</li>
+<li>JavaScript解析器：允许运行js脚本的环境</li>
+<li>布局：主要网页中模块定位、浮动、排列等等。</li>
 </ol>
-<blockquote>
-<p>什么是域对象？</p>
+</li>
+</ul>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210720101108.png" alt="image-20210720093315726"></p>
+<h3 id="网页解析流程（网页是如何解析出来的）"><a href="#网页解析流程（网页是如何解析出来的）" class="headerlink" title="网页解析流程（网页是如何解析出来的）"></a>网页解析流程（网页是如何解析出来的）</h3><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210720101111.png" alt="image-20210720093948257"></p>
+<ol>
+<li><p>加载网页代码</p>
+<ol>
+<li>判断是否是网络资源，是就利用网络模块从网络上获取网页代码</li>
+<li>如果是本地的文件，则直接加载本地 文件代码到内核中</li>
+</ol>
+</li>
+<li><p>经过html解析器，对代码进行解析</p>
+<p>浏览器从代码第一行开始解析，把不同类型的代码交给对应的解析器进行解析</p>
+<ul>
+<li>css代码——&gt; css解析器</li>
+<li>JavaScript代码——&gt; JavaScript解析器</li>
+<li>html代码——&gt;html解析器</li>
+</ul>
+</li>
+<li><p>将各个解析器的结果综合进行梳理（内部表示）</p>
+<p>将标签和对应的css结合起来，每个标签都有自己的渲染对象，里面包含了该标签最终的样式</p>
+</li>
+<li><p>布局和绘图</p>
+<p>会把每个标签的样式、位置绘制在页面上，如果需要使用图片、视频音频等内容，再利用对应的模块来处理，处理完成之后直接显示在页面上。</p>
+</li>
+</ol>
+<h2 id="兼容性问题的处理"><a href="#兼容性问题的处理" class="headerlink" title="兼容性问题的处理"></a>兼容性问题的处理</h2><h3 id="hack代码（针对IE浏览器）"><a href="#hack代码（针对IE浏览器）" class="headerlink" title="hack代码（针对IE浏览器）"></a>hack代码（针对IE浏览器）</h3><blockquote>
+<p>专门针对特定浏览器设置css代码</p>
+<p>针对不同的浏览器或者浏览器不同的版本写不同的代码，这个写css代码的过程称为css  hack。</p>
 </blockquote>
-<p> 域对象，是可以像Map一样存取数据的对象，叫域对象</p>
-<p>这里的域指的是存取数据的操作范围，整个web工程</p>
+<h4 id="CSS-hack分类"><a href="#CSS-hack分类" class="headerlink" title="CSS hack分类"></a>CSS hack分类</h4><h5 id="属性前缀法"><a href="#属性前缀法" class="headerlink" title="属性前缀法"></a>属性前缀法</h5><blockquote>
+<p>属性前缀法是在css代码属性名前添加一些特定浏览器才能识别的hack前缀，以达到预期效果。</p>
+</blockquote>
+<ul>
+<li>缺点：属性前缀只能单个属性设置，多个属性一个一个设置。</li>
+</ul>
 <table>
 <thead>
 <tr>
-<th></th>
-<th>存数据</th>
-<th align="center">取数据</th>
-<th align="center">删除 数据</th>
+<th align="center">hack</th>
+<th align="center">写法</th>
+<th align="center">实例</th>
+<th align="center">IE6 (S)</th>
+<th align="center">IE6 (Q)</th>
+<th align="center">IE7 (S)</th>
+<th align="center">IE7 (Q)</th>
+<th align="center">IE8 (S)</th>
+<th align="center">IE8 (Q)</th>
+<th align="center">IE9 (S)</th>
+<th align="center">IE9 (Q)</th>
+<th align="center">IE10 (S)</th>
+<th align="center">IE10 (Q)</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>Map</td>
-<td>put()</td>
-<td align="center">get()</td>
-<td align="center">remove()</td>
+<td align="center">*</td>
+<td align="center">*color</td>
+<td align="center">青色</td>
+<td align="center">Y</td>
+<td align="center">Y</td>
+<td align="center">Y</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">Y</td>
 </tr>
 <tr>
-<td>域对象</td>
-<td>setAttribute()</td>
-<td align="center">getAttribute()</td>
-<td align="center">removeAttribute()</td>
+<td align="center">+</td>
+<td align="center">+color</td>
+<td align="center">绿色</td>
+<td align="center">Y</td>
+<td align="center">Y</td>
+<td align="center">Y</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">Y</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">-color</td>
+<td align="center">黄色</td>
+<td align="center">Y</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">N</td>
+<td align="center">N</td>
+<td align="center">N</td>
+<td align="center">N</td>
+<td align="center">N</td>
+<td align="center">N</td>
+<td align="center">N</td>
+</tr>
+<tr>
+<td align="center">_</td>
+<td align="center">_color</td>
+<td align="center">蓝色</td>
+<td align="center">Y</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">N</td>
+</tr>
+<tr>
+<td align="center">#</td>
+<td align="center">#color</td>
+<td align="center">紫色</td>
+<td align="center">Y</td>
+<td align="center">Y</td>
+<td align="center">Y</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">Y</td>
+</tr>
+<tr>
+<td align="center">\0</td>
+<td align="center">color:red\0</td>
+<td align="center">红色</td>
+<td align="center">N</td>
+<td align="center">N</td>
+<td align="center">N</td>
+<td align="center">N</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+</tr>
+<tr>
+<td align="center">\9\0</td>
+<td align="center">color:red\9\0</td>
+<td align="center">粉色</td>
+<td align="center">N</td>
+<td align="center">N</td>
+<td align="center">N</td>
+<td align="center">N</td>
+<td align="center">N</td>
+<td align="center">N</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+</tr>
+<tr>
+<td align="center">!important</td>
+<td align="center">color:blue !important; color:green;</td>
+<td align="center">棕色</td>
+<td align="center">N</td>
+<td align="center">N</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">Y</td>
+<td align="center">Y</td>
 </tr>
 </tbody></table>
-<h4 id="3-2-ServletContext类的四个作用"><a href="#3-2-ServletContext类的四个作用" class="headerlink" title="3.2  ServletContext类的四个作用"></a>3.2  ServletContext类的四个作用</h4><ol>
-<li>获取web.xml 中配置的上下文参数context-param</li>
-<li>获取当前的工程路径，格式：/工程路径</li>
-<li>获取工程部署后在服务硬盘上的绝对路径</li>
-<li>像Map一样存取数据</li>
-</ol>
-<pre class=" language-java"><code class="language-java">    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">doGet</span><span class="token punctuation">(</span>HttpServletRequest request<span class="token punctuation">,</span> HttpServletResponse response<span class="token punctuation">)</span> <span class="token keyword">throws</span> ServletException<span class="token punctuation">,</span> IOException <span class="token punctuation">{</span>
-<span class="token comment" spellcheck="true">//        1、获取 web.xml 中配置的上下文参数 context-param</span>
-        ServletContext context <span class="token operator">=</span> <span class="token function">getServletConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getServletContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h5 id="选择器前缀法"><a href="#选择器前缀法" class="headerlink" title="选择器前缀法"></a>选择器前缀法</h5><blockquote>
+<p>通过在css代码的选择器前添加一些特定浏览器能识别的代码。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">语法</th>
+<th align="center">IE6</th>
+<th align="center">IE7</th>
+<th align="center">IE8</th>
+<th align="center">IE9</th>
+<th align="center">IE10</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">* html *</td>
+<td align="center">√</td>
+<td align="center">×</td>
+<td align="center">×</td>
+<td align="center">×</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="center">* +html*+</td>
+<td align="center">×</td>
+<td align="center">√</td>
+<td align="center">×</td>
+<td align="center">×</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="center">@media screen\9{…}</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">×</td>
+<td align="center">×</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="center">@media \0screen{…}</td>
+<td align="center">×</td>
+<td align="center">×</td>
+<td align="center">√</td>
+<td align="center">×</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="center">@media \0screen\ , screen\9{…}</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">×</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="center">@media screen\0{…}</td>
+<td align="center">×</td>
+<td align="center">×</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="center">@media screen and (min-width:0\0){…}</td>
+<td align="center">×</td>
+<td align="center">×</td>
+<td align="center">×</td>
+<td align="center">√</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="center">@media screen and (-ms-hirh-contrast : active) , (-ms-high-contrast:none){…}</td>
+<td align="center">×</td>
+<td align="center">×</td>
+<td align="center">×</td>
+<td align="center">×</td>
+<td align="center">√</td>
+</tr>
+</tbody></table>
+<h5 id="条件注释法"><a href="#条件注释法" class="headerlink" title="条件注释法"></a>条件注释法</h5><blockquote>
+<p>通过注释的语法来完成样式指定版本导入。</p>
+</blockquote>
+<ul>
+<li>gte 大于等于  gt大于  lte小于等于  lt小于   ！否</li>
+</ul>
+<pre><code>只在IE下生效
+&lt;!--[if IE]&gt;
+这段文字只在IE浏览器显示
+&lt;![endif]--&gt;
 
-        String username <span class="token operator">=</span> context<span class="token punctuation">.</span><span class="token function">getInitParameter</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"context-param 参数username的值是："</span><span class="token operator">+</span>username<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"context-param 参数password的值是："</span><span class="token operator">+</span>context<span class="token punctuation">.</span><span class="token function">getInitParameter</span><span class="token punctuation">(</span><span class="token string">"password"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+只在IE6下生效
+&lt;!--[if IE 6]&gt;
+这段文字只在IE6浏览器显示
+&lt;![endif]--&gt;
 
-<span class="token comment" spellcheck="true">//        2、获取当前的工程路径，格式: /工程路径</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"当前工程路径："</span><span class="token operator">+</span>context<span class="token punctuation">.</span><span class="token function">getContextPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//        3、获取工程部署后在服务器硬盘上的绝对路径</span>
-        <span class="token comment" spellcheck="true">/**
-         *   /斜杠被服务器解析地址为：http://ip:port/工程名/     映射到IDEA代码的web目录
-         */</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"工程部署的路径是"</span><span class="token operator">+</span>context<span class="token punctuation">.</span><span class="token function">getRealPath</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+只在IE6以上版本生效
+&lt;!--[if gte IE 6]&gt;
+这段文字只在IE6以上(包括)版本IE浏览器显示
+&lt;![endif]--&gt;
 
-<span class="token comment" spellcheck="true">//        4、像 Map 一样存取数据</span>
-        context<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"key1"</span><span class="token punctuation">,</span><span class="token string">"value1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+只在IE8上不生效
+&lt;!--[if ! IE 8]&gt;
+这段文字在非IE8浏览器显示
+&lt;![endif]--&gt;
 
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Context中获取域数据key1的值 是："</span><span class="token operator">+</span>context<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">"key1"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+非IE浏览器生效
+&lt;!--[if !IE]&gt;
+这段文字只在非IE浏览器显示
+&lt;![endif]--&gt;
 </code></pre>
 
                 
@@ -603,7 +802,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://codehan045.github.io/posts/fd679463.html">https://codehan045.github.io/posts/fd679463.html</a>
+                    <a href="https://codehan045.github.io/posts/8db9e096.html">https://codehan045.github.io/posts/8db9e096.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -641,8 +840,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/servlet%E7%BB%93%E6%9E%84/">
-                                    <span class="chip bg-color">servlet结构</span>
+                                <a href="/tags/CSS%E5%85%BC%E5%AE%B9/">
+                                    <span class="chip bg-color">CSS兼容</span>
                                 </a>
                             
                         </div>
@@ -1080,46 +1279,47 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/a1ede006.html">
+                <a href="/posts/8db9e096.html">
                     <div class="card-image">
                         
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/iecss.jfif" class="responsive-img" alt="CSS兼容">
                         
-                        <img src="/medias/loading.gif" data-original="/medias/featureimages/8.jpg" class="responsive-img" alt="HTTP">
-                        
-                        <span class="card-title">HTTP</span>
+                        <span class="card-title">CSS兼容</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            CSS兼容、CSS hack代码、浏览器内核、网页解析
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/web/" class="post-category">
-                                    web
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/HTTP/">
-                        <span class="chip bg-color">HTTP</span>
+                    <a href="/tags/CSS%E5%85%BC%E5%AE%B9/">
+                        <span class="chip bg-color">CSS兼容</span>
                     </a>
                     
                 </div>
@@ -1133,30 +1333,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/8c470175.html">
+                <a href="/posts/7d6823a6.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/300.jpg" class="responsive-img" alt="Servlet技术">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/bfc.webp" class="responsive-img" alt="FC详解与应用">
                         
-                        <span class="card-title">Servlet技术</span>
+                        <span class="card-title">FC详解与应用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            BFC详解及应用、IFC说明
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/servlet/" class="post-category">
-                                    servlet
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
@@ -1166,8 +1366,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/servlet%E7%A8%8B%E5%BA%8F/">
-                        <span class="chip bg-color">servlet程序</span>
+                    <a href="/tags/layout/">
+                        <span class="chip bg-color">layout</span>
                     </a>
                     
                 </div>
