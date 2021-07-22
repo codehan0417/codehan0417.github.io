@@ -283,104 +283,10 @@
 
 
 
-<main class="post-container content">
+<main class="container content">
 
     
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-<style>
-    #articleContent h1::before,
-    #articleContent h2::before,
-    #articleContent h3::before,
-    #articleContent h4::before,
-    #articleContent h5::before,
-    #articleContent h6::before {
-        display: block;
-        content: " ";
-        height: 100px;
-        margin-top: -100px;
-        visibility: hidden;
-    }
-
-    #articleContent :focus {
-        outline: none;
-    }
-
-    .toc-fixed {
-        position: fixed;
-        top: 64px;
-    }
-
-    .toc-widget {
-        width: 345px;
-        padding-left: 20px;
-    }
-
-    .toc-widget .toc-title {
-        padding: 35px 0 15px 17px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    .toc-widget ol {
-        padding: 0;
-        list-style: none;
-    }
-
-    #toc-content {
-        padding-bottom: 30px;
-        overflow: auto;
-    }
-
-    #toc-content ol {
-        padding-left: 10px;
-    }
-
-    #toc-content ol li {
-        padding-left: 10px;
-    }
-
-    #toc-content .toc-link:hover {
-        color: #42b983;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    #toc-content .toc-link::before {
-        background-color: transparent;
-        max-height: 25px;
-
-        position: absolute;
-        right: 23.5vw;
-        display: block;
-    }
-
-    #toc-content .is-active-link {
-        color: #42b983;
-    }
-
-    #floating-toc-btn {
-        position: fixed;
-        right: 15px;
-        bottom: 76px;
-        padding-top: 15px;
-        margin-bottom: 0;
-        z-index: 998;
-    }
-
-    #floating-toc-btn .btn-floating {
-        width: 48px;
-        height: 48px;
-    }
-
-    #floating-toc-btn .btn-floating i {
-        line-height: 48px;
-        font-size: 1.4rem;
-    }
-</style>
-<div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
+    <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -421,21 +327,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-14
+                    2021-07-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    6 分
                 </div>
                 
 
@@ -462,12 +368,12 @@
             <div id="articleContent">
                 <p>-</p>
 <h2 id="CSS3-过渡（transition"><a href="#CSS3-过渡（transition" class="headerlink" title="CSS3 过渡（transition)"></a>CSS3 过渡（transition)</h2><ul>
-<li>概念 ：通过过渡可以指定一个属性发生变化时的切换方式</li>
+<li>概念 ：通过过渡可以指定某个属性发生变化时的切换方式</li>
 </ul>
 <blockquote>
 <p>注：过渡时，必须是从一个有效值向另外一个有效值进行过渡,谁需要过渡给谁加</p>
 </blockquote>
-<ul>
+<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><ul>
 <li><p><code>transition-property</code>：指定要执行过渡的属性（多个属性之间用 , 隔开）, 若所有属性都需要过渡则使用all</p>
 </li>
 <li><p><code>transition-duration</code> 指定效果的持续时间  时间单位 s 和 ms  1s=1000ms</p>
@@ -490,15 +396,32 @@
 </ul>
 </li>
 <li><p><code>transition-delay</code> ：过渡的效果延迟，等待一段时间后再执行过渡</p>
+<blockquote>
+<p>注：仅仅设置过渡的属性名没有用，需要配合过渡的执行时长一起使用</p>
+<ul>
+<li>多个属性名和多个执行时间一一对应</li>
+<li>当属性名多余执行时长个数时，执行时长重复，一一对应</li>
+</ul>
+</blockquote>
 </li>
 </ul>
+<h4 id="贝塞尔曲线"><a href="#贝塞尔曲线" class="headerlink" title="贝塞尔曲线"></a>贝塞尔曲线</h4><pre class=" language-css"><code class="language-css"><span class="token function">cubic-bezier</span><span class="token punctuation">(</span>x<span class="token number">1</span>,y<span class="token number">1</span>,x<span class="token number">2</span>,y<span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>这个坐标，决定了速度曲线的形状，不同的形状所对应的速度不一样，甚至可以为负</li>
+<li>贝塞尔网址：<a target="_blank" rel="noopener" href="https://cubic-bezier.com/#.35,.74,.84,.21">https://cubic-bezier.com/#.35,.74,.84,.21</a></li>
+<li>直接点击：<a target="_blank" rel="noopener" href="https://cubic-bezier.com/#.35,.74,.84,.21">贝塞尔曲线</a></li>
+</ul>
 <h3 id="简写属性"><a href="#简写属性" class="headerlink" title="简写属性"></a>简写属性</h3><ul>
-<li><code>transition</code>:可以同时设置过渡的相关的所有属性</li>
+<li><code>transition</code>:可以同时设置过渡的相关的所有属性，多个属性过渡用逗号隔开</li>
 </ul>
 <pre class=" language-css"><code class="language-css"><span class="token property">transition</span> <span class="token punctuation">:</span> 要过渡的属性 花费时间 运动曲线 何时开始 <span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/* 多个属性同时执行,中间使用逗号隔开 */</span>
+<span class="token property">transtion</span><span class="token punctuation">:</span> 属性名  执行时长   延迟时长  速率，属性名  执行时长   延迟时长  速率；
 </code></pre>
 <blockquote>
 <p>只有一个要求，若要写延迟，则两个时间中第一个是持续时间，第二个是延迟时间    </p>
+<p>注意：并不是所有属性都可以设置过渡，比如display</p>
 </blockquote>
 <h2 id="CSS3动画（animation"><a href="#CSS3动画（animation" class="headerlink" title="CSS3动画（animation)"></a>CSS3动画（animation)</h2><h3 id="执行步骤"><a href="#执行步骤" class="headerlink" title="执行步骤"></a>执行步骤</h3><ol>
 <li>定义动画关键帧</li>
@@ -608,16 +531,19 @@
 </code></pre>
 </li>
 </ul>
+<blockquote>
+<p>盒子以原来的位置作为参考点，进行平移</p>
+</blockquote>
 <h4 id="旋转："><a href="#旋转：" class="headerlink" title="旋转："></a>旋转：</h4><ul>
 <li><p>通过旋转可以使元素沿x,y,z轴旋转指定角度</p>
 </li>
-<li><p><code>rotateX()</code></p>
+<li><p><code>rotateX(deg)</code>  围绕 x 轴旋转</p>
 </li>
-<li><p><code>rotateY()</code></p>
+<li><p><code>rotateY(deg)</code>  围绕 y 轴旋转</p>
 </li>
-<li><p><code>rotateZ()</code></p>
+<li><p><code>rotateZ(deg) </code>  围绕 z 轴旋转</p>
 </li>
-<li><p><code>rotate3d(x,y,deg)</code></p>
+<li><p><code>rotate3d(x,y,z)</code></p>
 </li>
 <li><p> <code>backface-visibility</code> 是否显示元素背面</p>
 </li>
@@ -626,6 +552,11 @@
 <li><p><code>visible</code> 显示</p>
 </li>
 </ul>
+<blockquote>
+<p>围绕中心点进行旋转</p>
+<p>正值：顺时针</p>
+<p>负值：逆时针</p>
+</blockquote>
 <h4 id="缩放："><a href="#缩放：" class="headerlink" title="缩放："></a>缩放：</h4><ul>
 <li><p>对元素进行放大缩小</p>
 <ul>
@@ -647,13 +578,61 @@
 </ul>
 </li>
 </ul>
-<h4 id="综合简写"><a href="#综合简写" class="headerlink" title="综合简写"></a>综合简写</h4><pre class=" language-css"><code class="language-css"><span class="token property">transform</span> <span class="token punctuation">:</span> <span class="token function">translate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token function">rotate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token function">scale</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ；
+<blockquote>
+<p>值大于1放大，值为0  消失  值为0-1  缩小</p>
+</blockquote>
+<h3 id="倾斜（斜切）"><a href="#倾斜（斜切）" class="headerlink" title="倾斜（斜切）"></a>倾斜（斜切）</h3><ul>
+<li><p>可以让元素沿着x轴或y轴进行倾斜转换，skew来控制</p>
+</li>
+<li><p>语法：</p>
+<pre class=" language-css"><code class="language-css">沿着x轴和y轴进行倾斜
+<span class="token property">transform</span><span class="token punctuation">:</span><span class="token function">skew</span><span class="token punctuation">(</span>角度<span class="token number">1</span>，角度<span class="token number">2</span><span class="token punctuation">)</span>；
+沿着x轴倾斜
+<span class="token property">transfrom</span><span class="token punctuation">:</span><span class="token function">skew</span><span class="token punctuation">(</span>角度<span class="token punctuation">)</span>；
+<span class="token property">transfrom</span><span class="token punctuation">:</span><span class="token function">skewX</span><span class="token punctuation">(</span>角度<span class="token punctuation">)</span>；
+沿着y轴倾斜
+<span class="token property">transfrom</span><span class="token punctuation">:</span><span class="token function">skewY</span><span class="token punctuation">(</span>角度<span class="token punctuation">)</span>；
+</code></pre>
+<ul>
+<li>skewX：沿着x轴进行倾斜，角度越大，越接近于x轴，当角度为90度时，元素会和x轴平行，消失不见</li>
+<li>skewY：沿着Y轴进行倾斜，角度越大，越接近于Y轴，当角度为90度时，元素会和Y轴平行，消失不见</li>
+</ul>
+</li>
+</ul>
+<h3 id="转换基点"><a href="#转换基点" class="headerlink" title="转换基点"></a>转换基点</h3><ul>
+<li><p>基点：进行2D转换的参考点，可以通过<code>transfrom-origin</code>改变转换的参考点的位置</p>
+</li>
+<li><p>语法：</p>
+<pre class=" language-css"><code class="language-css"><span class="token property">transfrom-origin</span><span class="token punctuation">:</span>x   y；
+x代表在x轴上的位置，y代表在y轴上位置
+</code></pre>
+<ul>
+<li>单词：left  right  center  top  bottom  两两搭配使用</li>
+<li>像素</li>
+<li>百分比 </li>
+<li>默认值为盒子的中心点，center center  或 50%    50%</li>
+</ul>
+</li>
+<li><p>注意：</p>
+<ul>
+<li>针对旋转和缩放来说，因为转换和中心点有关，所以改变转换基点是会受影响</li>
+<li>针对位移来说，位移是参考原来的位置进行移动，跟转换基点无关，所以不会受影响</li>
+<li>设置转换基点时，在元素改变前的样式设置转换基点，因为默认元素的转换基点是中心点，如果在改变样式时进行设置，那么转换基点会从中心点变为指定的点，样式会发生错乱</li>
+</ul>
+</li>
+</ul>
+<h3 id="组合变换"><a href="#组合变换" class="headerlink" title="组合变换"></a>组合变换</h3><ul>
+<li><p>在进行2D转换时，会将多个2D转换组合起来使用，中间使用空格隔开</p>
+<pre class=" language-css"><code class="language-css"><span class="token property">transform</span> <span class="token punctuation">:</span> <span class="token function">translate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token function">rotate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token function">scale</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ；
 <span class="token property">transform</span><span class="token punctuation">:</span> translate<span class="token number">3</span><span class="token function">d</span><span class="token punctuation">(</span>x,y,z<span class="token punctuation">)</span>
 </code></pre>
+</li>
+</ul>
 <ol>
 <li>空格隔开</li>
 <li>属性值的顺序影响效果</li>
 <li>位移要放在前面</li>
+<li>旋转会改变坐标轴的方向</li>
 </ol>
 
                 
@@ -1173,7 +1152,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            弹性盒、弹性容器、弹性元素
                         
                     </div>
                     <div class="publish-info">
@@ -1314,100 +1293,6 @@
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // modify the toc link href to support Chinese.
-        let i = 0;
-        let tocHeading = 'toc-heading-';
-        $('#toc-content a').each(function () {
-            $(this).attr('href', '#' + tocHeading + (++i));
-        });
-
-        // modify the heading title id to support Chinese.
-        i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
-            $(this).attr('id', tocHeading + (++i));
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
-
     
 
 </main>
@@ -1432,7 +1317,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">37.2k</span>
+                        class="white-color">43.1k</span>
             
             
             

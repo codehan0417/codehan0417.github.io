@@ -421,21 +421,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-15
+                    2021-07-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    805
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    6 分
                 </div>
                 
 
@@ -460,19 +460,51 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="弹性盒，伸缩盒-：flex"><a href="#弹性盒，伸缩盒-：flex" class="headerlink" title="弹性盒，伸缩盒 ：flex"></a>弹性盒，伸缩盒 ：flex</h1><h2 id="弹性盒模型"><a href="#弹性盒模型" class="headerlink" title="弹性盒模型"></a>弹性盒模型</h2><ul>
-<li><p> Css的又一种布局手段，主要用来代替浮动来完成页面的布局</p>
+                <h1 id="弹性盒，伸缩盒模型-：flex"><a href="#弹性盒，伸缩盒模型-：flex" class="headerlink" title="弹性盒，伸缩盒模型 ：flex"></a>弹性盒，伸缩盒模型 ：flex</h1><h2 id="传统布局"><a href="#传统布局" class="headerlink" title="传统布局"></a>传统布局</h2><ul>
+<li><p>基于盒模型，依赖display+ float +position进行页面布局</p>
 </li>
-<li><p>flex 可以使元素具有弹性，让元素可以随页面大小的改变而改变</p>
+<li><p>这种布局兼容性好，但是布局比较繁琐。</p>
 </li>
 </ul>
-<h3 id="弹性容器"><a href="#弹性容器" class="headerlink" title="弹性容器"></a>弹性容器</h3><ul>
+<h4 id="不便："><a href="#不便：" class="headerlink" title="不便："></a>不便：</h4><ul>
+<li>div同行显示设置float或是设置display：inline-block</li>
+<li>清除浮动,高度塌陷</li>
+<li>各种居中对齐</li>
+<li>margin重叠</li>
+</ul>
+<blockquote>
+<p>css3 提供了一套自适应布局模式——弹性布局，它替代或辅助传统布局。</p>
+</blockquote>
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ul>
+<li>弹性盒模型是一种当页面需要适应不同 的屏幕大小以及设备类型时确保元素拥有恰当行为的一种布局方式。</li>
+<li>提供了一种更加有效的方式来控制一个容器里面的子元素进行排列、对齐、分配空白空间。对移动端友好。</li>
+</ul>
+<h2 id="弹性盒模型结构"><a href="#弹性盒模型结构" class="headerlink" title="弹性盒模型结构"></a>弹性盒模型结构</h2><p>弹性盒模型是由弹性容器和弹性项目构成。</p>
+<ul>
+<li>弹性容器：包含弹性项目的父元素<ul>
+<li>特点：<ul>
+<li>弹性容器里面的弹性项目同行显示，默认排列不下时，压缩显示</li>
+<li>弹性容器只对自己的子元素有效</li>
+<li>弹性容器对自己的兄弟元素没有影响</li>
+<li>对于弹性容器来说，高度可以自适应，无需设置高度</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>弹性项目：弹性容器里面的每个子元素都是弹性项目。</li>
+</ul>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210721104621.png" alt="image-20210721104621498"></p>
+<ul>
+<li>主轴：弹性项目一行显示的轴是主轴</li>
+<li>侧轴：与主轴垂直方向上是侧轴</li>
+</ul>
+<h2 id="弹性盒"><a href="#弹性盒" class="headerlink" title="弹性盒"></a>弹性盒</h2><h3 id="弹性容器-父元素"><a href="#弹性容器-父元素" class="headerlink" title="弹性容器(父元素)"></a>弹性容器(父元素)</h3><ul>
 <li><p>要使用弹性盒必须将一个元素设置为弹性容器</p>
 </li>
 <li><p>通过<code>display</code>来设置弹性容器</p>
 <ul>
-<li><code>display：flex;</code>设置块级弹性容器</li>
-<li><code>display：inline-flex;</code> 行内弹性容器</li>
+<li><code>display：flex;</code>设置块级弹性容器，会将盒子变为块级的弹性容器，对其他的兄弟标签来说，就是一个普通的块级标签，对其子元素来说，该盒子是他们弹性容器。</li>
+<li><code>display：inline-flex;</code> 行内弹性容器，会将盒子变为行内块级的弹性容器，对其他的兄弟标签来说，就是一个普通的行内块级标签，对其子元素来说，该盒子是他们弹性容器。</li>
 </ul>
 </li>
 </ul>
@@ -482,23 +514,18 @@
 <blockquote>
 <p>一个元素可以同时是弹性容器和弹性元素</p>
 </blockquote>
-<h3 id="弹性容器的样式"><a href="#弹性容器的样式" class="headerlink" title="弹性容器的样式"></a>弹性容器的样式</h3><ul>
-<li><p> <code>flex-direction </code>: 指定弹性容器中弹性元素的排列方式</p>
-</li>
-<li><p>可选值：</p>
-<ul>
+<h3 id="弹性容器的样式"><a href="#弹性容器的样式" class="headerlink" title="弹性容器的样式"></a>弹性容器的样式</h3><h4 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction "></a><code>flex-direction </code></h4><ul>
+<li>  指定弹性容器中弹性元素的排列方式</li>
+<li>可选值：<ul>
 <li><code>row</code> 默认值：弹性元素在容器中水平排列（左——&gt;右）</li>
 <li><code>row-reverse</code>  反向水平排列（右——&gt;左）</li>
 <li><code>column</code> 弹性元素纵向排列（自上而下）</li>
 <li><code>column-reverse</code> 反向纵向排列（自下而上）</li>
 </ul>
 </li>
-<li><p>主轴：弹性元素的排列方向</p>
-</li>
-<li><p>侧轴：与主轴的垂直方向</p>
-</li>
-<li><p><code>flex-wrap</code> 设置弹性元素是否在弹性容器中换行</p>
-<ul>
+</ul>
+<h4 id="flex-wrap"><a href="#flex-wrap" class="headerlink" title="flex-wrap"></a><code>flex-wrap</code></h4><ul>
+<li>设置弹性元素是否在弹性容器中换行<ul>
 <li>可选值：<ul>
 <li><code>nowrap</code>默认值元素不自动换行</li>
 <li><code>wrap</code> 元素沿辅轴方向自动换行</li>
@@ -507,67 +534,107 @@
 </li>
 </ul>
 </li>
-<li><p><code>flex-flow</code>：wrap和direction简写属性，无顺序要求 </p>
+</ul>
+<h4 id="flex-flow"><a href="#flex-flow" class="headerlink" title="flex-flow"></a><code>flex-flow</code></h4><ul>
+<li>wrap和direction简写属性，无顺序要求 </li>
+</ul>
+<h4 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a><code>justify-content</code></h4><ul>
+<li><p>分配主轴上的空白空间（主轴上的元素如何排列）</p>
 </li>
-<li><p><code>justify-content</code> :分配主轴上的空白空间（主轴上的元素如何排列）</p>
+<li><p>可选值：</p>
 <ul>
-<li>可选值：<ul>
-<li><code>flex-start</code> 元素沿主轴起边排列</li>
-<li><code>flex-end</code> 元素沿主轴终边排列</li>
-<li><code>space-around</code> 空白分布到元素两侧</li>
-<li><code>space-evenly</code> 空白分布到元素单侧（兼容性差）</li>
+<li><code>flex-start</code> 元素沿主轴起边排列，空白分布在弹性项的后边</li>
+<li><code>flex-end</code> 元素沿主轴终边排列，空白分布在弹性项的前边</li>
+<li><code>center</code>所有元素在主轴水平居中</li>
+<li><code>space-around</code> 空白分布到元素两侧,首尾是中间的一半</li>
+<li><code>space-evenly</code> 任何两个<code>item</code>之间的间距(以及边缘的空间)是相等的（兼容性差）</li>
 <li><code>space-between</code> 空白均匀分布到元素间</li>
 </ul>
 </li>
 </ul>
-</li>
-<li><p> <code>align-items</code>  元素在辅轴上如何对齐</p>
+<h4 id="align-items针对于-单行flex-item"><a href="#align-items针对于-单行flex-item" class="headerlink" title="align-items针对于 单行flex-item"></a><code>align-items</code>针对于 单行flex-item</h4><ul>
+<li><p> 元素在辅轴上如何对齐</p>
 </li>
 <li><p>可选值：</p>
-</li>
-<li><p><code>stretch</code> 默认值 将元素长度设置为相同值（同一行）</p>
-</li>
-<li><p><code>flex-start</code> 元素不会拉伸，沿辅轴起边对齐</p>
-</li>
-<li><p><code>flex-end </code>  元素不会拉伸，沿辅轴终边对齐</p>
-</li>
-<li><p><code>center</code>   元素不会拉伸，沿辅轴居中对齐</p>
-</li>
-<li><p><code>baseline </code> 沿基线对齐</p>
-</li>
-<li><p><code>align-content</code> 辅轴空白空间的分布与<code>justify-content</code>用法相同</p>
-</li>
-<li><p> 对单个弹性元素进行设置</p>
-</li>
-<li><p><code>align-self</code>用来覆盖当前弹性元素上的<code>align-item</code></p>
+<ul>
+<li><code>stretch</code> 默认值 将元素长度设置为相同值（同一行）注意：弹性项目没有高度，将弹性项目拉伸，占满弹性容器富裕空间</li>
+<li><code>flex-start</code> 元素不会拉伸，沿辅轴起边对齐</li>
+<li><code>flex-end </code>  元素不会拉伸，沿辅轴终边对齐</li>
+<li><code>center</code>   元素不会拉伸，沿辅轴居中对齐</li>
+<li><code>baseline </code> 沿基线对齐</li>
+</ul>
 </li>
 </ul>
-<h3 id="弹性元素样式"><a href="#弹性元素样式" class="headerlink" title="弹性元素样式"></a>弹性元素样式</h3><ul>
-<li><p><code>flex-basis</code> 元素的基础长度，指的是元素在主轴上的基础长度</p>
+<h4 id="align-content针对于多行的flex-item"><a href="#align-content针对于多行的flex-item" class="headerlink" title="align-content针对于多行的flex-item"></a><code>align-content</code>针对于多行的flex-item</h4><ul>
+<li><code>align-content</code> 辅轴空白空间的分布与<code>justify-content</code>用法相同</li>
+</ul>
+<h3 id="弹性元素样式"><a href="#弹性元素样式" class="headerlink" title="弹性元素样式"></a>弹性元素样式</h3><h4 id="对单个弹性元素进行设置"><a href="#对单个弹性元素进行设置" class="headerlink" title="对单个弹性元素进行设置"></a>对单个弹性元素进行设置</h4><ul>
+<li><code>align-self</code>用来覆盖当前弹性元素上的<code>align-item</code>  用法与<code>align-item</code>相同</li>
+</ul>
+<h4 id="flex-basis"><a href="#flex-basis" class="headerlink" title="flex-basis"></a><code>flex-basis</code></h4><ul>
+<li><p>元素的基础长度，指的是元素在主轴上的基础长度</p>
+</li>
+<li><p>主轴是横向 指元素的宽度</p>
+</li>
+<li><p>主轴是纵向，指元素的高度</p>
+</li>
+<li><p>默认值：<code>auto </code>表示参考元素自身的高度和宽度</p>
 <ul>
-<li>主轴是横向 指元素的宽度</li>
-<li>主轴是纵向，指元素的高度</li>
-<li>默认值：<code>auto </code>表示参考元素自身的高度和宽度<ul>
 <li>若传递了一个具体数值，则以该值为准</li>
 </ul>
 </li>
+<li><p>语法：</p>
+<pre class=" language-css"><code class="language-css"><span class="token property">flex-basis</span><span class="token punctuation">:</span>宽度；
+</code></pre>
+<blockquote>
+<p>注意：宽度优先级：flex-basis &gt; width &gt;由内容撑开</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="flex-grow"><a href="#flex-grow" class="headerlink" title="flex-grow"></a><code>flex-grow</code></h4><ul>
+<li><p>指定弹性元素的伸展系数，按比例分,设置弹性项目的弹性因子</p>
+</li>
+<li><p>原理：弹性容器会将多余的空间（富裕空间）按照设置的弹性因子分成等量的几份，分别让弹性项目进行消化，弹性因子大的弹性项目得到的多余的空间越多</p>
+</li>
+<li><p>语法：</p>
+<pre class=" language-css"><code class="language-css"><span class="token property">flex-grow</span><span class="token punctuation">:</span>数字；
+</code></pre>
+<ul>
+<li>默认值为 0</li>
 </ul>
 </li>
-<li><p><code>flex-grow</code> ：指定弹性元素的伸展系数，按比例分</p>
+<li><p>弹性空间的计算公式</p>
+<blockquote>
+<p>弹性项目的弹性空间 = 富裕空间 / 弹性因子总数 * 弹性因子<br>弹性项目的大小= 弹性空间+弹性项目原来的大小</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="flex-shrink"><a href="#flex-shrink" class="headerlink" title="flex-shrink "></a><code>flex-shrink </code></h4><ul>
+<li><p>指定弹性元素的收缩系数,当前容器宽度不够时,弹性项目的收缩因子</p>
+</li>
+<li><p>原理：当弹性容器的宽度容不下当前该行的弹性项目时，就会依赖<code>felx-shrink</code>来压缩弹性项目，达到不换行的目的。flex-shirink会将压缩空间分为等量的，通过减少弹性项目的尺寸</p>
+</li>
+<li><p>缩减多少是根据缩减系数和元素大小来计算的</p>
+</li>
+<li><p>语法</p>
+<pre class=" language-css"><code class="language-css"><span class="token property">flex-shrink</span><span class="token punctuation">:</span>数字；
+</code></pre>
 <ul>
-<li>当父元素有多余的空间时，会按照比例进行分配</li>
-<li>子元素如何伸展 0 不伸展</li>
+<li>默认值为1，设置为0时，相当于不压缩</li>
 </ul>
 </li>
-<li><p><code>flex-shrink </code>指定弹性元素的收缩系数（计算比较复杂）</p>
-<ul>
-<li>当父元素不能容纳所有子元素，对元素进行收缩</li>
-<li>缩减多少是根据缩减系数和元素大小来计算的</li>
-</ul>
+<li><p>压缩公式</p>
+<blockquote>
+<p>弹性项目压缩空间 = （弹性项目的总宽度 - 弹性容器的宽度）/ 压缩因子的总数   *  压缩因子<br>弹性项目的大小 =  弹性项目压缩前的宽度  -  压缩空间  </p>
+</blockquote>
 </li>
-<li><p><code>flex</code> 可设置弹性元素的所有三个样式</p>
-<ul>
+</ul>
+<h4 id="flex"><a href="#flex" class="headerlink" title="flex"></a><code>flex</code></h4><ul>
+<li><p>可设置弹性元素的所有三个样式</p>
+</li>
 <li><p>语法: flex 增长（伸展） 缩减（收缩） 基础长度</p>
+<pre class=" language-css"><code class="language-css"><span class="token property">flex</span><span class="token punctuation">:</span>flex-grow   flex-shrink   flex-basis<span class="token punctuation">;</span>
+</code></pre>
 </li>
 <li><p>initial–(flex:0 1 auto)  默认值</p>
 </li>
@@ -576,12 +643,26 @@
 <li><p>none  –(flex:0 0 auto) 无弹性</p>
 </li>
 </ul>
+<h4 id="order"><a href="#order" class="headerlink" title="order"></a><code>order</code></h4><ul>
+<li><p>决定弹性元素的排列顺序</p>
 </li>
-<li><p><code>order</code> 决定弹性元素的排列顺序</p>
+<li><p>数值越小越靠前 默认为 0,相同数学按照代码结构顺序显示</p>
+</li>
+<li><p>语法：</p>
+<pre class=" language-css"><code class="language-css"><span class="token property">order</span><span class="token punctuation">:</span>数字；
+</code></pre>
+</li>
+<li><p>应用场景</p>
 <ul>
-<li>数值越小越靠前 默认为 0</li>
+<li>鼠标点击拖拽某个元素排在最后</li>
 </ul>
 </li>
+</ul>
+<h2 id="富裕空间"><a href="#富裕空间" class="headerlink" title="富裕空间"></a>富裕空间</h2><ul>
+<li>概念：在弹性容器中，除弹性项目之外的剩余的空间就是富裕空间，主要分为主轴的富裕空间和侧轴的 富裕空间</li>
+</ul>
+<h2 id="弹性空间"><a href="#弹性空间" class="headerlink" title="弹性空间"></a>弹性空间</h2><ul>
+<li>概念：弹性空间是指弹性项目消化的富裕空间，将富裕空间变成弹性项目的一部分</li>
 </ul>
 
                 
@@ -1150,7 +1231,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            CSS3过渡、关键帧（2d\3d）、动画
                         
                     </div>
                     <div class="publish-info">
@@ -1361,7 +1442,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">37.2k</span>
+                        class="white-color">43.1k</span>
             
             
             
