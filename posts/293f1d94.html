@@ -327,21 +327,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-22
+                    2021-07-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    7 分
                 </div>
                 
 
@@ -510,7 +510,9 @@
 </code></pre>
 </li>
 </ul>
-<h2 id="关键帧"><a href="#关键帧" class="headerlink" title="关键帧"></a>关键帧</h2><h3 id="变形平移："><a href="#变形平移：" class="headerlink" title="变形平移："></a>变形平移：</h3><ul>
+<h2 id="关键帧2d-3d"><a href="#关键帧2d-3d" class="headerlink" title="关键帧2d-3d"></a>关键帧2d-3d</h2><h3 id="3d转换基础"><a href="#3d转换基础" class="headerlink" title="3d转换基础"></a>3d转换基础</h3><h4 id="三维坐标系"><a href="#三维坐标系" class="headerlink" title="三维坐标系"></a>三维坐标系</h4><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/%E5%9D%90%E6%A0%87.png"></p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210723102919.png" alt="image-20210723102919886"></p>
+<h3 id="变形平移："><a href="#变形平移：" class="headerlink" title="变形平移："></a>变形平移：</h3><ul>
 <li><p>变形：指通过css来改变元素的形状或位置</p>
 </li>
 <li><p>变形不会影响页面布局</p>
@@ -523,7 +525,7 @@
 </li>
 <li><p><code>translateY()</code> 沿Y轴平移</p>
 </li>
-<li><p><code>translateZ()</code> 沿Z轴平移 调整元素在Z轴的位置，属于立体效果（近大远小）默认网页不支持透视，若需要看见，则必须设置网页视距</p>
+<li><p><code>translateZ()</code> 沿Z轴平移 调整元素在Z轴的位置，属于立体效果（近大远小）默认网页不支持透视，若需要看见，则必须设置网页视距（景深）</p>
 <pre class=" language-css"><code class="language-css">  <span class="token selector">html</span><span class="token punctuation">{</span>
 <span class="token comment" spellcheck="true">/*  设置当前网页的视距为800px 人眼距网页的距离  */</span>
     <span class="token property">perspective</span><span class="token punctuation">:</span><span class="token number">800</span>px<span class="token punctuation">;</span>
@@ -534,16 +536,16 @@
 <blockquote>
 <p>盒子以原来的位置作为参考点，进行平移</p>
 </blockquote>
-<h4 id="旋转："><a href="#旋转：" class="headerlink" title="旋转："></a>旋转：</h4><ul>
+<h4 id="旋转：-坐标轴会改变"><a href="#旋转：-坐标轴会改变" class="headerlink" title="旋转： 坐标轴会改变"></a>旋转： 坐标轴会改变</h4><ul>
 <li><p>通过旋转可以使元素沿x,y,z轴旋转指定角度</p>
 </li>
-<li><p><code>rotateX(deg)</code>  围绕 x 轴旋转</p>
+<li><p><code>rotateX(deg)</code>  围绕 x 轴旋转 </p>
 </li>
 <li><p><code>rotateY(deg)</code>  围绕 y 轴旋转</p>
 </li>
 <li><p><code>rotateZ(deg) </code>  围绕 z 轴旋转</p>
 </li>
-<li><p><code>rotate3d(x,y,z)</code></p>
+<li><p><code>rotate3d(x,y,z,deg)</code> x,y,z是三维坐标系中的一个点，该旋转轴是（0,0,0)与(x,y,z) 连接线</p>
 </li>
 <li><p> <code>backface-visibility</code> 是否显示元素背面</p>
 </li>
@@ -552,11 +554,6 @@
 <li><p><code>visible</code> 显示</p>
 </li>
 </ul>
-<blockquote>
-<p>围绕中心点进行旋转</p>
-<p>正值：顺时针</p>
-<p>负值：逆时针</p>
-</blockquote>
 <h4 id="缩放："><a href="#缩放：" class="headerlink" title="缩放："></a>缩放：</h4><ul>
 <li><p>对元素进行放大缩小</p>
 <ul>
@@ -566,21 +563,56 @@
 </li>
 <li><p><code>scaleY()</code> 垂直方向缩放</p>
 </li>
-<li><p><code>scaleZ()</code> z轴方向缩放</p>
+<li><p><code>scaleZ()</code> z轴方向缩放 厚度</p>
 </li>
 </ul>
-</li>
-<li><p><code>transform-origin</code>：变形原点 默认值 center</p>
-</li>
-<li><p>设置3d变形效果</p>
+<blockquote>
+<p><code>transform-origin</code>：变形原点 默认值 center center center</p>
+</blockquote>
+<pre class=" language-css"><code class="language-css"><span class="token property">transform-origin</span><span class="token punctuation">:</span>x,y,z<span class="token punctuation">;</span>
+</code></pre>
+<blockquote>
+<p>设置3d变形效果,设置某元素的子元素以何种形式在父元素的空间里</p>
+</blockquote>
 <ul>
-<li><code>transform-style</code>:preserve-3d;  默认值为 flat 不显示3d效果</li>
+<li><code>transform-style</code>:preserve-3d;  <ul>
+<li>默认值为 flat 不显示3d效果 ，在2d平面显示</li>
+<li><code>preserve-3d</code> 所有元素在3d空间中呈现</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <blockquote>
 <p>值大于1放大，值为0  消失  值为0-1  缩小</p>
 </blockquote>
+<h3 id="灭点"><a href="#灭点" class="headerlink" title="灭点"></a>灭点</h3><ul>
+<li><p>灭点：是指在动画里视线的消失点</p>
+</li>
+<li><p>perspective-origin可以设置灭点，设置3d盒子的观察位置</p>
+</li>
+<li><p>作用：以不同的角度查看3D盒子</p>
+</li>
+<li><p>语法：</p>
+<pre class=" language-css"><code class="language-css"><span class="token property">perspective-origien</span><span class="token punctuation">:</span>x轴 y轴；
+</code></pre>
+<ul>
+<li>取值：<ul>
+<li>单词：left right  center top bottom 两两搭配使用</li>
+<li>像素</li>
+<li>百分比</li>
+</ul>
+</li>
+<li>默认值：center center，从舞台的正中心点观察盒子，看元素默认时对称</li>
+</ul>
+</li>
+<li><p>注意：</p>
+<ul>
+<li>这个属性设置最大的盒子使用（设置景深的盒子）</li>
+<li>一个3D舞台（设置了景深就创建了一个3D舞台）就有一个灭点。默认灭点是在舞台的中心点，观察者正对着舞台看元素</li>
+</ul>
+</li>
+</ul>
 <h3 id="倾斜（斜切）"><a href="#倾斜（斜切）" class="headerlink" title="倾斜（斜切）"></a>倾斜（斜切）</h3><ul>
 <li><p>可以让元素沿着x轴或y轴进行倾斜转换，skew来控制</p>
 </li>
@@ -1317,7 +1349,7 @@ x代表在x轴上的位置，y代表在y轴上位置
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">43.1k</span>
+                        class="white-color">43.3k</span>
             
             
             
