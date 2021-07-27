@@ -421,21 +421,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-26
+                    2021-07-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    6 分
                 </div>
                 
 
@@ -465,15 +465,33 @@
 <li>flex弹性布局</li>
 <li>less+rem+媒体查询</li>
 <li>混合布局</li>
+<li>好处<ul>
+<li>移动端有良好的用户体验</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>pc端和移动端代码是单独，代码量极大</li>
+</ul>
+</li>
 </ul>
 <h3 id="响应式页面兼容移动端（其次）"><a href="#响应式页面兼容移动端（其次）" class="headerlink" title="响应式页面兼容移动端（其次）"></a>响应式页面兼容移动端（其次）</h3><ul>
 <li>媒体查询</li>
 <li>bootstarp</li>
 </ul>
+<blockquote>
+<p>选择布局方式：页面布局相对比较简单，pc端和移动端布局差异性比较小，可以使用响应式布局，页面布局复杂，pc端和移动端布局没有联系，就使用移动端布局。</p>
+</blockquote>
 <h2 id="流式布局（百分比布局）"><a href="#流式布局（百分比布局）" class="headerlink" title="流式布局（百分比布局）"></a>流式布局（百分比布局）</h2><ul>
-<li><p>流式布局，就是百分比布局，也称非固定像素布局</p>
+<li>流式布局，就是百分比布局，也称非固定像素布局</li>
+<li>通过盒子的宽度设置成百分比来根据屏幕的宽度来进行伸缩，不受固定像素的限制，内容向两侧填充。</li>
+<li>更多用于移动端，移动端的屏幕大小都有差异，为了网页能够适配不同的屏幕，让正常显示</li>
+<li>好处:<ul>
+<li>对不同的屏幕有一定的适应性</li>
+</ul>
 </li>
-<li><p>通过盒子的宽度设置成百分比来根据屏幕的宽度来进行伸缩，不受固定像素的限制，内容向两侧填充。</p>
+<li>缺点：<ul>
+<li>当屏幕宽度足够小，导致内容无法查看</li>
+</ul>
 </li>
 </ul>
 <h2 id="弹性布局flex-弹性盒模型"><a href="#弹性布局flex-弹性盒模型" class="headerlink" title="弹性布局flex(弹性盒模型)"></a>弹性布局flex(弹性盒模型)</h2><ul>
@@ -493,113 +511,165 @@
 <li>rem是相对于根元素<code>html</code>元素的字体大小来计算</li>
 <li>应用：可以通过修改html里面的文字大小来改变页面中元素的大小，可以整体控制</li>
 </ul>
-<h3 id="媒体查询（Media-Query"><a href="#媒体查询（Media-Query" class="headerlink" title="媒体查询（Media Query)"></a>媒体查询（Media Query)</h3><h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><ul>
+<h3 id="媒体查询（Media-Query"><a href="#媒体查询（Media-Query" class="headerlink" title="媒体查询（Media Query)"></a>媒体查询（Media Query)</h3><ul>
+<li>媒体：在网页中媒体指的是各种设备，比如：电视、手机、电脑、打印机等等</li>
+<li>查询：检测当前的屏幕属于哪种设备，以及属于哪种类型，根据这些信息我们采用对应的css代码，能够实现在不同 的屏幕上有不同的用户体验（页面效果）</li>
+</ul>
+<h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><ul>
 <li>使用<code>@media</code>查询,可以针对不同的媒体类型定义不同的样式</li>
 <li><code>@media</code>可以针对不同的屏幕尺寸设置不同的样式</li>
-<li>重置浏览器大小的过程中，页面也会根据浏览器的宽度和高度 重新渲染页面</li>
+<li>重置浏览器页面大小的过程中，页面也会根据浏览器的宽度和高度 重新渲染页面</li>
 <li>一般按照从小到大的顺序来 </li>
 </ul>
-<h4 id="语法规范"><a href="#语法规范" class="headerlink" title="语法规范"></a>语法规范</h4><pre class=" language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@media</span> mediatype and|not|only   <span class="token punctuation">(</span>media feature<span class="token punctuation">)</span></span>  <span class="token punctuation">{</span>
-    css-code<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<ul>
-<li>用<code>@media</code>开头，注意@符号</li>
-<li><code>mdiatype</code> 媒体类型(查询类型)<ul>
-<li><code>all</code>：用于所有设备</li>
-<li><code>print</code> 用于打印机和打印预览</li>
-<li><code>screen</code> 用于电脑屏幕，平板电脑，智能手机等</li>
-</ul>
-</li>
-<li>关键字 :将媒体类型或多个媒体特性连接到一起作为媒体查询的条件<ul>
-<li><code>and</code> ：可以将多个媒体特性连接到一起，相当于 ‘ 且 ‘ 的意思</li>
-<li> <code>not</code> ：排除某个媒体特性，相当于  ‘非’ 的意思，可以省略</li>
-<li><code>only</code> ：指定某个特定的媒体类型，可以省略</li>
-</ul>
-</li>
-<li><code>media feature</code> 媒体特性，必须有小括号包含<ul>
-<li><code>width</code> ：定义输出设备中页面可见区域的宽度</li>
-<li><code>min-width</code> ：定义输出设备中页面的最小可见区域宽度</li>
-<li><code>max-width</code>：定义输出设备中页面最大可见区域宽度 小于等于max-width     </li>
-</ul>
-</li>
-</ul>
-<h4 id="引入资源（了解）"><a href="#引入资源（了解）" class="headerlink" title="引入资源（了解）"></a>引入资源（了解）</h4><ul>
+<h4 id="语法规范"><a href="#语法规范" class="headerlink" title="语法规范"></a>语法规范</h4><h5 id="引入资源"><a href="#引入资源" class="headerlink" title="引入资源"></a>引入资源</h5><ul>
 <li>当样式比较繁多时，可以针对不同的媒体使用不同的 stylesheets（样式表)</li>
 <li>原理： 直接在link中判断设备的尺寸，然后引入不同的css文件</li>
 </ul>
 <h5 id="语法规范-1"><a href="#语法规范-1" class="headerlink" title="语法规范"></a>语法规范</h5><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">media</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mediatype  and|not|only   (media feature)<span class="token punctuation">"</span></span>  <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mystylesheet.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 </code></pre>
-<h3 id="Less基础"><a href="#Less基础" class="headerlink" title="Less基础"></a>Less基础</h3><h4 id="维护CSS的弊端"><a href="#维护CSS的弊端" class="headerlink" title="维护CSS的弊端"></a>维护CSS的弊端</h4><ul>
-<li>css是一门非编程式语言，没有变量、函数、SCOPE(作用域) 等概念</li>
-<li>css需要书写大量看似没有逻辑的代码，冗余度较高</li>
-<li>不方便维护及扩展，不利于复用</li>
-<li>css没有很好的计算能力</li>
+<h5 id="css编写"><a href="#css编写" class="headerlink" title="css编写"></a>css编写</h5><pre class=" language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@media</span> 媒体类型</span><span class="token punctuation">{</span>
+    <span class="token selector">选择器</span><span class="token punctuation">{</span>
+        css代码
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li>用<code>@media</code>开头，注意@符号</li>
 </ul>
-<h4 id="less-介绍"><a href="#less-介绍" class="headerlink" title="less 介绍"></a>less 介绍</h4><ul>
-<li>Less(Leaner Style Sheets) 是一门CSS扩展语言，成为CSS的预处理器</li>
-<li>在CSS语法基础上，引入了变量，运算以及函数等功能，简化了CSS的编写，降低了CSS的维护成本，写的更少，做的更多</li>
-<li>Less中文网址：<a target="_blank" rel="noopener" href="http://lesscss.cn/">http://lesscss.cn</a></li>
-<li>常见的CSS预处理器：Sass、Less、Stylus</li>
+<h4 id="mdiatype-媒体类型-查询类型"><a href="#mdiatype-媒体类型-查询类型" class="headerlink" title="mdiatype 媒体类型(查询类型)"></a><code>mdiatype</code> 媒体类型(查询类型)</h4><ul>
+<li><code>all</code>：用于所有设备</li>
+<li><code>print</code> 用于打印机和打印预览</li>
+<li><code>screen</code> 用于电脑屏幕，平板电脑，智能手机等</li>
 </ul>
-<h4 id="Less使用"><a href="#Less使用" class="headerlink" title="Less使用"></a>Less使用</h4><blockquote>
-<p>创建后缀名为less的文件，在这个文件里面书写less语句</p>
+<table>
+<thead>
+<tr>
+<th align="center">值</th>
+<th align="center">设备类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">All</td>
+<td align="center">所有设备</td>
+</tr>
+<tr>
+<td align="center">Print</td>
+<td align="center">打印设备</td>
+</tr>
+<tr>
+<td align="center">Screen</td>
+<td align="center">电脑显示器，彩色屏幕</td>
+</tr>
+<tr>
+<td align="center">Braille</td>
+<td align="center">盲人用点字法触觉回馈设备</td>
+</tr>
+<tr>
+<td align="center">Embossed</td>
+<td align="center">盲文打印机</td>
+</tr>
+<tr>
+<td align="center">Handhelp</td>
+<td align="center">便携设备</td>
+</tr>
+<tr>
+<td align="center">Projection</td>
+<td align="center">投影设备</td>
+</tr>
+<tr>
+<td align="center">Speech</td>
+<td align="center">语音或者音频合成器</td>
+</tr>
+<tr>
+<td align="center">Tv</td>
+<td align="center">电视类型设备</td>
+</tr>
+<tr>
+<td align="center">Try</td>
+<td align="center">电传打印机或者终端</td>
+</tr>
+</tbody></table>
+<h4 id="关键字"><a href="#关键字" class="headerlink" title="关键字 :"></a>关键字 :</h4><blockquote>
+<p>将媒体类型或多个媒体特性连接到一起作为媒体查询的条件</p>
 </blockquote>
 <ul>
-<li><p>less变量</p>
-<ul>
-<li><p>语法:</p>
-<pre class=" language-less"><code class="language-less">@变量名<span class="token punctuation">:</span>值<span class="token punctuation">;</span>
+<li><p><code>and</code> ：可以将多个媒体特性连接到一起，相当于 ‘ 且 ‘ 的意思</p>
+<pre class=" language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@media</span> screen and <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span>750px<span class="token punctuation">)</span> and <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span>1200px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector"><span class="token class">.box</span></span><span class="token punctuation">{</span>
+        <span class="token property">background-color</span><span class="token punctuation">:</span> tomato<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 </li>
-<li><p>变量命名规范</p>
+<li><p><code>,</code>：代表或者的意思，即满足逗号前后任意一个条件即可</p>
 <ul>
-<li>必须有@为前缀</li>
-<li>不能包含特殊字符</li>
-<li>不能以数字开头</li>
-<li>大小写敏感</li>
+<li>注意：逗号前后的媒体类型是独立的</li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="Less的编译"><a href="#Less的编译" class="headerlink" title="Less的编译"></a>Less的编译</h4><ul>
-<li>使用Vscode Less插件—&gt;Easy LESS,安装完之后,重新加载下vscode</li>
-<li>只要保存以下less文件,会自动生成CSS文件</li>
-</ul>
-<h4 id="Less嵌套"><a href="#Less嵌套" class="headerlink" title="Less嵌套"></a>Less嵌套</h4><ul>
-<li>子元素的样式直接写到父元素里面</li>
-<li>伪类选择器,伪元素选择器,需要在前面添加 &amp;</li>
-<li>内层选择器的前面没有 &amp; 符号,则它被解析为 父选择器的后代</li>
-<li>若有 &amp; 符号,它就被解析为父元素自身或父元素的伪类</li>
-</ul>
-<h4 id="Less运算"><a href="#Less运算" class="headerlink" title="Less运算"></a>Less运算</h4><ul>
-<li><p>Less提供了加 减  乘 除 算术运算</p>
-<pre class=" language-css"><code class="language-css">less 里面写
-<span class="token atrule"><span class="token rule">@width</span> <span class="token punctuation">:</span> 10px + 5<span class="token punctuation">;</span></span>
-<span class="token selector">div </span><span class="token punctuation">{</span>
-    <span class="token property">border</span><span class="token punctuation">:</span><span class="token atrule"><span class="token rule">@width</span> solid red<span class="token punctuation">;</span></span>
-<span class="token punctuation">}</span>
-<span class="token selector">生成的css
-div </span><span class="token punctuation">{</span>
-    <span class="token property">border</span><span class="token punctuation">:</span><span class="token number">15</span>px solid red<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-less甚至还可以这样
-<span class="token property">width</span><span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token atrule"><span class="token rule">@width</span> + 5<span class="token punctuation">)</span> * 2<span class="token punctuation">;</span></span>
+<pre class=" language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* , 代表或者的意思 */</span>
+<span class="token comment" spellcheck="true">/* ,前后的设备类型是相互独立 */</span>
+<span class="token atrule"><span class="token rule">@media</span> screen and <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span>750px<span class="token punctuation">)</span>, print and <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span>1200px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector"><span class="token class">.box</span></span><span class="token punctuation">{</span>
+        <span class="token property">background-color</span><span class="token punctuation">:</span> yellowgreen<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> 
 </code></pre>
-<blockquote>
-<p>注:</p>
-<ol>
-<li><p>运算符的左右两侧必须有一个空格隔开</p>
-<ol start="2">
-<li>两个数参与运算,如果只有一个数有单位,则最后的结果就以这个单位为准</li>
-<li> 两个数参与运算,如果2个数都有单位,而且不一样的单位,最后的结果以第一个单位为准</li>
-</ol>
 </li>
-</ol>
-</blockquote>
+<li><p><code>not</code> ：排除某个媒体特性，相当于  ‘非’ 的意思，可以省略</p>
+<pre class=" language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* not 代表非，不是的意思 ，否定的是媒体的特性*/</span>
+<span class="token atrule"><span class="token rule">@media</span> not screen  and  <span class="token punctuation">(</span><span class="token property">width</span><span class="token punctuation">:</span>320px<span class="token punctuation">)</span></span><span class="token punctuation">{</span>
+    <span class="token selector"><span class="token class">.box</span></span><span class="token punctuation">{</span>
+        <span class="token property">background-color</span><span class="token punctuation">:</span> tomato<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> 
+</code></pre>
+</li>
+<li><p><code>only</code> ：指定某个特定的媒体类型</p>
+<ul>
+<li>代表唯一，这个条件放在媒体类型的前面，就是一种修饰的作用，强调</li>
+<li>only在老版本的浏览器，可以用于选择特殊的一些版本，某些浏览器不支持媒体查询，用only排除</li>
+</ul>
 </li>
 </ul>
+<h4 id="media-feature-媒体特性，必须有小括号包含"><a href="#media-feature-媒体特性，必须有小括号包含" class="headerlink" title="media feature 媒体特性，必须有小括号包含"></a><code>media feature</code> 媒体特性，必须有小括号包含</h4><ul>
+<li>概念：媒体特性是指媒体设备的特性，用来描述设备的特点，比如：设备的宽度、高度</li>
+<li>我们可以利用媒体特点来区分pc端还是移动端</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>值</strong></th>
+<th align="center"><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">width</td>
+<td align="center">网页显示区域完全等于设备的宽度</td>
+</tr>
+<tr>
+<td align="center">height</td>
+<td align="center">网页显示区域完全等于设备的高度</td>
+</tr>
+<tr>
+<td align="center">max-width</td>
+<td align="center">网页显示区域小于等于设备宽度</td>
+</tr>
+<tr>
+<td align="center">max-height</td>
+<td align="center">网页显示区域小于等于设备高度</td>
+</tr>
+<tr>
+<td align="center">min-width</td>
+<td align="center">网页显示区域大于等于设备的宽度</td>
+</tr>
+<tr>
+<td align="center">min-height</td>
+<td align="center">网页显示区域大于等于设备的高度</td>
+</tr>
+<tr>
+<td align="center">orientation</td>
+<td align="center">portrait (竖屏模式) | landscape (横屏模式)</td>
+</tr>
+</tbody></table>
 <h3 id="rem适配方案"><a href="#rem适配方案" class="headerlink" title="rem适配方案"></a>rem适配方案</h3><ol>
 <li>让一些不能自适应的元素,达到当设备尺寸发生变化时,等比例适配当前设备</li>
 <li>使用媒体查询根据不同的设备按比例设置html的字体大小,然后页面元素使用rem做单位,当html字体大小变化,元素尺寸也会发生变化,从而达到等比缩放的适配</li>
@@ -614,6 +684,54 @@ less甚至还可以这样
 <li>用屏幕尺寸除以我们划分的份数,得到了html里文字的大小,不同屏幕下得到的文字大小是不一样的</li>
 <li>页面元素的rem值=页面元素在 750像素下的px值 除以  html 里面的文字大小</li>
 </ol>
+<h2 id="响应式布局"><a href="#响应式布局" class="headerlink" title="响应式布局"></a>响应式布局</h2><h3 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h3><ul>
+<li><p>原理：利用媒体查询，实现当使用不同的设备时可以采用不同的css样式，即一套代码，多端使用，同时保证无论哪种设备进行访问时，都有良好的用户体验</p>
+<table>
+<thead>
+<tr>
+<th>设备划分</th>
+<th>尺寸区间</th>
+<th>响应式尺寸设置</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>超小屏幕(手机)</td>
+<td>&lt;768px</td>
+<td>宽度为100%</td>
+</tr>
+<tr>
+<td>小屏设备(平板)</td>
+<td>&gt;=768px~ &lt;992px</td>
+<td>宽度为750px</td>
+</tr>
+<tr>
+<td>中等屏幕（桌面显示器）</td>
+<td>&gt;=992px~&lt;1200px</td>
+<td>宽度为970px</td>
+</tr>
+<tr>
+<td>宽屏设备(大桌面显示器)</td>
+<td>&gt;=1200px</td>
+<td>宽度为1170px</td>
+</tr>
+</tbody></table>
+<ul>
+<li>好处<ul>
+<li>支持不同的屏幕，有很好的适应性</li>
+<li>良好的用户体验</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>大量的css代码，开发难度比较大，维护性下降</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="响应式布局容器"><a href="#响应式布局容器" class="headerlink" title="响应式布局容器"></a>响应式布局容器</h3><ul>
+<li>响应式需要一个父级作为布局容器，来配合子级元素来实现变化效果</li>
+<li>原理：在不同屏幕下，通过媒体查询来改变布局容器的大小，再改变里面子元素的排列方式和大小，从而实现不同屏幕下，看到不同的页面布局和样式变化</li>
+</ul>
 
                 
             </div>
@@ -1117,29 +1235,28 @@ less甚至还可以这样
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/ea92cade.html">
+                <a href="/posts/614a8be5.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/layoutphone.jfif" class="responsive-img" alt="移动端布局">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/less.jfif" class="responsive-img" alt="less基本使用">
                         
-                        <span class="card-title">移动端布局</span>
+                        <span class="card-title">less基本使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            移动端三大布局流式布局、弹性布局、rem适配、媒体查询
+                            less语法、使用
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-25
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-27
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1152,12 +1269,11 @@ less甚至还可以这样
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AFlayout/">
-                        <span class="chip bg-color">移动端layout</span>
+                    <a href="/tags/less/">
+                        <span class="chip bg-color">less</span>
                     </a>
                     
                 </div>
@@ -1393,7 +1509,7 @@ less甚至还可以这样
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">44.8k</span>
+                        class="white-color">46.3k</span>
             
             
             

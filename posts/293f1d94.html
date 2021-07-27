@@ -327,21 +327,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-23
+                    2021-07-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    2.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    8 分
                 </div>
                 
 
@@ -423,8 +423,21 @@
 <p>只有一个要求，若要写延迟，则两个时间中第一个是持续时间，第二个是延迟时间    </p>
 <p>注意：并不是所有属性都可以设置过渡，比如display</p>
 </blockquote>
-<h2 id="CSS3动画（animation"><a href="#CSS3动画（animation" class="headerlink" title="CSS3动画（animation)"></a>CSS3动画（animation)</h2><h3 id="执行步骤"><a href="#执行步骤" class="headerlink" title="执行步骤"></a>执行步骤</h3><ol>
-<li>定义动画关键帧</li>
+<h2 id="CSS3动画（animation"><a href="#CSS3动画（animation" class="headerlink" title="CSS3动画（animation)"></a>CSS3动画（animation)</h2><h3 id="完成自动播放的动画"><a href="#完成自动播放的动画" class="headerlink" title="完成自动播放的动画"></a>完成自动播放的动画</h3><ol>
+<li>编写JavaScript脚本完成自动播放</li>
+<li>可以使用flash技术来完成动画的设计</li>
+<li>可以借助某些动画的标签，比如marquee</li>
+<li>h5提供了canvas技术（绘图技术）完成动画的设计</li>
+<li>css3提供了animation动画可以完成持续自动播放</li>
+</ol>
+<h3 id="执行步骤"><a href="#执行步骤" class="headerlink" title="执行步骤"></a>执行步骤</h3><ol>
+<li>定义动画关键帧<ul>
+<li>指盒子将要发生变化的帧，就是设置需要播放的动画的步骤，一个完整的动画被拆分为多个步骤，将多个步骤组合起来形成的动画，每个步骤就是一个关键帧</li>
+<li>例子：盒子向右移动100px，有两个关键帧，开始状态和结束状态</li>
+<li>例子：盒子变成圆后，向右移动100px，有3个关键帧： 开始状态——变圆——右移100px</li>
+<li>css3 动画：定义关键帧</li>
+</ul>
+</li>
 <li><code>animation</code>使用动画关键帧</li>
 </ol>
 <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><ul>
@@ -465,10 +478,24 @@
 </li>
 <li><p><code>animation-delay：2s;</code> 动画的延时</p>
 </li>
+<li><p><code>animation-timing-function</code>：贝塞尔曲线</p>
+<ul>
+<li><code>ease</code> 默认值 慢速开始，先加速再减速</li>
+<li><code>linear</code> 匀速运动</li>
+<li><code>ease-in</code> 加速运动，低速开始</li>
+<li><code>ease-out</code> 减速运动，低速结束</li>
+<li><code>cubic-bezier(x1,y1,x2,y2)</code> 来指定时序函数,贝塞尔曲线</li>
+<li><code>steps()</code> 分步执行过渡效果<ul>
+<li> <code>steps(2,end)</code> 结束时执行过渡（默认值）</li>
+<li> <code>steps(2,start)</code> 开始时执行过渡</li>
+</ul>
+</li>
+</ul>
+</li>
 <li><p><code>animation-interation-count: </code>动画执行的次数</p>
 <ul>
 <li>可选值：<ul>
-<li>次数 </li>
+<li>次数,数字</li>
 <li><code>infinite </code>无限执行</li>
 </ul>
 </li>
@@ -479,7 +506,7 @@
 <li>可选值：<ul>
 <li><code> normal</code>默认值 从from-to 运行，每次都如此</li>
 <li><code>reverse</code> 从to- from 运行，每次都这样</li>
-<li><code> alternate</code> 从from向to 运行，重复时，反向执行</li>
+<li><code> alternate</code> 从from向to 运行（奇数次），重复时，反向执行(偶数次)</li>
 <li><code> alternate-reverse</code> 从to-from 重复时反向执行</li>
 </ul>
 </li>
@@ -494,7 +521,7 @@
 </li>
 </ul>
 </li>
-<li><p><code>animation-fill-mode</code>：动画填充模式</p>
+<li><p><code>animation-fill-mode</code>：动画填充模式（设置第一帧和最后一帧是否作用在元素上）</p>
 <ul>
 <li>可选值：<ul>
 <li><code>none </code>默认值 动画执行完元素回到原来的位置</li>
@@ -508,6 +535,9 @@
 <li><p><code>animation</code>：简写属性；延时在执行时间之后</p>
 <pre class=" language-css"><code class="language-css"> animation：动画名称 持续时间 运动曲线 何时开始 播放次数 是否反向 是否返回起始点<span class="token punctuation">;</span>   
 </code></pre>
+<blockquote>
+<p>只有一个要求，若要写延迟，则两个时间中第一个是持续时间，第二个是延迟时间    </p>
+</blockquote>
 </li>
 </ul>
 <h2 id="关键帧2d-3d"><a href="#关键帧2d-3d" class="headerlink" title="关键帧2d-3d"></a>关键帧2d-3d</h2><h3 id="3d转换基础"><a href="#3d转换基础" class="headerlink" title="3d转换基础"></a>3d转换基础</h3><h4 id="三维坐标系"><a href="#三维坐标系" class="headerlink" title="三维坐标系"></a>三维坐标系</h4><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/%E5%9D%90%E6%A0%87.png"></p>
@@ -1349,7 +1379,7 @@ x代表在x轴上的位置，y代表在y轴上位置
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">44.8k</span>
+                        class="white-color">46.3k</span>
             
             
             
