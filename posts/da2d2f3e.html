@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CSS选择器, java mysql javascript jdbc javaweb">
+    <meta name="keywords" content="Javascript简介, java mysql javascript jdbc javaweb">
     <meta name="description" content="世界不停转动，直到我们相逢">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>CSS选择器 | doNow</title>
+    <title>Javascript简介 | doNow</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -268,12 +268,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/codehan045/imags/img/select.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210806114939.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CSS选择器</h1>
+                    <h1 class="description center-align post-title">Javascript简介</h1>
                 </div>
             </div>
         </div>
@@ -389,8 +389,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/css%E9%80%89%E6%8B%A9%E5%99%A8/">
-                                <span class="chip bg-color">css选择器</span>
+                            <a href="/tags/javascript/">
+                                <span class="chip bg-color">javascript</span>
                             </a>
                         
                     </div>
@@ -414,28 +414,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-09
+                    2021-08-06
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-20
+                    2021-08-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.4k
+                    690
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    2 分
                 </div>
                 
 
@@ -460,381 +460,70 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h1><h2 id="CSS注释"><a href="#CSS注释" class="headerlink" title="CSS注释"></a>CSS注释</h2><ul>
-<li><p>语法</p>
-<pre class=" language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*   注释内容  */</span>
-</code></pre>
-</li>
-</ul>
-<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h3 id="选择器概述"><a href="#选择器概述" class="headerlink" title="选择器概述"></a>选择器概述</h3><ul>
-<li><p>含义：通过选择器可以选中页面中的指定元素</p>
-<p>比如：</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector">p</span><span class="token punctuation">{</span>
-    <span class="token property">width</span><span class="token punctuation">:</span><span class="token number">200</span>px<span class="token punctuation">;</span>
-    <span class="token property">height</span><span class="token punctuation">:</span><span class="token number">300</span>px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p>它的作用是选中页面中所有的p元素</p>
-</li>
-<li><p>声明块：通过声明块来指定要为元素设置的样式，由一个个声明组成</p>
-</li>
-<li><p>声明式：是一个名值对结构，一个样式名对应一个样式值，名和值之间以 ：连接，以 ; 结尾</p>
-</li>
-<li><p>注：这里的分号: 和 ; 是英文模式下的</p>
-</li>
-</ul>
-<h2 id="常用选择器"><a href="#常用选择器" class="headerlink" title="常用选择器"></a>常用选择器</h2><h3 id="元素选择器"><a href="#元素选择器" class="headerlink" title="元素选择器"></a>元素选择器</h3><ul>
-<li><p> 作用：根据标签名选中指定的元素</p>
-</li>
-<li><p>语法：</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector">标签名 </span><span class="token punctuation">{</span>
-    样式名 <span class="token punctuation">:</span> 样式值 <span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector">例：
-p </span><span class="token punctuation">{</span>
-    <span class="token property">width</span> <span class="token punctuation">:</span> <span class="token number">100</span>px <span class="token punctuation">;</span>
-    <span class="token property">display</span> <span class="token punctuation">:</span> flex <span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-</li>
-</ul>
-<h3 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h3><ul>
-<li><p>作用：根据元素的id属性值选中一个元素</p>
-</li>
-<li><p>命名规则：由数字、字母、下划线_ 和 - 构成，不能以数字开头，不能包含特殊字符</p>
-</li>
-<li><p>语法：</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token id">#id</span>属性值 </span><span class="token punctuation">{</span>
-   样式名 <span class="token punctuation">:</span> 样式值 ；
-<span class="token punctuation">}</span>
-<span class="token selector"><span class="token id">#box</span></span><span class="token punctuation">{</span>
-    
-<span class="token punctuation">}</span>
-html代码
-&lt;div id=<span class="token string">"box"</span>>hello &lt;/div>
-</code></pre>
-</li>
-</ul>
-<h3 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h3><ul>
-<li><p>作用：根据元素的class属性值选中一组元素</p>
-</li>
-<li><p>class是一个标签的属性，和id类似，不同的是class可以重复使用</p>
-</li>
-<li><p>在标签中可以为同一个元素指定多个class属性，class属性之间用空格隔开</p>
-</li>
-<li><p>语法：</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.class</span>属性值 </span><span class="token punctuation">{</span>
-   样式名 <span class="token punctuation">:</span> 样式值 ；
-<span class="token punctuation">}</span>
-<span class="token selector"><span class="token class">.box</span></span><span class="token punctuation">{</span>
-    
-<span class="token punctuation">}</span>
-html代码
-&lt;div class=<span class="token string">"box"</span>>hello &lt;/div>
-</code></pre>
-</li>
-</ul>
-<h3 id="适配选择器"><a href="#适配选择器" class="headerlink" title="适配选择器"></a>适配选择器</h3><ul>
-<li><p>作用：选中页面中的所有元素</p>
-</li>
-<li><p>应用：去除页面中所有元素的浏览器默认的样式</p>
-</li>
-<li><p>语法：</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector">* </span><span class="token punctuation">{</span>
-   样式名 <span class="token punctuation">:</span> 样式值 <span class="token punctuation">;</span> 
-<span class="token punctuation">}</span>
-</code></pre>
-</li>
-</ul>
-<h3 id="复合选择器"><a href="#复合选择器" class="headerlink" title="复合选择器"></a>复合选择器</h3><h4 id="交集选择器"><a href="#交集选择器" class="headerlink" title="交集选择器"></a>交集选择器</h4><ul>
-<li><p>作用：选中同时符合多个条件的元素</p>
-</li>
-<li><p>注：交集选择器中如果有元素选择器，必须使用元素选择器开头</p>
-</li>
-<li><p>语法：选择器之间没有任何连接符</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector">选择器1选择器2选择器3<span class="token class">.....n</span> </span><span class="token punctuation">{</span>
-    
-<span class="token punctuation">}</span>
-</code></pre>
-</li>
-</ul>
-<h4 id="并集选择器（选择器分组）"><a href="#并集选择器（选择器分组）" class="headerlink" title="并集选择器（选择器分组）"></a>并集选择器（选择器分组）</h4><ul>
-<li><p>作用：同时选择多个选择器对应的元素</p>
-</li>
-<li><p>语法：选择器之间使用逗号连接</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector">选择器1,选择器2,选择器3,<span class="token class">...</span>选择器n </span><span class="token punctuation">{</span>
-    
-<span class="token punctuation">}</span>
-</code></pre>
-</li>
-</ul>
-<h3 id="关系选择器"><a href="#关系选择器" class="headerlink" title="关系选择器"></a>关系选择器</h3><h4 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h4><ul>
-<li>父元素：直接包含子元素的元素</li>
-<li>子元素：直接被父元素包含的元素</li>
-<li>祖先元素：直接或间接包含后代元素<ul>
-<li>一个元素的父元素也是他的祖先元素</li>
+                <p>-</p>
+<h1 id="javascript简介"><a href="#javascript简介" class="headerlink" title="javascript简介"></a>javascript简介</h1><h2 id="语言"><a href="#语言" class="headerlink" title="语言"></a>语言</h2><ul>
+<li>语言的发展： <ul>
+<li>纸带机：机器语言</li>
+<li>汇编语言：符号语言</li>
+<li>现代语言：高级语言</li>
 </ul>
 </li>
-<li>后代元素：直接或间接被祖先元素包含的元素<ul>
-<li>子元素也是后代元素</li>
 </ul>
+<h2 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h2><ul>
+<li><p>诞生于1995年，主要用于处理网页中的前端验证</p>
 </li>
-<li>兄弟元素：拥有相同父元素的元素</li>
-</ul>
-<h4 id="子元素选择器"><a href="#子元素选择器" class="headerlink" title="子元素选择器"></a>子元素选择器</h4><ul>
-<li><p>作用：选中指定父元素的指定子元素</p>
-</li>
-<li><p>语法：</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector">父元素>子元素 </span><span class="token punctuation">{</span>
-    
-<span class="token punctuation">}</span>
-</code></pre>
-</li>
-</ul>
-<h4 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h4><ul>
-<li><p>作用：选中指定元素内的指定后代元素</p>
-</li>
-<li><p>语法：元素之间使用空格连接</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector">祖先  后代 </span><span class="token punctuation">{</span>
-    
-<span class="token punctuation">}</span>
-</code></pre>
-</li>
-</ul>
-<h4 id="兄弟选择器"><a href="#兄弟选择器" class="headerlink" title="兄弟选择器"></a>兄弟选择器</h4><ul>
-<li><p>作用：选择下一个兄弟元素</p>
-</li>
-<li><p>语法： </p>
-<pre class=" language-css"><code class="language-css"><span class="token selector">前一个+后一个  </span><span class="token punctuation">{</span>
-    
-<span class="token punctuation">}</span>
-</code></pre>
-</li>
-<li><p>作用：选择下边所有的相同标签的兄弟元素</p>
-</li>
-<li><p>语法：</p>
-<pre class=" language-css"><code class="language-css">兄~弟
-</code></pre>
-</li>
-</ul>
-<h4 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h4><ul>
-<li>根据标签上属性名或属性值找到对应的标签</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>选择器</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>[属性名]</code></td>
-<td>用于选取带有指定属性的元素。</td>
-</tr>
-<tr>
-<td><code>[属性名=属性值]</code></td>
-<td>用于选取带有指定属性和值的元素。（精确匹配）</td>
-</tr>
-<tr>
-<td><code>[属性名*=属性值]</code></td>
-<td>匹配属性值中包含指定值的某个元素。（模糊匹配）</td>
-</tr>
-<tr>
-<td><code>[属性名~=属性值]</code></td>
-<td>用于选取属性值中包含指定词汇的元素。</td>
-</tr>
-<tr>
-<td><code>[属性名|=属性值]</code></td>
-<td>用于选取带有以指定值开头的属性值的元素，该值必须是整个单词。</td>
-</tr>
-<tr>
-<td><code>[属性名^=属性值]</code></td>
-<td>匹配属性值以指定值开头的每个元素。</td>
-</tr>
-<tr>
-<td><code>[属性名$=属性值]</code></td>
-<td>匹配属性值以指定值结尾的每个元素。</td>
-</tr>
-</tbody></table>
-<h2 id="伪类及伪元素"><a href="#伪类及伪元素" class="headerlink" title="伪类及伪元素"></a>伪类及伪元素</h2><h3 id="伪类（不存在的类，特殊的类）"><a href="#伪类（不存在的类，特殊的类）" class="headerlink" title="伪类（不存在的类，特殊的类）"></a>伪类（不存在的类，特殊的类）</h3><h4 id="一般使用"><a href="#一般使用" class="headerlink" title="一般使用"></a>一般使用</h4><ul>
-<li><p>含义:描述一个元素的特殊状态</p>
-</li>
-<li><p>用法（语法）</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector">选择器：first-child </span><span class="token punctuation">{</span>
-    
-<span class="token punctuation">}</span>
-</code></pre>
-<ol>
-<li><code>:first-child</code> 找到满足条件的标签，并且这个标签是某个标签的第一个子元素</li>
-<li><code>:last-child</code>最后一个元素</li>
-<li><code>:nth-child(n)</code> 选中第n个子元素</li>
-<li><code>:nth-last-child(n)</code>选中倒数的第几个元素<ul>
-<li> 特殊值：</li>
-<li>n 第n个 n的范围0~正无穷</li>
-<li>even/2n选中偶数位的元素</li>
-<li>odd/2n+1 选中奇数位的元素</li>
-</ul>
-</li>
-<li><code> :first-of-type</code>  同类型元素的第一个子元素</li>
-<li><code>:last-of-type</code>  同类型元素的最后一个子元素 </li>
-<li><code>:nth-of-type(n)</code>  同类型元素的第n个子元素</li>
-<li><code>:nth-last-of-type(n)</code>同类型的倒数第n个元素</li>
-<li><code>:not</code> 否定伪类，将符合条件的元素从选择器中去除</li>
-<li><code>:focus</code>向拥有键盘输入焦点的标签添加样式</li>
-</ol>
-</li>
-</ul>
-<p>注 ：<strong>上述5，6 、7、8几个伪类的功能与1，2，3、4类似，不同点是5，6、7、8是在同类型元素中进行排序</strong></p>
-<h4 id="a标签的伪类"><a href="#a标签的伪类" class="headerlink" title="a标签的伪类"></a>a标签的伪类</h4><ul>
-<li><p><code>:link</code> 用来表示没访问过的链接(正常的链接) a标签独有</p>
-</li>
-<li><p><code>:visited</code> 表示访问过的链接 （由于隐私原因，visited这个伪类只能修改链接的颜色 a标签独有</p>
-</li>
-<li><p><code>:hover</code> 表示鼠标移入的状态</p>
-</li>
-<li><p><code>:active</code>用来表示鼠标点击</p>
-<pre class=" language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* 未被访问的超链接的样式 */</span>
-<span class="token selector">a<span class="token pseudo-class">:link</span> </span><span class="token punctuation">{</span>
-    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">/* 被访问过的超链接的样式 */</span>
-<span class="token selector">a<span class="token pseudo-class">:visited</span> </span><span class="token punctuation">{</span>
-    <span class="token property">color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">/* 鼠标移入超链接时，作用的样式 */</span>
-<span class="token comment" spellcheck="true">/* hover必须当中link和visited之后 */</span>
-<span class="token selector">a<span class="token pseudo-class">:hover</span> </span><span class="token punctuation">{</span>
-    <span class="token property">color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">/* 超链接被点击时的样式，鼠标按住不放时样式 */</span>
-<span class="token comment" spellcheck="true">/* active必须放在hover之后 */</span>
-<span class="token selector">a<span class="token pseudo-class">:active</span> </span><span class="token punctuation">{</span>
-    <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-</li>
-</ul>
-<blockquote>
-<p>注意：设置超链接的样式时，注意样式的作用顺序，hover必须放在link和visited之后，active必须放在hover之后（顺序：L-V-H-A）</p>
-</blockquote>
-<h3 id="伪元素选择器"><a href="#伪元素选择器" class="headerlink" title="伪元素选择器"></a>伪元素选择器</h3><h4 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h4><ul>
-<li>定义：表示页面中一些特殊的并不真实存在的元素（特殊的位置）</li>
-<li>语法格式：伪元素使用<code>：：</code>开头</li>
-</ul>
-<h5 id="常见伪元素"><a href="#常见伪元素" class="headerlink" title="常见伪元素"></a>常见伪元素</h5><ol>
-<li><code>::first-letter</code> 表示第一个字母</li>
-<li><code>::first-line</code>  表示第一行</li>
-<li><code>::selection</code> 表示选中的内容</li>
-<li><code>::before</code>  元素的开始</li>
-<li><code>::after</code> 元素的最后</li>
-</ol>
-<p><strong>注：</strong>4,5必须结合content属性来使用</p>
-<p>格式</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> <span class="token pseudo-element">::before</span> </span><span class="token punctuation">{</span>
-    <span class="token property">content</span><span class="token punctuation">:</span><span class="token string">"}"</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<h2 id="选择器的权重及样式继承"><a href="#选择器的权重及样式继承" class="headerlink" title="选择器的权重及样式继承"></a>选择器的权重及样式继承</h2><h4 id="样式的继承"><a href="#样式的继承" class="headerlink" title="样式的继承"></a>样式的继承</h4><ul>
-<li><p>概念：我们为一个元素设置样式同时也会应用到它的后代元素上， 发生在祖先元素和后代元素之间。</p>
-</li>
-<li><p>注：并不是所有的样式都会被继承</p>
-</li>
-<li><p>继承分为两种：</p>
+<li><p>前端验证：指检查用户输入的内容是否符合一定的规则</p>
 <ul>
-<li><p>自动继承：子元素不需要重复这个样式，可以自动从父元素上继承样式</p>
+<li>例如：用户名的长度，密码长度，邮箱的格式等</li>
+</ul>
 </li>
-<li><p>手动继承：子元素通过重复设置这个样式，指定从父元素上继承样式；</p>
-<p>属性值设置为<code>inherit </code>：继承父元素的该属性的属性值</p>
+<li><p>网景公司发明，起初命名为LiveScript,后由sun公司介入，更名为Javascript</p>
 </li>
+<li><p> 1996年微软公司在其最新的IE3浏览器中引入了自己对 JavaScript的实现JScript。</p>
+</li>
+<li><p>JS的标准名命名为<strong>ECMAScript</strong></p>
+</li>
+</ul>
+<h2 id="时间表"><a href="#时间表" class="headerlink" title="时间表"></a>时间表</h2><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210806110711.png" alt="image-20210806110426200"></p>
+<h2 id="JS的特点"><a href="#JS的特点" class="headerlink" title="JS的特点"></a>JS的特点</h2><h3 id="解释型语言"><a href="#解释型语言" class="headerlink" title="解释型语言"></a>解释型语言</h3><ul>
+<li>JavaScript是一门解释型语言，不需要编译为机器码在执行,而是直接执行</li>
+<li>使用了JIT技术，运行速度得以改善</li>
+<li>优缺点：<ul>
+<li>优势：不需编译，开发起来尤为轻松</li>
+<li>劣势：运行较慢</li>
 </ul>
 </li>
 </ul>
-<h4 id="哪些属性可以自动继承"><a href="#哪些属性可以自动继承" class="headerlink" title="哪些属性可以自动继承"></a>哪些属性可以自动继承</h4><ul>
-<li><p>文本样式可以被自动继承</p>
-<ul>
-<li><code>color</code></li>
-<li><code>text-align</code></li>
-<li><code>line-height</code></li>
-<li><code>text-decoration</code></li>
-<li><code>letter-spacing</code></li>
-<li><code>word-spacing</code></li>
-<li><code>text-indent</code></li>
-<li><code>text-transform</code></li>
+<h3 id="类似于C和Java的语法结构"><a href="#类似于C和Java的语法结构" class="headerlink" title="类似于C和Java的语法结构"></a>类似于C和Java的语法结构</h3><ul>
+<li>JavaScript的语法结构与C和Java很像，向for、if、while等语 句和Java的基本上是一模一样的。</li>
+<li>不过JavaScript和与Java的关系也仅仅是看起来像而已</li>
 </ul>
-</li>
-<li><p>font系统字体样式可以被自动继承</p>
-<ul>
-<li><code>font-family</code></li>
-<li><code>font-size</code></li>
-<li><code>font-weight</code></li>
-<li><code>font-style</code></li>
+<h3 id="动态语言"><a href="#动态语言" class="headerlink" title="动态语言"></a>动态语言</h3><ul>
+<li>动态语言：在语言中的一切内容都是不确定的。</li>
+<li>JavaScript 是一种基于事件驱动的脚本语言，它不需要经过 Web 服务器就可以对用户的输入直接做出响应。</li>
 </ul>
+<h3 id="基于原型的面向对象，弱类型的语言"><a href="#基于原型的面向对象，弱类型的语言" class="headerlink" title="基于原型的面向对象，弱类型的语言"></a>基于原型的面向对象，弱类型的语言</h3><p>• JavaScript是一门面向对象的语言。</p>
+<h3 id="跨平台性"><a href="#跨平台性" class="headerlink" title="跨平台性"></a>跨平台性</h3><ul>
+<li>JavaScript 依赖于浏览器本身，与操作环境无关。任何浏览器，只要具有JavaScript脚本引擎，就可以执行JavaScript。目前，几乎所有用户使用的浏览器都内置了JavaScript脚本引擎。</li>
+</ul>
+<h2 id="Js的优点"><a href="#Js的优点" class="headerlink" title="Js的优点"></a>Js的优点</h2><ul>
+<li><p>交互性：可以与用户进行动态交互</p>
 </li>
-<li><p><code>list-style</code>属性可以让<code>li</code>标签自动从<code>ul</code>标签上自动继承</p>
+<li><p>安全性：只能在浏览器内部运行，不能访问本地硬盘或者其他资源</p>
 </li>
-<li><p>鼠标样式 <code>cursor</code> 可以被自动继承</p>
-<pre class=" language-css"><code class="language-css"><span class="token property">cursor</span> <span class="token punctuation">:</span> pointer <span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">/*抓手 */</span>
-</code></pre>
+<li><p>跨平台：无论任何平台，只要有浏览器，就能运行</p>
 </li>
 </ul>
-<h4 id="哪些属性不能被自动继承"><a href="#哪些属性不能被自动继承" class="headerlink" title="哪些属性不能被自动继承"></a>哪些属性不能被自动继承</h4><ul>
-<li><code>width</code>、<code>height</code> 、<code>margin</code>、<code> padding</code>、<code>border</code></li>
-<li>背景相关的布局，定位属性，盒子模型属性</li>
+<h2 id="JavaScript的组成部分"><a href="#JavaScript的组成部分" class="headerlink" title="JavaScript的组成部分"></a>JavaScript的组成部分</h2><p>标准化后的 JavaScript 包含了 3 个组成部分，如图 1 所示。</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210806114220.gif" alt="JavaScript组成部分"><br>图 1：JavaScript 组成部分</p>
+<h4 id="1-ECMAScript"><a href="#1-ECMAScript" class="headerlink" title="1) ECMAScript"></a>1) ECMAScript</h4><ul>
+<li>脚本语言的核心内容，定义了脚本语言的基本语法和基本对象。现在每种浏览器都有对ECMAScript标准的实现。</li>
 </ul>
-<h4 id="选择器的权重"><a href="#选择器的权重" class="headerlink" title="选择器的权重"></a>选择器的权重</h4><ul>
-<li><p>问题来源：样式冲突,通过不同的选择器选中相同的元素，并为相同的样式设置不同的值时</p>
-</li>
-<li><p>选择器的权重   优先级从上到下逐渐降低</p>
-<pre class=" language-tex"><code class="language-tex">
-内联样式              1，0，0，0
-id选择器              0，1，0，0
-类和伪类选择器         0，0，1，0
-元素选择器            0，0，0，1
-通配符选择器          0，0，0，0
-继承的样式          没有优先级
-</code></pre>
-</li>
-<li><p> 优先级计算相同，此时优先使用靠下的样式 (就近原则)</p>
-</li>
-<li><p> 比较优先级时，需将所有的选择器的优先级相加，最后优先级越高，则越优先显示</p>
-</li>
-<li><p>分组选择器单独计算 按位比较</p>
-</li>
-<li><p>选择器的累加不会超过其最大的数量级（类选择器再高也不会超过id选择器）</p>
-</li>
-<li><p>可以在某一个样式后添加( ! important )则此样式会获得最高的优先级，甚至超过内联样式（一般不会使用）不会遵循权重大小的计算，用多了样式没有规律，计算权重比较麻烦，维护性下降。慎用</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector">p </span><span class="token punctuation">{</span>
-  color：blue ! important <span class="token punctuation">;</span>   
-<span class="token punctuation">}</span>
-</code></pre>
-<h5 id="选择器的计算方案："><a href="#选择器的计算方案：" class="headerlink" title="选择器的计算方案："></a>选择器的计算方案：</h5><h6 id="加法运算"><a href="#加法运算" class="headerlink" title="加法运算"></a>加法运算</h6></li>
-<li><p>就是将所有的选择器的权重相加，对比大小</p>
-<ul>
-<li><p>内联样式默认值为1000</p>
-</li>
-<li><p>id选择器的权重为100</p>
-</li>
-<li><p>类（属性）选择器的权重为10</p>
-</li>
-<li><p>标签选择器的权重为1</p>
-</li>
-<li><p>继承的属性权重为0</p>
-</li>
+<h4 id="2-DOM（Document-Object-Model）"><a href="#2-DOM（Document-Object-Model）" class="headerlink" title="2) DOM（Document Object Model）"></a>2) DOM（Document Object Model）</h4><ul>
+<li>文档对象模型，它是HTML和XML文档的应用程序编程接口。浏览器中的DOM把整个网页规划成由节点层级构成的树状结构的文档。用DOM API可以轻松地删除、添加和替换文档树结构中的节点。</li>
 </ul>
-<blockquote>
-<p>将所有基础选择器的权重相加，进行大小对比，谁大权重更高，但是不满足满10进1 的规则</p>
-</blockquote>
-<h6 id="4个0"><a href="#4个0" class="headerlink" title="4个0"></a>4个0</h6><p>（0，0，0，0）</p>
-<ul>
-<li>第一个0：代表内联样式，有则为1，无则为0</li>
-<li>第二个0：代表id选择器的个数</li>
-<li>第三个0：代表类（属性）选择器的个数</li>
-<li>第四个0：代表标签选择器的个数</li>
-</ul>
-<blockquote>
-<p>从第一个0开始进行对比，值大的权重更高，如果相同，对比第二0，依次类推，如果最后一个0也相等，权重大小一样，后面的选择器会盖住前面选择器样式。</p>
-</blockquote>
-</li>
+<h4 id="3-BOM（Browser-Object-Model）"><a href="#3-BOM（Browser-Object-Model）" class="headerlink" title="3) BOM（Browser Object Model）"></a>3) BOM（Browser Object Model）</h4><ul>
+<li>浏览器对象模型，描述了对浏览器窗口进行访问和操作的方法和接口。</li>
 </ul>
 
                 
@@ -862,7 +551,7 @@ id选择器              0，1，0，0
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://codehan045.github.io/posts/b6981f1b.html">https://codehan045.github.io/posts/b6981f1b.html</a>
+                    <a href="https://codehan045.github.io/posts/da2d2f3e.html">https://codehan045.github.io/posts/da2d2f3e.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -900,8 +589,8 @@ id选择器              0，1，0，0
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/css%E9%80%89%E6%8B%A9%E5%99%A8/">
-                                    <span class="chip bg-color">css选择器</span>
+                                <a href="/tags/javascript/">
+                                    <span class="chip bg-color">javascript</span>
                                 </a>
                             
                         </div>
@@ -1339,76 +1028,28 @@ id选择器              0，1，0，0
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/f4159b08.html">
+                <a href="/posts/da2d2f3e.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/background.png" class="responsive-img" alt="CSS样式之背景及雪碧图">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210806114939.webp" class="responsive-img" alt="Javascript简介">
                         
-                        <span class="card-title">CSS样式之背景及雪碧图</span>
+                        <span class="card-title">Javascript简介</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-09
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    web前端
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/css/">
-                        <span class="chip bg-color">css</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/bf654099.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/loading.gif" data-original="/medias/featureimages/17.jpg" class="responsive-img" alt="CSS概述">
-                        
-                        <span class="card-title">CSS概述</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            网页概述、css基本概念、样式来源、@import与link的区别、网页中的单位、网页的优化6
+                            javascript简介
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-06
                             </span>
                         <span class="publish-author">
                             
@@ -1422,13 +1063,50 @@ id选择器              0，1，0，0
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/css/">
-                        <span class="chip bg-color">css</span>
+                    <a href="/tags/javascript/">
+                        <span class="chip bg-color">javascript</span>
                     </a>
                     
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/c9c4c598.html">
+                    <div class="card-image">
+                        
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/bootstrap.jfif" class="responsive-img" alt="Bootstrap前端开发框架">
+                        
+                        <span class="card-title">Bootstrap前端开发框架</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            时光路人
+                            
+                        </span>
+                    </div>
                 </div>
                 
             </div>
