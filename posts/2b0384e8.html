@@ -421,21 +421,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-08
+                    2021-08-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.5k
+                    3.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    13 分
+                    15 分
                 </div>
                 
 
@@ -751,6 +751,9 @@
 <li><p>注意：</p>
 <ul>
 <li>单选框需要设置相同的name值进行绑定，才能实现单选效果</li>
+<li> 像这种选择框不需要用户填写内容的，还必须指定一个value属性，</li>
+<li>这样选中的元素的value属性值将会被提交到服务器</li>
+<li>如果希望某个单选按钮处在默认选中的状态可以在标签中添加属性 checked=”checked” </li>
 <li>label的特殊用法：通过for属性指定表单元素的id名，通过点击label里面的文本可以控制对应的表单元素获取焦点</li>
 </ul>
 </li>
@@ -779,7 +782,9 @@
 <li><p>注意：</p>
 <ul>
 <li>下拉列表默认选中第一个选项，selected可以设置下拉列表的默认选项</li>
+<li>下拉列表的name属性需要指定给select标签，value属性需要指定给option</li>
 <li>下拉列表默认只能选一个选项，mutiple可以设置选择多个选项</li>
+<li>如果希望将option设置为默认选中，则可以在option中添加一个属性 selected = “selected”</li>
 </ul>
 </li>
 </ul>
@@ -813,6 +818,10 @@
 <h4 id="form标签"><a href="#form标签" class="headerlink" title="form标签"></a>form标签</h4><ul>
 <li><p>将表单元素放在form标签中，提交给服务器</p>
 </li>
+<li><p>form中有一个必须的属性叫做action</p>
+</li>
+<li><p>action需要一个服务器的地址，当我们提交表单时，填写的内容将会提交到action指向的地址</p>
+</li>
 <li><p>语法：</p>
 <pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>提交数据的服务器地址<span class="token punctuation">"</span></span>  <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>数据提交方式<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     
@@ -821,6 +830,26 @@
 <ul>
 <li>get：从服务器获取数据，也可以提交数据给服务器，数据会显示在地址栏</li>
 <li>post：提交数据给服务器，数据不会显示在地址栏</li>
+</ul>
+</li>
+<li><p>如果希望表单中的内容最终发送到服务器，还必须要给表单项添加一个name属性</p>
+</li>
+<li><p>该属性将会作为用户填写内容名字，在服务器中可以根据这个名字来获取用户填写内容</p>
+</li>
+<li><p>默认情况下，用户添加的内容将会以查询字符串的形式发送给服务器，</p>
+<ul>
+<li><p>所谓的查询字符串就是<code>url地址</code>?后边的内容</p>
+</li>
+<li><p><code>username=sunwukong&amp;password=123123</code></p>
+</li>
+<li><p>查询字符实际上就是一个一个的名值对结构，多个名值对之间使用&amp;隔开</p>
+</li>
+<li><p> 一个名字 = 一个值</p>
+</li>
+<li><p>名字就是表单项指定的name属性值</p>
+</li>
+<li><p>值就是用户填写的内容，在服务器中可以通过名字来获取用户填写的内容</p>
+</li>
 </ul>
 </li>
 <li><p>注意：表单元素上name和value的区别：name提交数据存储位置，value提交的数据具体的值。</p>
@@ -1721,7 +1750,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">47k</span>
+                        class="white-color">51.5k</span>
             
             
             

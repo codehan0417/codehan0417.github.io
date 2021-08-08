@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="web服务器之Tomcat, java mysql javascript jdbc javaweb">
+    <meta name="keywords" content="JavaScript基本语法, java mysql javascript jdbc javaweb">
     <meta name="description" content="世界不停转动，直到我们相逢">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>web服务器之Tomcat | doNow</title>
+    <title>JavaScript基本语法 | doNow</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -268,12 +268,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/codehan045/imags/img/tomcat.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210807095626.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">web服务器之Tomcat</h1>
+                    <h1 class="description center-align post-title">JavaScript基本语法</h1>
                 </div>
             </div>
         </div>
@@ -389,8 +389,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Tomcat/">
-                                <span class="chip bg-color">Tomcat</span>
+                            <a href="/tags/javascript/">
+                                <span class="chip bg-color">javascript</span>
                             </a>
                         
                     </div>
@@ -401,8 +401,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/web/" class="post-category">
-                                web
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                web前端
                             </a>
                         
                     </div>
@@ -414,28 +414,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-23
+                    2021-08-07
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-23
+                    2021-08-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    869
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    7 分
                 </div>
                 
 
@@ -460,128 +460,350 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-常用的Web服务器"><a href="#1-常用的Web服务器" class="headerlink" title="1. 常用的Web服务器"></a>1. 常用的Web服务器</h3><ul>
-<li><p>Tomcat  ：由Apache组织提供的web服务器，提供对jsp、Servlet的支持，一种轻量级的javaWeb容器，应用最为广泛（免费）</p>
+                <p>-</p>
+<h1 id="JavaScript基本语法"><a href="#JavaScript基本语法" class="headerlink" title="JavaScript基本语法"></a>JavaScript基本语法</h1><h2 id="输入和输出"><a href="#输入和输出" class="headerlink" title="输入和输出"></a>输入和输出</h2><h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><ul>
+<li><p><code>alert(" ")</code> 控制浏览器弹出一个警告框</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"这是我的第一个网页"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+</code></pre>
 </li>
-<li><p>jboss：遵从javaEE规范，纯EJB服务器（免费）</p>
+<li><p><code>document.write("")</code> 可以向body中写入一个内容</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span>
+document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"Hello world"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"&lt;a href='http://www.baidu.com'>百度一下&lt;/a>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token comment" spellcheck="true">//如果要输出的是HTML标签的代码本身。那么JavaScript会将其解析为一个真正的标签并显示在页面上。</span>
+</code></pre>
 </li>
-<li><p>GlassFish:  Oracle公司开发，商业服务器，产品级质量（应用较少）</p>
-</li>
-<li><p>Resin ：CAUCHO公司产品 ，对servlet和JSP提供良好的支持。性能优良（收费，应用较多）</p>
-</li>
-<li><p>WebLogic：Oracle公司的产品，目前应用最广泛的Web服务器，支持JavaEE规范，适合大项目（收费，适合大公司）</p>
+<li><p><code>console.log("")</code>向控制台输出一个内容</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"我在这里"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+</code></pre>
 </li>
 </ul>
-<h3 id="2-Tomcat服务器的-使用"><a href="#2-Tomcat服务器的-使用" class="headerlink" title="2. Tomcat服务器的 使用"></a>2. Tomcat服务器的 使用</h3><h3 id="2-1-安装"><a href="#2-1-安装" class="headerlink" title="2.1 安装"></a>2.1 安装</h3><p>找到需要的Tomcat版本的zip压缩包，解压到相应的安装目录</p>
-<p>附：Tomcat7.0 ,8.0,8.5 请自行下载</p>
-<p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1w3YJIWUkcDu6DSKzMfd7qQ">百度网盘Tomcat</a><br>提取码：y5z6 </p>
-<h3 id="2-2-目录结构"><a href="#2-2-目录结构" class="headerlink" title="2.2 目录结构"></a>2.2 目录结构</h3><ul>
-<li>bin                         专门用来存放 Tomcat 服务器的可执行程序</li>
-<li>conf                       专门用来存放 Tocmat 服务器的配置文件</li>
-<li>lib                           专门用来存放 Tomcat 服务器的 jar 包</li>
-<li>logs                        专门用来存放 Tomcat 服务器运行时输出的日记信息</li>
-<li>temp                      专门用来存放 Tomcdat 运行时产生的临时数据</li>
-<li>webapps                专门用来存放部署的 Web 工程。</li>
-<li>work                       是 Tomcat 工作时的目录，用来存放 Tomcat 运行时 jsp 翻译为                                 Servlet 的源码，和 Sessio</li>
-</ul>
-<h3 id="2-3-Tomcat服务器的启动"><a href="#2-3-Tomcat服务器的启动" class="headerlink" title="2.3 Tomcat服务器的启动"></a>2.3 Tomcat服务器的启动</h3><h4 id="2-3-1-方式一"><a href="#2-3-1-方式一" class="headerlink" title="2.3.1 方式一"></a>2.3.1 方式一</h4><p>找到 Tomcat 目录下的 bin 目录下的 startup.bat 文件，双击，就可以启动 Tomcat 服务器。</p>
-<h4 id="2-3-2-方式二"><a href="#2-3-2-方式二" class="headerlink" title="2.3.2 方式二"></a>2.3.2 方式二</h4><ol>
-<li><p>打开命令行 </p>
+<h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><ul>
+<li><p><code>prompt("")</code>获取用户输入的文字</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token function">prompt</span><span class="token punctuation">(</span><span class="token string">"提示性文字"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//配合输出</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token function">prompt</span><span class="token punctuation">(</span><span class="token string">'请输入您的手机号'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 </li>
-<li><p>cd 到 你的 Tomcat 的 bin 目录下 </p>
+</ul>
+<h2 id="编写位置"><a href="#编写位置" class="headerlink" title="编写位置"></a>编写位置</h2><h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a><script>标签</h3><ul>
+<li><p>js代码需要编写到<code>&lt;script&gt; js代码&lt;/script&gt;</code>标签中</p>
+</li>
+<li><p><code>&lt;script&gt;</code>标签可以写在<code>&lt;head&gt;</code>标签中，也可以写在<code>&lt;body</code>标签中</p>
+</li>
+<li><p><code>&lt;script&gt;</code>属性</p>
 <ul>
-<li><p>方式一 进入bin目录  在下图所在位置输入cmd 直接进入</p>
-<p><img src="/medias/loading.gif" data-original="C:\Users\16852\AppData\Roaming\Typora\typora-user-images\1621696145110.png" alt="1621696145110"></p>
-</li>
-<li><p>方式二</p>
-<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/2021-05-22_231447.png">    </p>
-</li>
+<li><code>type</code> 默认值<code>text/javascript</code>可以省略不写</li>
+<li><code>src</code>当需要引入一个外部的js文件时，使用该属性指向文件的地址</li>
 </ul>
-</li>
-<li><p>敲入启动命令： catalina run</p>
-</li>
-</ol>
-<h4 id="2-3-3-测试Tomcat服务器启动成功"><a href="#2-3-3-测试Tomcat服务器启动成功" class="headerlink" title="2.3.3 测试Tomcat服务器启动成功"></a>2.3.3 测试Tomcat服务器启动成功</h4><ul>
-<li><p>打开浏览器，在浏览器地址栏中输入以下地址测试：<br>1、<a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080</a><br>2、<a target="_blank" rel="noopener" href="http://127.0.0.1:8080/">http://127.0.0.1:8080</a><br>3、http://真实 ip:8080</p>
-</li>
-<li><p>出现以下界面，说明启动成功</p>
-<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210522232611.png" alt="tomcat登陆成功"></p>
-</li>
-<li><p>常见的启动失败现象及原因，</p>
-<p>现象：双击startup.bat文件，会出现一个小黑窗口一闪而过</p>
-<p>原因：JAVA_HOME环境变量未配置好</p>
-<ul>
-<li><p>配置JAVA_HOME环境变量</p>
-<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210523094233.png"></p>
-<p><strong>注</strong>: </p>
-<ol>
-<li><strong>JAVA_HOME</strong> 必须全大写</li>
-<li><strong>JAVA_HOME</strong> 中间必须是下划线</li>
-<li><strong>JAVA_HOME</strong>配置路径只需要配置到jdk安装目录</li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-4-Tomcat-的停止"><a href="#2-4-Tomcat-的停止" class="headerlink" title="2.4 Tomcat 的停止"></a>2.4 Tomcat 的停止</h3><ol>
-<li>关闭tomcat服务器窗口（黑框）</li>
-<li>找到Tomcat的bin目录下的shutdown.bat双击，就可以停止Tomcat服务器</li>
-</ol>
-<h3 id="2-5修改Tomcat的端口号"><a href="#2-5修改Tomcat的端口号" class="headerlink" title="2.5修改Tomcat的端口号"></a>2.5修改Tomcat的端口号</h3><ul>
-<li><strong>mysql</strong>  默认端口号是 3306</li>
-<li><strong>Tomcat</strong>  默认端口号是 8080</li>
-<li><strong>HTTP</strong>  协议默认的端口号是  80</li>
-</ul>
-<hr>
 <blockquote>
-<p>修改：找到Tomcat目录下的conf  目录，找到server.xml配置文件</p>
+<p>注：<code>&lt;script&gt;</code>若作为外部引入js文件使用，则在标签内书写的js代码无效，默认被注释，不被解析,只能单一作用，若引入js文件后，再编写js代码，则需重新添加·<code>&lt;script&gt;</code>标签</p>
 </blockquote>
-<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210523101754.png"></p>
-<ul>
-<li>找到Connector标签，修改port属性为你需要的端口号，端口号范围：<strong>1 —  65535</strong></li>
-<li>修改完端口号，一定要重启Tomcat服务器才能生效</li>
+</li>
 </ul>
-<h3 id="3-IDEA整合Tomcat服务器"><a href="#3-IDEA整合Tomcat服务器" class="headerlink" title="3.IDEA整合Tomcat服务器"></a>3.IDEA整合Tomcat服务器</h3><blockquote>
-<p>操作菜单如下： File–&gt;Settings–&gt;Build, Execution, Deployment –&gt;Application Servers</p>
+<h3 id="内联属性"><a href="#内联属性" class="headerlink" title="内联属性"></a>内联属性</h3><ul>
+<li><p>可以将js代码编写到标签onclick 属性中，当我们点击按钮时，js代码才会执行</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>alert(<span class="token punctuation">'</span>你点我干嘛！<span class="token punctuation">'</span>);<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>点我一下<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+</code></pre>
+</li>
+<li><p>可以将js代码写在超链接的href属性中，点击超链接时，执行js代码</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>javascript:alert(<span class="token punctuation">'</span>让你点你就点！<span class="token punctuation">'</span>);<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>你也点我一下<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>javascript:;<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>点我<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> <span class="token comment" spellcheck="true">&lt;!-- 无任何效果，可作占位符--></span>
+</code></pre>
+</li>
+</ul>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><blockquote>
+<p>注释中的内容不会被解析器解析执行，但是会在 源码中显示，我们一般会使用注释对程序中的内 容进行解释。</p>
 </blockquote>
-<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210523103335.png"></p>
-<p>配置你的Tomcat安装目录</p>
-<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210523103737.png"></p>
-<p>新建一个Module查看是不是配置成功</p>
-<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210523104130.png"></p>
-<h3 id="4-IDEA中动态web工程的操作"><a href="#4-IDEA中动态web工程的操作" class="headerlink" title="4.IDEA中动态web工程的操作"></a>4.IDEA中动态web工程的操作</h3><ol>
-<li>创建一个module</li>
-<li>选择要创建的类型模块</li>
-</ol>
-<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210523104758.png"></p>
-<ol start="3">
-<li><p>输入模块名，点击【Finish】完成创建</p>
+<ul>
+<li><p>单行注释</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//单行注释</span>
+</code></pre>
 </li>
-<li><p>创建成功web目录结构</p>
-<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210523105121.png"></p>
+<li><p>多行注释</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/*
+ * 多行注释
+ * js注释
+*/</span>
+</code></pre>
+</li>
+</ul>
+<h2 id="javascript书写规范"><a href="#javascript书写规范" class="headerlink" title="javascript书写规范"></a>javascript书写规范</h2><ol>
+<li><p>js严格区分大小写，也就是abc和Abc会被解析器 认为是两个不同的东西。</p>
+</li>
+<li><p>js中每一条语句以分号 ;结尾</p>
+<ul>
+<li>如果不写分号，浏览器会自动添加，但是会消耗资源，有时会加错 ，**必须写 **</li>
+</ul>
+</li>
+<li><p>js中会忽略多个空格和换行，所以可以利用空格和换行来格式化</p>
 </li>
 </ol>
-<blockquote>
-<p>web工程结构介绍</p>
+<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><blockquote>
+<p>所谓标识符，就是可以自己起名字的变量，函数、属性等或是函数的参数</p>
 </blockquote>
-<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210523111147.png"></p>
-<h4 id="5-eclipse-整合Tomcat"><a href="#5-eclipse-整合Tomcat" class="headerlink" title="5.eclipse 整合Tomcat"></a>5.eclipse 整合Tomcat</h4><ol>
-<li><p>找到eclipse  window–&gt;Preferences–&gt;Server–&gt;Runtime Environm</p>
-<p> <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210523113100.png"></p>
+<h3 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h3><ol>
+<li><p>标识符中可以有字母，数字，_ ,$</p>
 </li>
-<li><p>添加你的tomcat安装路径</p>
+<li><p>不能以数字开头,第一个字符必须是一个<code>字母</code>、<code>下划线（ _ ）</code>或一个<code>美元符号（ $ ）</code></p>
 </li>
-<li><p>打开Server窗口，新建Server</p>
-<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210523113607.png"></p>
-<ol start="4">
-<li><p>右击所添加的Server,添加项目到此服务</p>
+<li><p>标识符不能是<code>关键字</code>和<code>保留字</code></p>
 </li>
-<li><p>在此Server上运行，右击项目中的页面文件，点击run as  ——&gt;Run on Server</p>
+<li><p>一般使用<code>驼峰命名法</code></p>
+<ul>
+<li>首字母小写，每个单词的开头字母大写，其余子母小写</li>
+<li>示例：<code> helloWorld</code></li>
+</ul>
+</li>
+<li><p>Js底层保存标识符时，实际上是采用的是Unicode编码</p>
 </li>
 </ol>
+<h2 id="关键字和保留字"><a href="#关键字和保留字" class="headerlink" title="关键字和保留字"></a>关键字和保留字</h2><blockquote>
+<p>关键字：具有特殊意义和功能的的单词</p>
+<p>保留字：将来有可能作为关键字</p>
+</blockquote>
+<h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210807105551.png"></p>
+<h3 id="保留字"><a href="#保留字" class="headerlink" title="保留字"></a>保留字</h3><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210807105710.png"></p>
+<h2 id="字面量和变量"><a href="#字面量和变量" class="headerlink" title="字面量和变量"></a>字面量和变量</h2><blockquote>
+<p>字面量：一些不可改变的值</p>
+<p>变量：可以保存字面量，它的值可以任意改变，作用是给某一个值或对象标注名称，能够重复的使用数据</p>
+<ul>
+<li>变量定义一次，可以多次使用</li>
+<li>变量都需要<code>先定义，再使用</code></li>
+</ul>
+</blockquote>
+<ul>
+<li><p>变量的声明</p>
+<ul>
+<li><p>使用var关键字来声明一个变量,可以用来保存任何类型的值，声明范围是函数作用域</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> he；
+</code></pre>
 </li>
-</ol>
+</ul>
+</li>
+<li><p>变量的赋值</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> a<span class="token punctuation">;</span>
+a<span class="token operator">=</span><span class="token number">123</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>声明和赋值同时进行</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> a<span class="token operator">=</span><span class="token number">123</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>变量的使用</p>
+<ul>
+<li><p>需重新定义变量。直接修改变量的数据即可</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> demo <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> 
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>demo<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 1</span>
+<span class="token comment" spellcheck="true">//修改</span>
+demo <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>demo<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 3</span>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="基本数据类型（JavaScript中有5种）"><a href="#基本数据类型（JavaScript中有5种）" class="headerlink" title="基本数据类型（JavaScript中有5种）"></a>基本数据类型（JavaScript中有5种）</h3><h4 id="字符串型-String"><a href="#字符串型-String" class="headerlink" title="字符串型 String"></a>字符串型 String</h4><blockquote>
+<p>用于表示一个字符序列，即字符串</p>
+</blockquote>
+<ul>
+<li><p>字符串需要使用<code>&quot;</code>或 <code>&#39;</code>括起来</p>
+</li>
+<li><p>引号不能嵌套，双引号不能放双引号，单引号不能放单引号</p>
+</li>
+<li><p>转义字符：</p>
+<table>
+<thead>
+<tr>
+<th>转义字符</th>
+<th>含义</th>
+<th>转义字符</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>\n</code></td>
+<td>换行</td>
+<td><code>\</code></td>
+<td>斜杠</td>
+</tr>
+<tr>
+<td><code>\t</code></td>
+<td>制表符</td>
+<td><code>\&#39;</code></td>
+<td>单引号</td>
+</tr>
+<tr>
+<td><code>\b</code></td>
+<td>空格</td>
+<td><code>\&quot;</code></td>
+<td>双引号</td>
+</tr>
+<tr>
+<td><code>\r</code></td>
+<td>回车</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+<li><p>将其他数值转换为字符串有三种方式：<code>toString()</code>、<code>String()</code>、 <code>拼串</code>。</p>
+</li>
+</ul>
+<h4 id="数值型-Number"><a href="#数值型-Number" class="headerlink" title="数值型 Number"></a>数值型 Number</h4><blockquote>
+<p>js中所有的数值都是Number</p>
+<p> 包括整数和浮点数（小数）</p>
+</blockquote>
+<ul>
+<li><p>js中可以表示的数字的最大值</p>
+<ul>
+<li><code>Number.MAX_VALUE</code>    1.7976931348623157e+308</li>
+<li>使用的Number超过 最大值，则会返回一个<code>Infinity</code> 正无穷 <code>Infinity</code> 数值类型</li>
+</ul>
+</li>
+<li><p>大于0的最小值 <code>Number.MIN_VALUE</code></p>
+</li>
+<li><p><code>NaN</code> 是一个特殊的数字not a number 非数字</p>
+</li>
+<li><p>在js中整数的运算基本可以保证精确</p>
+</li>
+<li><p>使用js进行浮点运算，可能得到不精确的结果</p>
+</li>
+<li><p>数字保留指定位数的小数点</p>
+<ul>
+<li><p><code>toFixed</code>:能够指定某个数字保留几位小数,会四舍五入。</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> 变量名<span class="token operator">=</span> 数字<span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span>小数点的位数<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
+例子：保留一位小数
+<span class="token keyword">var</span> num <span class="token operator">=</span><span class="token number">1.674</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> num1 <span class="token operator">=</span> num<span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>num1<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 1.7</span>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="布尔型-Boolean"><a href="#布尔型-Boolean" class="headerlink" title="布尔型 Boolean"></a>布尔型 Boolean</h4><ul>
+<li>布尔值只有两个  做逻辑判断<ul>
+<li><code>true</code></li>
+<li><code>false</code> </li>
+</ul>
+</li>
+</ul>
+<h4 id="Null-型null-空值"><a href="#Null-型null-空值" class="headerlink" title="Null 型null  空值"></a>Null 型null  空值</h4><ul>
+<li><p>Null类型只有一个，就是null</p>
+</li>
+<li><p> null这个值专门用来表示一个为空的对象</p>
+</li>
+<li><p>使用typeof 检查一个null值时，会返回object</p>
+</li>
+</ul>
+<h4 id="Undefined型-undefined-未定义"><a href="#Undefined型-undefined-未定义" class="headerlink" title="Undefined型 undefined 未定义"></a>Undefined型 undefined 未定义</h4><ul>
+<li><p>Undefined 类型只有一个值，即特殊的 <code>undefined</code> 。</p>
+</li>
+<li><p>在使用 var 声明变量但未对其加以初始化时，这个变量的值就 是 undefined</p>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li><p>typeof对没有初始化和没有声明的变量都会返回 undefined</p>
+</li>
+<li><p>undefined值实际上是由null值衍生出来的，所以如果比较 undefined和null是否相等，会返回true；</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h3><ul>
+<li>Object 对象<ul>
+<li>数组</li>
+<li>函数 function</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h2><h3 id="将其他数据类型转换为String"><a href="#将其他数据类型转换为String" class="headerlink" title="将其他数据类型转换为String"></a>将其他数据类型转换为<code>String</code></h3><ul>
+<li>方式一<ul>
+<li><p>调用被转换数据类型的toString()方法</p>
+</li>
+<li><p>对于Number调用toString()时可以在方法中传递一个整数作为参数</p>
+<ul>
+<li><p>此时它将会把数字转换为指定的进制,如果不指定则默认转换为10进制</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">255</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//转换为二进制</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//输出为1111 1111</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//string</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>该方法不会影响原变量，会将转换的结果返回</p>
+</li>
+<li><p>注：null 和 undefined 这两个值没有toString()方法</p>
+</li>
+</ul>
+</li>
+<li>方式二<ul>
+<li>调用String()函数，将被转换的数据作为参数传递给函数</li>
+<li>使用String()函数做强制转换时：<ul>
+<li>对于<code>Number</code>和<code>Boolean</code>实际上调用的是<code>toString()</code>方法</li>
+<li>对于<code>null</code>和<code>undefined</code>是直接转换</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>方式三<ul>
+<li>字符串的拼接，任何值与字符串相加，都会先转换为字符串，然后再进行拼接</li>
+<li>一种隐式的类型转换，由浏览器自动完成，实际上它也是调用String()函数</li>
+</ul>
+</li>
+</ul>
+<h3 id="将其他数据类型转换为Number"><a href="#将其他数据类型转换为Number" class="headerlink" title="将其他数据类型转换为Number"></a>将其他数据类型转换为<code>Number</code></h3><ul>
+<li><p>方式一</p>
+<ul>
+<li><p>使用<code>Number()</code>函数</p>
+</li>
+<li><p>不同数据类型转换结果</p>
+<ul>
+<li><p>字符串—–&gt;数字</p>
+<ol>
+<li><code>纯数字</code>，直接转换</li>
+<li><code>非数字</code>的内容，则转换为<code>NaN</code></li>
+<li>字符串是<code>空串</code>，或是<code>空格的字符</code>，转换为<code>0</code></li>
+</ol>
+</li>
+<li><p>布尔值—–&gt;数字</p>
+<ul>
+<li><code>true</code> 转换为  <code>1</code></li>
+<li><code>false</code>转换为  <code> 0</code></li>
+</ul>
+</li>
+<li><p>null—–&gt;数字   为  0</p>
+</li>
+<li><p>undefined—-&gt;数字   NaN</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>方式二：专门用于字符串的转换</p>
+<ul>
+<li>若对<code>非String </code>使用<code> parseInt()</code> 或 <code>parseFloat()</code> ,他会先将其转换为String然后再操作</li>
+<li><code>parseInt() </code>把一个字符串转换为一个整数</li>
+<li>可以将一个字符串中的有效的整数内容提取出来，然后转换为Number</li>
+<li><code>parseFloat() </code>获得有效的小数</li>
+</ul>
+</li>
+<li><p>方式三</p>
+<ul>
+<li>通过运算符，<code>将一个值减0 ,*1, /1</code>来将其转换为<code>Number</code></li>
+<li>原理和Number()函数一样</li>
+</ul>
+</li>
+</ul>
+</script></h3>
                 
             </div>
             <hr/>
@@ -607,7 +829,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://codehan045.github.io/posts/5971465f.html">https://codehan045.github.io/posts/5971465f.html</a>
+                    <a href="https://codehan045.github.io/posts/bbf13a25.html">https://codehan045.github.io/posts/bbf13a25.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -645,8 +867,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Tomcat/">
-                                    <span class="chip bg-color">Tomcat</span>
+                                <a href="/tags/javascript/">
+                                    <span class="chip bg-color">javascript</span>
                                 </a>
                             
                         </div>
@@ -1088,12 +1310,12 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/8c470175.html">
+                <a href="/posts/bc94c580.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/300.jpg" class="responsive-img" alt="Servlet技术">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210807152605.jfif" class="responsive-img" alt="JavaScript运算符及语句">
                         
-                        <span class="card-title">Servlet技术</span>
+                        <span class="card-title">JavaScript运算符及语句</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1104,14 +1326,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-24
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-07
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/servlet/" class="post-category">
-                                    servlet
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
@@ -1121,8 +1343,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/servlet%E7%A8%8B%E5%BA%8F/">
-                        <span class="chip bg-color">servlet程序</span>
+                    <a href="/tags/javascript/">
+                        <span class="chip bg-color">javascript</span>
                     </a>
                     
                 </div>
@@ -1136,30 +1358,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/ab56c92c.html">
+                <a href="/posts/da2d2f3e.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/images.jpg" class="responsive-img" alt="多线程详解">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210806114939.webp" class="responsive-img" alt="Javascript简介">
                         
-                        <span class="card-title">多线程详解</span>
+                        <span class="card-title">Javascript简介</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            最全多线程基础详解
+                            javascript简介
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-06
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/java%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    java基础
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
@@ -1169,8 +1391,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
+                    <a href="/tags/javascript/">
+                        <span class="chip bg-color">javascript</span>
                     </a>
                     
                 </div>
