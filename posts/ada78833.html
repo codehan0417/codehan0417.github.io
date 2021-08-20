@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HTTP, java mysql javascript jdbc javaweb">
+    <meta name="keywords" content="JavaScript作用域和预解析, java mysql javascript jdbc javaweb">
     <meta name="description" content="世界不停转动，直到我们相逢">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>HTTP | doNow</title>
+    <title>JavaScript作用域和预解析 | doNow</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -268,12 +268,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210816150612.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">HTTP</h1>
+                    <h1 class="description center-align post-title">JavaScript作用域和预解析</h1>
                 </div>
             </div>
         </div>
@@ -389,8 +389,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/HTTP/">
-                                <span class="chip bg-color">HTTP</span>
+                            <a href="/tags/javascript/">
+                                <span class="chip bg-color">javascript</span>
                             </a>
                         
                     </div>
@@ -401,8 +401,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/web/" class="post-category">
-                                web
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                web前端
                             </a>
                         
                     </div>
@@ -414,21 +414,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-06-04
+                    2021-08-16
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-01
+                    2021-08-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    722
+                    699
                 </div>
                 
 
@@ -460,145 +460,107 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h2><h3 id="1-什么是HTTP协议"><a href="#1-什么是HTTP协议" class="headerlink" title="1. 什么是HTTP协议"></a>1. 什么是HTTP协议</h3><ul>
-<li>协议：是指双方，或多方，相互约定好，大家都需要遵守的规则，叫做协议</li>
-<li>HTTP协议：指客户端和服务器之间通信时，发送数据，需要遵守的规则（HTTP协议中的数据又叫报文）</li>
+                <p>-</p>
+<h1 id="JavaScript作用域和预解析"><a href="#JavaScript作用域和预解析" class="headerlink" title="JavaScript作用域和预解析"></a>JavaScript作用域和预解析</h1><h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><ul>
+<li>JavaScript作用域：<ul>
+<li>官方解释：一段程序代码中所用到的名字并不总是有效和可用的，限定这个名字的<strong>可用性的代码范围</strong>，就是这个名字的作用域</li>
+<li>就是这段代码或变量在某个范围内的作用和效果</li>
 </ul>
-<h3 id="2-请求的HTTP协议格式"><a href="#2-请求的HTTP协议格式" class="headerlink" title="2. 请求的HTTP协议格式"></a>2. 请求的HTTP协议格式</h3><ul>
-<li>请求  客户端给服务器发送数据</li>
-<li>响应  服务器给客户端回传数据</li>
+</li>
+<li>目的：提高程序逻辑的局部性，增强程序的可靠性，减少名字冲突。</li>
 </ul>
-<h4 id="2-1-GET请求"><a href="#2-1-GET请求" class="headerlink" title="2.1 GET请求"></a>2.1 GET请求</h4><ol>
-<li><p>请求行</p>
-<p>① 请求的方式                           GET</p>
-<p>② 请求的资源路径[+?+请求参数]</p>
-<p>③ 请求的协议的版本号           HTTP/1.1</p>
-</li>
-<li><p>请求头</p>
-<p>key:value    组成    不同的键值对，表示不同的含义</p>
-</li>
-</ol>
-<h4 id="2-2-POST-请求"><a href="#2-2-POST-请求" class="headerlink" title="2.2  POST  请求"></a>2.2  POST  请求</h4><ol>
-<li><p>请求行</p>
-<p>① 请求的方式                           POST</p>
-<p>② 请求的资源路径[+?+请求参数]</p>
-<p>③ 请求的协议的版本号           HTTP/1.1</p>
-</li>
-<li><p>请求头</p>
-<p>① key:value         不同的请求头，有不同的含义</p>
-<p> 空行</p>
-</li>
-<li><p>请求体        发送给服务器的数据</p>
-</li>
-</ol>
-<h4 id="2-3-常用的请求头"><a href="#2-3-常用的请求头" class="headerlink" title="2.3 常用的请求头"></a>2.3 常用的请求头</h4><p>Accept: 表示客户端可以接收的数据类型</p>
-<p>Accept-Language：表示客户端可以接收的语言类型   </p>
-<ul>
-<li>zh_CN   中文中国</li>
-<li>en_US   英文美国</li>
-</ul>
-<p>Connection: 告诉服务器请求连接如何处理</p>
-<ul>
-<li>Keep-Alive    告诉服务器回传数据不要马上关闭，保持一小段时间的连接</li>
-<li>Closed     马上关闭</li>
-</ul>
-<p>User-Agent：表示客户端浏览器的信息</p>
-<p>Host: 表示请求时的服务器 ip 和端口号</p>
-<h4 id="2-4-区分哪些是GET请求，哪些是POST请求"><a href="#2-4-区分哪些是GET请求，哪些是POST请求" class="headerlink" title="2.4 区分哪些是GET请求，哪些是POST请求"></a>2.4 区分哪些是GET请求，哪些是POST请求</h4><blockquote>
-<p>GET请求</p>
+<h3 id="作用域分类"><a href="#作用域分类" class="headerlink" title="作用域分类"></a>作用域分类</h3><h4 id="全局作用域"><a href="#全局作用域" class="headerlink" title="全局作用域"></a>全局作用域</h4><blockquote>
+<p>整个script标签，或是一个单独的js文件</p>
 </blockquote>
-<ol>
-<li>form标签    method=get</li>
-<li>a标签</li>
-<li>link标签引入css</li>
-<li>Script标签引入js文件</li>
-<li>img标签引入图片</li>
-<li>iframe引入html页面</li>
-<li>在浏览器地址栏中输入地址后敲回车</li>
-</ol>
-<blockquote>
-<p>POST请求</p>
+<h4 id="局部作用域"><a href="#局部作用域" class="headerlink" title="局部作用域"></a>局部作用域</h4><blockquote>
+<p>（函数作用域)在函数内部就是局部作用域这个代码的名字只在函数内部起效果和作用</p>
 </blockquote>
-<ol>
-<li>form标签     method=post</li>
+<h4 id="ES6新增块级作用域：-包含的区域"><a href="#ES6新增块级作用域：-包含的区域" class="headerlink" title="ES6新增块级作用域：{} 包含的区域"></a>ES6新增块级作用域：{} 包含的区域</h4><h3 id="变量作用域-根据作用域不同"><a href="#变量作用域-根据作用域不同" class="headerlink" title="变量作用域(根据作用域不同)"></a>变量作用域(根据作用域不同)</h3><h4 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h4><blockquote>
+<p>在全局作用域下的变量，在任何位置都可使用</p>
+</blockquote>
+<p>注：<strong>在函数内部，没有声明直接赋值的变量也属于全局变量</strong></p>
+<h4 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h4><blockquote>
+<p>在局部作用域下的变量，在函数内部的变量</p>
+</blockquote>
+<p>注：<strong>函数的形参也可以看作局部变量</strong></p>
+<h4 id="从执行效率来看全局变量和局部变量"><a href="#从执行效率来看全局变量和局部变量" class="headerlink" title="从执行效率来看全局变量和局部变量"></a>从执行效率来看全局变量和局部变量</h4><ol>
+<li><p>全局变量只有在浏览器关闭时才会销毁，比较占内存</p>
+</li>
+<li><p>局部变量程序执行完毕就会销毁，比较节约内存资源</p>
+</li>
 </ol>
-<h3 id="3-响应的HTTP协议格式"><a href="#3-响应的HTTP协议格式" class="headerlink" title="3. 响应的HTTP协议格式"></a>3. 响应的HTTP协议格式</h3><ol>
-<li>响应行<ul>
-<li>响应的协议和版本号</li>
-<li>响应状态码</li>
-<li>响应状态描述符</li>
+<h3 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h3><h4 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h4><ul>
+<li>只要是代码，就至少有一个作用域</li>
+<li>写在函数内部的局部作用域</li>
+<li>如果函数中还有函数，那么在这个作用域中就又可以诞生一个作用域</li>
+<li>内部函数可以访问外部函数的变量机制</li>
+<li>用链式查找决定哪些数据能被内部函数访问，就称作作用域链（就近原则）</li>
+</ul>
+<h2 id="预解析"><a href="#预解析" class="headerlink" title="预解析"></a>预解析</h2><h3 id="概述-2"><a href="#概述-2" class="headerlink" title="概述"></a>概述</h3><ul>
+<li>JavaScript代码是由浏览器中的JavaScript解析器来执行的。</li>
+<li>JavaScript解析器在运行JavaScript代码的时候分为两步:<ul>
+<li><code>预解析</code>和<code>代码执行</code>。</li>
 </ul>
 </li>
-<li>响应头<ul>
-<li>key ：value      不同的响应头，有其不同的含义</li>
-<li>空行</li>
+</ul>
+<h3 id="预解析-1"><a href="#预解析-1" class="headerlink" title="预解析"></a>预解析</h3><ul>
+<li>js引擎会把js里<code>所有的var</code> 还有<code>function</code>提升到<code>当前作用域</code>的<code>最前面</code></li>
+</ul>
+<h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><ul>
+<li>变量预解析(变量提升)<ul>
+<li>把所有的变量声明提升到当前的作用域最前面，<code>不提升赋值操作</code></li>
 </ul>
 </li>
-<li>响应体          就是回传给服务器的数据</li>
-</ol>
-<h4 id="3-1-常见的响应码说明"><a href="#3-1-常见的响应码说明" class="headerlink" title="3.1 常见的响应码说明"></a>3.1 常见的响应码说明</h4><ul>
-<li>200    表示请求成功</li>
-<li>302    表示请求重定向</li>
-<li>404    表示请求服务器已经收到，但是你要的数据不存在(请求地址错误)</li>
-<li>500    表示服务器已经收到请求，但是服务器内部错误(代码错误)</li>
+<li>函数预解析(函数提升)<ul>
+<li>把所有的函数声明提升到当前作用域的最前面，<code>不调用函数</code></li>
 </ul>
-<h3 id="4-MIME-类型说明"><a href="#4-MIME-类型说明" class="headerlink" title="4. MIME 类型说明"></a>4. MIME 类型说明</h3><ul>
-<li>MIME 是HTTP协议中的数据类型 （多功能Internet邮件扩充服务）</li>
-<li>MIME 类型的格式是“大类型/小类型”,并与某一种文件的扩展名相对应</li>
+</li>
 </ul>
-<blockquote>
-<p>常见的MIME类型</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th align="left">文件</th>
-<th>文件后缀</th>
-<th>MIME类型</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">超文本标记语言文本</td>
-<td>.html , .htm</td>
-<td>text/html</td>
-</tr>
-<tr>
-<td align="left">普通文本</td>
-<td>.txt</td>
-<td>text/plain</td>
-</tr>
-<tr>
-<td align="left">RTF文本</td>
-<td>.rtf</td>
-<td>application/rtf</td>
-</tr>
-<tr>
-<td align="left">GIF图形</td>
-<td>.gif</td>
-<td>image/gif</td>
-</tr>
-<tr>
-<td align="left">JPEG</td>
-<td>.jpeg .jpg</td>
-<td>image/jpeg</td>
-</tr>
-<tr>
-<td align="left">au声音文件</td>
-<td>.au</td>
-<td>audio/basic</td>
-</tr>
-<tr>
-<td align="left">MIDI 音乐文件</td>
-<td>.mid,.midi</td>
-<td>audio/midi,audio/x-midi</td>
-</tr>
-<tr>
-<td align="left">AVI文件</td>
-<td>.avi</td>
-<td>video/x-msvideo</td>
-</tr>
-</tbody></table>
-<h4 id="4-1谷歌浏览器查看HTTP协议"><a href="#4-1谷歌浏览器查看HTTP协议" class="headerlink" title="4.1谷歌浏览器查看HTTP协议"></a>4.1谷歌浏览器查看HTTP协议</h4><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210604153111.png"></p>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><ul>
+<li><p>变量提升</p>
+<pre class=" language-js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//undefined</span>
+<span class="token keyword">var</span> num<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 相当于</span>
+<span class="token keyword">var</span> num<span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+num<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>函数提升</p>
+<pre class=" language-js"><code class="language-js"> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//报错</span>
+<span class="token comment" spellcheck="true">// 函数表达式定义函数</span>
+<span class="token keyword">var</span> fun <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// 相当于执行以下代码</span>
+<span class="token keyword">var</span> fun<span class="token punctuation">;</span>
+<span class="token function">fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+fun <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><p>例题</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> num <span class="token operator">=</span><span class="token number">10</span> <span class="token punctuation">;</span>
+<span class="token function">fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> fun <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span>log <span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> num <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//相当于执行</span>
+<span class="token keyword">var</span> num <span class="token punctuation">;</span>
+<span class="token keyword">function</span> fun <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> num <span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">{</span>
+        num <span class="token operator">=</span> <span class="token number">20</span> <span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+num <span class="token operator">=</span> <span class="token number">10</span> <span class="token punctuation">;</span>
+<span class="token function">fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
 
                 
             </div>
@@ -625,7 +587,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://codehan045.github.io/posts/a1ede006.html">https://codehan045.github.io/posts/a1ede006.html</a>
+                    <a href="https://codehan045.github.io/posts/ada78833.html">https://codehan045.github.io/posts/ada78833.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -663,8 +625,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/HTTP/">
-                                    <span class="chip bg-color">HTTP</span>
+                                <a href="/tags/javascript/">
+                                    <span class="chip bg-color">javascript</span>
                                 </a>
                             
                         </div>
@@ -1106,30 +1068,31 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/c1b463a3.html">
+                <a href="/posts/eb300c35.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210611112125.png" class="responsive-img" alt="ITCLUB博客网站">
                         
-                        <span class="card-title">ITCLUB博客网站</span>
+                        <img src="/medias/loading.gif" data-original="/medias/featureimages/0.jpg" class="responsive-img" alt="Javascript模板字符串">
+                        
+                        <span class="card-title">Javascript模板字符串</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            TCLUB博客系统实现了发布文章、图片管理、添加好友和博客排行榜等功能，ITCLUB博客由前台的博文信息浏览和后台的博文信息管理两大部分构成。
+                            
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-06
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-17
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/web%E7%BD%91%E7%AB%99%E9%A1%B9%E7%9B%AE/" class="post-category">
-                                    web网站项目
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
@@ -1139,8 +1102,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/program/">
-                        <span class="chip bg-color">program</span>
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
                     </a>
                     
                 </div>
@@ -1154,12 +1117,12 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/fd679463.html">
+                <a href="/posts/bd63f59d.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/ser.jpg" class="responsive-img" alt="Servlet结构体系">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210813204223.jpg" class="responsive-img" alt="JavaScript数组">
                         
-                        <span class="card-title">Servlet结构体系</span>
+                        <span class="card-title">JavaScript数组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1170,14 +1133,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-12
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/servlet/" class="post-category">
-                                    servlet
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
@@ -1187,8 +1150,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/servlet%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">servlet结构</span>
+                    <a href="/tags/javascript/">
+                        <span class="chip bg-color">javascript</span>
                     </a>
                     
                 </div>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HTTP, java mysql javascript jdbc javaweb">
+    <meta name="keywords" content="数组、字符串、对象遍历方法集锦, java mysql javascript jdbc javaweb">
     <meta name="description" content="世界不停转动，直到我们相逢">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>HTTP | doNow</title>
+    <title>数组、字符串、对象遍历方法集锦 | doNow</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -268,12 +268,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210819092322.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">HTTP</h1>
+                    <h1 class="description center-align post-title">数组、字符串、对象遍历方法集锦</h1>
                 </div>
             </div>
         </div>
@@ -389,8 +389,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/HTTP/">
-                                <span class="chip bg-color">HTTP</span>
+                            <a href="/tags/%E9%81%8D%E5%8E%86%E9%9B%86%E9%94%A6/">
+                                <span class="chip bg-color">遍历集锦</span>
                             </a>
                         
                     </div>
@@ -401,8 +401,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/web/" class="post-category">
-                                web
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                web前端
                             </a>
                         
                     </div>
@@ -414,28 +414,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-06-04
+                    2021-08-18
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-01
+                    2021-08-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    722
+                    705
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -460,145 +460,117 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h2><h3 id="1-什么是HTTP协议"><a href="#1-什么是HTTP协议" class="headerlink" title="1. 什么是HTTP协议"></a>1. 什么是HTTP协议</h3><ul>
-<li>协议：是指双方，或多方，相互约定好，大家都需要遵守的规则，叫做协议</li>
-<li>HTTP协议：指客户端和服务器之间通信时，发送数据，需要遵守的规则（HTTP协议中的数据又叫报文）</li>
+                <h1 id="数组、字符串、对象遍历方法"><a href="#数组、字符串、对象遍历方法" class="headerlink" title="数组、字符串、对象遍历方法"></a>数组、字符串、对象遍历方法</h1><h2 id="params"><a href="#params" class="headerlink" title="params"></a>params</h2><pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> array<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">34</span><span class="token punctuation">,</span><span class="token number">56</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> str<span class="token operator">=</span><span class="token string">"asdadaawsadf"</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> Params <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token string">'张三'</span><span class="token punctuation">,</span>
+  age<span class="token punctuation">:</span> <span class="token string">'19'</span><span class="token punctuation">,</span>
+  sex<span class="token punctuation">:</span><span class="token string">'男'</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="基础for循环"><a href="#基础for循环" class="headerlink" title="基础for循环"></a>基础for循环</h2><ul>
+<li>传统方式</li>
 </ul>
-<h3 id="2-请求的HTTP协议格式"><a href="#2-请求的HTTP协议格式" class="headerlink" title="2. 请求的HTTP协议格式"></a>2. 请求的HTTP协议格式</h3><ul>
-<li>请求  客户端给服务器发送数据</li>
-<li>响应  服务器给客户端回传数据</li>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//遍历Array</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span> <span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">//遍历object</span>
+<span class="token comment" spellcheck="true">//Object.length===undefined;</span>
+<span class="token comment" spellcheck="true">//所以不能使用传统for循环遍历对象</span>
+
+<span class="token comment" spellcheck="true">//遍历string</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span> <span class="token punctuation">;</span> i <span class="token operator">&lt;</span> str<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="for…in循环"><a href="#for…in循环" class="headerlink" title="for…in循环"></a>for…in循环</h2><ul>
+<li>为遍历数组而生</li>
+<li>全能，可以遍历数组、对象、字符串</li>
 </ul>
-<h4 id="2-1-GET请求"><a href="#2-1-GET请求" class="headerlink" title="2.1 GET请求"></a>2.1 GET请求</h4><ol>
-<li><p>请求行</p>
-<p>① 请求的方式                           GET</p>
-<p>② 请求的资源路径[+?+请求参数]</p>
-<p>③ 请求的协议的版本号           HTTP/1.1</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token keyword">in</span> ArrayList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ArrayList<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">// i输出为index索引</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token keyword">in</span> ObjectParams<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ObjectParams<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// i输出为key</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token keyword">in</span> StringParams<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>StringParams<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// i输出为index索引</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="for-of-循环-ES6引入"><a href="#for-of-循环-ES6引入" class="headerlink" title="for of 循环(ES6引入)"></a>for of 循环(ES6引入)</h2><pre class=" language-js"><code class="language-js"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token keyword">of</span> ArrayList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">//输出数组中的每一个元素</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// 数组原生具备iterator接口（即默认部署了Symbol.iterator属性），for...of循环本质上就是调用这个接口产生的遍历器</span>
+ObjectParams<span class="token punctuation">[</span>Symbol<span class="token punctuation">.</span>iterator<span class="token punctuation">]</span> <span class="token operator">=</span> ArrayList<span class="token punctuation">[</span>Symbol<span class="token punctuation">.</span>iterator<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>ArrayList<span class="token punctuation">)</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token keyword">of</span> ObjectParams<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 输出结果与直接遍历ArrayList一样，Object默认是不具备Symbol.iterator属性的，因此无法对Object用for of进行遍历</span>
+<span class="token punctuation">}</span>  
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token keyword">of</span> StringParams<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>  
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="forEach循环-数组特有，不可break"><a href="#forEach循环-数组特有，不可break" class="headerlink" title="forEach循环(数组特有，不可break)"></a>forEach循环(数组特有，不可break)</h2><ul>
+<li><p><code>forEach()</code>这个方法只支持IE8以上的浏览器<br>IE8及以下的浏览器均不支持该方法，所以如果需要兼容IE8，则不要使用forEach<br>还是使用for循环来遍历</p>
 </li>
-<li><p>请求头</p>
-<p>key:value    组成    不同的键值对，表示不同的含义</p>
-</li>
-</ol>
-<h4 id="2-2-POST-请求"><a href="#2-2-POST-请求" class="headerlink" title="2.2  POST  请求"></a>2.2  POST  请求</h4><ol>
-<li><p>请求行</p>
-<p>① 请求的方式                           POST</p>
-<p>② 请求的资源路径[+?+请求参数]</p>
-<p>③ 请求的协议的版本号           HTTP/1.1</p>
-</li>
-<li><p>请求头</p>
-<p>① key:value         不同的请求头，有不同的含义</p>
-<p> 空行</p>
-</li>
-<li><p>请求体        发送给服务器的数据</p>
-</li>
-</ol>
-<h4 id="2-3-常用的请求头"><a href="#2-3-常用的请求头" class="headerlink" title="2.3 常用的请求头"></a>2.3 常用的请求头</h4><p>Accept: 表示客户端可以接收的数据类型</p>
-<p>Accept-Language：表示客户端可以接收的语言类型   </p>
+<li><p><code> forEach()</code>方法需要一个函数作为参数</p>
+<p>像这种函数，由我们创建但是不由我们调用的，我们称为回调函数</p>
+<p>数组中有几个元素函数就会执行几次，每次执行时，浏览器会将遍历到的元素</p>
+<p> 以实参的形式传递进来，我们可以来定义形参，来读取这些内容</p>
 <ul>
-<li>zh_CN   中文中国</li>
-<li>en_US   英文美国</li>
-</ul>
-<p>Connection: 告诉服务器请求连接如何处理</p>
+<li><p>浏览器会在回调函数中传递三个参数：</p>
 <ul>
-<li>Keep-Alive    告诉服务器回传数据不要马上关闭，保持一小段时间的连接</li>
-<li>Closed     马上关闭</li>
-</ul>
-<p>User-Agent：表示客户端浏览器的信息</p>
-<p>Host: 表示请求时的服务器 ip 和端口号</p>
-<h4 id="2-4-区分哪些是GET请求，哪些是POST请求"><a href="#2-4-区分哪些是GET请求，哪些是POST请求" class="headerlink" title="2.4 区分哪些是GET请求，哪些是POST请求"></a>2.4 区分哪些是GET请求，哪些是POST请求</h4><blockquote>
-<p>GET请求</p>
-</blockquote>
-<ol>
-<li>form标签    method=get</li>
-<li>a标签</li>
-<li>link标签引入css</li>
-<li>Script标签引入js文件</li>
-<li>img标签引入图片</li>
-<li>iframe引入html页面</li>
-<li>在浏览器地址栏中输入地址后敲回车</li>
-</ol>
-<blockquote>
-<p>POST请求</p>
-</blockquote>
-<ol>
-<li>form标签     method=post</li>
-</ol>
-<h3 id="3-响应的HTTP协议格式"><a href="#3-响应的HTTP协议格式" class="headerlink" title="3. 响应的HTTP协议格式"></a>3. 响应的HTTP协议格式</h3><ol>
-<li>响应行<ul>
-<li>响应的协议和版本号</li>
-<li>响应状态码</li>
-<li>响应状态描述符</li>
+<li><p>第一个参数，就是当前正在遍历的元素</p>
+</li>
+<li><p>第二个参数，就是当前正在遍历的元素的索引</p>
+</li>
+<li><p>第三个参数，就是正在遍历的数组</p>
+</li>
 </ul>
 </li>
-<li>响应头<ul>
-<li>key ：value      不同的响应头，有其不同的含义</li>
-<li>空行</li>
 </ul>
 </li>
-<li>响应体          就是回传给服务器的数据</li>
-</ol>
-<h4 id="3-1-常见的响应码说明"><a href="#3-1-常见的响应码说明" class="headerlink" title="3.1 常见的响应码说明"></a>3.1 常见的响应码说明</h4><ul>
-<li>200    表示请求成功</li>
-<li>302    表示请求重定向</li>
-<li>404    表示请求服务器已经收到，但是你要的数据不存在(请求地址错误)</li>
-<li>500    表示服务器已经收到请求，但是服务器内部错误(代码错误)</li>
 </ul>
-<h3 id="4-MIME-类型说明"><a href="#4-MIME-类型说明" class="headerlink" title="4. MIME 类型说明"></a>4. MIME 类型说明</h3><ul>
-<li>MIME 是HTTP协议中的数据类型 （多功能Internet邮件扩充服务）</li>
-<li>MIME 类型的格式是“大类型/小类型”,并与某一种文件的扩展名相对应</li>
-</ul>
-<blockquote>
-<p>常见的MIME类型</p>
+<pre class=" language-js"><code class="language-js">arr<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>value <span class="token punctuation">,</span> index <span class="token punctuation">,</span> obj<span class="token punctuation">)</span><span class="token punctuation">{</span>
+     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//第二个和第三个参数可选，value参数必须写</span>
+</code></pre>
+<h2 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h2><pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> ArrayList<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ArrayList<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  i<span class="token operator">++</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> j <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token comment" spellcheck="true">// 你会发现它并没有走进这个while循环，因为ObjectParams.length === undefined</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>j <span class="token operator">&lt;</span> ObjectParams<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ObjectParams<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  j<span class="token operator">++</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> k <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>k <span class="token operator">&lt;</span> StringParams<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>StringParams<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  k<span class="token operator">++</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="do-while循环"><a href="#do-while循环" class="headerlink" title="do while循环"></a>do while循环</h2><pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">do</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ArrayList<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  i<span class="token operator">++</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> ArrayList<span class="token punctuation">.</span>length<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//其他与while循环一致</span>
+</code></pre>
+<h2 id="map-数组特有，不可break"><a href="#map-数组特有，不可break" class="headerlink" title="map(数组特有，不可break)"></a>map(数组特有，不可break)</h2><pre class=" language-js"><code class="language-js">ArrayList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
+<p>遍历数组用forEach、map（如果你不需要中断它），需要中断的话就选for…of吧<br>遍历字符串for..of, for…in<br>遍历对象for…in<br><code>while和do while的区别</code> while先判断条件，do while先执行一次再判断条件。</p>
 </blockquote>
-<table>
-<thead>
-<tr>
-<th align="left">文件</th>
-<th>文件后缀</th>
-<th>MIME类型</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">超文本标记语言文本</td>
-<td>.html , .htm</td>
-<td>text/html</td>
-</tr>
-<tr>
-<td align="left">普通文本</td>
-<td>.txt</td>
-<td>text/plain</td>
-</tr>
-<tr>
-<td align="left">RTF文本</td>
-<td>.rtf</td>
-<td>application/rtf</td>
-</tr>
-<tr>
-<td align="left">GIF图形</td>
-<td>.gif</td>
-<td>image/gif</td>
-</tr>
-<tr>
-<td align="left">JPEG</td>
-<td>.jpeg .jpg</td>
-<td>image/jpeg</td>
-</tr>
-<tr>
-<td align="left">au声音文件</td>
-<td>.au</td>
-<td>audio/basic</td>
-</tr>
-<tr>
-<td align="left">MIDI 音乐文件</td>
-<td>.mid,.midi</td>
-<td>audio/midi,audio/x-midi</td>
-</tr>
-<tr>
-<td align="left">AVI文件</td>
-<td>.avi</td>
-<td>video/x-msvideo</td>
-</tr>
-</tbody></table>
-<h4 id="4-1谷歌浏览器查看HTTP协议"><a href="#4-1谷歌浏览器查看HTTP协议" class="headerlink" title="4.1谷歌浏览器查看HTTP协议"></a>4.1谷歌浏览器查看HTTP协议</h4><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210604153111.png"></p>
 
                 
             </div>
@@ -625,7 +597,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://codehan045.github.io/posts/a1ede006.html">https://codehan045.github.io/posts/a1ede006.html</a>
+                    <a href="https://codehan045.github.io/posts/8013204b.html">https://codehan045.github.io/posts/8013204b.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -663,8 +635,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/HTTP/">
-                                    <span class="chip bg-color">HTTP</span>
+                                <a href="/tags/%E9%81%8D%E5%8E%86%E9%9B%86%E9%94%A6/">
+                                    <span class="chip bg-color">遍历集锦</span>
                                 </a>
                             
                         </div>
@@ -1102,45 +1074,47 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/c1b463a3.html">
+                <a href="/posts/8013204b.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210611112125.png" class="responsive-img" alt="ITCLUB博客网站">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210819092322.jpg" class="responsive-img" alt="数组、字符串、对象遍历方法集锦">
                         
-                        <span class="card-title">ITCLUB博客网站</span>
+                        <span class="card-title">数组、字符串、对象遍历方法集锦</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            TCLUB博客系统实现了发布文章、图片管理、添加好友和博客排行榜等功能，ITCLUB博客由前台的博文信息浏览和后台的博文信息管理两大部分构成。
+                            
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/web%E7%BD%91%E7%AB%99%E9%A1%B9%E7%9B%AE/" class="post-category">
-                                    web网站项目
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/program/">
-                        <span class="chip bg-color">program</span>
+                    <a href="/tags/%E9%81%8D%E5%8E%86%E9%9B%86%E9%94%A6/">
+                        <span class="chip bg-color">遍历集锦</span>
                     </a>
                     
                 </div>
@@ -1154,12 +1128,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/fd679463.html">
+                <a href="/posts/eb300c35.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/ser.jpg" class="responsive-img" alt="Servlet结构体系">
                         
-                        <span class="card-title">Servlet结构体系</span>
+                        <img src="/medias/loading.gif" data-original="/medias/featureimages/0.jpg" class="responsive-img" alt="Javascript模板字符串">
+                        
+                        <span class="card-title">Javascript模板字符串</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1170,14 +1145,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-17
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/servlet/" class="post-category">
-                                    servlet
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
@@ -1187,8 +1162,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/servlet%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">servlet结构</span>
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
                     </a>
                     
                 </div>
