@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="网页发展、网页结构、文档类型、开发工具及插件">
+    <meta name="keywords" content="BOM组成、window对象、定时器">
     <meta name="description" content="世界不停转动，直到我们相逢">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>HTML | doNow</title>
+    <title>JavaScript组成之BOM | doNow</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210820232812.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">HTML</h1>
+                    <h1 class="description center-align post-title">JavaScript组成之BOM</h1>
                 </div>
             </div>
         </div>
@@ -367,8 +367,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/html/">
-                                <span class="chip bg-color">html</span>
+                            <a href="/tags/javascript/">
+                                <span class="chip bg-color">javascript</span>
                             </a>
                         
                     </div>
@@ -392,28 +392,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-05
+                    2021-08-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-17
+                    2021-08-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    8 分
                 </div>
                 
 
@@ -438,116 +438,275 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Html"><a href="#Html" class="headerlink" title="Html"></a>Html</h1><h2 id="前端发展历程"><a href="#前端发展历程" class="headerlink" title="前端发展历程"></a>前端发展历程</h2><h3 id="前端开发方向"><a href="#前端开发方向" class="headerlink" title="前端开发方向"></a>前端开发方向</h3><ul>
-<li>web网页开发</li>
-<li>小程序</li>
-<li>移动端开发</li>
-<li>UI设计</li>
+                <h1 id="JavaScript组成之BOM"><a href="#JavaScript组成之BOM" class="headerlink" title="JavaScript组成之BOM"></a>JavaScript组成之BOM</h1><h2 id="BOM概述"><a href="#BOM概述" class="headerlink" title="BOM概述"></a>BOM概述</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><ul>
+<li><code>BOM(Browser Object Model - 浏览器对象模型)</code>– 指的是在JavaScript中会将一个页面抽象成一个对象来进行操作</li>
+<li>JavaScript内置了很多API来对页面本身进行操作—比如：新建或关闭网页、前进、后退、刷新修改页面地址等。</li>
+<li>JavaScript BOM负责了 程序和页面本身之间的交互。开发人员通过JavaScript提供的api来进行操作</li>
+<li>BOM将页面抽象为了一个对象即<code>window</code>对象(每个页面的专属对象,每个页面只有一个)，是BOM的核心内容。</li>
 </ul>
-<h3 id="时间线"><a href="#时间线" class="headerlink" title="时间线"></a>时间线</h3><ul>
-<li>91年，出现第一个网页，早期的网页主要用于看文档，传论文，学术研究,Tim benners-lee 互联网之父</li>
-<li>94年，PHP诞生，实现数据的交互和动态页面的模板引擎，为Web2.0时代做了铺垫，lee博士,建立了W3C（指定前端开发规则，包含Html,Css，js等）</li>
-<li>web1.0 纯静态页面</li>
-<li>web2.0 动态页面，数据动态渲染</li>
-<li>95年：Javascript出现，只能实现动态交互，页面的动画效果</li>
-<li>99年：ajax技术，异步加载，web2.0 时代到来</li>
-<li>07年：第一部ipone手机诞生，标志互联网时代的到来</li>
-<li>14年 Html5版本发布</li>
-<li>20年：Vue3.0发布，混合开发</li>
+<h3 id="BOM的构成"><a href="#BOM的构成" class="headerlink" title="BOM的构成"></a>BOM的构成</h3><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210822150341.png" alt="window"></p>
+<ul>
+<li><p><code>BOM</code> 包含 <code>DOM</code>。</p>
+</li>
+<li><p><code>window</code> 对象是浏览器的顶级对象，它具有双重角色</p>
+</li>
+<li><p>它是 JS 访问浏览器窗口的一个接口</p>
+</li>
+<li><p>它是一个全局对象。定义在全局作用域中的变量、函数都会变成 <code>window </code>对象的属性和方法</p>
+</li>
+<li><p>在调用的时候可以省略 window，前面学习的对话框都属于 <code>window</code> 对象方法，如 <code>alert()</code>、<code>prompt()</code>等。</p>
+</li>
 </ul>
-<h3 id="前端三件套概述"><a href="#前端三件套概述" class="headerlink" title="前端三件套概述"></a>前端三件套概述</h3><ol>
-<li>Html（超文本标记语言）负责网页基本骨架结构搭建</li>
-<li>CSS  负责对网页样式美化</li>
-<li>Javascritpt 负责页面动态交互效果</li>
+<h3 id="window对象相关api-方法"><a href="#window对象相关api-方法" class="headerlink" title="window对象相关api(方法)"></a>window对象相关api(方法)</h3><ul>
+<li><p><code>window.confirm()</code>: 显示一个具有一个可选消息和两个按钮(确定和取消)的模态对话框,会返回一个布尔类型值</p>
+</li>
+<li><p><code>window.close()</code>: 用于关闭当前页面</p>
+</li>
+<li><p><code>window.open()</code>: 创建一个新的浏览器窗口对象</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//语法</span>
+window<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">"页面地址"</span><span class="token punctuation">,</span><span class="token string">"_self/_blank"</span><span class="token punctuation">,</span><span class="token string">"页面尺寸和位置"</span><span class="token punctuation">)</span>；
+<span class="token comment" spellcheck="true">//注：_self是在当前页面打开新标签页    _blank是创建一个新的标签页</span>
+<span class="token comment" spellcheck="true">//例</span>
+window<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'http://www.baidu.com'</span><span class="token punctuation">,</span><span class="token string">'_blank'</span><span class="token punctuation">,</span><span class="token string">'width=500,height=500,left=300,top=100'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//注：后面设置的页面尺寸和位置不需要带单位</span>
+</code></pre>
+</li>
+<li><p><code>window.innerWidth</code>&amp;<code>window.innerHeight</code>返回以像素为单位的窗口（首屏）的内部宽度和内部高度</p>
+<pre class=" language-js"><code class="language-js"> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>innerWidth<span class="token punctuation">,</span>innerHeight<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p>在使用window对象相关api时，可以省略<code>window.</code>前缀</p>
+<ol>
+<li>所有全局变量都是window的属性</li>
+<li>所有全局的函数都是window的方法</li>
 </ol>
-<h2 id="Html-1"><a href="#Html-1" class="headerlink" title="Html"></a>Html</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Hyper Text Marckup Language 超文本标记语言</p>
-<ul>
-<li>超文本：通过一系列的超链接，将不同空间的资源连接在一起形成一个网状结构。超文本其实就是超媒体，它不仅包含文本，还包含视频、音频等媒体文件</li>
-<li>标记：指的是标签，一个文本内容会通过一个标签进行连接</li>
-</ul>
-<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ul>
-<li>可扩展 不同的标签不同的功能</li>
-<li>简单性  标签的使用</li>
-<li>跨平台性 基于浏览器</li>
-<li>通用性 网页写好之后，可以相互嵌套，在浏览器渲染</li>
-</ul>
-<h2 id="Html网页文档结构"><a href="#Html网页文档结构" class="headerlink" title="Html网页文档结构"></a>Html网页文档结构</h2><ul>
-<li>html 文档用来描述网页</li>
-<li>html文档包含标签和文本</li>
-</ul>
-<h3 id="文档结构"><a href="#文档结构" class="headerlink" title="文档结构"></a>文档结构</h3><pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE HTML></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>utf-8<span class="token punctuation">'</span></span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>我的第一个网页<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-        hello world
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+</blockquote>
+<pre class=" language-js"><code class="language-js">window<span class="token punctuation">.</span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//具有相同的效果</span>
 </code></pre>
-<ul>
-<li><code>&lt;!DOCTYPE HTML&gt;</code>：代表网页的文档类型，申明了浏览器解析时的解析规则，大小写均可</li>
-<li><code>&lt;html&gt;</code>：根标签，每个网页只有一个</li>
-<li><code>&lt;head&gt;</code>:网页的头部,tilte 表示网页的标题，显示在浏览器的窗口栏上，利于seo收录</li>
-<li><code> &lt;meta charset='utf-8'&gt;</code> ：指定网页的编码集</li>
-<li><code>&lt;body&gt;</code>：代表网页的主体，书写网页结构和内容的代码</li>
-</ul>
-<h3 id="DOCTYPE"><a href="#DOCTYPE" class="headerlink" title="DOCTYPE"></a>DOCTYPE</h3><ul>
-<li>H5 既可以使用兼容模式，也可以使用严格模式</li>
-</ul>
-<pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE HTML></span>
+<h2 id="window的内置对象"><a href="#window的内置对象" class="headerlink" title="window的内置对象"></a>window的内置对象</h2><h3 id="location"><a href="#location" class="headerlink" title="location"></a>location</h3><h4 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h4><ul>
+<li><p><code>location</code>代表当前浏览器的地址栏信息<code>url</code>，通过Location可以获取地址栏信息，或者操作浏览器跳转页面</p>
+</li>
+<li><p>直接输出<code>location</code>，则可以获取到地址栏的信息（当前页面的完整路径）</p>
+<pre class=" language-js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>location<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//http://127.0.0.1:5501/day17/source/day17/03.Location.html</span>
 </code></pre>
-<ul>
-<li>H4</li>
+</li>
 </ul>
-<pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"></span>
+<h4 id="扩展url"><a href="#扩展url" class="headerlink" title="扩展url"></a>扩展url</h4><ul>
+<li><p>概念：<code>url</code>(<code>uniform resouce locator</code>)统一资源定位符，是互联网上标准资源的地址。互联网上的每一个文件都有一个唯一的<code>URL</code>。</p>
+</li>
+<li><p>一般语法格式</p>
+<pre class=" language-js"><code class="language-js">protovol<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>host<span class="token punctuation">[</span><span class="token punctuation">:</span>port<span class="token punctuation">]</span><span class="token operator">/</span>path<span class="token operator">/</span><span class="token punctuation">[</span><span class="token operator">?</span>query<span class="token punctuation">]</span>#fragment
+
+http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>localhost<span class="token operator">/</span>index<span class="token punctuation">.</span>html<span class="token operator">?</span>name<span class="token operator">=</span>andy<span class="token operator">&amp;</span>age<span class="token operator">=</span><span class="token number">18</span>#link
 </code></pre>
+<table>
+<thead>
+<tr>
+<th>组成</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>protocol</td>
+<td>通信协议 常用的http,https等</td>
+</tr>
+<tr>
+<td>host</td>
+<td>主机(域名) <a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a>    本机 <code>localhost</code>/<code>127.0.0.1</code></td>
+</tr>
+<tr>
+<td>port</td>
+<td>端口号，可选</td>
+</tr>
+<tr>
+<td>path</td>
+<td>路径 由零或多个’/‘符号隔开的字符串</td>
+</tr>
+<tr>
+<td>query</td>
+<td>参数 以键值对的形式，通过&amp;符分隔开来</td>
+</tr>
+<tr>
+<td>fragment</td>
+<td>片段 #后面内容 常见于链接 锚点</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="页面跳转"><a href="#页面跳转" class="headerlink" title="页面跳转"></a>页面跳转</h4><ul>
+<li><p>若直接将<code>location</code>属性修改为一个完整的路径，或相对路径，则我们页面会自动跳转到该路径，并产生相应的历史记录；</p>
+<pre class=" language-js"><code class="language-js">location<span class="token operator">=</span><span class="token string">"http://www.baidu.com"</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p><code>href</code> 获取或设置整个<code>URL</code></p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//语法</span>
+location<span class="token punctuation">.</span>href<span class="token operator">=</span><span class="token string">"新地址"</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//跳转到新页面，保存历史记录</span>
+</code></pre>
+</li>
+<li><p><code>assign()</code></p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//语法</span>
+location<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token string">"新地址"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//跳转到新页面，保存历史记录</span>
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p>以上三种方式功能上没有任何区别，</p>
+</blockquote>
 <ul>
-<li><p><strong>作用</strong></p>
+<li><p><code>replace()</code>可以使用一个新的页面替换当前页面，调用完毕也会跳转页面,不会生成历史记录，不能使用回退按钮回退</p>
+</li>
+<li><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//语法</span>
+location<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"新地址"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p><code>replace()</code>与其他方式的区别在于，在跳转页面后，没有回退的历史记录，不能回退到之前的页面</p>
+</blockquote>
+<h4 id="刷新页面"><a href="#刷新页面" class="headerlink" title="刷新页面"></a>刷新页面</h4><ul>
+<li><p><code>reload()</code>用于重新加载当前页面，作用和刷新按钮一样</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//语法</span>
+location<span class="token punctuation">.</span><span class="token function">reload</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//如果在方法中传递一个`true`作为参数，则会强制清空缓存刷新页面  ctrl+f5</span>
+</code></pre>
+</li>
+</ul>
+<h4 id="在页面之间传递数据"><a href="#在页面之间传递数据" class="headerlink" title="在页面之间传递数据"></a>在页面之间传递数据</h4><ul>
+<li><p><code>search</code>属性  返回参数</p>
+</li>
+<li><p>概述</p>
 <ul>
-<li>申明文档类型</li>
-<li>申明html版本，浏览器解析规则版本</li>
-<li>决定了浏览器的加载模式</li>
+<li>当提交表单，浏览器会把表单里写的数据通过<code>location.search</code>传递到提交的页面。在提交的页面上通过<code>location.search</code>获得对应的数据，利用字符串api解析其中的数据</li>
 </ul>
 </li>
-<li><p><strong>浏览器加载模式</strong></p>
-<ul>
-<li>严格模式（标准模式）：严格按照W3c标准来解析网页</li>
-<li>混杂模式（兼容模式）：按照自己的规范解析网页</li>
-</ul>
-</li>
-<li><p><strong>doctype不写？</strong></p>
-<ul>
-<li>若doctype不写，会导致文档无法判断当前的版本和dtd约束条件，浏览器会采用兼容模式解析网页</li>
-<li>若doctype书写正确并且dtd的约束条件正确，默认采用严格模式解析网页</li>
-</ul>
-</li>
-</ul>
-<h2 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h2><ul>
-<li><p>webstorm</p>
-<p>内置了很多插件，不用自己安装，对电脑内存消耗比较大</p>
-</li>
-<li><p>Hbuilder</p>
-<p>小巧的开发工具，内置了部分插件，提供了完善的前端开发语法支持，启动比较慢，电脑性能不好，会出现卡退的现象</p>
-</li>
-<li><p>记事本</p>
-<p>用起来比较麻烦</p>
-</li>
-<li><p>vs code ——目前市场上比较主流的开发工具</p>
-<p>微软开发的软件，不仅可以前端使用，还可以开发java、python等等。轻量化软件，需要插件自己安装，内存消耗不大。</p>
+<li><p>示例</p>
+<p>书写登录框，点击登录跳转到<code>index.html</code></p>
+<pre class=" language-js"><code class="language-js"><span class="token operator">&lt;</span>body<span class="token operator">></span>
+    <span class="token operator">&lt;</span>form action<span class="token operator">=</span><span class="token string">"index.html"</span><span class="token operator">></span>
+        用户名： <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> name<span class="token operator">=</span><span class="token string">"uname"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"submit"</span> value<span class="token operator">=</span><span class="token string">"登录"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
+</code></pre>
+<p>在<code>index.html</code>获取登录参数</p>
+<pre class=" language-js"><code class="language-js"> <span class="token comment" spellcheck="true">// 获取URl中的参数</span>
+<span class="token keyword">var</span> data<span class="token operator">=</span>location<span class="token punctuation">.</span>search<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//?user=admin&amp;pass=123</span>
+<span class="token comment" spellcheck="true">// 利用字符串api截取？之后的数据</span>
+data<span class="token operator">=</span>data<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 获取用户名</span>
+data<span class="token operator">=</span>data<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"user="</span><span class="token punctuation">,</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 获取密码</span>
+data<span class="token operator">=</span>data<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"pass="</span><span class="token punctuation">,</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 转换为字符串数组</span>
+data<span class="token operator">=</span>data<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">"&amp;"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//["admin","123"]</span>
+</code></pre>
 </li>
 </ul>
-<h3 id="常用插件的安装"><a href="#常用插件的安装" class="headerlink" title="常用插件的安装"></a>常用插件的安装</h3><ol>
-<li><code>Chinese (Simplified) Language Pack for Visual Studio Code</code> 汉化</li>
-<li><code>Auto Rename Tag</code>自动将结尾标签更改</li>
-<li><code>HTML CSS Support</code>在HTMl文档中支持css的提示</li>
-<li><code>HTML Snippets</code>自动生成html代码，专门对html代码格式化，比如自动生成html代码结构</li>
-<li><code>Image preview</code>在html代码中预览引入的图片的缩略图</li>
-<li><code>IntelliSense for CSS class names in HTML</code>可以在html代码中智能提示css代码中class name</li>
-<li><code>Live Server</code>:可以将vscode作为一台服务器，让浏览器来访问，执行html代码实时更新</li>
-<li><code>open in browser</code>:可以指定浏览器打开网页，不能实时更新</li>
-</ol>
+<h3 id="history"><a href="#history" class="headerlink" title="history"></a>history</h3><h4 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h4><ul>
+<li>代表浏览器的历史记录，可以通过该对象来操作浏览器的历史记录</li>
+<li>由于隐私原因，该对象不能获取到具体的历史记录，只能操作浏览器向前或向后翻页 ,而且该操作只在当次访问时有效</li>
+<li>该对象包含用户（在浏览器窗口中）访问过的 <code>URL</code></li>
+</ul>
+<h4 id="相关属性方法"><a href="#相关属性方法" class="headerlink" title="相关属性方法"></a>相关属性方法</h4><ul>
+<li><code>go()</code>根据传入的数字来决定是前进还是后退指定的步数</li>
+<li><code>forward()</code>前进一步</li>
+<li><code>back()</code>后退一步</li>
+</ul>
+<pre class=" language-js"><code class="language-js">history<span class="token punctuation">.</span><span class="token function">go</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>前进<span class="token number">2</span>步
+history<span class="token punctuation">.</span><span class="token function">go</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>后退一步
+history<span class="token punctuation">.</span><span class="token function">forward</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>前进一步
+history<span class="token punctuation">.</span><span class="token function">back</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>后退一步
+</code></pre>
+<blockquote>
+<p>以上是根据页面保存的页面历史，来前进后退。</p>
+</blockquote>
+<h3 id="navigator"><a href="#navigator" class="headerlink" title="navigator"></a>navigator</h3><h4 id="概念-2"><a href="#概念-2" class="headerlink" title="概念"></a>概念</h4><ul>
+<li>代表的当前浏览器的信息，通过该对象可以来识别不同的浏览器</li>
+</ul>
+<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><ul>
+<li><p><code>userAgent</code>:返回浏览器的版本信息</p>
+</li>
+<li><p><code>userAgent</code>是一个字符串，这个字符串中包含有用来描述浏览器信息的内容</p>
+</li>
+<li><p>不同的浏览器会有不同的<code>userAgent</code>可以配合正则表达式以及字符串api来实现浏览器版本检测功能</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//火狐的userAgent</span>
+Mozilla<span class="token operator">/</span><span class="token number">5.0</span> <span class="token punctuation">(</span>Windows NT <span class="token number">6.1</span><span class="token punctuation">;</span> WOW64<span class="token punctuation">;</span> rv<span class="token punctuation">:</span><span class="token number">50.0</span><span class="token punctuation">)</span> Gecko<span class="token operator">/</span><span class="token number">20100101</span> Firefox<span class="token operator">/</span><span class="token number">50.0</span>
+<span class="token comment" spellcheck="true">//Chrome的userAgent</span>
+Mozilla<span class="token operator">/</span><span class="token number">5.0</span> <span class="token punctuation">(</span>Windows NT <span class="token number">6.1</span><span class="token punctuation">;</span> Win64<span class="token punctuation">;</span> x64<span class="token punctuation">)</span> AppleWebKit<span class="token operator">/</span><span class="token number">537.36</span> <span class="token punctuation">(</span>KHTML<span class="token punctuation">,</span> like Gecko<span class="token punctuation">)</span> Chrome<span class="token operator">/</span><span class="token number">52.0</span><span class="token punctuation">.</span><span class="token number">2743.82</span> Safari<span class="token operator">/</span><span class="token number">537.36</span>
+<span class="token comment" spellcheck="true">//IE11</span>
+Mozilla<span class="token operator">/</span><span class="token number">5.0</span> <span class="token punctuation">(</span>Windows NT <span class="token number">6.1</span><span class="token punctuation">;</span> WOW64<span class="token punctuation">;</span> Trident<span class="token operator">/</span><span class="token number">7.0</span><span class="token punctuation">;</span> SLCC2<span class="token punctuation">;</span> <span class="token punctuation">.</span>NET CLR <span class="token number">2.0</span><span class="token punctuation">.</span><span class="token number">50727</span><span class="token punctuation">;</span> <span class="token punctuation">.</span>NET CLR <span class="token number">3.5</span><span class="token punctuation">.</span><span class="token number">30729</span><span class="token punctuation">;</span> <span class="token punctuation">.</span>NET CLR <span class="token number">3.0</span><span class="token punctuation">.</span><span class="token number">30729</span><span class="token punctuation">;</span> Media Center PC <span class="token number">6.0</span><span class="token punctuation">;</span> <span class="token punctuation">.</span>NET4<span class="token punctuation">.</span>0C<span class="token punctuation">;</span> <span class="token punctuation">.</span>NET4<span class="token punctuation">.</span>0E<span class="token punctuation">;</span> rv<span class="token punctuation">:</span><span class="token number">11.0</span><span class="token punctuation">)</span> like Gecko
+<span class="token comment" spellcheck="true">// 在IE11中已经将微软和IE相关的标识都已经去除了，所以我们基本已经不能通过UserAgent来识别一个浏览器是否是IE了</span>
+<span class="token comment" spellcheck="true">//如果通过UserAgent不能判断，还可以通过一些浏览器中特有的对象，来判断浏览器的信息</span>
+ 比如：ActiveXObject
+</code></pre>
+</li>
+</ul>
+<h3 id="screen"><a href="#screen" class="headerlink" title="screen"></a>screen</h3><h4 id="概念-3"><a href="#概念-3" class="headerlink" title="概念"></a>概念</h4><ul>
+<li><p>代表用户的屏幕的信息，通过该对象可以获取到用户的显示器的相关的信息</p>
+</li>
+<li><p>因为兼容性问题。实用性不强</p>
+<pre class=" language-js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>screen<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<h3 id="document会在DOM中——请移步到DOM查看"><a href="#document会在DOM中——请移步到DOM查看" class="headerlink" title="document会在DOM中——请移步到DOM查看"></a>document会在DOM中——请移步到DOM查看</h3><h2 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h2><h3 id="概念-4"><a href="#概念-4" class="headerlink" title="概念"></a>概念</h3><ul>
+<li>定时器是指JavaScript提供了相应的api能够实现一段时间之后执行代码。类似于生活中的 延时自拍或定时闹钟，会在指定时间之后才会执行</li>
+</ul>
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><ul>
+<li>延时定时器：在一段时间之后执行一次指定代码</li>
+<li>间隔定时器：每隔一段时间之后就执行一次指定的代码</li>
+</ul>
+<h4 id="延时定时器-setTimeout"><a href="#延时定时器-setTimeout" class="headerlink" title="延时定时器 setTimeout()"></a>延时定时器 setTimeout()</h4><ul>
+<li><p><code>setTimeout(函数，[延时时间])</code> : 设置延时定时器  <code>回调函数 callback</code></p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> 定时器标识符 <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>延时时间<span class="token punctuation">)</span><span class="token punctuation">;</span>
+例子：<span class="token number">5</span>秒后提示自拍
+<span class="token keyword">var</span> timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+     所要执行的代码
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">5000</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//延时时间以毫秒为单位  1秒 = 1000毫秒 默认为0</span>
+
+<span class="token keyword">var</span> timer<span class="token operator">=</span><span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+    执行代码；
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+<li><p><code>clearTimeout(定时器标识)</code>：停止(清除)延时定时器,取消了先前通过调用 <code>setTimeout()</code>建立的定时器</p>
+<pre class=" language-js"><code class="language-js"><span class="token function">clearTimeout</span><span class="token punctuation">(</span>定时器标识符<span class="token punctuation">)</span><span class="token punctuation">;</span>
+例子：
+<span class="token function">clearTimeout</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<blockquote>
+<p>普通函数是按照代码顺序直接调用，而这个函数，需要等待事件，事件到了才会去调用这个函数，因此称为<code>回调函数</code>。</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="间隔定时器-setInterval"><a href="#间隔定时器-setInterval" class="headerlink" title="间隔定时器 setInterval()"></a>间隔定时器 setInterval()</h4><ul>
+<li><p><code>setInterval(函数,[间隔时间])</code>：重复调用一个函数，每隔这个时间，就去调用一次回调函数</p>
+<pre class=" language-js"><code class="language-js"><span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//执行代码</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">[</span>间隔时间<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//例子：每隔1秒输出一次当前时间</span>
+<span class="token keyword">var</span> timer <span class="token operator">=</span><span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//间隔时间以毫秒为单位  1秒 = 1000毫秒 默认为0</span>
+</code></pre>
+</li>
+<li><p><code>clearInterval()</code> 方法取消了先前通过调用 <code>setInterval()</code> 建立的定时器</p>
+<pre class=" language-js"><code class="language-js"><span class="token function">clearInterval</span><span class="token punctuation">(</span>定时器标识符<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//例子：</span>
+<span class="token function">clearInterval</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<blockquote>
+<p>延时定时器和间隔定时器都会 ，返回一个Number类型的数据</p>
+<p>这个数字用来作为定时器的唯一标识</p>
+</blockquote>
+</li>
+</ul>
 
                 
             </div>
@@ -574,7 +733,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://codehan045.github.io/posts/2eec1551.html">https://codehan045.github.io/posts/2eec1551.html</a>
+                    <a href="https://codehan045.github.io/posts/73cc49c3.html">https://codehan045.github.io/posts/73cc49c3.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -612,8 +771,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/html/">
-                                    <span class="chip bg-color">html</span>
+                                <a href="/tags/javascript/">
+                                    <span class="chip bg-color">javascript</span>
                                 </a>
                             
                         </div>
@@ -1055,23 +1214,23 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/ec54ee2f.html">
+                <a href="/posts/a1ca87a4.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210706090524.png" class="responsive-img" alt="Photoshop">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210822211109.webp" class="responsive-img" alt="JavaScript组成之DOM及操作">
                         
-                        <span class="card-title">Photoshop</span>
+                        <span class="card-title">JavaScript组成之DOM及操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ps基本操作
+                            DOM简介、获取元素、修改属性、css样式操作
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-06
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-22
                         </span>
                         <span class="publish-author">
                             
@@ -1088,8 +1247,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Photoshop/">
-                        <span class="chip bg-color">Photoshop</span>
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
                     </a>
                     
                 </div>
@@ -1103,12 +1262,12 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/e8901063.html">
+                <a href="/posts/8013204b.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210609194415.png" class="responsive-img" alt="89C51串口通信时钟">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210819092322.jpg" class="responsive-img" alt="数组、字符串、对象遍历方法集锦">
                         
-                        <span class="card-title">89C51串口通信时钟</span>
+                        <span class="card-title">数组、字符串、对象遍历方法集锦</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1119,14 +1278,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-18
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8D%95%E7%89%87%E6%9C%BA/" class="post-category">
-                                    单片机
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
@@ -1136,8 +1295,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E5%AD%97%E6%97%B6%E9%92%9F/">
-                        <span class="chip bg-color">数字时钟</span>
+                    <a href="/tags/%E9%81%8D%E5%8E%86%E9%9B%86%E9%94%A6/">
+                        <span class="chip bg-color">遍历集锦</span>
                     </a>
                     
                 </div>

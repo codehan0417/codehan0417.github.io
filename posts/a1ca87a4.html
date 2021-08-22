@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="网页发展、网页结构、文档类型、开发工具及插件">
+    <meta name="keywords" content="JavaScript组成之DOM及操作, java mysql javascript jdbc javaweb">
     <meta name="description" content="世界不停转动，直到我们相逢">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>HTML | doNow</title>
+    <title>JavaScript组成之DOM及操作 | doNow</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210822211109.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">HTML</h1>
+                    <h1 class="description center-align post-title">JavaScript组成之DOM及操作</h1>
                 </div>
             </div>
         </div>
@@ -367,8 +367,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/html/">
-                                <span class="chip bg-color">html</span>
+                            <a href="/tags/JavaScript/">
+                                <span class="chip bg-color">JavaScript</span>
                             </a>
                         
                     </div>
@@ -392,28 +392,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-05
+                    2021-08-22
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-17
+                    2021-08-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    7 分
                 </div>
                 
 
@@ -438,116 +438,246 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Html"><a href="#Html" class="headerlink" title="Html"></a>Html</h1><h2 id="前端发展历程"><a href="#前端发展历程" class="headerlink" title="前端发展历程"></a>前端发展历程</h2><h3 id="前端开发方向"><a href="#前端开发方向" class="headerlink" title="前端开发方向"></a>前端开发方向</h3><ul>
-<li>web网页开发</li>
-<li>小程序</li>
-<li>移动端开发</li>
-<li>UI设计</li>
+                <h1 id="JavaScript组成之DOM及操作"><a href="#JavaScript组成之DOM及操作" class="headerlink" title="JavaScript组成之DOM及操作"></a>JavaScript组成之DOM及操作</h1><h2 id="DOM简介"><a href="#DOM简介" class="headerlink" title="DOM简介"></a>DOM简介</h2><h3 id="什么是DOM"><a href="#什么是DOM" class="headerlink" title="什么是DOM"></a>什么是DOM</h3><ul>
+<li>文档对象模型(<code>Document Object Model,简称DOM</code>)是W3C组织推荐的处理可扩展标记语言（HTML或XML)的标准编程接口，比如对HTML标签浮动增删查改、修改css等。</li>
+<li>JavaScript中是将所有对于HTML标签的操作相关api整合成了<code>document</code>对象。</li>
 </ul>
-<h3 id="时间线"><a href="#时间线" class="headerlink" title="时间线"></a>时间线</h3><ul>
-<li>91年，出现第一个网页，早期的网页主要用于看文档，传论文，学术研究,Tim benners-lee 互联网之父</li>
-<li>94年，PHP诞生，实现数据的交互和动态页面的模板引擎，为Web2.0时代做了铺垫，lee博士,建立了W3C（指定前端开发规则，包含Html,Css，js等）</li>
-<li>web1.0 纯静态页面</li>
-<li>web2.0 动态页面，数据动态渲染</li>
-<li>95年：Javascript出现，只能实现动态交互，页面的动画效果</li>
-<li>99年：ajax技术，异步加载，web2.0 时代到来</li>
-<li>07年：第一部ipone手机诞生，标志互联网时代的到来</li>
-<li>14年 Html5版本发布</li>
-<li>20年：Vue3.0发布，混合开发</li>
+<h3 id="DOM树"><a href="#DOM树" class="headerlink" title="DOM树"></a>DOM树</h3><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210822212229.png" alt="dom"></p>
+<ul>
+<li>文档：一个页面就是一个文档，<code>DOM</code>中使用<code>document</code>来表示</li>
+<li>元素：页面中的所有标签都是元素，<code>DOM</code>中使用<code>element</code>表示</li>
+<li>节点：网页中的所有内容都是节点（标签，属性，文本，注释等），<code>DOM</code>中使用<code>node</code>来表示</li>
 </ul>
-<h3 id="前端三件套概述"><a href="#前端三件套概述" class="headerlink" title="前端三件套概述"></a>前端三件套概述</h3><ol>
-<li>Html（超文本标记语言）负责网页基本骨架结构搭建</li>
-<li>CSS  负责对网页样式美化</li>
-<li>Javascritpt 负责页面动态交互效果</li>
+<blockquote>
+<p>DOM将以上内容都看作是<strong>对象</strong></p>
+</blockquote>
+<h2 id="获取页面元素"><a href="#获取页面元素" class="headerlink" title="获取页面元素"></a>获取页面元素</h2><h3 id="根据标签ID属性获取"><a href="#根据标签ID属性获取" class="headerlink" title="根据标签ID属性获取"></a>根据标签ID属性获取</h3><ul>
+<li><p>使用<code>getElementById("id属性值")</code>获取标签id为此属性值的标签</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//语法</span>
+<span class="token keyword">var</span> 标签变量名<span class="token operator">=</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"id属性值"</span><span class="token punctuation">)</span>；<span class="token comment" spellcheck="true">//此处不需要写#</span>
+</code></pre>
+</li>
+</ul>
+<h3 id="根据标签名获取"><a href="#根据标签名获取" class="headerlink" title="根据标签名获取"></a>根据标签名获取</h3><ul>
+<li><p>使用<code>getElementsByTagName()</code> 可以返回带有指定标签名的对象集合</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//语法</span>
+<span class="token keyword">var</span> 变量名 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">"标签名"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//获取的是一个实时的集合对象,可以通过下标来查找和遍历</span>
+<span class="token operator">&lt;</span>ul<span class="token operator">></span>
+    <span class="token operator">&lt;</span>li<span class="token operator">></span>等你好久<span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
+    <span class="token operator">&lt;</span>li<span class="token operator">></span>知否知否<span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+    <span class="token comment" spellcheck="true">// 1.返回的是获取过来元素对象的集合 以伪数组的形式存储</span>
+    <span class="token keyword">var</span> lis <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>lis<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>lis<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 2.依次打印,遍历</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> lis<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>lis<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+</code></pre>
+<blockquote>
+<p>得到的对象是动态的，随着页面中标签的个数改变而改变</p>
+<p>返回的是获取到的元素对象的集合，以伪数组的形式存储</p>
+<p>若获取不到元素，则返回为空的伪数组</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="根据某个标签名下所有指定标签名的子元素"><a href="#根据某个标签名下所有指定标签名的子元素" class="headerlink" title="根据某个标签名下所有指定标签名的子元素"></a>根据某个标签名下所有指定标签名的子元素</h4><ul>
+<li><p>通过标签名获取某个元素(父元素)内部所有指定标签名的子元素，获取的时候不包含父元素自身</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//语法</span>
+element<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'标签名'</span><span class="token punctuation">)</span>；
+<span class="token comment" spellcheck="true">//例：</span>
+ol<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">"li"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<blockquote>
+<p>父元素必须是单个对象（必须指明是哪一个元素对象）</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="通过H5新增方法获取"><a href="#通过H5新增方法获取" class="headerlink" title="通过H5新增方法获取"></a>通过H5新增方法获取</h3><h4 id="getElementsByClassName"><a href="#getElementsByClassName" class="headerlink" title="getElementsByClassName"></a>getElementsByClassName</h4><ul>
+<li><p>根据类名返回元素对象集合</p>
+<pre class=" language-js"><code class="language-js">document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">'类名'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+</code></pre>
+</li>
+</ul>
+<h3 id="document-querySelector"><a href="#document-querySelector" class="headerlink" title="document.querySelector"></a>document.querySelector</h3><ul>
+<li><p>根据指定的选择器返回第一个元素对象(标签)</p>
+<pre class=" language-js"><code class="language-js">document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'选择器'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 切记里面的选择器需要加符号 </span>
+<span class="token comment" spellcheck="true">// 类选择器.box </span>
+<span class="token comment" spellcheck="true">// id选择器 #nav</span>
+<span class="token keyword">var</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<h3 id="document-querySelectorAll"><a href="#document-querySelectorAll" class="headerlink" title="document.querySelectorAll"></a>document.querySelectorAll</h3><ul>
+<li><p>根据指定选择器返回所有符合css选择器要求的元素对象(标签)</p>
+<pre class=" language-js"><code class="language-js">document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">'选择器'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<blockquote>
+<p><code>querySelectorAll</code>返回一个<code>NodeList类数组对象</code>。是一个非实时的。可以通过下标来操作</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="直接获取特殊元素"><a href="#直接获取特殊元素" class="headerlink" title="直接获取特殊元素"></a>直接获取特殊元素</h3><ul>
+<li><strong><code>document.body</code></strong>:快速获取当前页面的<code>&lt;body&gt;</code>标签</li>
+<li><strong><code>document.documentElement</code></strong>:快速获得当前页面的<code>&lt;html&gt;</code>标签</li>
+<li><code>document.title</code>:快速获得当前页面的标题文本</li>
+<li><code>document.URL</code>:获取当前页面的地址</li>
+<li><code>document.write()</code>:向页面中写入内容或标签</li>
+</ul>
+<h2 id="操作元素-页面标签"><a href="#操作元素-页面标签" class="headerlink" title="操作元素(页面标签)"></a>操作元素(页面标签)</h2><p>JavaScript 的 DOM 操作可以改变网页内容、结构和样式，我们可以利用 DOM 操作元素来改变元素里面的内容 、属性等。</p>
+<h3 id="改变元素内容"><a href="#改变元素内容" class="headerlink" title="改变元素内容"></a>改变元素内容</h3><h4 id="针对双标签"><a href="#针对双标签" class="headerlink" title="针对双标签"></a>针对双标签</h4><h5 id="innerHTML"><a href="#innerHTML" class="headerlink" title="innerHTML"></a>innerHTML</h5><ul>
+<li><p>语法</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//获取</span>
+标签变量名<span class="token punctuation">.</span>innerHTML
+<span class="token comment" spellcheck="true">//修改</span>
+标签变量名<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span>新数据<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//例子：修改id为box的标签的内容为一个src为img/id1.jpg的img标签</span>
+<span class="token keyword">var</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"box"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+box<span class="token punctuation">.</span>innerHTML  <span class="token operator">=</span><span class="token string">"&lt;img src='img/id1.jpg'>"</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<h5 id="innerText"><a href="#innerText" class="headerlink" title="innerText"></a>innerText</h5><ul>
+<li><p>语法</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//获取</span>
+标签变量名<span class="token punctuation">.</span>innerText
+<span class="token comment" spellcheck="true">// 修改</span>
+标签变量名<span class="token punctuation">.</span>innerText <span class="token operator">=</span>新数据<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//例子：修改id为box的标签的内容为一个src为img/id1.jpg的img标签</span>
+<span class="token keyword">var</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"box"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+box<span class="token punctuation">.</span>innerText  <span class="token operator">=</span><span class="token string">"&lt;img src='img/id1.jpg'>"</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//会在页面上显示纯文本</span>
+</code></pre>
+</li>
+</ul>
+<h4 id="针对表单标签-value"><a href="#针对表单标签-value" class="headerlink" title="针对表单标签 value"></a>针对表单标签 value</h4><ul>
+<li><p>语法</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 获取</span>
+标签变量名<span class="token punctuation">.</span>value
+<span class="token comment" spellcheck="true">// 修改</span>
+标签变量名<span class="token punctuation">.</span>value <span class="token operator">=</span>新数据<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//例子：修改id为myinput的内容为123 </span>
+<span class="token keyword">var</span> input <span class="token operator">=</span>  document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"myinput"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+input<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token string">"123"</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p>innerHTML和innerText的区别</p>
+<ol>
+<li>innerHTML 、innerText 是针对<code>双标签</code>.value针对<code>input、select、textarea</code>以及其他带有<code>value</code>属性的标签</li>
+<li><code>innerHTML</code>获取标签内部的所有代码，包括子标签。而<code>innerText</code>获取的是该标签内部的所有文本(包括子标签的)</li>
+<li><code>innerHTML</code>设置会将字符串作为HTML标签来执行。而<code>innerText</code>会直接当做文本进行处理。</li>
 </ol>
-<h2 id="Html-1"><a href="#Html-1" class="headerlink" title="Html"></a>Html</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Hyper Text Marckup Language 超文本标记语言</p>
-<ul>
-<li>超文本：通过一系列的超链接，将不同空间的资源连接在一起形成一个网状结构。超文本其实就是超媒体，它不仅包含文本，还包含视频、音频等媒体文件</li>
-<li>标记：指的是标签，一个文本内容会通过一个标签进行连接</li>
-</ul>
-<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ul>
-<li>可扩展 不同的标签不同的功能</li>
-<li>简单性  标签的使用</li>
-<li>跨平台性 基于浏览器</li>
-<li>通用性 网页写好之后，可以相互嵌套，在浏览器渲染</li>
-</ul>
-<h2 id="Html网页文档结构"><a href="#Html网页文档结构" class="headerlink" title="Html网页文档结构"></a>Html网页文档结构</h2><ul>
-<li>html 文档用来描述网页</li>
-<li>html文档包含标签和文本</li>
-</ul>
-<h3 id="文档结构"><a href="#文档结构" class="headerlink" title="文档结构"></a>文档结构</h3><pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE HTML></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>utf-8<span class="token punctuation">'</span></span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>我的第一个网页<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-        hello world
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+</blockquote>
+<h3 id="改变元素属性"><a href="#改变元素属性" class="headerlink" title="改变元素属性"></a>改变元素属性</h3><h4 id="获取元素属性"><a href="#获取元素属性" class="headerlink" title="获取元素属性"></a>获取元素属性</h4><ul>
+<li><p>获取自定义属性值</p>
+<pre class=" language-js"><code class="language-js">标签变量名<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">'属性名'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<ul>
-<li><code>&lt;!DOCTYPE HTML&gt;</code>：代表网页的文档类型，申明了浏览器解析时的解析规则，大小写均可</li>
-<li><code>&lt;html&gt;</code>：根标签，每个网页只有一个</li>
-<li><code>&lt;head&gt;</code>:网页的头部,tilte 表示网页的标题，显示在浏览器的窗口栏上，利于seo收录</li>
-<li><code> &lt;meta charset='utf-8'&gt;</code> ：指定网页的编码集</li>
-<li><code>&lt;body&gt;</code>：代表网页的主体，书写网页结构和内容的代码</li>
-</ul>
-<h3 id="DOCTYPE"><a href="#DOCTYPE" class="headerlink" title="DOCTYPE"></a>DOCTYPE</h3><ul>
-<li>H5 既可以使用兼容模式，也可以使用严格模式</li>
-</ul>
-<pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE HTML></span>
+<blockquote>
+<p>上面这种方式也可以获得元素本身自带的属性</p>
+</blockquote>
+</li>
+<li><p>获取内置属性值(元素本身自带的属性)</p>
+<pre class=" language-js"><code class="language-js">标签变量名<span class="token punctuation">.</span>属性名<span class="token punctuation">;</span>
 </code></pre>
-<ul>
-<li>H4</li>
+</li>
 </ul>
-<pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"></span>
+<h4 id="设置属性值"><a href="#设置属性值" class="headerlink" title="设置属性值"></a>设置属性值</h4><ul>
+<li><p>设置内置属性值</p>
+<pre class=" language-js"><code class="language-js">标签变量名<span class="token punctuation">.</span>属性名 <span class="token operator">=</span> <span class="token string">'属性值'</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// img.属性</span>
+img<span class="token punctuation">.</span>src <span class="token operator">=</span> <span class="token string">"img/001.png"</span><span class="token punctuation">;</span>
 </code></pre>
-<ul>
-<li><p><strong>作用</strong></p>
-<ul>
-<li>申明文档类型</li>
-<li>申明html版本，浏览器解析规则版本</li>
-<li>决定了浏览器的加载模式</li>
-</ul>
 </li>
-<li><p><strong>浏览器加载模式</strong></p>
-<ul>
-<li>严格模式（标准模式）：严格按照W3c标准来解析网页</li>
-<li>混杂模式（兼容模式）：按照自己的规范解析网页</li>
-</ul>
-</li>
-<li><p><strong>doctype不写？</strong></p>
-<ul>
-<li>若doctype不写，会导致文档无法判断当前的版本和dtd约束条件，浏览器会采用兼容模式解析网页</li>
-<li>若doctype书写正确并且dtd的约束条件正确，默认采用严格模式解析网页</li>
-</ul>
+<li><p>设置自定义或内置属性值</p>
+<pre class=" language-js"><code class="language-js">element<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">'属性名'</span><span class="token punctuation">,</span><span class="token string">'属性值'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//例子：将id为box的标签它的class属性设置为item</span>
+<span class="token keyword">var</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#box"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+box<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"class"</span><span class="token punctuation">,</span><span class="token string">"item"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 </li>
 </ul>
-<h2 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h2><ul>
-<li><p>webstorm</p>
-<p>内置了很多插件，不用自己安装，对电脑内存消耗比较大</p>
+<h4 id="移除属性"><a href="#移除属性" class="headerlink" title="移除属性"></a>移除属性</h4><pre class=" language-js"><code class="language-js">element<span class="token punctuation">.</span><span class="token function">removeAttribute</span><span class="token punctuation">(</span><span class="token string">'属性名'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="改变CSS样式属性"><a href="#改变CSS样式属性" class="headerlink" title="改变CSS样式属性"></a>改变CSS样式属性</h3><p>可以通过 JS 修改元素的大小、颜色、位置等样式</p>
+<h4 id="获取样式属性值"><a href="#获取样式属性值" class="headerlink" title="获取样式属性值"></a>获取样式属性值</h4><ul>
+<li><p>通过调用<code>window.getComputedStyle()</code>来获取该标签的所有的css属性。</p>
 </li>
-<li><p>Hbuilder</p>
-<p>小巧的开发工具，内置了部分插件，提供了完善的前端开发语法支持，启动比较慢，电脑性能不好，会出现卡退的现象</p>
-</li>
-<li><p>记事本</p>
-<p>用起来比较麻烦</p>
-</li>
-<li><p>vs code ——目前市场上比较主流的开发工具</p>
-<p>微软开发的软件，不仅可以前端使用，还可以开发java、python等等。轻量化软件，需要插件自己安装，内存消耗不大。</p>
+<li><p> 通过css属性名找到指定css属性的取值</p>
 </li>
 </ul>
-<h3 id="常用插件的安装"><a href="#常用插件的安装" class="headerlink" title="常用插件的安装"></a>常用插件的安装</h3><ol>
-<li><code>Chinese (Simplified) Language Pack for Visual Studio Code</code> 汉化</li>
-<li><code>Auto Rename Tag</code>自动将结尾标签更改</li>
-<li><code>HTML CSS Support</code>在HTMl文档中支持css的提示</li>
-<li><code>HTML Snippets</code>自动生成html代码，专门对html代码格式化，比如自动生成html代码结构</li>
-<li><code>Image preview</code>在html代码中预览引入的图片的缩略图</li>
-<li><code>IntelliSense for CSS class names in HTML</code>可以在html代码中智能提示css代码中class name</li>
-<li><code>Live Server</code>:可以将vscode作为一台服务器，让浏览器来访问，执行html代码实时更新</li>
-<li><code>open in browser</code>:可以指定浏览器打开网页，不能实时更新</li>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//例子： 获取id为box的标签的宽度和高度</span>
+<span class="token keyword">var</span> box <span class="token operator">=</span>  document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> style <span class="token operator">=</span> <span class="token function">getComputedStyle</span><span class="token punctuation">(</span>box<span class="token punctuation">,</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> width <span class="token operator">=</span> style<span class="token punctuation">.</span>width<span class="token punctuation">;</span>
+<span class="token keyword">var</span> h <span class="token operator">=</span> style<span class="token punctuation">.</span>height<span class="token punctuation">;</span>
+</code></pre>
+<h4 id="设置CSS样式"><a href="#设置CSS样式" class="headerlink" title="设置CSS样式"></a>设置CSS样式</h4><ul>
+<li><p>行内样式操作</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// element.style</span>
+div<span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">'pink'</span><span class="token punctuation">;</span>
+div<span class="token punctuation">.</span>style<span class="token punctuation">.</span>width <span class="token operator">=</span> <span class="token string">'250px'</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>类名样式操作：通过提前编写指定类名的css样式，再修改类名来设置样式</p>
+<pre class=" language-html"><code class="language-html"> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>css样式<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+element<span class="token punctuation">.</span>className
+<span class="token comment" spellcheck="true">//我们可以通过 修改元素的className更改元素的样式 适合于样式较多或者功能复杂的情况</span>
+div<span class="token punctuation">.</span>className<span class="token operator">=</span><span class="token string">'change'</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//如果想要保留原先的类名，我们可以这么做 多类名选择器</span>
+ div<span class="token punctuation">.</span>className<span class="token operator">=</span><span class="token string">'row  change'</span><span class="token punctuation">;</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<ol>
+<li>JS里面的样式采取驼峰命名法，比如 <code>fontSize</code> ，<code>backgroundColor</code>通俗来讲就是在css样式中由两个单词用<code>-</code>连接的，将<code>-</code>去掉之后，它后面的的单词首字母大写</li>
+<li>JS 修改 style 样式操作 ，产生的是行内样式，CSS权重比较高</li>
+<li>如果样式修改较多，可以采取操作类名方式更改元素样式</li>
+<li>class 因为是个保留字，因此使用<code>className</code>来操作元素类名属性</li>
+<li>className 会直接更改元素的类名，会覆盖原先的类名</li>
 </ol>
+</blockquote>
+<h2 id="排他思想"><a href="#排他思想" class="headerlink" title="排他思想"></a>排他思想</h2><p>如果有同一组元素，我们相要某一个元素实现某种样式，需要用到循环的排他思想算法：</p>
+<ol>
+<li>所有元素全部清除样式（干掉其他人）</li>
+<li>给当前元素设置样式 （留下我自己）</li>
+<li>注意顺序不能颠倒，首先干掉其他人，再设置自己</li>
+</ol>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">></span></span>按钮1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">></span></span>按钮2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">></span></span>按钮3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">></span></span>按钮4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">></span></span>按钮5<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+        <span class="token comment" spellcheck="true">// 1. 获取所有按钮元素</span>
+        <span class="token keyword">var</span> btns <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// btns得到的是伪数组  里面的每一个元素 btns[i]</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> btns<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            btns<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// (1) 我们先把所有的按钮背景颜色去掉  干掉所有人</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> btns<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    btns<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token comment" spellcheck="true">// (2) 然后才让当前的元素背景颜色为pink 留下我自己</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">'pink'</span><span class="token punctuation">;</span>
+
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">//2. 首先先排除其他人，然后才设置自己的样式 这种排除其他人的思想我们称为排他思想</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+</code></pre>
 
                 
             </div>
@@ -574,7 +704,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://codehan045.github.io/posts/2eec1551.html">https://codehan045.github.io/posts/2eec1551.html</a>
+                    <a href="https://codehan045.github.io/posts/a1ca87a4.html">https://codehan045.github.io/posts/a1ca87a4.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -612,8 +742,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/html/">
-                                    <span class="chip bg-color">html</span>
+                                <a href="/tags/JavaScript/">
+                                    <span class="chip bg-color">JavaScript</span>
                                 </a>
                             
                         </div>
@@ -1051,28 +1181,78 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/ec54ee2f.html">
+                <a href="/posts/a1ca87a4.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210706090524.png" class="responsive-img" alt="Photoshop">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210822211109.webp" class="responsive-img" alt="JavaScript组成之DOM及操作">
                         
-                        <span class="card-title">Photoshop</span>
+                        <span class="card-title">JavaScript组成之DOM及操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ps基本操作
+                            DOM简介、获取元素、修改属性、css样式操作
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-06
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/73cc49c3.html">
+                    <div class="card-image">
+                        
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210820232812.jpg" class="responsive-img" alt="JavaScript组成之BOM">
+                        
+                        <span class="card-title">JavaScript组成之BOM</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1088,56 +1268,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Photoshop/">
-                        <span class="chip bg-color">Photoshop</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/e8901063.html">
-                    <div class="card-image">
-                        
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/20210609194415.png" class="responsive-img" alt="89C51串口通信时钟">
-                        
-                        <span class="card-title">89C51串口通信时钟</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-09
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%8D%95%E7%89%87%E6%9C%BA/" class="post-category">
-                                    单片机
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%95%B0%E5%AD%97%E6%97%B6%E9%92%9F/">
-                        <span class="chip bg-color">数字时钟</span>
+                    <a href="/tags/javascript/">
+                        <span class="chip bg-color">javascript</span>
                     </a>
                     
                 </div>
