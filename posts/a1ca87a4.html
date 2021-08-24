@@ -399,14 +399,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-22
+                    2021-08-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    2k
                 </div>
                 
 
@@ -678,6 +678,26 @@ div<span class="token punctuation">.</span>className<span class="token operator"
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 </code></pre>
+<h2 id="如何实现JavaScript中的-动画"><a href="#如何实现JavaScript中的-动画" class="headerlink" title="如何实现JavaScript中的 动画"></a>如何实现JavaScript中的 动画</h2><ul>
+<li>利用间隔定时器不断的改变标签的位置css属性.让其不断的改变，在页面上就会不断的缓慢移动。</li>
+</ul>
+<pre class=" language-js"><code class="language-js"><span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>    
+    <span class="token comment" spellcheck="true">//修改标签的margin-top(在原来的基础之上进行修改)   </span>
+    <span class="token comment" spellcheck="true">//获取旧的 margin-top   </span>
+    <span class="token keyword">var</span> div <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#box"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
+    <span class="token keyword">var</span> style <span class="token operator">=</span> <span class="token function">getComputedStyle</span><span class="token punctuation">(</span>div<span class="token punctuation">,</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    
+    <span class="token keyword">var</span> oldtop <span class="token operator">=</span> style<span class="token punctuation">.</span>marginTop<span class="token punctuation">;</span>    
+    oldtop <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span>oldtop<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">'px'</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
+    <span class="token comment" spellcheck="true">//设置新的margin-top   </span>
+    div<span class="token punctuation">.</span>style<span class="token punctuation">.</span>marginTop <span class="token operator">=</span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>oldtop<span class="token operator">+</span><span class="token number">2</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">px`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">16.7</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>如何解决定时器的”加速”效果<ul>
+<li>定义一个开关变量，当为true时可以执行定时器，执行后将开关变量变为false。当停止定时器后再将开关变量设为true，又可以继续执行</li>
+</ul>
+</li>
+</ul>
 
                 
             </div>
@@ -1181,29 +1201,29 @@ div<span class="token punctuation">.</span>className<span class="token operator"
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/a1ca87a4.html">
+                <a href="/posts/f48f37b0.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210822211109.webp" class="responsive-img" alt="JavaScript组成之DOM及操作">
                         
-                        <span class="card-title">JavaScript组成之DOM及操作</span>
+                        <img src="/medias/loading.gif" data-original="/medias/featureimages/10.jpg" class="responsive-img" alt="JavaScript组成之DOM节点操作">
+                        
+                        <span class="card-title">JavaScript组成之DOM节点操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            DOM简介、获取元素、修改属性、css样式操作
+                            节点概述、节点层级 父 子 兄节点获取、节点增、删、复制  DOM核心总结
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-22
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-23
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1216,7 +1236,6 @@ div<span class="token punctuation">.</span>className<span class="token operator"
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1457,7 +1476,7 @@ div<span class="token punctuation">.</span>className<span class="token operator"
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">62.3k</span>
+                        class="white-color">64.2k</span>
             
             
             

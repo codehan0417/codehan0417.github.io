@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="while for">
+    <meta name="keywords" content="JavaScript组成之DOM节点操作, java mysql javascript jdbc javaweb">
     <meta name="description" content="世界不停转动，直到我们相逢">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>java流程控制 | doNow</title>
+    <title>JavaScript组成之DOM节点操作 | doNow</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">java流程控制</h1>
+                    <h1 class="description center-align post-title">JavaScript组成之DOM节点操作</h1>
                 </div>
             </div>
         </div>
@@ -367,8 +367,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/java/">
-                                <span class="chip bg-color">java</span>
+                            <a href="/tags/JavaScript/">
+                                <span class="chip bg-color">JavaScript</span>
                             </a>
                         
                     </div>
@@ -379,8 +379,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/java%E5%9F%BA%E7%A1%80/" class="post-category">
-                                java基础
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                web前端
                             </a>
                         
                     </div>
@@ -392,28 +392,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-20
+                    2021-08-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-20
+                    2021-08-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    862
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    6 分
                 </div>
                 
 
@@ -438,202 +438,244 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-用户交互Scanner"><a href="#1-用户交互Scanner" class="headerlink" title="1.用户交互Scanner"></a>1.用户交互Scanner</h2><h3 id="Scannner-对象"><a href="#Scannner-对象" class="headerlink" title="Scannner 对象"></a>Scannner 对象</h3><ul>
-<li><p>我们可以通过Scanner 类获取用户的输入</p>
-</li>
-<li><p>基本语法</p>
-<pre class=" language-java"><code class="language-java">Scanner s<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <h2 id="节点概述"><a href="#节点概述" class="headerlink" title="节点概述"></a>节点概述</h2><ul>
+<li>网页中所有内容都是节点（标签、属性、文本、注释等），在<code>DOM</code>中节点使用<code>node</code>来表示</li>
+<li><code>HTML DOM</code> 树中的所有节点均可通过 JavaScript 进行访问，所有 <code>HTML 元素（节点）</code>均可被修改，也可以创建或删除。</li>
+</ul>
+<p> <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210824114250.jfif" alt="DOM节点"> </p>
+<p>一般的，节点至少拥有<code>ndeType</code>(节点类型)，<code>nodeName</code>(节点名称)和<code>nodeValue</code>(节点值)三个基本属性</p>
+<ul>
+<li>元素节点：<code>nodeType 为1</code></li>
+<li>属性节点：<code>nodeType 为2</code></li>
+<li>文本节点：<code>nodeType 为3</code>(文本节点包括文字、空格、换行等)</li>
+</ul>
+<h2 id="节点层级-amp-节点获取"><a href="#节点层级-amp-节点获取" class="headerlink" title="节点层级&amp;节点获取"></a>节点层级&amp;节点获取</h2><table>
+<thead>
+<tr>
+<th><strong>利用DOM提供的方法获取元素</strong></th>
+<th><strong>利用节点层级关系获取元素</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>document.getElementById()</code></td>
+<td>利用父子兄节点关系获取元素</td>
+</tr>
+<tr>
+<td><code>document.querySelector()</code></td>
+<td>逻辑性强，但兼容性较差</td>
+</tr>
+<tr>
+<td><code>document.querySelectorAll()</code></td>
+<td></td>
+</tr>
+<tr>
+<td>逻辑性不强繁琐</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="父级节点"><a href="#父级节点" class="headerlink" title="父级节点"></a>父级节点</h3><h4 id="parentNode"><a href="#parentNode" class="headerlink" title="parentNode"></a><code>parentNode</code></h4><pre class=" language-js"><code class="language-js">node<span class="token punctuation">.</span>parentNode
+<span class="token comment" spellcheck="true">//例子</span>
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"demo"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"box"</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span>span <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"son"</span><span class="token operator">></span>×<span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+ <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token keyword">var</span> son <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.son'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>son<span class="token punctuation">.</span>parentNode<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//输出的是类名为box的div</span>
 </code></pre>
-</li>
-<li><p>使用：</p>
 <ul>
-<li><p>通过Scanner类的next( ) 与 nextLine( ) 方法获取输入的字符串</p>
-</li>
-<li><p>在读取之前，一般需要使用hasNext() 与 hasNextLine() 判断是否还有输入的数据</p>
-<ul>
-<li><p>next() </p>
-<ol>
-<li>一定要读取到有效字符后才可以结束输入</li>
-<li>对输入有效字符之前遇到的空白，next() 方法会自动将其去掉。</li>
-<li>对于输入有效字符之后的空白，作为结束符</li>
-<li>next() 不能得到带有空格的字符串</li>
-</ol>
-</li>
-<li><p>nextLine()</p>
-<ol>
-<li>以Enter为结束符，此方法返回的是输入回车之前的所有字符</li>
-<li>可以获得空白</li>
-</ol>
-</li>
+<li><code>parentNode</code>属性可以返回某节点的父结点，**<code>注意是最近的一个父结点</code>**</li>
+<li>指定的节点没有父结点则返回null</li>
 </ul>
-<pre class=" language-java"><code class="language-java"> <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token comment" spellcheck="true">//创建一个扫描对象，接收键盘数据</span>
-      Scanner s<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"请输入数据："</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      
-          <span class="token comment" spellcheck="true">//使用nextLine()方式接收</span>
-          String str<span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"输出的内容为："</span><span class="token operator">+</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>        
-      <span class="token comment" spellcheck="true">//凡是属于IO流的类如果不关闭会一直占用资源，用完立即即关闭</span>
-      s<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
+<h4 id="parentElement"><a href="#parentElement" class="headerlink" title="parentElement"></a><code>parentElement</code></h4><pre class=" language-js"><code class="language-js">node<span class="token punctuation">.</span>parentElement<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//例子；获取id为box的父标签</span>
+<span class="token keyword">var</span> father <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#box"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>parentElement
 </code></pre>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-顺序结构"><a href="#2-顺序结构" class="headerlink" title="2. 顺序结构"></a>2. 顺序结构</h2><ul>
-<li>java的基本结构就是顺序结构</li>
-</ul>
-<h2 id="3-选择结构"><a href="#3-选择结构" class="headerlink" title="3.选择结构"></a>3.选择结构</h2><ol>
-<li>多个选择表达式，之间没有交集的关系，判断语句声明在上下都无关紧要。</li>
-<li>包含关系，通常小范围声明在大范围的上面，否则范围小的无法被执行输出；</li>
-<li>可嵌套</li>
-<li>就近原则</li>
-</ol>
 <ul>
-<li><p>if单选择结构</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>表达式布尔型<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    执行语句
+<li>此方法与上面的方法效果是一样的</li>
+</ul>
+<h3 id="子节点"><a href="#子节点" class="headerlink" title="子节点"></a>子节点</h3><h4 id="children"><a href="#children" class="headerlink" title="children"></a><code>children</code></h4><pre class=" language-js"><code class="language-js">parentNode<span class="token punctuation">.</span>children
+</code></pre>
+<ul>
+<li><code>parentNode.children</code> 是一个只读属性，返回所有的子元素节点</li>
+<li><strong>它只返回<code>直接子元素节点</code>，其余节点不返回</strong> </li>
+</ul>
+<h4 id="第一个子节点"><a href="#第一个子节点" class="headerlink" title="第一个子节点"></a>第一个子节点</h4><pre class=" language-js"><code class="language-js">parentNode<span class="token punctuation">.</span>firstElementChild
+</code></pre>
+<ul>
+<li><code>firstElementChild</code> 返回第一个子节点，找不到则返回<code>null</code>,有兼容性问题，<code>IE9</code>以上才支持</li>
+</ul>
+<h4 id="最后一个子节点"><a href="#最后一个子节点" class="headerlink" title="最后一个子节点"></a>最后一个子节点</h4><pre class=" language-js"><code class="language-js">parentNode<span class="token punctuation">.</span>firstElementChild
+</code></pre>
+<ul>
+<li><code>firstElementChild</code> 返回第一个子节点，找不到则返回<code>null</code>,有兼容性问题，<code>IE9</code>以上才支持</li>
+</ul>
+<h3 id="兄弟节点"><a href="#兄弟节点" class="headerlink" title="兄弟节点"></a>兄弟节点</h3><h4 id="上一个兄弟节点"><a href="#上一个兄弟节点" class="headerlink" title="上一个兄弟节点"></a>上一个兄弟节点</h4><pre class=" language-js"><code class="language-js">node<span class="token punctuation">.</span>previousElementSibling<span class="token comment" spellcheck="true">//只返回一个</span>
+</code></pre>
+<ul>
+<li><code>previousElementSibling</code> 返回当前元素上一个兄弟元素节点，找不到则返回<code>null</code>,有兼容性问题，<code>IE9</code>以上才支持</li>
+</ul>
+<h4 id="下一个兄弟节点"><a href="#下一个兄弟节点" class="headerlink" title="下一个兄弟节点"></a>下一个兄弟节点</h4><pre class=" language-js"><code class="language-js">node<span class="token punctuation">.</span>nextElementSibling
+</code></pre>
+<ul>
+<li><code>nextElementSibling</code> 返回当前元素下一个兄弟元素节点，找不到则返回<code>null</code>,有兼容性问题，<code>IE9</code>以上才支持</li>
+</ul>
+<h2 id="节点创建-amp-添加删除"><a href="#节点创建-amp-添加删除" class="headerlink" title="节点创建&amp;添加删除"></a>节点创建&amp;添加删除</h2><h4 id="createElement-39-tagName-39"><a href="#createElement-39-tagName-39" class="headerlink" title="createElement('tagName')"></a><code>createElement('tagName')</code></h4><pre class=" language-js"><code class="language-js">document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"tagName"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> newDiv <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li><code>document.createElement()</code> 方法创建由 <code>tagName</code> 指定的HTML 元素</li>
+<li>因为这些元素原先不存在，是根据我们的需求动态生成的，所以我们也称为<strong>动态创建元素节点</strong></li>
+</ul>
+<h4 id="添加节点"><a href="#添加节点" class="headerlink" title="添加节点"></a>添加节点</h4><pre class=" language-js"><code class="language-js">node<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>child<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//例子：给id为box的标签添加一个新的p标签</span>
+<span class="token comment" spellcheck="true">//1. 新建标签</span>
+<span class="token keyword">var</span> newP <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//2. 放在父标签里面</span>
+<span class="token keyword">var</span> father <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#box"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+father<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>newP<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li><code>node.appendChild()</code> 方法将一个节点添加到指定父节点的子节点列表<strong>末尾</strong>。</li>
+<li>将新标签作为父标签的最后一个自标签。父标签必须是已存在页面上的标签。</li>
+</ul>
+<pre class=" language-js"><code class="language-js">node<span class="token punctuation">.</span><span class="token function">insertBefore</span><span class="token punctuation">(</span>child<span class="token punctuation">,</span>指定元素<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//html: </span>
+<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">'box'</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>p id<span class="token operator">=</span><span class="token string">"firstP"</span><span class="token operator">></span>哈哈哈‘<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token comment" spellcheck="true">//例子：在id为box的标签的第一个p标签之前插入一个新的p标签</span>
+<span class="token comment" spellcheck="true">//1. 新建p标签</span>
+<span class="token keyword">var</span> newP <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//2. 找到父标签以及其兄弟标签</span>
+<span class="token keyword">var</span> father <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#box"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> brother <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#firstP"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//3. 插入新标签</span>
+father<span class="token punctuation">.</span><span class="token function">insertBefore</span><span class="token punctuation">(</span>newP<span class="token punctuation">,</span>brother<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li><code>node.insertBefore()</code> 方法将一个节点添加到父节点的指定子节点<strong>前面</strong>。</li>
+</ul>
+<h4 id="示例：向页面添加新的元素"><a href="#示例：向页面添加新的元素" class="headerlink" title="示例：向页面添加新的元素"></a>示例：向页面添加新的元素</h4><pre class=" language-js"><code class="language-js"> <span class="token comment" spellcheck="true">// 1. 创建节点元素节点</span>
+        <span class="token keyword">var</span> li <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 2. 添加节点 node.appendChild(child)  node 父级  child 是子级 后面追加元素  </span>
+        <span class="token comment" spellcheck="true">// 先获取父亲ul</span>
+        <span class="token keyword">var</span> ul <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'ul'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ul<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 3. 添加节点 node.insertBefore(child, 指定元素);</span>
+        <span class="token keyword">var</span> newli <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ul<span class="token punctuation">.</span><span class="token function">insertBefore</span><span class="token punctuation">(</span>newli<span class="token punctuation">,</span> ul<span class="token punctuation">.</span>firstElementChild<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 4. 我们想要页面添加一个新的元素分两步: 1. 创建元素 2.修改属性内容 3. 添加元素</span>
+</code></pre>
+<h4 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h4><pre class=" language-js"><code class="language-js">node<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>child<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//例子：删除id为box的标签下第一个子标签</span>
+<span class="token keyword">var</span> father <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> elem <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#box :first-child"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+father<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>elem<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li><code>node.removeChild()</code>方法从 DOM 中删除一个子节点，返回删除的节点</li>
+</ul>
+<h5 id="批量删除"><a href="#批量删除" class="headerlink" title="批量删除"></a>批量删除</h5><ul>
+<li><p>先找到需要删除的标签，通过遍历依次调用<code>removeChild</code>来进行删除</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//例子：删除所有的图片</span>
+<span class="token keyword">var</span> imgs  <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">"img"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 遍历，删除每一个图片</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>imgs<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>imgs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
 </li>
-<li><p>if 双选择结构</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>表达式<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    执行语句<span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
-    执行语句<span class="token number">2</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<li><p>如果是删除某个标签下的所有子标签，可以通过设置<code>innerHTML</code>来达到快捷删除的目的</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//例子：删除id为box的标签下的所有子标签</span>
+document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#box"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
-<li><p>if 多选择结构</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>表达式<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    执行语句<span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>表达式<span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    执行语句<span class="token number">2</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>表达式<span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    执行语句<span class="token number">3</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-​``````````
+</ul>
+<h4 id="复制节点-克隆节点"><a href="#复制节点-克隆节点" class="headerlink" title="复制节点(克隆节点)"></a>复制节点(克隆节点)</h4><pre class=" language-js"><code class="language-js">node<span class="token punctuation">.</span><span class="token function">cloneNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
-</li>
-<li><p>switch多选择结构(匹配某一个字符/字符串)</p>
 <ul>
-<li><p>结构</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">switch</span><span class="token punctuation">(</span>expression<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">case</span> value<span class="token operator">:</span>
-    语句<span class="token punctuation">;</span>
-    <span class="token keyword">break</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//可选</span>
-    <span class="token keyword">case</span> value<span class="token operator">:</span>
-    语句<span class="token punctuation">;</span>
-    <span class="token keyword">break</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//可选</span>
-    ···
-    <span class="token keyword">default</span><span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>可选
-    <span class="token comment" spellcheck="true">//语句</span>
-<span class="token punctuation">}</span>
-</code></pre>
-</li>
-<li><p>switch语句中的变量类型可以为</p>
-<ul>
-<li><p>byte、short、int 或 char、枚举类型（jdk5.0新增）、string（jdk7.0新增)</p>
-</li>
-<li><p>从java SE 7开始 支持字符串 String 类型了</p>
-</li>
-<li><p>case 标签必须为字符串常量或字面量</p>
-</li>
+<li><code>node.cloneNode()</code>方法返回调用该方法的节点的一个副本。 也称为克隆节点/拷贝节点</li>
+<li>如果括号参数为空或者为 false ，则是浅拷贝，即只克隆复制节点本身，不克隆里面的子节点</li>
+<li>如果括号参数为 true ，则是深度拷贝，会复制节点本身以及里面所有的子节点</li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="4-循环结构"><a href="#4-循环结构" class="headerlink" title="4.循环结构"></a>4.循环结构</h2><h4 id="四要素"><a href="#四要素" class="headerlink" title="四要素"></a>四要素</h4><ol>
-<li>初始化条件</li>
-<li>循环条件</li>
-<li>循环体</li>
-<li>迭代条件</li>
-</ol>
+<blockquote>
+<p> <em>1. <code>node.cloneNode()</code>; 括号为空或者里面是false 浅拷贝 只复制标签不复制里面的内容</em>        * 2.<code> node.cloneNode(true)</code>; 括号为true 深拷贝 复制标签&amp;复制里面的内容*</p>
+</blockquote>
+<h2 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h2><p>三种动态创建元素的区别</p>
 <ul>
-<li><p>while循环</p>
-<ul>
-<li><p>结构</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">while</span><span class="token punctuation">(</span>布尔表达式<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">//循环内容</span>
-<span class="token punctuation">}</span>
-</code></pre>
-</li>
-<li><p>布尔表达式为true，循环会一直执行下去</p>
-</li>
+<li><code>doucument.write()</code></li>
+<li><code>element.innerHTML</code></li>
+<li><code>document.createElement()</code></li>
 </ul>
-</li>
-<li><p>do ···while循环</p>
+<p>区别：</p>
 <ul>
-<li><p>至少执行一次循环体</p>
+<li><p><code>document.write()</code> 是直接将内容写入页面的内容流，但是文档流执行完毕，它会导致页面全部重绘</p>
 </li>
-<li><p>结构</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">do</span><span class="token punctuation">{</span>
-<span class="token comment" spellcheck="true">//代码语句</span>
-<span class="token punctuation">}</span><span class="token keyword">while</span><span class="token punctuation">(</span>布尔表达式<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<li><p><code>innerHTML</code> 是将内容写入某个 DOM 节点，不会导致页面全部重绘</p>
 </li>
-<li><p>while 与 do ···while 的区别</p>
-<ul>
-<li>while先判断后执行，do···while是先执行后判断</li>
-<li>do····while总是保证循环体至少执行一次</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>for 循环</p>
-<ul>
-<li><p>格式</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span>初始化<span class="token punctuation">;</span>布尔表达式；更新<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">//执行语句</span>
-<span class="token punctuation">}</span>
-</code></pre>
-</li>
-<li><p>嵌套for循环</p>
-<pre class=" language-java"><code class="language-java"> <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">&lt;=</span>i<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>j<span class="token operator">+</span><span class="token string">"*"</span><span class="token operator">+</span>i<span class="token operator">+</span><span class="token string">"="</span><span class="token operator">+</span>i<span class="token operator">*</span>j<span class="token operator">+</span><span class="token string">"\t"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<li><p><code>innerHTML</code> 创建多个元素效率更高（不要拼接字符串，采取数组形式拼接），结构稍微复杂</p>
+<pre class=" language-js"><code class="language-js"> <span class="token comment" spellcheck="true">// 2.2 innerHTML 用数组形式拼接</span>
+        <span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'&lt;a href="#">百度&lt;/a>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-</code></pre>
-<ul>
-<li><p>内层循环遍历一遍，只相当于外层循环执行循环体一次</p>
-</li>
-<li><p>外层循环控制行数，内层循环控制列数</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Java5中引入主要用于数组的增强 for 循环</p>
-<ul>
-<li><p>格式</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span>声明语句：表达式<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">//代码句子</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<ul>
-<li><p>声明语句：声明新的局部变量，该变量类型必须和数组元素的类型匹配</p>
-</li>
-<li><p>表达式：即要访问的数组名，或是返回值为数组的方法</p>
-</li>
-<li><p>示例</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> number<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">,</span><span class="token number">44</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token operator">:</span>number<span class="token punctuation">)</span><span class="token punctuation">{</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
+        inner<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
-</ul>
+<li><p><code>createElement()</code>创建多个元素效率稍低一点点，但是结构更清晰</p>
 </li>
 </ul>
+<blockquote>
+<p>总结：不同浏览器下，<code>innerHTML</code>效率要比<code>createElement()</code>高</p>
+</blockquote>
+<h2 id="DOM核心总结"><a href="#DOM核心总结" class="headerlink" title="DOM核心总结"></a>DOM核心总结</h2><p>对于DOM操作，我们主要针对子元素的操作，主要有</p>
+<ul>
+<li>创建</li>
+<li>增</li>
+<li>删</li>
+<li>查</li>
+<li>改</li>
+<li>属性操作</li>
+<li>时间操作</li>
+</ul>
+<h4 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h4><ul>
+<li><p><code>document.write()</code></p>
+</li>
+<li><p><code>innerHTML</code></p>
+</li>
+<li><p><code>createElement()</code></p>
 </li>
 </ul>
-<h2 id="5-break-amp-continue"><a href="#5-break-amp-continue" class="headerlink" title="5.break &amp; continue"></a>5.break &amp; continue</h2><ul>
-<li>break 用于强行退出循环</li>
-<li>continue 用于终止某次循环过程</li>
+<h4 id="增"><a href="#增" class="headerlink" title="增"></a>增</h4><ul>
+<li><p><code>appendChild()</code></p>
+</li>
+<li><p><code>insertBefore( new, child)</code></p>
+</li>
+</ul>
+<h4 id="删"><a href="#删" class="headerlink" title="删"></a>删</h4><ul>
+<li><code>removeChild()</code></li>
+</ul>
+<h4 id="改"><a href="#改" class="headerlink" title="改"></a>改</h4><ul>
+<li>主要修改<code>dom</code>的元素属性，<code>dom</code>元素的内容、属性、表单的值等</li>
+<li>修改元素属性：<code>src</code>、<code>href</code>、<code>title</code> 等</li>
+<li>修改普通元素内容：<code>innerHTML</code>、<code>innerText</code></li>
+<li>修改表单元素：<code>value</code>、<code>type</code>、<code>disabled</code></li>
+<li>修改元素样式：<code>style</code>、<code>className</code></li>
+</ul>
+<h4 id="查"><a href="#查" class="headerlink" title="查"></a>查</h4><ul>
+<li>主要获取查询DOM的元素</li>
+<li><code>DOM</code>提供的<code>API</code>方法：<code>getElementById()</code>、<code>getElementsByTagName()</code> (古老用法，不推荐)</li>
+<li><code>H5</code>提供的新方法：<code>querySelector()</code>、<code>querySelectorAll()</code> </li>
+<li>利用节点属性操作获取元素：父(<code>parentNode</code>)、子(<code>children</code>)、兄(<code>previousElementSibling</code>、<code>nextElementSibling</code>) 提倡</li>
+</ul>
+<h4 id="属性操作"><a href="#属性操作" class="headerlink" title="属性操作"></a>属性操作</h4><ul>
+<li>针对于自定义和自身属性</li>
+<li><code>setAttribute</code>：设置DOM的属性值</li>
+<li><code>getAttribute</code>：得到DOM的属性值</li>
+<li><code>getComputedStyle(标签变量名,null)</code>获取该标签的所有css属性</li>
+<li><code>removeAttribute</code>：移除属性</li>
 </ul>
 
                 
@@ -661,7 +703,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://codehan045.github.io/posts/561f6059.html">https://codehan045.github.io/posts/561f6059.html</a>
+                    <a href="https://codehan045.github.io/posts/f48f37b0.html">https://codehan045.github.io/posts/f48f37b0.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -699,8 +741,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/java/">
-                                    <span class="chip bg-color">java</span>
+                                <a href="/tags/JavaScript/">
+                                    <span class="chip bg-color">JavaScript</span>
                                 </a>
                             
                         </div>
@@ -1142,43 +1184,32 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/ab56c92c.html">
+                <a href="/posts/c9adf6e3.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/images.jpg" class="responsive-img" alt="多线程详解">
                         
-                        <span class="card-title">多线程详解</span>
+                        <img src="/medias/loading.gif" data-original="/medias/featureimages/2.jpg" class="responsive-img" alt="JavaScript正则表达式">
+                        
+                        <span class="card-title">JavaScript正则表达式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            最全多线程基础详解
+                            
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-22
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-24
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/java%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    java基础
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            时光路人
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -1190,30 +1221,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/fac754a7.html">
+                <a href="/posts/a1ca87a4.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan045/imags/img/jdbccontect.jpg" class="responsive-img" alt="面向对象编程">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210822211109.webp" class="responsive-img" alt="JavaScript组成之DOM及操作">
                         
-                        <span class="card-title">面向对象编程</span>
+                        <span class="card-title">JavaScript组成之DOM及操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            DOM简介、获取元素、修改属性、css样式操作
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-22
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/java%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    java基础
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
@@ -1223,8 +1254,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
                     </a>
                     
                 </div>
