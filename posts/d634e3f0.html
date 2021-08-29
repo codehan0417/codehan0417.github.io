@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JavaScript正则表达式, java mysql javascript jdbc javaweb">
+    <meta name="keywords" content="DOM事件, java mysql javascript jdbc javaweb">
     <meta name="description" content="世界不停转动，直到我们相逢">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JavaScript正则表达式 | doNow</title>
+    <title>DOM事件 | doNow</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210825183525.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210829213700.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JavaScript正则表达式</h1>
+                    <h1 class="description center-align post-title">DOM事件</h1>
                 </div>
             </div>
         </div>
@@ -367,8 +367,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JavaScript%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
-                                <span class="chip bg-color">JavaScript正则表达式</span>
+                            <a href="/tags/Javascript/">
+                                <span class="chip bg-color">Javascript</span>
                             </a>
                         
                     </div>
@@ -392,28 +392,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-24
+                    2021-08-29
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-29
+                    2021-08-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    969
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    3 分
                 </div>
                 
 
@@ -438,174 +438,131 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="正则表达式基础"><a href="#正则表达式基础" class="headerlink" title="正则表达式基础"></a>正则表达式基础</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><ul>
-<li>正则表达式用于定义一些字符串的规则， 计算机可以根据正则表达式，来检查一个字符串是否符合规则</li>
-<li> 获取将字符串中符合规则的内容提取出来</li>
+                <h2 id="事件基础"><a href="#事件基础" class="headerlink" title="事件基础"></a>事件基础</h2><h3 id="事件概述"><a href="#事件概述" class="headerlink" title="事件概述"></a>事件概述</h3><ul>
+<li>我们把用户跟页面之间的所有交互动作统称为事件。每个动作都是一个事件。比如点击事件、输入框获取焦点、失去焦点。</li>
+<li>JavaScript可以实现在某个事件触发时，可以执行指定的代码</li>
+<li>简单理解： <code>触发</code>  —   <code> 响应机制</code>。</li>
 </ul>
-<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><ul>
-<li>检查数据格式，获取符合要求的数据</li>
-</ul>
-<h3 id="正则表达式对象的定义-创建"><a href="#正则表达式对象的定义-创建" class="headerlink" title="正则表达式对象的定义(创建)"></a>正则表达式对象的定义(创建)</h3><h4 id="创建正则表达式对象"><a href="#创建正则表达式对象" class="headerlink" title="创建正则表达式对象"></a>创建正则表达式对象</h4><pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> 变量 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token string">"正则表达式"</span><span class="token punctuation">,</span><span class="token string">"匹配模式"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//使用typeof检查正则对象，会返回object</span>
-<span class="token keyword">var</span> reg <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//这个正则表达式可以来检查一个字符串中是否含有a</span>
-<span class="token comment" spellcheck="true">// 在构造函数中可以传递一个匹配模式作为第二个参数</span>
-u 默认值  匹配第一个
-i   忽略大小写 
-g  全局匹配模式
-</code></pre>
-<h4 id="字面量创建正则表达式"><a href="#字面量创建正则表达式" class="headerlink" title="字面量创建正则表达式"></a>字面量创建正则表达式</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//语法</span>
-<span class="token keyword">var</span>  变量<span class="token operator">=</span> <span class="token operator">/</span>正则表达式<span class="token operator">/</span>匹配模式<span class="token punctuation">;</span>
-<span class="token keyword">var</span> reg<span class="token operator">=</span><span class="token regex">/[0-9]/</span><span class="token punctuation">;</span>
-</code></pre>
-<h3 id="正则表达式的方法"><a href="#正则表达式的方法" class="headerlink" title="正则表达式的方法"></a>正则表达式的方法</h3><h4 id="test"><a href="#test" class="headerlink" title="test()"></a>test()</h4><ul>
-<li><p>使用此方法可以用来检查一个字符串是否符合正则表达式的规则，如果符合则返回<code>true</code>，否则返回<code>false</code></p>
-<pre class=" language-js"><code class="language-js">reg <span class="token operator">=</span> <span class="token regex">/[0-9]/</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>reg<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token boolean">true</span>
-</code></pre>
-</li>
-</ul>
-<h4 id="exec"><a href="#exec" class="headerlink" title="exec()"></a>exec()</h4><ul>
-<li><p>判断某个数据是否满足正则表达式，返回匹配的那部分数据，若数据中有多个满足正则表达式，只返回满足条件的第一个</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> reg<span class="token operator">=</span><span class="token regex">/[0-9{10}]/</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> text<span class="token operator">=</span><span class="token string">'1234567890  1112223330 7778889990'</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> result<span class="token operator">=</span>reg<span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//1234567890</span>
-</code></pre>
-</li>
-</ul>
-<h3 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h3><h4 id="组"><a href="#组" class="headerlink" title="[ ]组"></a><code>[ ]</code>组</h4><blockquote>
-<p>可以匹配其中的任意一个字符，<code>[]</code>中的内容是或的关系，相当于<code>|</code></p>
-</blockquote>
-<ul>
-<li><p><code>[0-9]</code>:匹配任意一个数字</p>
-<pre class=" language-js"><code class="language-js"><span class="token punctuation">[</span><span class="token number">123456</span><span class="token punctuation">]</span><span class="token punctuation">:</span>匹配<span class="token number">1</span>，<span class="token number">2</span>，<span class="token number">3</span>，<span class="token number">4</span>，<span class="token number">5</span>，<span class="token number">6</span> 当中的任意一个
-</code></pre>
-</li>
-<li><p><code>[a-z]</code> 匹配任意一个小写字母</p>
-</li>
-<li><p><code>[A-Z]</code>匹配任意一个大写字母</p>
-</li>
-<li><p><code>[a-zA-Z]</code>:匹配任意一个字母  或  <code>[A-z]</code> 任意字母</p>
-</li>
-<li><p><code>[0-9a-zA-Z]</code>:匹配任意一个数字或字母</p>
-</li>
-</ul>
-<h4 id="-1"><a href="#-1" class="headerlink" title="{}"></a>{}</h4><blockquote>
-<p>用于描述组<code>[ ]</code>出现的次数：这里如果不进行限制，最多出现的次数不匹配，需要验证整个字符串。</p>
-</blockquote>
-<ul>
-<li><code>{m,n}</code>:表示前面的一个组至少出现m次，最多n次</li>
-<li><code>{m}</code>:表示前面的一个组固定次数m次</li>
-<li><code>{m,}</code>:表示前面的一个组至少m次</li>
-<li><code>{,n}</code>:表示前面的一个组至多n次</li>
-</ul>
-<h4 id="以什么开头"><a href="#以什么开头" class="headerlink" title="^以什么开头"></a><code>^</code>以什么开头</h4><ul>
-<li><code>/^[0-9]{3}/</code>:以3个连续的数字开头</li>
-<li><code>/^[a-z]/</code>:以一个小写字母开头</li>
-</ul>
-<h4 id="以什么结束"><a href="#以什么结束" class="headerlink" title="$以什么结束"></a><code>$</code>以什么结束</h4><ul>
-<li><code>/[0-9a-zA-Z]{3}$/</code>:以3个数字或字母结尾</li>
-</ul>
-<blockquote>
-<p><code>/^正则表达式语法$/</code>:匹配整个的字符串必须符合此规则，以什么开头，以什么结尾</p>
-</blockquote>
-<pre class=" language-js"><code class="language-js"><span class="token regex">/^[a-zA-Z]{10}$/</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//表示整个字符串是10个字母</span>
-</code></pre>
-<h4 id="匹配固定长字符"><a href="#匹配固定长字符" class="headerlink" title="() 匹配固定长字符"></a>() 匹配固定长字符</h4><ul>
-<li><code>/(jpg|png|gif|jpeg)/</code>:匹配<code>jpg</code>、<code>png</code>、<code>gif</code>、<code>jpeg</code>中的一个</li>
-</ul>
-<h2 id="正则表达式高阶"><a href="#正则表达式高阶" class="headerlink" title="正则表达式高阶"></a>正则表达式高阶</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><ul>
-<li>正则表达式中有一些符号具有特殊的含义<code>元字符</code></li>
-</ul>
-<h3 id="常见元字符"><a href="#常见元字符" class="headerlink" title="常见元字符"></a>常见元字符</h3><ul>
-<li><code>.</code>:会匹配一个除换行符以外的任意一个字符。如果想要匹配<code>.</code>本身。需要通过转义字符<code>\</code>来处理</li>
-<li><code>+</code>:会匹配前面的组<code>[]</code>至少一次。等同于<code>{1,}</code> (最大限度的匹配)</li>
-<li><code>?</code>:会匹配前面的组<code>[]</code>一次或者没有。等同于<code>{0,1}</code></li>
-<li><code>*</code>:会匹配前面的组<code>[]</code>至少0次。等同于<code>{0,}</code></li>
-<li><code>\w</code>:匹配一个单词字符或下划线。等同于<code>[0-9a-zA-Z_]</code></li>
-<li><code>\d</code>:匹配一个数字。等同于<code>[0-9]</code></li>
-</ul>
-<h3 id="常用正则表达式应用"><a href="#常用正则表达式应用" class="headerlink" title="常用正则表达式应用"></a>常用正则表达式应用</h3><ul>
-<li><p> 汉字：<code>/^[\u4e00-\u9fa5]{0,}$/</code></p>
-</li>
-<li><p>Email邮箱地址：<code>/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/</code></p>
-</li>
-<li><p>手机号码：<code>/^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/</code></p>
-</li>
-</ul>
-<h3 id="正则表达式匹配模式"><a href="#正则表达式匹配模式" class="headerlink" title="正则表达式匹配模式"></a>正则表达式匹配模式</h3><h4 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h4><ul>
-<li>根据不同的需求，正则表达式提供了针对不同场景下使用的模式。常见的模式有3种：u(默认)，g(全局)，i(不区分大小写)</li>
-</ul>
-<h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><ul>
-<li><code>u</code>(默认):匹配最近的那一项</li>
-<li><code>g</code>(全局):匹配所有满足的项</li>
-<li><code>i</code>(不区分大小写):在匹配时不考虑大小写</li>
-</ul>
-<h2 id="正则表达式在字符串中的应用"><a href="#正则表达式在字符串中的应用" class="headerlink" title="正则表达式在字符串中的应用"></a>正则表达式在字符串中的应用</h2><h3 id="match"><a href="#match" class="headerlink" title="match()"></a>match()</h3><blockquote>
-<p>与字符串一起使用以检查字符串和正则表达式 <code>regex</code> 之间的匹配，以正则表达式为参数。</p>
-</blockquote>
-<pre class=" language-js"><code class="language-js">str<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<h4 id="返回值（数组）"><a href="#返回值（数组）" class="headerlink" title="返回值（数组）"></a>返回值（数组）</h4><ul>
-<li>如果正则表达式包含一个 <code>g</code> 标记，即为全局匹配，它将返回一个包含所有匹配项的数组；</li>
-<li>如果正则表达式没有 <code>g</code> 标记，它将返回一个包含第一个匹配项的数组；</li>
-<li>没有匹配项，返回<code>null</code></li>
-</ul>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//匹配模式为  g  全局匹配模式</span>
-<span class="token keyword">var</span> strText <span class="token operator">=</span> <span class="token string">"Hello China"</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> regex <span class="token operator">=</span> <span class="token regex">/[A-Z]/g</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 大写字母正则表达式</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>strText<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// [ 'H', 'C' ]</span>
-<span class="token comment" spellcheck="true">//匹配模式为默认</span>
-<span class="token keyword">var</span> text <span class="token operator">=</span> <span class="token string">'Hello World'</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> regex <span class="token operator">=</span> <span class="token regex">/[A-Z]/</span><span class="token punctuation">;</span> 
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>text<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// [ 'H', index: 0, input: 'Hello World', groups: undefined ]</span>
-</code></pre>
-<h3 id="search"><a href="#search" class="headerlink" title="search()"></a>search()</h3><blockquote>
-<p>是一个字符串方法，可以将其与正则表达式一起使用。可以将正则表达式作为参数传递给它，以在字符串中搜索匹配项。</p>
-</blockquote>
-<h4 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h4><ul>
-<li>方法返回第一个匹配项在整个字符串中的位置（<code>索引</code>），如果没有匹配项，则返回 <code>-1</code>。</li>
-</ul>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> strText <span class="token operator">=</span> <span class="token string">"hello china，i love china"</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> regex <span class="token operator">=</span> <span class="token regex">/china/</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>strText<span class="token punctuation">.</span><span class="token function">search</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 6</span>
-</code></pre>
-<h3 id="replace"><a href="#replace" class="headerlink" title="replace()"></a>replace()</h3><blockquote>
-<p>在字符串中搜索指定的值 或 符合正则表达式的值   将其替换为另一个值</p>
-<p>两个参数：</p>
-<ol>
-<li>要搜索的值</li>
-<li>要替换的新值</li>
+<h3 id="事件三要素"><a href="#事件三要素" class="headerlink" title="事件三要素"></a>事件三要素</h3><ol>
+<li>事件源(谁，哪个)</li>
+<li>事件类型(什么事件)</li>
+<li>事件执行程序(干什么)</li>
 </ol>
-</blockquote>
-<h4 id="返回值-1"><a href="#返回值-1" class="headerlink" title="返回值"></a>返回值</h4><ul>
-<li>返回一个包含被替换后的<code>新字符串</code>，<strong>需要注意的是，它不会改变原始字符串，并且只会替换搜索到的第一个值</strong>。</li>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//例: 点击一个按钮，弹出对话框</span>
+<span class="token comment" spellcheck="true">//（1）事件源  事件触发的对象   ，谁-----> 按钮</span>
+<span class="token keyword">var</span> btn<span class="token operator">=</span>document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#btn'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//(2) 事件类型  如何触发 什么事件 比如鼠标点击(onclick) 还是鼠标经过 还是键盘按下</span>
+<span class="token comment" spellcheck="true">//(3) 事件处理程序 点击之后发生什么  ---弹出对话框  通过一个函数赋值的方式 完成</span>
+btn<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+   <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"点我干哈"</span><span class="token punctuation">)</span>； 
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="执行事件的步骤"><a href="#执行事件的步骤" class="headerlink" title="执行事件的步骤"></a>执行事件的步骤</h2><ol>
+<li>获取事件源(在DOM对节点和元素操作中查看)</li>
+<li>注册事件(绑定事件)</li>
+<li>添加事件处理程序（<code>DOM0/2</code>级方式） </li>
+</ol>
+<h3 id="绑定事件-注册事件"><a href="#绑定事件-注册事件" class="headerlink" title="绑定事件(注册事件)"></a>绑定事件(注册事件)</h3><ul>
+<li>概念：给元素添加事件</li>
 </ul>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> strText <span class="token operator">=</span> <span class="token string">"hello world,i love world"</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> regex <span class="token operator">=</span> <span class="token regex">/world/</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>strText<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>regex<span class="token punctuation">,</span> <span class="token string">"china"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// hello china,i love world</span>
+<h4 id="绑定事件的方式"><a href="#绑定事件的方式" class="headerlink" title="绑定事件的方式"></a>绑定事件的方式</h4><table>
+<thead>
+<tr>
+<th>传统方式DOM0级</th>
+<th>添加事件监听方式DOM2级</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>直接在页面标签中书写对应的事件或调用函数，如下：</td>
+<td><code>W3C</code>标准推荐方式</td>
+</tr>
+<tr>
+<td><code>&lt;button onclick = "alert("hello world")"&gt;&lt;/button&gt;</code></td>
+<td><code>事件源.addEventListener('事件名'，function(){事件执行程序})</code></td>
+</tr>
+<tr>
+<td><code>btn.onclick = function() {事件执行程序}</code></td>
+<td></td>
+</tr>
+<tr>
+<td>缺点：对于同一元素的同一个事件，只能添加一个，若添加多个则后面的会覆盖掉前面的</td>
+<td>特点：同一个元素同一个事件可以绑定多个监听器，执行时按顺序依次执行</td>
+</tr>
+<tr>
+<td>只支持冒泡，不支持捕获</td>
+<td>都支持</td>
+</tr>
+</tbody></table>
+<h5 id="传统方式DOM0级"><a href="#传统方式DOM0级" class="headerlink" title="传统方式DOM0级"></a><strong>传统方式DOM0级</strong></h5><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//1. 直接写在标签代码上</span>
+<span class="token operator">&lt;</span>标签名 on事件名<span class="token operator">=</span><span class="token string">"要执行的代码"</span><span class="token operator">></span>
+<span class="token comment" spellcheck="true">//例子：给div设置点击事件，触发点击时执行demo函数</span>
+<span class="token operator">&lt;</span>div onclick<span class="token operator">=</span><span class="token string">"demo()"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token comment" spellcheck="true">//2. JavaScript代码</span>
+标签变量名<span class="token punctuation">.</span>on事件名 <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//事件触发时要执行的代码</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h5 id="addEventListener-事件监听方式"><a href="#addEventListener-事件监听方式" class="headerlink" title="addEventListener()事件监听方式"></a><code>addEventListener()</code>事件监听方式</h5><ul>
+<li><code>eventTarget.addEventListener()</code>方法将指定的监听器绑定到 <code>eventTarget</code>（目标对象，目标元素）上</li>
+</ul>
+<pre class=" language-js"><code class="language-js">eventTarget<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span>eventType<span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">,</span><span class="token punctuation">[</span>usecap<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>该方法接收三个参数<ul>
+<li><code>eventType</code>:事件类型，比如<code>click</code>,<code>mousemove</code>注：**<code>这里不带 on</code>**</li>
+<li><code>function</code>  :事件处理函数</li>
+<li><code>usecap</code>:可选参数，是一个布尔值，默认为false(在DOM事件流中，表示是否捕获阶段执行) </li>
+</ul>
+</li>
+</ul>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//例子：给div设置点击事件，触发点击时执行demo函数，捕获和冒泡都要执行，</span>
+<span class="token keyword">var</span> div <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+div<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span>demo<span class="token punctuation">,</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//冒泡阶段处理</span>
+div<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span>demo<span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//捕获阶段处理</span>
+<span class="token keyword">function</span> <span class="token function">demo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//要执行的代码</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//或</span>
+div<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+   <span class="token comment" spellcheck="true">// 要执行的代码</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//冒泡阶段处理</span>
+div<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//要执行的代码</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//捕获阶段处理</span>
 </code></pre>
 <blockquote>
-<p>若被替换的参数值为正则表达式并且为全局模式，则可以将所有 匹配的字符串，替换为新的值</p>
+<p><code>addEventListener()</code>事件监听方式，在调用函数时，里面的函数demo不需要加小括号调用</p>
 </blockquote>
-<h3 id="split"><a href="#split" class="headerlink" title="split()"></a>split()</h3><blockquote>
-<p>根据符号或正则表达式对字符串进行分割</p>
-<p>参数：</p>
-<ol>
-<li>必须:字符串或正则表达式</li>
-<li>可选，设置返回数组的最大长度</li>
-</ol>
-</blockquote>
-<h4 id="返回值-2"><a href="#返回值-2" class="headerlink" title="返回值"></a>返回值</h4><ul>
-<li>返回一个数组</li>
-</ul>
-<pre class=" language-js"><code class="language-js">字符串<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span>正则表达式<span class="token punctuation">)</span><span class="token punctuation">;</span>
-例子：提取字符串中的所有数据
-<span class="token keyword">var</span> str  <span class="token operator">=</span><span class="token string">"张三#李四@#王五--赵六@#%田七"</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> reg <span class="token operator">=</span> <span class="token regex">/[\#@\-\%]+/</span><span class="token punctuation">;</span> 需要进行转义
-str<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span>reg<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//["张三", "李四", "王五", "赵六", "田七"]</span>
+<h3 id="删除事件-解绑事件"><a href="#删除事件-解绑事件" class="headerlink" title="删除事件(解绑事件)"></a>删除事件(解绑事件)</h3><h4 id="DOM2级"><a href="#DOM2级" class="headerlink" title="DOM2级"></a>DOM2级</h4><pre class=" language-js"><code class="language-js">标签变量名<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">"事件名"</span><span class="token punctuation">,</span>触发事件要执行的函数<span class="token punctuation">,</span>是否捕获阶段处理<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-
+<blockquote>
+<p>如果要删除，那么删除所提供的参数必须和添加事件处理程序的参数一模一样,且提供的是自定义函数，不能直接是function。</p>
+</blockquote>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 可以删除 </span>
+div<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span>demo<span class="token punctuation">,</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//冒泡阶段处理</span>
+div<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span>demo<span class="token punctuation">,</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//冒泡阶段处理</span>
+<span class="token comment" spellcheck="true">//不可以删除</span>
+div<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//冒泡阶段处理</span>
+div<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//冒泡阶段处理  x</span>
+</code></pre>
+<h4 id="DOM0级"><a href="#DOM0级" class="headerlink" title="DOM0级"></a>DOM0级</h4><pre class=" language-js"><code class="language-js">标签变量名<span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+</code></pre>
+<blockquote>
+<p> 删除事件兼容性解决方案</p>
+</blockquote>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">removeEventListener</span><span class="token punctuation">(</span>element<span class="token punctuation">,</span> eventName<span class="token punctuation">,</span> fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// 判断当前浏览器是否支持 removeEventListener 方法</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>element<span class="token punctuation">.</span>removeEventListener<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        element<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span>eventName<span class="token punctuation">,</span> fn<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 第三个参数 默认是false</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>element<span class="token punctuation">.</span>detachEvent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        element<span class="token punctuation">.</span><span class="token function">detachEvent</span><span class="token punctuation">(</span><span class="token string">'on'</span> <span class="token operator">+</span> eventName<span class="token punctuation">,</span> fn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        element<span class="token punctuation">[</span><span class="token string">'on'</span> <span class="token operator">+</span> eventName<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span> 
+</code></pre>
+<h2 id="事件类型"><a href="#事件类型" class="headerlink" title="事件类型"></a>事件类型</h2>
                 
             </div>
             <hr/>
@@ -631,7 +588,7 @@ str<span class="token punctuation">.</span><span class="token function">split</s
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://codehan045.github.io/posts/c9adf6e3.html">https://codehan045.github.io/posts/c9adf6e3.html</a>
+                    <a href="https://codehan045.github.io/posts/d634e3f0.html">https://codehan045.github.io/posts/d634e3f0.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -669,8 +626,8 @@ str<span class="token punctuation">.</span><span class="token function">split</s
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JavaScript%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
-                                    <span class="chip bg-color">JavaScript正则表达式</span>
+                                <a href="/tags/Javascript/">
+                                    <span class="chip bg-color">Javascript</span>
                                 </a>
                             
                         </div>
@@ -1108,9 +1065,10 @@ str<span class="token punctuation">.</span><span class="token function">split</s
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/posts/d634e3f0.html">
                     <div class="card-image">
@@ -1127,9 +1085,9 @@ str<span class="token punctuation">.</span><span class="token function">split</s
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1142,6 +1100,7 @@ str<span class="token punctuation">.</span><span class="token function">split</s
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1160,23 +1119,23 @@ str<span class="token punctuation">.</span><span class="token function">split</s
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/f48f37b0.html">
+                <a href="/posts/c9adf6e3.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210825155845.jfif" class="responsive-img" alt="JavaScript组成之DOM节点操作">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210825183525.jpg" class="responsive-img" alt="JavaScript正则表达式">
                         
-                        <span class="card-title">JavaScript组成之DOM节点操作</span>
+                        <span class="card-title">JavaScript正则表达式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            节点概述、节点层级 父 子 兄节点获取、节点增、删、复制  DOM核心总结
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-24
                             </span>
                         <span class="publish-author">
                             
@@ -1193,8 +1152,8 @@ str<span class="token punctuation">.</span><span class="token function">split</s
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
+                    <a href="/tags/JavaScript%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+                        <span class="chip bg-color">JavaScript正则表达式</span>
                     </a>
                     
                 </div>
