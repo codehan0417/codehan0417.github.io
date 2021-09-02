@@ -399,21 +399,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-16
+                    2021-09-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.8k
+                    3.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    13 分
                 </div>
                 
 
@@ -438,8 +438,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>-</p>
-<h1 id="JavaScript数组"><a href="#JavaScript数组" class="headerlink" title="JavaScript数组"></a>JavaScript数组</h1><h2 id="JavaScript-数组概念"><a href="#JavaScript-数组概念" class="headerlink" title="JavaScript 数组概念"></a>JavaScript 数组概念</h2><ul>
+                <h1 id="JavaScript数组"><a href="#JavaScript数组" class="headerlink" title="JavaScript数组"></a>JavaScript数组</h1><h2 id="JavaScript-数组概念"><a href="#JavaScript-数组概念" class="headerlink" title="JavaScript 数组概念"></a>JavaScript 数组概念</h2><ul>
 <li><p>官方：数组是指一堆有序数据的集合。即数组能够处理多个数据，并保持一定的顺序。</p>
 </li>
 <li><p>数组是多个数据的”仓库”。一个数组可以保存并管理多个数据。数据的保存顺序是根据<code>下标</code>来决定的</p>
@@ -524,36 +523,6 @@ scores<span class="token punctuation">[</span><span class="token number">0</span
 <span class="token punctuation">}</span>
 
 </code></pre>
-<ul>
-<li><p>方式二</p>
-<ul>
-<li><p><code>forEach()</code>这个方法只支持IE8以上的浏览器<br>IE8及以下的浏览器均不支持该方法，所以如果需要兼容IE8，则不要使用forEach<br>还是使用for循环来遍历</p>
-</li>
-<li><p><code> forEach()</code>方法需要一个函数作为参数</p>
-<p>像这种函数，由我们创建但是不由我们调用的，我们称为回调函数</p>
-<p>数组中有几个元素函数就会执行几次，每次执行时，浏览器会将遍历到的元素</p>
-<p> 以实参的形式传递进来，我们可以来定义形参，来读取这些内容</p>
-<ul>
-<li><p>浏览器会在回调函数中传递三个参数：</p>
-<ul>
-<li><p>第一个参数，就是当前正在遍历的元素</p>
-</li>
-<li><p>第二个参数，就是当前正在遍历的元素的索引</p>
-</li>
-<li><p>第三个参数，就是正在遍历的数组</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<pre class=" language-js"><code class="language-js">arr<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>value <span class="token punctuation">,</span> index <span class="token punctuation">,</span> obj<span class="token punctuation">)</span><span class="token punctuation">{</span>
-     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//第二个和第三个参数可选，value参数必须写</span>
-</code></pre>
-</li>
-</ul>
 </li>
 </ul>
 <h3 id="数组的应用"><a href="#数组的应用" class="headerlink" title="数组的应用"></a>数组的应用</h3><ul>
@@ -628,13 +597,13 @@ scores<span class="token punctuation">[</span><span class="token number">0</span
 </code></pre>
 </li>
 </ul>
-<h3 id="数组API"><a href="#数组API" class="headerlink" title="数组API"></a>数组API</h3><h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><ul>
+<h2 id="数组API"><a href="#数组API" class="headerlink" title="数组API"></a>数组API</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><ul>
 <li>应用编程接口(application programming interface)。指的编程语言<code>已经写好的代码</code>，开发人员<code>直接可以使用</code>，能够解决编程过程中遇到的常见的操作。</li>
 <li>JavaScript针对数组提供了大量的api来简化对数组的常规操作。</li>
 <li>每个api本质是一个内置函数。</li>
 <li>已经用过的api：<code>Math.random</code>、<code>Number()</code>、<code>parseInt()</code>、<code>parseFloat()</code>等</li>
 </ul>
-<h4 id="数组相关API-ES3"><a href="#数组相关API-ES3" class="headerlink" title="数组相关API(ES3)"></a>数组相关API(ES3)</h4><ol>
+<h3 id="数组相关API-ES3"><a href="#数组相关API-ES3" class="headerlink" title="数组相关API(ES3)"></a>数组相关API(ES3)</h3><ol>
 <li><p><strong><code>push</code></strong>:追加</p>
 </li>
 <li><p><strong><code>pop</code></strong>:删除末尾数据</p>
@@ -662,7 +631,7 @@ scores<span class="token punctuation">[</span><span class="token number">0</span
 <li><p><code>concat()</code>可以连接两个或多个数组，并将新的数组返回</p>
 </li>
 </ol>
-<h4 id="详解"><a href="#详解" class="headerlink" title="详解"></a>详解</h4><ul>
+<h3 id="详解"><a href="#详解" class="headerlink" title="详解"></a>详解</h3><ul>
 <li><p><strong><code>push()</code></strong>:向数组的末尾添加一个或多个元素，并返回数组的新的长度,改变原数组</p>
 <pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> arr2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"小明"</span><span class="token punctuation">,</span> <span class="token string">"小张"</span><span class="token punctuation">,</span>  <span class="token string">"小李"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token keyword">var</span> length <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">"小王"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -811,6 +780,74 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </code></pre>
 </li>
 </ul>
+<h2 id="ES5新增数组API"><a href="#ES5新增数组API" class="headerlink" title="ES5新增数组API"></a>ES5新增数组API</h2><h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h3><ul>
+<li><p><code>forEach()</code>数组的专属遍历，可用于替代传统的for循环</p>
+</li>
+<li><p><code> forEach()</code>方法需要一个函数作为参数</p>
+<p>像这种函数，由我们创建但是不由我们调用的，我们称为回调函数</p>
+<p>数组中有几个元素函数就会执行几次，每次执行时，浏览器会将遍历到的元素</p>
+<p> 以实参的形式传递进来，我们可以来定义形参，来读取这些内容</p>
+</li>
+</ul>
+<pre class=" language-js"><code class="language-js">arr<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>value <span class="token punctuation">,</span> index <span class="token punctuation">,</span> array<span class="token punctuation">)</span><span class="token punctuation">{</span>
+     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token comment" spellcheck="true">//value:指的是遍历的数据本身</span>
+    <span class="token comment" spellcheck="true">//index：指的是遍历的数据对应的下标</span>
+   <span class="token comment" spellcheck="true">// array:指的是遍历数组本身</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//第二个和第三个参数可选，value参数必须写</span>
+</code></pre>
+<ul>
+<li>流程：当遍历数组时，forEach会依次从数组中拿出一个数据，调用一次我们传过去的函数，吧数据以及对应的下标以及数组作为实际参数传过去进行处理</li>
+</ul>
+<h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h3><blockquote>
+<p>遍历数组，根据条件拿到数组中满足条件的数据，并返回一个新的数组</p>
+</blockquote>
+<pre class=" language-js"><code class="language-js">arr<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span>index<span class="token punctuation">,</span>array<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//value:指的是遍历的数据本身</span>
+    <span class="token comment" spellcheck="true">//index：指的是遍历的数据对应的下标</span>
+    <span class="token comment" spellcheck="true">//array:指的是遍历数组本身</span>
+    如果value满足条件，需要<span class="token keyword">return</span> <span class="token boolean">true</span> 来告诉 filter 当前数据满足条件，不满足则 <span class="token keyword">return</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="map"><a href="#map" class="headerlink" title="map"></a>map</h3><blockquote>
+<p>遍历数组，会将每次遍历处理后return的数据 加入到新数组中并返回。对原数组没有影响</p>
+</blockquote>
+<pre class=" language-js"><code class="language-js">  数组变量名<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span>index<span class="token punctuation">,</span>array<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">//value:指的是遍历的数据本身</span>
+      <span class="token comment" spellcheck="true">//index：指的是遍历的数据对应的下标</span>
+      <span class="token comment" spellcheck="true">//array:指的是遍历数组本身</span>
+      将处理后的数据<span class="token keyword">return</span>，  如果没有<span class="token keyword">return</span>，那么新数组中对应下标位置上的数据是undefined
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>；
+</code></pre>
+<h3 id="some"><a href="#some" class="headerlink" title="some"></a>some</h3><blockquote>
+<p>遍历数组，用于判断某个遍历的数据是否满足指定的条件，只要有一个满足条件，则最终返回true,否则返回false。some返回的是布尔型数据</p>
+</blockquote>
+<pre class=" language-js"><code class="language-js">数组变量名<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span>index<span class="token punctuation">,</span>array<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//value:指的是遍历的数据本身</span>
+   <span class="token comment" spellcheck="true">// index：指的是遍历的数据对应的下标</span>
+    <span class="token comment" spellcheck="true">//array:指的是遍历数组本身</span>
+    对value进行处理并判断，如果满足，就<span class="token keyword">return</span> <span class="token boolean">true</span>，否则<span class="token keyword">return</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>；
+</code></pre>
+<h3 id="every"><a href="#every" class="headerlink" title="every"></a>every</h3><blockquote>
+<p>遍历数组，用于判断某个遍历的数据是否满足指定的条件，必须每一个都要满足条件，最终返回true，否则false。即<code>every</code>函数返回的是布尔型数据</p>
+</blockquote>
+<h3 id="reduce"><a href="#reduce" class="headerlink" title="reduce"></a>reduce</h3><blockquote>
+<p>为数组中的每一个元素依次执行回调函数，不包括数组中被删除或从未被赋值的元素，接受四个参数：初始值(或者上一次回调函数的返回值)，当前元素值，当前索引，调用 reduce 的数组。</p>
+</blockquote>
+<pre class=" language-js"><code class="language-js">数组变量名<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span>value<span class="token punctuation">,</span>index<span class="token punctuation">,</span>array<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//data  累加值，初始值</span>
+    <span class="token comment" spellcheck="true">//value:指的是遍历的数据本身</span>
+   <span class="token comment" spellcheck="true">// index：指的是遍历的数据对应的下标</span>
+    <span class="token comment" spellcheck="true">//array:指的是遍历数组本身</span>
+    对value进行处理
+<span class="token punctuation">}</span><span class="token punctuation">)</span>；
+</code></pre>
+<blockquote>
+<p>在没有初始值的空数组上调用 reduce 将报错</p>
+<p>不给初始值的话，会取数组的第一项作为初始值</p>
+</blockquote>
 
                 
             </div>
@@ -1588,7 +1625,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">66.8k</span>
+                        class="white-color">69.4k</span>
             
             
             
