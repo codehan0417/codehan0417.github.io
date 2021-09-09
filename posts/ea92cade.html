@@ -399,21 +399,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-30
+                    2021-09-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    2.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    7 分
                 </div>
                 
 
@@ -709,6 +709,25 @@
 <h3 id="响应式布局容器"><a href="#响应式布局容器" class="headerlink" title="响应式布局容器"></a>响应式布局容器</h3><ul>
 <li>响应式需要一个父级作为布局容器，来配合子级元素来实现变化效果</li>
 <li>原理：在不同屏幕下，通过媒体查询来改变布局容器的大小，再改变里面子元素的排列方式和大小，从而实现不同屏幕下，看到不同的页面布局和样式变化</li>
+</ul>
+<h2 id="移动端的开发技巧"><a href="#移动端的开发技巧" class="headerlink" title="移动端的开发技巧"></a>移动端的开发技巧</h2><ul>
+<li><code>em</code>:是css中的 相对单位。1em指的是相对父标签的font-size的取值。比如父标签的font-size为20px.那么给子标签设置<code>1em==20px;2em==40px</code></li>
+<li><code>rem</code>:是css中的相对单位。rem是相对于<code>&lt;html&gt;</code>标签本身的font-size的取值。比如HTML标签的font-size为30px.即1rem等于30px。</li>
+<li><code>vw</code>:相对单位。是相对于视口的宽度，即屏幕宽度。1vw==宽度的1%</li>
+<li><code>vh</code>:相对单位。是相对于视口的高度，即屏幕高度。1vh==高度的1%</li>
+</ul>
+<h3 id="主要原则"><a href="#主要原则" class="headerlink" title="主要原则"></a>主要原则</h3><ul>
+<li>页面本身的尺寸由百分比或vh或vw来确定</li>
+<li>页面标签的尺寸和位置由<code>rem</code>或百分比来确定</li>
+<li>页面字体的尺寸由<code>rem</code>来确定</li>
+</ul>
+<h3 id="页面开发思路"><a href="#页面开发思路" class="headerlink" title="页面开发思路"></a>页面开发思路</h3><ul>
+<li>基本布局尽量使用弹性布局。尺寸使用百分比或rem</li>
+<li>盒子尺寸用rem单位。</li>
+</ul>
+<h3 id="页面开发技巧"><a href="#页面开发技巧" class="headerlink" title="页面开发技巧"></a>页面开发技巧</h3><ul>
+<li>一个页面最开始可以套一个宽高都100%的div，主要防止子标签宽度不对导致页面布局混乱</li>
+<li>文字或间距的尺寸一般都是在0.26~0.35rem之间</li>
 </ul>
 
                 
@@ -1487,7 +1506,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">69.4k</span>
+                        class="white-color">73.3k</span>
             
             
             
