@@ -367,8 +367,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JavaScript/">
-                                <span class="chip bg-color">JavaScript</span>
+                            <a href="/tags/javascript/">
+                                <span class="chip bg-color">javascript</span>
                             </a>
                         
                             <a href="/tags/%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C/">
@@ -750,8 +750,8 @@ document<span class="token punctuation">.</span><span class="token function">que
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JavaScript/">
-                                    <span class="chip bg-color">JavaScript</span>
+                                <a href="/tags/javascript/">
+                                    <span class="chip bg-color">javascript</span>
                                 </a>
                             
                                 <a href="/tags/%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C/">
@@ -1230,8 +1230,8 @@ document<span class="token punctuation">.</span><span class="token function">que
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
+                    <a href="/tags/javascript/">
+                        <span class="chip bg-color">javascript</span>
                     </a>
                     
                     <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
@@ -1282,8 +1282,8 @@ document<span class="token punctuation">.</span><span class="token function">que
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
+                    <a href="/tags/javascript/">
+                        <span class="chip bg-color">javascript</span>
                     </a>
                     
                     <a href="/tags/%E5%85%83%E7%B4%A0%E6%93%8D%E4%BD%9C/">
@@ -1383,7 +1383,7 @@ document<span class="token punctuation">.</span><span class="token function">que
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h2, h3, h4, h5'
         });
 
         // modify the toc link href to support Chinese.
@@ -1395,7 +1395,7 @@ document<span class="token punctuation">.</span><span class="token function">que
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h2, h3, h4, h5').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 

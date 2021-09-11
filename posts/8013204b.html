@@ -1089,8 +1089,8 @@ ObjectParams<span class="token punctuation">[</span>Symbol<span class="token pun
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
+                    <a href="/tags/javascript/">
+                        <span class="chip bg-color">javascript</span>
                     </a>
                     
                     <a href="/tags/BOM/">
@@ -1142,8 +1142,8 @@ ObjectParams<span class="token punctuation">[</span>Symbol<span class="token pun
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
+                    <a href="/tags/javascript/">
+                        <span class="chip bg-color">javascript</span>
                     </a>
                     
                 </div>
@@ -1239,7 +1239,7 @@ ObjectParams<span class="token punctuation">[</span>Symbol<span class="token pun
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h2, h3, h4, h5'
         });
 
         // modify the toc link href to support Chinese.
@@ -1251,7 +1251,7 @@ ObjectParams<span class="token punctuation">[</span>Symbol<span class="token pun
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h2, h3, h4, h5').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
