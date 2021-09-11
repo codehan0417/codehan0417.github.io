@@ -410,14 +410,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    2.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    8 分
                 </div>
                 
 
@@ -446,11 +446,24 @@
 <li>文档对象模型(<code>Document Object Model,简称DOM</code>)是W3C组织推荐的处理可扩展标记语言（HTML或XML)的标准编程接口，比如对HTML标签浮动增删查改、修改css等。</li>
 <li>JavaScript中是将所有对于HTML标签的操作相关api整合成了<code>document</code>对象。</li>
 </ul>
+<h3 id="发展"><a href="#发展" class="headerlink" title="发展"></a>发展</h3><ul>
+<li>DOM 0级：在96年之前ie浏览器和⽹景浏览器为了抢夺市场，都分别实现了⼀套 JavaScript⽤于操作HTML的api。因为是分别实现的，没有标准，在正式dom标准出 来之前，统称它们的相关api为dom0级</li>
+<li>DOM 1级：98年w3c出台了第⼀版domapi的标准，基本ie8就使⽤了该标准。dom1级 只能简单的操作HTML标签，⽐如提供 <code>document.images</code> 来获取⻚⾯上所有的<code>&lt;img&gt;</code>标签等。</li>
+<li> DOM 2级：⽬前所有浏览器都⽀持的版本。增强了对⻚⾯的控制，以及添加了对css 的⽀持，以及事件的⽀持。ie9+ </li>
+<li>DOM 3级：⽬前所有浏览器都⽀持的版本，将api进⾏模块化，更⽅便管理和更新。</li>
+</ul>
+<h4 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h4><ul>
+<li><p>DOM1级，ie8及以下 </p>
+</li>
+<li><p>DOM2级和3级：ie9+、现代浏览器</p>
+</li>
+</ul>
 <h3 id="DOM树"><a href="#DOM树" class="headerlink" title="DOM树"></a>DOM树</h3><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210822212229.png" alt="dom"></p>
 <ul>
 <li>文档：一个页面就是一个文档，<code>DOM</code>中使用<code>document</code>来表示</li>
 <li>元素：页面中的所有标签都是元素，<code>DOM</code>中使用<code>element</code>表示</li>
 <li>节点：网页中的所有内容都是节点（标签，属性，文本，注释等），<code>DOM</code>中使用<code>node</code>来表示</li>
+<li>每个HTML标签都是⼀个节点，不仅如此，每个标签内部的属性和⽂本内容在 JavaScript中也会当成单独的⼀个节点存在。⽽⽂本节点则会作为其标签节点的⼦节 点</li>
 </ul>
 <blockquote>
 <p>DOM将以上内容都看作是<strong>对象</strong></p>
@@ -1491,7 +1504,7 @@ div<span class="token punctuation">.</span>className<span class="token operator"
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">75.5k</span>
+                        class="white-color">77.1k</span>
             
             
             
