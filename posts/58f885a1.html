@@ -399,7 +399,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-25
+                    2021-09-26
                 </div>
                 
 
@@ -413,7 +413,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    9 分
                 </div>
                 
 
@@ -658,13 +658,14 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li>当定义一个基本类型的数据时，JavaScript会在栈里分配一块内存空间(大小是固定的)用于保存数据，将该区域的内存地址赋给变量。即变量保存的是内存地址。当我们访问变量时，JavaScript会通过变量保存的内存地址找到对应的数据并使用。<ol>
 <li>如果遇到<code>var a=1;var c=a</code>这种情况时，实际上创建变量<code>c</code>时，JavaScript会分配新的内存空间，把变量<code>a</code>的值复制到空间里，并把新的内存地址赋给变量<code>c</code>。即变量<code>a</code>和变量<code>c</code>的内存地址是不一样的，互不干扰。</li>
 <li>每声明一个变量，就会在栈中开辟一个内存空间</li>
+<li>在栈内存中的数据发生复制行为时，系统会自动为新的变量分配一个新值，最后这些变量都是 <strong>相互独立，互不影响的</strong>。</li>
 </ol>
 </li>
 </ul>
 <h4 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h4><ul>
 <li>如果一个变量的数据是对象，那么JavaScript会在堆里分配一块可动态增长的内存区域保存对象数据，然后再栈里分配一块区域保存对象数据对应堆空间的内存地址，最后将栈里对应空间的内存地址赋给变量。</li>
 </ul>
-<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210925152706.jpg"></p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210926201708.jpg" alt="内存空间"></p>
 <h4 id="内存、变量、数据三者之间的关系"><a href="#内存、变量、数据三者之间的关系" class="headerlink" title="内存、变量、数据三者之间的关系"></a>内存、变量、数据三者之间的关系</h4><ul>
 <li>内存用来存储数据的空间</li>
 <li>变量是内存的标识</li>
@@ -1506,7 +1507,7 @@ ge 1
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">80.3k</span>
+                        class="white-color">81.2k</span>
             
             
             
