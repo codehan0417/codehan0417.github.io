@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JavaScript之原生对象, java mysql javascript jdbc javaweb">
+    <meta name="keywords" content="JavaScript之原生对象ES5, java mysql javascript jdbc javaweb">
     <meta name="description" content="世界不停转动，直到我们相逢">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JavaScript之原生对象 | doNow</title>
+    <title>JavaScript之原生对象ES5 | doNow</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210926234621.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210927000546.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JavaScript之原生对象</h1>
+                    <h1 class="description center-align post-title">JavaScript之原生对象ES5</h1>
                 </div>
             </div>
         </div>
@@ -367,12 +367,16 @@
                     
                     <div class="article-tag">
                         
+                            <a href="/tags/ES5/">
+                                <span class="chip bg-color">ES5</span>
+                            </a>
+                        
                             <a href="/tags/javascript/">
                                 <span class="chip bg-color">javascript</span>
                             </a>
                         
-                            <a href="/tags/%E5%8E%9F%E7%94%9F%E5%AF%B9%E8%B1%A1%EF%BC%8Cjavascript%E5%9F%BA%E7%A1%80/">
-                                <span class="chip bg-color">原生对象，javascript基础</span>
+                            <a href="/tags/%E5%8E%9F%E7%94%9F%E5%AF%B9%E8%B1%A1/">
+                                <span class="chip bg-color">原生对象</span>
                             </a>
                         
                     </div>
@@ -410,14 +414,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    207
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -468,7 +472,139 @@
 </ul>
 </li>
 </ol>
-<h2 id="对象操作"><a href="#对象操作" class="headerlink" title="对象操作"></a>对象操作</h2><h3 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h3>
+<h2 id="对象操作"><a href="#对象操作" class="headerlink" title="对象操作"></a>对象操作</h2><h3 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h3><h4 id="构造函数创建对象"><a href="#构造函数创建对象" class="headerlink" title="构造函数创建对象"></a>构造函数创建对象</h4><ul>
+<li><p> 使用new关键字调用的函数，是构造函数<code>function</code></p>
+</li>
+<li><p>构造函数是专门用来创建对象的函数</p>
+</li>
+<li><p>使用typeof检查一个对象时，会返回object</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<h4 id="字面量创建对象"><a href="#字面量创建对象" class="headerlink" title="字面量创建对象"></a>字面量创建对象</h4><ul>
+<li><p>定义一个空的对象</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> 对象变量名 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>定义带有默认数据的对象</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> 对象变量名 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    属性名<span class="token number">1</span><span class="token punctuation">:</span> 属性值<span class="token number">1</span><span class="token punctuation">,</span>
+    属性名<span class="token number">2</span><span class="token punctuation">:</span> 属性值<span class="token number">2</span><span class="token punctuation">,</span>
+    属性名<span class="token number">3</span><span class="token punctuation">:</span> 属性值<span class="token number">3</span><span class="token punctuation">,</span>
+    属性名n<span class="token punctuation">:</span> 属性值n
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><blockquote>
+<p>在对象中保存的值称为属性</p>
+</blockquote>
+<h4 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h4><ul>
+<li><p>向对象中添加或修改属性</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//添加</span>
+对象<span class="token punctuation">.</span>属性名<span class="token operator">=</span>属性值；
+obj<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"孙悟空"</span><span class="token punctuation">;</span>
+对象<span class="token punctuation">[</span><span class="token string">'属性名'</span><span class="token punctuation">]</span><span class="token operator">=</span>属性值；
+<span class="token comment" spellcheck="true">//修改</span>
+对象<span class="token punctuation">[</span><span class="token string">'属性名'</span><span class="token punctuation">]</span><span class="token operator">=</span>新值；
+对象<span class="token punctuation">.</span>属性名 <span class="token operator">=</span> 新值；
+obj<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"tom"</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>读取对象中的属性</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//1.方式一</span>
+对象<span class="token punctuation">.</span>属性名
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">.</span>gender<span class="token punctuation">)</span>；
+<span class="token comment" spellcheck="true">//2.方式二</span>
+对象<span class="token punctuation">[</span><span class="token string">'属性名'</span><span class="token punctuation">]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">[</span><span class="token string">'gender'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>；
+</code></pre>
+<p><strong>如果读取到对象中没有的属性，不会报错而是返回<code>undefined</code></strong></p>
+</li>
+<li><p>删除对象的属性</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">delete</span>  对象<span class="token punctuation">.</span>属性名；
+<span class="token keyword">delete</span> obj<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<h4 id="属性名和属性值"><a href="#属性名和属性值" class="headerlink" title="属性名和属性值"></a>属性名和属性值</h4><h5 id="属性名"><a href="#属性名" class="headerlink" title="属性名"></a>属性名</h5><ul>
+<li><p>对象的属性名不强制要求遵守标识符的规范</p>
+</li>
+<li><p>如果要使用特殊的属性名，不能采用<code>.</code>的方式来操作,读取时也需使用这种方式</p>
+<pre class=" language-js"><code class="language-js">对象<span class="token punctuation">[</span><span class="token string">"属性名"</span><span class="token punctuation">]</span> <span class="token operator">=</span> 属性值
+</code></pre>
+</li>
+<li><p>使用<code>[ ]</code>这种形式去操作属性，更加的灵活，</p>
+</li>
+<li><p> 在<code>[ ]</code>中可以直接传递一个变量，来读取对应属性名的属性值</p>
+</li>
+</ul>
+<h5 id="属性值"><a href="#属性值" class="headerlink" title="属性值"></a>属性值</h5><ul>
+<li> <code>JS</code>对象的属性值，可以是任意的数据类型，甚至也可以是一个对象</li>
+</ul>
+<h5 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h5><ul>
+<li><p><code>in</code>运算符</p>
+<ul>
+<li>通过该运算符可以检查一个对象中是否含有指定的属性</li>
+<li>如果有则返回true，没有则返回false</li>
+</ul>
+<pre class=" language-js"><code class="language-js"><span class="token string">"属性名"</span> <span class="token keyword">in</span> 对象
+<span class="token comment" spellcheck="true">//检查obj中是否含有test2属性</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"test2"</span> <span class="token keyword">in</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>工厂模式创建对象</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//使用工厂方法创建对象</span>
+<span class="token comment" spellcheck="true">//通过该方法可以大批量的创建对象</span>
+<span class="token keyword">function</span> <span class="token function">createPerson</span><span class="token punctuation">(</span>name <span class="token punctuation">,</span> age <span class="token punctuation">,</span>gender<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//创建一个新的对象 </span>
+    <span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//向对象中添加属性</span>
+    obj<span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    obj<span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    obj<span class="token punctuation">.</span>gender <span class="token operator">=</span> gender<span class="token punctuation">;</span>
+    obj<span class="token punctuation">.</span>sayName <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//将新的对象返回</span>
+    <span class="token keyword">return</span> obj<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//使用工厂方法创建的对象，使用的构造函数都是Object</span>
+<span class="token comment" spellcheck="true">//所以创建的对象都是Object这个类型，</span>
+<span class="token comment" spellcheck="true">//就导致我们无法区分出多种不同类型的对象</span>
+</code></pre>
+</li>
+</ul>
+<h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><ul>
+<li><p>专门用于创建对象，对对象中的属性等进行初始化</p>
+</li>
+<li><p> 构造函数就是一个普通的函数，创建方式和普通函数没有区别,<strong>不同的是构造函数习惯上首字母大写</strong></p>
+</li>
+<li><p><strong>构造函数和普通函数的区别就是<code>调用方式</code>的不同，普通函数是直接调用，而构造函数需要使用new关键字来调用</strong></p>
+</li>
+<li><p>使用同一个构造函数创建的对象，称为一类对象，一个构造函数称为一个类</p>
+</li>
+<li><p>通过一个构造函数创建的对象，称为该类的实例</p>
+</li>
+</ul>
+<h3 id="执行流程"><a href="#执行流程" class="headerlink" title="执行流程"></a>执行流程</h3><ol>
+<li>立刻创建一个新的对象</li>
+<li>将新建的对象设置为函数中<code>this</code>,在构造函数中可以使用<code>this</code>来引用新建的对象</li>
+<li>逐行执行函数中的代码</li>
+<li>将新建的对象作为返回值返回,在创建对象时，用一个变量接收</li>
+</ol>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span>name <span class="token punctuation">,</span> age <span class="token punctuation">,</span> gender<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>gender <span class="token operator">=</span> gender<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>sayName <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> per <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">"孙悟空"</span><span class="token punctuation">,</span><span class="token number">18</span><span class="token punctuation">,</span><span class="token string">"男"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
                 
             </div>
             <hr/>
@@ -532,12 +668,16 @@
                     
                         <div class="article-tag">
                             
+                                <a href="/tags/ES5/">
+                                    <span class="chip bg-color">ES5</span>
+                                </a>
+                            
                                 <a href="/tags/javascript/">
                                     <span class="chip bg-color">javascript</span>
                                 </a>
                             
-                                <a href="/tags/%E5%8E%9F%E7%94%9F%E5%AF%B9%E8%B1%A1%EF%BC%8Cjavascript%E5%9F%BA%E7%A1%80/">
-                                    <span class="chip bg-color">原生对象，javascript基础</span>
+                                <a href="/tags/%E5%8E%9F%E7%94%9F%E5%AF%B9%E8%B1%A1/">
+                                    <span class="chip bg-color">原生对象</span>
                                 </a>
                             
                         </div>
@@ -1261,7 +1401,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">81.2k</span>
+                        class="white-color">83.8k</span>
             
             
             
