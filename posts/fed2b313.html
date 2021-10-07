@@ -403,21 +403,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-02
+                    2021-10-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    857
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -569,6 +569,48 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="深克隆"><a href="#深克隆" class="headerlink" title="深克隆"></a>深克隆</h3><ul>
 <li>原理：对属性值是对象的属性也进行一次浅克隆（即使用递归）</li>
 </ul>
+<h4 id="ES5深克隆"><a href="#ES5深克隆" class="headerlink" title="ES5深克隆"></a>ES5深克隆</h4><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">deepClone</span><span class="token punctuation">(</span>origin<span class="token punctuation">,</span>target<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//创建一个空对象</span>
+    <span class="token keyword">var</span> tar<span class="token operator">=</span> target <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>；
+    <span class="token keyword">var</span> toStr<span class="token operator">=</span>Object<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>toString<span class="token punctuation">;</span>
+    <span class="token keyword">var</span> arrType<span class="token operator">=</span><span class="token string">"[object Array]"</span>；
+    <span class="token comment" spellcheck="true">//遍历对象</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> k <span class="token keyword">in</span> origin<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//自身的属性进行克隆</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>origin<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//判断属性是否是对象并且不为null   null的类型也为object</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">typeof</span>  origin<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token operator">===</span><span class="token string">'object'</span> <span class="token operator">&amp;&amp;</span> origin<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token operator">!==</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">//判断是否为数组</span>
+                tar<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token operator">=</span>toStr<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>origin<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">===</span>arrType<span class="token operator">?</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">//递归调用，将属性值为对象的属性值再次克隆</span>
+                <span class="token function">deepClone</span><span class="token punctuation">(</span>origin<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">,</span>tar<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">//非对象直接将属性值添加到目标对象中</span>
+                tar<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token operator">=</span>origin<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>    
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h4><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">deepClone</span><span class="token punctuation">(</span>origin<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//undefined 和 null == 结果为true</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>origin<span class="token operator">==</span> undefined <span class="token operator">||</span> <span class="token keyword">typeof</span> origin <span class="token operator">!==</span><span class="token string">'object'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> origin<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">//对于特殊的对象返回</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>origin <span class="token keyword">instanceof</span> <span class="token class-name">Date</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>origin<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">//调用源对象的构造函数，创建一个新的对象</span>
+    <span class="token keyword">const</span> target <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">origin<span class="token punctuation">.</span>constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> k <span class="token keyword">in</span> origin<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>origin<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            target<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">deepClone</span><span class="token punctuation">(</span>origin<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> target<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 
                 
             </div>
@@ -1076,29 +1118,28 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/fed2b313.html">
+                <a href="/posts/aac20146.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20211002162628.jpg" class="responsive-img" alt="JavaScript之Object类">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20211003164357.jpg" class="responsive-img" alt="JavaScript异常">
                         
-                        <span class="card-title">JavaScript之Object类</span>
+                        <span class="card-title">JavaScript异常</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            异常基础、异常分类、处理异常try-catch、抛出异常 throw、自定义异常类
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-02
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-03
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1111,7 +1152,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1119,8 +1159,8 @@ console<span class="token punctuation">.</span><span class="token function">log<
                         <span class="chip bg-color">javascript</span>
                     </a>
                     
-                    <a href="/tags/Object%E7%B1%BB/">
-                        <span class="chip bg-color">Object类</span>
+                    <a href="/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">
+                        <span class="chip bg-color">异常处理</span>
                     </a>
                     
                 </div>
@@ -1360,7 +1400,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">87.6k</span>
+                        class="white-color">91.1k</span>
             
             
             
