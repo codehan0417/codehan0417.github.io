@@ -375,10 +375,6 @@
                                 <span class="chip bg-color">异步编程</span>
                             </a>
                         
-                            <a href="/tags/promise/">
-                                <span class="chip bg-color">promise</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -407,21 +403,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-10
+                    2021-10-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
 
@@ -446,7 +442,17 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="同步和异步"><a href="#同步和异步" class="headerlink" title="同步和异步"></a>同步和异步</h2><h4 id="单线程"><a href="#单线程" class="headerlink" title="单线程"></a>单线程</h4><blockquote>
+                <h2 id="什么是异步编程"><a href="#什么是异步编程" class="headerlink" title="什么是异步编程"></a>什么是异步编程</h2><ul>
+<li><p>同步编程：一件事情做完之后才能去做另外一件事情（单线程）</p>
+</li>
+<li><p>异步编程：上一件事情没有处理完的情况下，就可以去做下一件事情（多线程）</p>
+</li>
+</ul>
+<blockquote>
+<p> JS 代码在浏览器中执行，而浏览器是多进程的，当我们打开一个界面的时候就相当于开启了一个进程，在这一个进程里会存在多个线程（JS引擎、GUI渲染、HTTP网络请求、DOM事件监听器、定时器监听线程…），其中JS引擎就来执行JS代码，很明显它是一个单线程，因为它是单线程所以默认情况下它只能同步完成代码执行，但是JS可以实现异步，这是因为它内部存在事件循环和事件队列机制。</p>
+</blockquote>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20211012160001.png"></p>
+<h2 id="同步和异步"><a href="#同步和异步" class="headerlink" title="同步和异步"></a>同步和异步</h2><h4 id="单线程"><a href="#单线程" class="headerlink" title="单线程"></a>单线程</h4><blockquote>
 <p>Javascript语言的执行环境是”单线程”（single thread）。</p>
 <p>所谓”单线程”，就是指一次只能完成一件任务。如果有多个任务，就必须排队，前面一个任务完成，再执行后面一个任务，以此类推</p>
 </blockquote>
@@ -505,6 +511,10 @@
 </ul>
 <h4 id="同步回调"><a href="#同步回调" class="headerlink" title="同步回调"></a>同步回调</h4><ul>
 <li>回调函数的代码必定是按照书写顺序来执行的</li>
+<li>立即执行，完全执行完才结束，不会放入回调队列中<ul>
+<li>例子：数组遍历相关的回调函数</li>
+</ul>
+</li>
 </ul>
 <pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">task1</span><span class="token punctuation">(</span>callback<span class="token punctuation">)</span><span class="token punctuation">{</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'任务1执行中'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -517,6 +527,10 @@
 </code></pre>
 <h4 id="异步回调"><a href="#异步回调" class="headerlink" title="异步回调"></a>异步回调</h4><ul>
 <li>回调函数的执行跟书写顺序不一致。</li>
+<li>不会立即执行，会放入回调队列中将来执行<ul>
+<li>例子：定时器回调、ajax回调、promise的成功失败回调</li>
+</ul>
+</li>
 </ul>
 <pre class=" language-js"><code class="language-js"><span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'1000后执行'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -623,10 +637,6 @@ $<span class="token punctuation">.</span><span class="token function">ajax</span
                             
                                 <a href="/tags/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/">
                                     <span class="chip bg-color">异步编程</span>
-                                </a>
-                            
-                                <a href="/tags/promise/">
-                                    <span class="chip bg-color">promise</span>
                                 </a>
                             
                         </div>
@@ -1064,29 +1074,28 @@ $<span class="token punctuation">.</span><span class="token function">ajax</span
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/8731ab21.html">
+                <a href="/posts/dd7185f2.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20211003210741.jpg" class="responsive-img" alt="异步编程">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20211010234300.jpg" class="responsive-img" alt="promise解读-async/await">
                         
-                        <span class="card-title">异步编程</span>
+                        <span class="card-title">promise解读-async/await</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            同步和异步、事件循环（宏任务&微任务）、回调函数、回调地狱
+                            
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-03
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-10
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1099,7 +1108,6 @@ $<span class="token punctuation">.</span><span class="token function">ajax</span
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1107,12 +1115,12 @@ $<span class="token punctuation">.</span><span class="token function">ajax</span
                         <span class="chip bg-color">javascript</span>
                     </a>
                     
-                    <a href="/tags/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/">
-                        <span class="chip bg-color">异步编程</span>
-                    </a>
-                    
                     <a href="/tags/promise/">
                         <span class="chip bg-color">promise</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">异步编程</span>
                     </a>
                     
                 </div>
@@ -1352,7 +1360,7 @@ $<span class="token punctuation">.</span><span class="token function">ajax</span
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">91.7k</span>
+                        class="white-color">93.2k</span>
             
             
             

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数组、字符串、对象遍历方法集锦, java mysql javascript jdbc javaweb">
+    <meta name="keywords" content="Webpack, java mysql javascript jdbc javaweb">
     <meta name="description" content="世界不停转动，直到我们相逢">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数组、字符串、对象遍历方法集锦 | doNow</title>
+    <title>Webpack | doNow</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210819092322.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20211027145001.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数组、字符串、对象遍历方法集锦</h1>
+                    <h1 class="description center-align post-title">Webpack</h1>
                 </div>
             </div>
         </div>
@@ -367,8 +367,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%81%8D%E5%8E%86%E9%9B%86%E9%94%A6/">
-                                <span class="chip bg-color">遍历集锦</span>
+                            <a href="/tags/javascript/">
+                                <span class="chip bg-color">javascript</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%89%8D%E7%AB%AF%E8%B5%84%E6%BA%90%E6%89%93%E5%8C%85/">
+                                <span class="chip bg-color">前端资源打包</span>
                             </a>
                         
                     </div>
@@ -392,28 +396,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-18
+                    2021-10-27
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-10
+                    2021-10-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    705
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -438,117 +442,175 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="数组、字符串、对象遍历方法"><a href="#数组、字符串、对象遍历方法" class="headerlink" title="数组、字符串、对象遍历方法"></a>数组、字符串、对象遍历方法</h1><h2 id="params"><a href="#params" class="headerlink" title="params"></a>params</h2><pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> array<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">34</span><span class="token punctuation">,</span><span class="token number">56</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> str<span class="token operator">=</span><span class="token string">"asdadaawsadf"</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> Params <span class="token operator">=</span> <span class="token punctuation">{</span>
-  name<span class="token punctuation">:</span> <span class="token string">'张三'</span><span class="token punctuation">,</span>
-  age<span class="token punctuation">:</span> <span class="token string">'19'</span><span class="token punctuation">,</span>
-  sex<span class="token punctuation">:</span><span class="token string">'男'</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<h2 id="基础for循环"><a href="#基础for循环" class="headerlink" title="基础for循环"></a>基础for循环</h2><ul>
-<li>传统方式</li>
-</ul>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//遍历Array</span>
-<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span> <span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment" spellcheck="true">//遍历object</span>
-<span class="token comment" spellcheck="true">//Object.length===undefined;</span>
-<span class="token comment" spellcheck="true">//所以不能使用传统for循环遍历对象</span>
-
-<span class="token comment" spellcheck="true">//遍历string</span>
-<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span> <span class="token punctuation">;</span> i <span class="token operator">&lt;</span> str<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<h2 id="for…in循环"><a href="#for…in循环" class="headerlink" title="for…in循环"></a>for…in循环</h2><ul>
-<li>为遍历对象而生</li>
-<li>全能，可以遍历数组、对象、字符串</li>
-</ul>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token keyword">in</span> ArrayList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ArrayList<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">// i输出为index索引</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token keyword">in</span> ObjectParams<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ObjectParams<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// i输出为key</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token keyword">in</span> StringParams<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>StringParams<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// i输出为index索引</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<h2 id="for-of-循环-ES6引入"><a href="#for-of-循环-ES6引入" class="headerlink" title="for of 循环(ES6引入)"></a>for of 循环(ES6引入)</h2><pre class=" language-js"><code class="language-js"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token keyword">of</span> ArrayList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">//输出数组中的每一个元素</span>
-<span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">// 数组原生具备iterator接口（即默认部署了Symbol.iterator属性），for...of循环本质上就是调用这个接口产生的遍历器</span>
-ObjectParams<span class="token punctuation">[</span>Symbol<span class="token punctuation">.</span>iterator<span class="token punctuation">]</span> <span class="token operator">=</span> ArrayList<span class="token punctuation">[</span>Symbol<span class="token punctuation">.</span>iterator<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>ArrayList<span class="token punctuation">)</span>
-<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token keyword">of</span> ObjectParams<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 输出结果与直接遍历ArrayList一样，Object默认是不具备Symbol.iterator属性的，因此无法对Object用for of进行遍历</span>
-<span class="token punctuation">}</span>  
-<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token keyword">of</span> StringParams<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>  
-<span class="token punctuation">}</span>
-</code></pre>
-<h2 id="forEach循环-数组特有，不可break"><a href="#forEach循环-数组特有，不可break" class="headerlink" title="forEach循环(数组特有，不可break)"></a>forEach循环(数组特有，不可break)</h2><ul>
-<li><p><code>forEach()</code>这个方法只支持IE8以上的浏览器<br>IE8及以下的浏览器均不支持该方法，所以如果需要兼容IE8，则不要使用forEach<br>还是使用for循环来遍历</p>
-</li>
-<li><p><code> forEach()</code>方法需要一个函数作为参数</p>
-<p>像这种函数，由我们创建但是不由我们调用的，我们称为回调函数</p>
-<p>数组中有几个元素函数就会执行几次，每次执行时，浏览器会将遍历到的元素</p>
-<p> 以实参的形式传递进来，我们可以来定义形参，来读取这些内容</p>
-<ul>
-<li><p>浏览器会在回调函数中传递三个参数：</p>
-<ul>
-<li><p>第一个参数，就是当前正在遍历的元素</p>
-</li>
-<li><p>第二个参数，就是当前正在遍历的元素的索引</p>
-</li>
-<li><p>第三个参数，就是正在遍历的数组</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<pre class=" language-js"><code class="language-js">arr<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>value <span class="token punctuation">,</span> index <span class="token punctuation">,</span> obj<span class="token punctuation">)</span><span class="token punctuation">{</span>
-     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//第二个和第三个参数可选，value参数必须写</span>
-</code></pre>
-<h2 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h2><pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span>
-<span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> ArrayList<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ArrayList<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
-  i<span class="token operator">++</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">let</span> j <span class="token operator">=</span> <span class="token number">0</span>
-<span class="token comment" spellcheck="true">// 你会发现它并没有走进这个while循环，因为ObjectParams.length === undefined</span>
-<span class="token keyword">while</span> <span class="token punctuation">(</span>j <span class="token operator">&lt;</span> ObjectParams<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ObjectParams<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
-  j<span class="token operator">++</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">let</span> k <span class="token operator">=</span> <span class="token number">0</span>
-<span class="token keyword">while</span> <span class="token punctuation">(</span>k <span class="token operator">&lt;</span> StringParams<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>StringParams<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">)</span>
-  k<span class="token operator">++</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<h2 id="do-while循环"><a href="#do-while循环" class="headerlink" title="do while循环"></a>do while循环</h2><pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span>
-<span class="token keyword">do</span> <span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ArrayList<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
-  i<span class="token operator">++</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> ArrayList<span class="token punctuation">.</span>length<span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">//其他与while循环一致</span>
-</code></pre>
-<h2 id="map-数组特有，不可break"><a href="#map-数组特有，不可break" class="headerlink" title="map(数组特有，不可break)"></a>map(数组特有，不可break)</h2><pre class=" language-js"><code class="language-js">ArrayList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
-<p>遍历数组用forEach、map（如果你不需要中断它），需要中断的话就选for…of吧<br>遍历字符串for..of, for…in<br>遍历对象for…in<br><code>while和do while的区别</code> while先判断条件，do while先执行一次再判断条件。</p>
+                <h2 id="webpack是什么"><a href="#webpack是什么" class="headerlink" title="webpack是什么"></a>webpack是什么</h2><blockquote>
+<p>webpack是一种前端资源构建工具，一个静态模块打包器(module bundler).在webpack看来，前端的所有资源文件(js、json、css、img、less、scss…)都会作为模块处理，根据模块的依赖关系进行静态分析，打包生成对应的静态资源(bundle).</p>
 </blockquote>
+<h2 id="webpack五个核心概念"><a href="#webpack五个核心概念" class="headerlink" title="webpack五个核心概念"></a>webpack五个核心概念</h2><h3 id="entry"><a href="#entry" class="headerlink" title="entry"></a>entry</h3><blockquote>
+<p>入口(entry) 指示 <code>webpack</code>以哪个文件为入口起点开始打包，分析构建内部依赖图</p>
+</blockquote>
+<h3 id="output"><a href="#output" class="headerlink" title="output"></a>output</h3><blockquote>
+<p>输出(output) 指示 <code>webpack</code>打包后的资源 <code>bundles</code> 输出到哪里去，以及如何命名</p>
+</blockquote>
+<h3 id="loader"><a href="#loader" class="headerlink" title="loader"></a>loader</h3><blockquote>
+<p>loader 让 <code>webpack</code>能够去处理那些非 <code>js</code>文件 webpack本身能够处理<code>js</code>和<code>json</code>资源</p>
+</blockquote>
+<h3 id="plugins"><a href="#plugins" class="headerlink" title="plugins"></a>plugins</h3><blockquote>
+<p>插件(plugins)可以用于执行范围更广的任务。插件的范围包括，从打包优化和压缩，一直到重新定义环境中的变量等</p>
+</blockquote>
+<h3 id="mode"><a href="#mode" class="headerlink" title="mode"></a>mode</h3><blockquote>
+<p>模式(mode)指示<code>webpack</code>使用相应模式的配置</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>development</code>（开发模式）</td>
+<td align="left">会将 <code>DefinePlugin</code> 中 <code>process.env.NODE_ENV</code> 的值设置为 <code>development</code>. 为模块和 chunk 启用有效的名。</td>
+</tr>
+<tr>
+<td align="left"><code>production</code>（生产模式）</td>
+<td align="left">会将 <code>DefinePlugin</code> 中 <code>process.env.NODE_ENV</code> 的值设置为 <code>production</code>。为模块和 chunk 启用确定性的混淆名称，<code>FlagDependencyUsagePlugin</code>，<code>FlagIncludedChunksPlugin</code>，<code>ModuleConcatenationPlugin</code>，<code>NoEmitOnErrorsPlugin</code> 和 <code>TerserPlugin</code> 。比开发模式多一个压缩代码</td>
+</tr>
+</tbody></table>
+<h3 id="配置文件webpack-config-js"><a href="#配置文件webpack-config-js" class="headerlink" title="配置文件webpack.config.js"></a>配置文件webpack.config.js</h3><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/* 配置文件 
+    作用：指示webpack干哪些事（当运行webpack指令时，会加载里面的配置）
+
+    所有构建工具都是基于nodejs平台运行的，模块化默认采用commonjs
+
+    loader :1 下载 2.使用(配置loader)
+    plugins:1.下载 2.引入 3.使用
+*/</span>
+<span class="token keyword">const</span> HtmlWebpackPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'html-webpack-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 将css单独打包成一个文件的插件，它为每个包含css的js文件都创建一个css文件。它支持css和sourceMaps的按需加载。</span>
+<span class="token keyword">const</span> MiniCssExtractPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mini-css-extract-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> resolve <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> webpack <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'webpack'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// webpack配置</span>
+    <span class="token comment" spellcheck="true">//入口起点</span>
+    entry<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        index<span class="token punctuation">:</span> <span class="token string">"./src/js/index.js"</span><span class="token punctuation">,</span>
+        login<span class="token punctuation">:</span> <span class="token string">"./src/js/login.js"</span><span class="token punctuation">,</span>
+        register<span class="token punctuation">:</span> <span class="token string">"./src/js/regist.js"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// 输出</span>
+    output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 输出文件名</span>
+        filename<span class="token punctuation">:</span> <span class="token string">'./js/[name].js'</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">// __dirname  nodejs的变量，代表当前文件的目录绝对路径</span>
+        path<span class="token punctuation">:</span> <span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'dist'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// loader的配置</span>
+    <span class="token comment" spellcheck="true">// 不同文件必须配置不同loader处理</span>
+    module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        rules<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token comment" spellcheck="true">// 详细的loader配置</span>
+            <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// 打包css</span>
+                <span class="token comment" spellcheck="true">//匹配哪些文件</span>
+                test<span class="token punctuation">:</span> <span class="token regex">/\.css$/i</span><span class="token punctuation">,</span>
+                <span class="token comment" spellcheck="true">//use数组中的loader执行顺序：从右到左，从下到上 依次执行</span>
+                use<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                    MiniCssExtractPlugin<span class="token punctuation">.</span>loader<span class="token punctuation">,</span>
+                    <span class="token comment" spellcheck="true">// 创建style标签，将js的样式资源插入进行,添加到head中生效，这里使用了插件，与此loader冲突，所以不写</span>
+                    <span class="token comment" spellcheck="true">// 'style-loader',</span>
+                    <span class="token comment" spellcheck="true">// 将css文件变成commonjs模块加载到js中，里面内容是样式字符串</span>
+                    <span class="token string">'css-loader'</span>
+                <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token comment" spellcheck="true">// 打包scss文件</span>
+            <span class="token punctuation">{</span>
+                test<span class="token punctuation">:</span> <span class="token regex">/\.scss/i</span><span class="token punctuation">,</span>
+                use<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                    MiniCssExtractPlugin<span class="token punctuation">.</span>loader<span class="token punctuation">,</span>
+                    <span class="token string">'css-loader'</span><span class="token punctuation">,</span>
+                    <span class="token comment" spellcheck="true">// 将scss文件编译成css文件</span>
+                    <span class="token string">'sass-loader'</span>
+                <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token comment" spellcheck="true">// 打包图片</span>
+            <span class="token punctuation">{</span>
+                test<span class="token punctuation">:</span> <span class="token regex">/\.(jpg|png|jpeg|gif)/i</span><span class="token punctuation">,</span>
+                <span class="token comment" spellcheck="true">// 下载：url-loader 依赖于 file-loader</span>
+                loader<span class="token punctuation">:</span> <span class="token string">'url-loader'</span><span class="token punctuation">,</span>
+                options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                    <span class="token comment" spellcheck="true">// 图片大小小于8kb,就会被base64处理</span>
+                    <span class="token comment" spellcheck="true">// 优点：减少请求数量（减轻服务器压力）</span>
+                    <span class="token comment" spellcheck="true">// 缺点：图片体积 会更大(文件请求速度更慢)</span>
+                    limit<span class="token punctuation">:</span> <span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">8</span><span class="token punctuation">,</span>
+                    <span class="token comment" spellcheck="true">// 输出路径</span>
+                    outputPath<span class="token punctuation">:</span> <span class="token string">'./assets/'</span><span class="token punctuation">,</span>
+                    esModule<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span><span class="token comment" spellcheck="true">// 用于解决兼容性问题</span>
+                    <span class="token comment" spellcheck="true">// [hash:6]取图片的hash的前6位</span>
+                    <span class="token comment" spellcheck="true">// [ext]:取文件原来的扩展名</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'[hash:6].[ext]'</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token comment" spellcheck="true">// html 中 img</span>
+            <span class="token punctuation">{</span>
+                test<span class="token punctuation">:</span> <span class="token regex">/\.html$/i</span><span class="token punctuation">,</span>
+                <span class="token comment" spellcheck="true">// 处理html文件中的img图片(负责引入img，从而被url-loader进行处理)</span>
+                loader<span class="token punctuation">:</span> <span class="token string">'html-withimg-loader'</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// plugins的配置</span>
+    plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token comment" spellcheck="true">// 详细plugins的配置</span>
+        <span class="token comment" spellcheck="true">// 打包html 使用 html-webpack-plugin插件:</span>
+        <span class="token comment" spellcheck="true">// 功能:默认会创建一个空的html，自动引入打包输出的所有资源(js、css)</span>
+        <span class="token function">htmlPlugin</span><span class="token punctuation">(</span><span class="token string">'index'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token function">htmlPlugin</span><span class="token punctuation">(</span><span class="token string">'login'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token function">htmlPlugin</span><span class="token punctuation">(</span><span class="token string">'register'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">new</span> <span class="token class-name">MiniCssExtractPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            filename<span class="token punctuation">:</span> <span class="token string">'./css/[name].css'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">// 全局暴露jquery</span>
+        <span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>ProvidePlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            $<span class="token punctuation">:</span> <span class="token string">'jquery'</span><span class="token punctuation">,</span>
+            jQuery<span class="token punctuation">:</span> <span class="token string">'jquery'</span><span class="token punctuation">,</span>
+
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    mode<span class="token punctuation">:</span> <span class="token string">'development'</span><span class="token punctuation">,</span><span class="token comment" spellcheck="true">// 开发模式</span>
+    <span class="token comment" spellcheck="true">// mode:'production', //生产模式</span>
+    <span class="token comment" spellcheck="true">// 开发服务器devServer:用来自动化(自动编译自动打开浏览器，自动刷新浏览器)</span>
+    <span class="token comment" spellcheck="true">// 特点：只会在内存中编译打包，不会有任何输出</span>
+    <span class="token comment" spellcheck="true">// 启动指令：webpack4:webpack-dev-server</span>
+    <span class="token comment" spellcheck="true">// webpack5:npx webpack s</span>
+    devServer<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 启动gzip压缩</span>
+        compress<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">// 端口号</span>
+        port<span class="token punctuation">:</span> <span class="token number">8888</span><span class="token punctuation">,</span>
+
+        <span class="token comment" spellcheck="true">// openPage:'html/login.html',webpack5不支持报错</span>
+        open<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'html/login.html'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 启动服务器时自动打开页面</span>
+        hot<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 实时更新</span>
+        <span class="token comment" spellcheck="true">//跨域问题解决</span>
+        proxy<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">'/'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> 
+                target<span class="token punctuation">:</span> <span class="token string">'http://localhost:3000'</span>  <span class="token comment" spellcheck="true">// 后端服务器地址</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//封装打包html文件</span>
+<span class="token keyword">function</span> <span class="token function">htmlPlugin</span><span class="token punctuation">(</span>filename<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">HtmlWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//需要打包的HTML页面, 设置要打包的源文件 HTML 的路径</span>
+        template<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`./src/html/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>filename<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.html`</span></span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">//设置打包后的文件路径和文件名</span>
+        filename<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`./html/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>filename<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.html`</span></span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">//需要引入的js文件名数组, 当前 HTML 文件中引入的 JS 的名字</span>
+        chunks<span class="token punctuation">:</span> <span class="token punctuation">[</span>filename<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
 
                 
             </div>
@@ -575,7 +637,7 @@ ObjectParams<span class="token punctuation">[</span>Symbol<span class="token pun
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://codehan045.github.io/posts/8013204b.html">https://codehan045.github.io/posts/8013204b.html</a>
+                    <a href="https://codehan045.github.io/posts/764f33bc.html">https://codehan045.github.io/posts/764f33bc.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -613,8 +675,12 @@ ObjectParams<span class="token punctuation">[</span>Symbol<span class="token pun
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%81%8D%E5%8E%86%E9%9B%86%E9%94%A6/">
-                                    <span class="chip bg-color">遍历集锦</span>
+                                <a href="/tags/javascript/">
+                                    <span class="chip bg-color">javascript</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%89%8D%E7%AB%AF%E8%B5%84%E6%BA%90%E6%89%93%E5%8C%85/">
+                                    <span class="chip bg-color">前端资源打包</span>
                                 </a>
                             
                         </div>
@@ -1052,16 +1118,17 @@ ObjectParams<span class="token punctuation">[</span>Symbol<span class="token pun
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/73cc49c3.html">
+                <a href="/posts/764f33bc.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20210820232812.jpg" class="responsive-img" alt="JavaScript组成之BOM">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20211027145001.png" class="responsive-img" alt="Webpack">
                         
-                        <span class="card-title">JavaScript组成之BOM</span>
+                        <span class="card-title">Webpack</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1071,9 +1138,9 @@ ObjectParams<span class="token punctuation">[</span>Symbol<span class="token pun
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1086,6 +1153,7 @@ ObjectParams<span class="token punctuation">[</span>Symbol<span class="token pun
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1093,8 +1161,8 @@ ObjectParams<span class="token punctuation">[</span>Symbol<span class="token pun
                         <span class="chip bg-color">javascript</span>
                     </a>
                     
-                    <a href="/tags/BOM/">
-                        <span class="chip bg-color">BOM</span>
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E8%B5%84%E6%BA%90%E6%89%93%E5%8C%85/">
+                        <span class="chip bg-color">前端资源打包</span>
                     </a>
                     
                 </div>
@@ -1108,13 +1176,12 @@ ObjectParams<span class="token punctuation">[</span>Symbol<span class="token pun
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/eb300c35.html">
+                <a href="/posts/dd7185f2.html">
                     <div class="card-image">
                         
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20211010234300.jpg" class="responsive-img" alt="promise解读-async/await">
                         
-                        <img src="/medias/loading.gif" data-original="/medias/featureimages/0.jpg" class="responsive-img" alt="Javascript模板字符串">
-                        
-                        <span class="card-title">Javascript模板字符串</span>
+                        <span class="card-title">promise解读-async/await</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1125,7 +1192,7 @@ ObjectParams<span class="token punctuation">[</span>Symbol<span class="token pun
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-10
                             </span>
                         <span class="publish-author">
                             
@@ -1144,6 +1211,14 @@ ObjectParams<span class="token punctuation">[</span>Symbol<span class="token pun
                     
                     <a href="/tags/javascript/">
                         <span class="chip bg-color">javascript</span>
+                    </a>
+                    
+                    <a href="/tags/promise/">
+                        <span class="chip bg-color">promise</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">异步编程</span>
                     </a>
                     
                 </div>
