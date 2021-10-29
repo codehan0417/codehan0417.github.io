@@ -407,21 +407,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-21
+                    2021-10-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    168
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -446,7 +446,10 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Promise的理解和运用"><a href="#Promise的理解和运用" class="headerlink" title="Promise的理解和运用"></a>Promise的理解和运用</h2><h3 id="Promise是什么"><a href="#Promise是什么" class="headerlink" title="Promise是什么"></a>Promise是什么</h3><h4 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h4><ol>
+                <h2 id="Promise的理解和运用"><a href="#Promise的理解和运用" class="headerlink" title="Promise的理解和运用"></a>Promise的理解和运用</h2><h3 id="Promise是什么"><a href="#Promise是什么" class="headerlink" title="Promise是什么"></a>Promise是什么</h3><h4 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h4><blockquote>
+<p>Promise是ES6标准化提供的一套异步编程的解决方案，用来替代传统回调函数的异步操作。Promise在JavaScript中是一个内置的类,它的每一个对象都可以负责一个异步操作。</p>
+</blockquote>
+<ol>
 <li><p>抽象表达</p>
 <p><code>Promise</code>是<code>js</code>中进行异步编程的新的解决方案(旧的是纯回调函数   )</p>
 </li>
@@ -465,7 +468,136 @@
 <blockquote>
 <p>这里从pending状态可以切换到fulfill状态（jQuery中是resolve状态），也可以从pengding切换到reject状态，这个状态切换不可逆，且fulfilled和reject两个状态之间是不能互相切换的。</p>
 </blockquote>
-<h4 id="Promise基本流程"><a href="#Promise基本流程" class="headerlink" title="Promise基本流程"></a>Promise基本流程</h4>
+<h4 id="Promise基本流程"><a href="#Promise基本流程" class="headerlink" title="Promise基本流程"></a>Promise基本流程</h4><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20211029212342.png" alt="promise"></p>
+<h5 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h5><pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span>reject<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 异步操作代码</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>异步操作成功<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">resolve</span><span class="token punctuation">(</span>数据<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+        <span class="token function">reject</span><span class="token punctuation">(</span>数据<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+a<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//即指定resolve函数，</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//即指定reject函数，</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//封装ajax请求获取数据</span>
+<span class="token keyword">function</span> <span class="token function">ajax</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>arr<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span>reson<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        $<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            url<span class="token punctuation">:</span>url<span class="token punctuation">,</span>
+            success<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>arr<span class="token operator">==</span>undefined<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">[</span>data<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    <span class="token comment" spellcheck="true">//...arr不定长参数</span>
+                    <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">[</span>data<span class="token punctuation">,</span><span class="token operator">...</span>arr<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            fail<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token function">reson</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+   <span class="token comment" spellcheck="true">// 指定then和catch</span>
+<span class="token keyword">let</span> p <span class="token operator">=</span> <span class="token function">ajax</span><span class="token punctuation">(</span><span class="token string">"https://www.fastmock.site/mock/bb4157f45a0b5ffdcb3f6d984517a6c0/woniuMovie/getMoviesCount"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+p<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">ajax</span><span class="token punctuation">(</span><span class="token string">'https://www.fastmock.site/mock/bb4157f45a0b5ffdcb3f6d984517a6c0/woniuMovie/getAllMovies'</span><span class="token punctuation">,</span>data<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>data1<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">ajax</span><span class="token punctuation">(</span><span class="token string">'https://www.fastmock.site/mock/bb4157f45a0b5ffdcb3f6d984517a6c0/woniuMovie/getAllTypes'</span><span class="token punctuation">,</span>data1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>data2<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data2<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//输出所有请求的数据</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<ul>
+<li>当promise对象创建后，会立即执行异步操作。对于异步操作成功后要执行的<code>resolve</code>函数或失败后要执行的<code>reject</code>是由then和catch来补充的</li>
+<li>会根据异步操作的结果调用对应的函数。如果异步操作执行成功，会执行then里的函数，如果失败，会执行catch里的函数。</li>
+<li>promise对象执行异步 操作后会保存结果。直到我们指定了then和catch后才会拿到异步的结果并处理。then指定的是resolve函数，catch是reject函数</li>
+</ul>
+</blockquote>
+<h3 id="为什么要用Promise"><a href="#为什么要用Promise" class="headerlink" title="为什么要用Promise"></a>为什么要用Promise</h3><h4 id="指定回调函数的方式更加灵活"><a href="#指定回调函数的方式更加灵活" class="headerlink" title="指定回调函数的方式更加灵活"></a>指定回调函数的方式更加灵活</h4><ol>
+<li>旧的：必须在启动异步任务前指定</li>
+<li>promise：启动异步任务 =&gt; 返回 promise 对象 =&gt; 给 promise 对象绑定回调函数 (甚至可以在异步任务结束后指定)</li>
+</ol>
+<h4 id="支持链式调用，可以解决回调地狱问题"><a href="#支持链式调用，可以解决回调地狱问题" class="headerlink" title="支持链式调用，可以解决回调地狱问题"></a>支持链式调用，可以解决回调地狱问题</h4><ol>
+<li><p>什么是回调地狱?</p>
+<p> 回调函数嵌套调用, 外部回调函数异步执行的结果是嵌套的回调执行的条件</p>
+</li>
+<li><p> 回调地狱的缺点? </p>
+</li>
+</ol>
+<p>   不便于阅读 不便于异常处理 </p>
+<ol start="3">
+<li><p>解决方案? </p>
+<p>promise 链式调用 </p>
+</li>
+<li><p>终极解决方案?</p>
+<p>async/await</p>
+</li>
+</ol>
+<h3 id="如何使用Promise"><a href="#如何使用Promise" class="headerlink" title="如何使用Promise"></a>如何使用Promise</h3><ol>
+<li><p>Promise 构造函数: <code>Promise (excutor) {} excutor</code> 函数: 同步执行 (resolve, reject) =&gt; {} </p>
+<p><code>resolve</code> 函数: 内部定义成功时我们调用的函数 value =&gt; {} </p>
+<p><code>reject</code> 函数: 内部定义失败时我们调用的函数 reason =&gt; {} </p>
+<p>说明: excutor 会在 Promise 内部立即同步回调,异步操作在执行器中执行</p>
+</li>
+<li><p><code>Promise.prototype.then</code> 方法: (onResolved, onRejected) =&gt; {} </p>
+<p><code>onResolved</code> 函数: 成功的回调函数 (value) =&gt; {} </p>
+<p><code>onRejected</code> 函数: 失败的回调函数 (reason) =&gt; {} </p>
+<p>说明: 指定用于得到成功 value 的成功回调和用于得到失败 reason 的失败回调 返回一个新的 promise 对象 </p>
+</li>
+<li><p><code>Promise.prototype.catch</code> 方法: (onRejected) =&gt; {} </p>
+<p><code>onRejected</code> 函数: 失败的回调函数 (reason) =&gt; {} </p>
+<p>说明: then()的语法糖, 相当于: <code>then(undefined, onRejected)</code> </p>
+</li>
+<li><p><code>Promise.resolve</code> 方法: (value) =&gt; {} </p>
+<p><code>value</code>: 成功的数据或 promise 对象 </p>
+<p>说明: 返回一个成功/失败的 promise 对象 </p>
+</li>
+<li><p><code>Promise.reject </code>方法: (reason) =&gt; {} </p>
+<p><code>reason</code>: 失败的原因 </p>
+<p>说明: 返回一个失败的 promise 对象 </p>
+</li>
+<li><p><code>Promise.all</code> 方法: (promises) =&gt; {} </p>
+<p>promises: 包含 n 个 promise 的数组 </p>
+<p>说明: 返回一个新的 promise, 只有所有的 promise 都成功才成功, 只要有一 个失败了就直接失败 </p>
+</li>
+<li><p><code>Promise.race</code> 方法: (promises) =&gt; {} </p>
+<p>promises: 包含 n 个 promise 的数组 </p>
+<p>说明: 返回一个新的 promise, 第一个完成的 promise 的结果状态就是最终的 结果状态</p>
+</li>
+</ol>
+<h2 id="async与await"><a href="#async与await" class="headerlink" title="async与await"></a>async与await</h2><blockquote>
+<ul>
+<li>ES7 的新增的内容，作为异步编程的最终解决方案。</li>
+<li>async作为一个函数的修饰符，表示该函数主要用于解决异步编程问题。即该函数里一般情况下主要执行异步代码。</li>
+<li>await作为一个修饰符。只能够在<code>async</code>函数中使用。表示等待一个异步操作结束并接收异步操作的处理结果。但需保证该异步操作是用promise来处理的</li>
+</ul>
+</blockquote>
+<h3 id="async函数"><a href="#async函数" class="headerlink" title="async函数"></a>async函数</h3><ol>
+<li>函数的返回值为 promise 对象</li>
+<li>promise 对象的结果由 async 函数执行的返回值决定</li>
+</ol>
+<h3 id="await表达式"><a href="#await表达式" class="headerlink" title="await表达式"></a>await表达式</h3><ol>
+<li><code>await</code> 右侧的表达式一般为 <code>promise</code> 对象, 但也可以是其它的值 </li>
+<li>如果表达式是 <code>promise</code> 对象, <code>await</code> 返回的是 <code>promise</code> 成功的值 </li>
+<li>如果表达式是其它值, 直接将此值作为 <code>await</code> 的返回值</li>
+</ol>
+<blockquote>
+<ol>
+<li><code>await</code> 必须写在 <code>async</code> 函数中, 但 <code>async</code> 函数中可以没有 <code>await</code></li>
+<li>如果 <code>await</code> 的 <code>promise</code> 失败了, 就会抛出异常, 需要通过 <code>try...catch</code> 捕获处理</li>
+</ol>
+</blockquote>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">async</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> a<span class="token operator">=</span> <span class="token keyword">await</span>  promise对象<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//能够让多个异步操作像同步代码一样顺序执行并拿到异步操作的数据</span>
+</code></pre>
+
                 
             </div>
             <hr/>
@@ -1258,7 +1390,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">93.2k</span>
+                        class="white-color">94.8k</span>
             
             
             

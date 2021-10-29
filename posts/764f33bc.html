@@ -403,21 +403,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-27
+                    2021-10-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
 
@@ -442,9 +442,17 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="webpack是什么"><a href="#webpack是什么" class="headerlink" title="webpack是什么"></a>webpack是什么</h2><blockquote>
+                <p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20211027232002.png"></p>
+<h2 id="webpack是什么"><a href="#webpack是什么" class="headerlink" title="webpack是什么"></a>webpack是什么</h2><blockquote>
 <p>webpack是一种前端资源构建工具，一个静态模块打包器(module bundler).在webpack看来，前端的所有资源文件(js、json、css、img、less、scss…)都会作为模块处理，根据模块的依赖关系进行静态分析，打包生成对应的静态资源(bundle).</p>
 </blockquote>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20211027231432.png"></p>
+<h2 id="webpack作用"><a href="#webpack作用" class="headerlink" title="webpack作用"></a>webpack作用</h2><ul>
+<li>能够对前端资源进行打包</li>
+<li>良好的兼容性。能够自动将新版本代码转为低版本代码。比如ES6-&gt;ES5</li>
+<li>不同模块打包：对于其他资源也可以进行打包，比如将scss和css等进行打包处理。</li>
+<li>提供丰富的插件。能够简化其他的项目工作</li>
+</ul>
 <h2 id="webpack五个核心概念"><a href="#webpack五个核心概念" class="headerlink" title="webpack五个核心概念"></a>webpack五个核心概念</h2><h3 id="entry"><a href="#entry" class="headerlink" title="entry"></a>entry</h3><blockquote>
 <p>入口(entry) 指示 <code>webpack</code>以哪个文件为入口起点开始打包，分析构建内部依赖图</p>
 </blockquote>
@@ -476,6 +484,20 @@
 <td align="left">会将 <code>DefinePlugin</code> 中 <code>process.env.NODE_ENV</code> 的值设置为 <code>production</code>。为模块和 chunk 启用确定性的混淆名称，<code>FlagDependencyUsagePlugin</code>，<code>FlagIncludedChunksPlugin</code>，<code>ModuleConcatenationPlugin</code>，<code>NoEmitOnErrorsPlugin</code> 和 <code>TerserPlugin</code> 。比开发模式多一个压缩代码</td>
 </tr>
 </tbody></table>
+<h2 id="webpack使用"><a href="#webpack使用" class="headerlink" title="webpack使用"></a>webpack使用</h2><ol>
+<li><p>使用<code>npm init</code>针对前端项目生成<code>package.json</code></p>
+</li>
+<li><p>下载并安装<code>webpack</code></p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> i webpack webpack-cli --save-dev
+</code></pre>
+<ul>
+<li><code>--save-dev</code>:表示在开发模式中能够使用，上线之后就不再使用，可以简写成<code>-D</code></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>通过webpack命令和配置文件来对项目打包进行配置。</li>
+</ul>
 <h3 id="配置文件webpack-config-js"><a href="#配置文件webpack-config-js" class="headerlink" title="配置文件webpack.config.js"></a>配置文件webpack.config.js</h3><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/* 配置文件 
     作用：指示webpack干哪些事（当运行webpack指令时，会加载里面的配置）
 
@@ -544,6 +566,9 @@ module<span class="token punctuation">.</span>exports <span class="token operato
                     limit<span class="token punctuation">:</span> <span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">8</span><span class="token punctuation">,</span>
                     <span class="token comment" spellcheck="true">// 输出路径</span>
                     outputPath<span class="token punctuation">:</span> <span class="token string">'./assets/'</span><span class="token punctuation">,</span>
+ <span class="token comment" spellcheck="true">// 问题：因为 url-loader 默认使用 es6 模块化解析，而 html-loader 引入图片是 commonjs</span>
+<span class="token comment" spellcheck="true">// 解析时会出问题：[object Module]</span>
+<span class="token comment" spellcheck="true">// 解决：关闭 url-loader 的 es6 模块化，使用 commonjs 解析</span>
                     esModule<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span><span class="token comment" spellcheck="true">// 用于解决兼容性问题</span>
                     <span class="token comment" spellcheck="true">// [hash:6]取图片的hash的前6位</span>
                     <span class="token comment" spellcheck="true">// [ext]:取文件原来的扩展名</span>
@@ -1118,17 +1143,16 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/764f33bc.html">
+                <a href="/posts/9d5ee47d.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20211027145001.png" class="responsive-img" alt="Webpack">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20211029224829.jpg" class="responsive-img" alt="NodeJS">
                         
-                        <span class="card-title">Webpack</span>
+                        <span class="card-title">NodeJS</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1138,9 +1162,9 @@ module<span class="token punctuation">.</span>exports <span class="token operato
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-27
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-29
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1153,16 +1177,15 @@ module<span class="token punctuation">.</span>exports <span class="token operato
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/javascript/">
-                        <span class="chip bg-color">javascript</span>
+                    <a href="/tags/node/">
+                        <span class="chip bg-color">node</span>
                     </a>
                     
-                    <a href="/tags/%E5%89%8D%E7%AB%AF%E8%B5%84%E6%BA%90%E6%89%93%E5%8C%85/">
-                        <span class="chip bg-color">前端资源打包</span>
+                    <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+                        <span class="chip bg-color">服务器</span>
                     </a>
                     
                 </div>
@@ -1406,7 +1429,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">93.2k</span>
+                        class="white-color">94.8k</span>
             
             
             

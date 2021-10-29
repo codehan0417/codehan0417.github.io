@@ -399,21 +399,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-11
+                    2021-10-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.4k
+                    3.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    13 分
+                    14 分
                 </div>
                 
 
@@ -847,6 +847,26 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <blockquote>
 <p>在没有初始值的空数组上调用 reduce 将报错</p>
 <p>不给初始值的话，会取数组的第一项作为初始值</p>
+</blockquote>
+<h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><blockquote>
+<p>find（）是在数组中找第一个符合条件的元素</p>
+<ul>
+<li>当数组中的元素在测试条件时返回 <em>true</em> 时, find() 返回符合条件的元素，之后的值不会再调用执行函数。</li>
+<li>如果没有符合条件的元素返回 undefined。</li>
+</ul>
+</blockquote>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> stu <span class="token operator">=</span> students<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> item<span class="token punctuation">.</span>id <span class="token operator">==</span> <span class="token number">3</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>stu<span class="token punctuation">)</span> 
+<span class="token comment" spellcheck="true">// 打印结果为{ id: 3, name: '王五', age: 60, sex: 0, like: '下棋' }</span>
+stu<span class="token punctuation">.</span>aaa <span class="token operator">=</span> <span class="token number">100</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>stu<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//打印结果为{ id: 3, name: '王五', age: 60, sex: 0, like: '下棋',aaa:100 }</span>
+</code></pre>
+<blockquote>
+<p>数组students竟然也被改变了，由此可见，find方法并没有创建新的内存地址，它所指向的仍然是数组students的内存地址。</p>
+<p>find方法和filter方法不同的是，find方法返回的是数组中指定的数据项，而filter方法返回的是原数组过滤后的新数组。</p>
 </blockquote>
 
                 
@@ -1629,7 +1649,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">93.2k</span>
+                        class="white-color">94.8k</span>
             
             
             
