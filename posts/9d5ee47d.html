@@ -403,21 +403,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-29
+                    2021-11-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3
+                    941
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -442,7 +442,131 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Nodejs介绍"><a href="#Nodejs介绍" class="headerlink" title="Nodejs介绍"></a>Nodejs介绍</h2>
+                <h2 id="前后端"><a href="#前后端" class="headerlink" title="前后端"></a>前后端</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><ul>
+<li>一个web应用(网站、app、h5游戏等)从开发角度分为前端和后端。<ul>
+<li>前端主要负责页面的实现以及页面交互以及数据渲染(数据来自于后端).</li>
+<li>后端主要负责服务器程序的编写以及数据库的交互，以及将数据传给前端或数据库</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>前端和后端的交互：一个基本的流程<ul>
+<li>前端通过ajax等技术发送请求到服务器，服务器接收请求并处理，处理后发现需要数据，后端开发人员就会去数据库里拿数据，服务器拿到数据库数据之后再传给前端。</li>
+</ul>
+</li>
+<li>技术栈<ul>
+<li>前端：HTML+css+JavaScript+vue(生态)+react(生态)</li>
+<li>后端：NodeJs+Express</li>
+<li>数据库：MongoDB、mongoose(实现和nodejs进行交互)</li>
+</ul>
+</li>
+<li>服务器程序工作<ul>
+<li>接收和处理请求</li>
+<li>读取或保存数据到数据库</li>
+<li>将前端获得的数据以及从数据库拿到的数据进行交互</li>
+</ul>
+</li>
+</ul>
+<h2 id="Node-js是什么"><a href="#Node-js是什么" class="headerlink" title="Node.js是什么"></a>Node.js是什么</h2><h3 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h3><blockquote>
+<ul>
+<li>Node.js 是一个开源和跨平台的 JavaScript 运行时环境。 Node.js可以解析和运行JavaScript代码</li>
+<li>Node.js 在浏览器之外运行 V8 JavaScript 引擎（Google Chrome 的内核）</li>
+<li>既不是语言，也不是框架，它是一个平台</li>
+</ul>
+</blockquote>
+<ul>
+<li>Node.js 中的 JavaScript<ul>
+<li>没有 BOM、DOM</li>
+<li>EcmaScript 基本的 JavaScript 语言部分</li>
+<li>在 Node 中为 JavaScript 提供了一些服务器级别的 API<ul>
+<li>文件读写操作</li>
+<li>http 服务器</li>
+<li>网络服务器的构建</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>构建与Chrome的V8引擎之上<ul>
+<li>代码只是具有特定格式的字符串</li>
+<li>引擎可以认识它，帮你解析和执行</li>
+<li>Google Chrome的V8引擎是目前公认的解析执行JavaScript代码最快的</li>
+<li>Node.js的作者把Google Chrome中的V8引擎移植出来，开发了一个独立的JavaScript运行时环境</li>
+</ul>
+</li>
+</ul>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><ul>
+<li>envent-driven  事件驱动</li>
+<li>non-blocking I/O mode 非阻塞IO模型(异步)</li>
+<li>lightweight and efficent 轻量和高效</li>
+<li>npm是世界上最大的开源库生态系统</li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
+<li><p>官网安装:<a target="_blank" rel="noopener" href="http://nodejs.cn/download/current/">http://nodejs.cn/download/current/</a> </p>
+<p> <a target="_blank" rel="noopener" href="https://nodejs.org/dist/">https://nodejs.org/dist/</a></p>
+<ul>
+<li>win7：选择12.x。win10:用最新的稳定版本，目前是14.x</li>
+</ul>
+</li>
+<li><p>傻瓜式安装(一路<code>next</code>)</p>
+</li>
+<li><p>安装过再次安装会升级</p>
+</li>
+</ul>
+<h4 id="测试安装成功"><a href="#测试安装成功" class="headerlink" title="测试安装成功"></a>测试安装成功</h4><ul>
+<li>打开终端命令行，输入<code>node -v</code>查看当前版本</li>
+<li>若出现<code>不是内部或外部命令</code>则需要进行环境变量的配置</li>
+</ul>
+<h3 id="解析执行js"><a href="#解析执行js" class="headerlink" title="解析执行js"></a>解析执行js</h3><ol>
+<li>创建JavaScript脚本文件</li>
+<li>打开终端，进入脚本文件目录</li>
+<li>输入<code>node 文件名.js</code> 执行对应文件</li>
+</ol>
+<h2 id="文件读写"><a href="#文件读写" class="headerlink" title="文件读写"></a>文件读写</h2><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//fs是file-system的简写，就是文件系统的意思</span>
+<span class="token comment" spellcheck="true">//在Node中如果想要进行文件的操作就必须引用fs这个核心模块</span>
+<span class="token comment" spellcheck="true">//在fs这个模块中，就提供了所有文件操作相关的API</span>
+<span class="token comment" spellcheck="true">//例如 fs.readFile就是用来读取文件的</span>
+<span class="token comment" spellcheck="true">//  1.使用fs核心模块</span>
+<span class="token keyword">var</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 2.读取文件</span>
+fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'./data/a.txt'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>data<span class="token punctuation">)</span><span class="token punctuation">{</span>
+   <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'文件读取失败'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+    <span class="token keyword">else</span><span class="token punctuation">{</span>
+         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 3.将数据写入文件</span>
+fs<span class="token punctuation">.</span><span class="token function">writeFile</span><span class="token punctuation">(</span><span class="token string">'./data/a.txt'</span><span class="token punctuation">,</span><span class="token string">'我是文件写入的信息'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>data<span class="token punctuation">)</span><span class="token punctuation">{</span>
+   <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'文件写入失败'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+    <span class="token keyword">else</span><span class="token punctuation">{</span>
+         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="Http服务器"><a href="#Http服务器" class="headerlink" title="Http服务器"></a>Http服务器</h2><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 1.加载http核心模块</span>
+<span class="token keyword">var</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 2.使用http.createServer()创建一个web服务器</span>
+<span class="token keyword">var</span> server <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 3.服务器要做的事儿</span>
+<span class="token comment" spellcheck="true">// 提供服务：对数据服务</span>
+<span class="token comment" spellcheck="true">// 发请求</span>
+<span class="token comment" spellcheck="true">//    接收请求</span>
+<span class="token comment" spellcheck="true">//    处理请求</span>
+<span class="token comment" spellcheck="true">//    反馈（发送响应）</span>
+<span class="token comment" spellcheck="true">//    当客户端请求过来，就会自动触发服务器的request请求事件，</span>
+<span class="token comment" spellcheck="true">//然后执行第二个参数：回调处理函数</span>
+server<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'request'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'收到客户的请求了'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 4.绑定端口号，启动服务</span>
+server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'runing...'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+
                 
             </div>
             <hr/>
@@ -949,29 +1073,28 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/9d5ee47d.html">
+                <a href="/posts/93fac3b6.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20211029224829.jpg" class="responsive-img" alt="NodeJS">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20211103233235.png" class="responsive-img" alt="Node.js模块化">
                         
-                        <span class="card-title">NodeJS</span>
+                        <span class="card-title">Node.js模块化</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            common.js
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-29
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-03
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -984,16 +1107,15 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/node/">
-                        <span class="chip bg-color">node</span>
+                    <a href="/tags/node-js%E6%A8%A1%E5%9D%97%E5%8C%96/">
+                        <span class="chip bg-color">node.js模块化</span>
                     </a>
                     
-                    <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
-                        <span class="chip bg-color">服务器</span>
+                    <a href="/tags/common-js/">
+                        <span class="chip bg-color">common.js</span>
                     </a>
                     
                 </div>
@@ -1233,7 +1355,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">94.8k</span>
+                        class="white-color">95.8k</span>
             
             
             

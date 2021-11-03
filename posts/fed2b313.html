@@ -403,7 +403,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-03
+                    2021-11-03
                 </div>
                 
 
@@ -541,7 +541,7 @@ Object<span class="token punctuation">.</span><span class="token function">defin
     enumerable<span class="token punctuation">:</span><span class="token boolean">false</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="浅克隆和深克隆"><a href="#浅克隆和深克隆" class="headerlink" title="浅克隆和深克隆"></a>浅克隆和深克隆</h2><blockquote>
+<h2 id="浅克隆和深克隆（针对引用类型数据）"><a href="#浅克隆和深克隆（针对引用类型数据）" class="headerlink" title="浅克隆和深克隆（针对引用类型数据）"></a>浅克隆和深克隆（针对引用类型数据）</h2><blockquote>
 <p>无论是浅拷贝或深拷贝，都是在做同一件事情：拷贝对象</p>
 </blockquote>
 <h3 id="浅克隆"><a href="#浅克隆" class="headerlink" title="浅克隆"></a>浅克隆</h3><ul>
@@ -569,7 +569,15 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="深克隆"><a href="#深克隆" class="headerlink" title="深克隆"></a>深克隆</h3><ul>
 <li>原理：对属性值是对象的属性也进行一次浅克隆（即使用递归）</li>
 </ul>
-<h4 id="ES5深克隆"><a href="#ES5深克隆" class="headerlink" title="ES5深克隆"></a>ES5深克隆</h4><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">deepClone</span><span class="token punctuation">(</span>origin<span class="token punctuation">,</span>target<span class="token punctuation">)</span><span class="token punctuation">{</span>
+<h4 id="方式："><a href="#方式：" class="headerlink" title="方式："></a>方式：</h4><blockquote>
+<ol>
+<li>递归方式返回一个新对象(更灵活)</li>
+<li>JSON转换为字符串，有缺陷，若属性值为’null’ ,转换之后与之前对象不匹配</li>
+<li>Object.assign() 对象的合并</li>
+<li>扩展运算符{…Object};</li>
+</ol>
+</blockquote>
+<h5 id="ES5深克隆"><a href="#ES5深克隆" class="headerlink" title="ES5深克隆"></a>ES5深克隆</h5><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">deepClone</span><span class="token punctuation">(</span>origin<span class="token punctuation">,</span>target<span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">//创建一个空对象</span>
     <span class="token keyword">var</span> tar<span class="token operator">=</span> target <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>；
     <span class="token keyword">var</span> toStr<span class="token operator">=</span>Object<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>toString<span class="token punctuation">;</span>
@@ -1400,7 +1408,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">94.8k</span>
+                        class="white-color">95.8k</span>
             
             
             
