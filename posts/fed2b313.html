@@ -403,14 +403,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-03
+                    2021-11-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.2k
                 </div>
                 
 
@@ -497,10 +497,16 @@ console<span class="token punctuation">.</span><span class="token function">log<
 */</span>
 <span class="token keyword">const</span> target <span class="token operator">=</span>Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token string">"a"</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
     value<span class="token punctuation">:</span><span class="token string">'属性值'</span><span class="token punctuation">,</span>
-    writtable<span class="token punctuation">:</span>是否可写<span class="token punctuation">,</span>默认为<span class="token boolean">false</span><span class="token punctuation">,</span>
+    writtable<span class="token punctuation">:</span>是否可以被更改<span class="token punctuation">,</span>默认为<span class="token boolean">false</span><span class="token punctuation">,</span>
     enumrable：是否可枚举<span class="token punctuation">,</span>默认为<span class="token boolean">false</span><span class="token punctuation">,</span>
-    configurable<span class="token punctuation">:</span>是否可配置，默认为<span class="token boolean">false</span>
-     
+    configurable<span class="token punctuation">:</span> <span class="token function">是否可配置</span><span class="token punctuation">(</span>是否可以被删除<span class="token punctuation">)</span>，默认为<span class="token boolean">false</span>，
+  <span class="token comment" spellcheck="true">//在读取该对象的a属性时，get函数(getter)就会被调用，且返回值就是属性a的值  </span>
+   <span class="token keyword">get</span><span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'helo'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment" spellcheck="true">//在修改该对象的a属性时，set函数(setter)就会被调用，且会收到修改的具体值 </span>
+    <span class="token keyword">set</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        
+    <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
@@ -524,6 +530,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li><code>Object.is()-ES6</code>:判断两个数据是否一致，类似于<code>===</code>,只是判断NaN是否等于NaN时为true</li>
 <li><code>Object.assign()-ES6</code>:将多个对象进行合并，一般用于对象复制</li>
 <li><code>toString()</code>:对象的字符串输出.</li>
+<li><code>Object.keys(对象参数)</code>将传入对象的所有属性名提取出来，返回一个数组</li>
 </ul>
 <h2 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h2><ul>
 <li>概念：枚举是指对象中的 某个属性是否可以被遍历出来。</li>
@@ -1408,7 +1415,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">95.8k</span>
+                        class="white-color">96.6k</span>
             
             
             

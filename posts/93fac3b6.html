@@ -403,21 +403,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-03
+                    2021-11-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    619
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -442,7 +442,89 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h2 id="模块化的由来"><a href="#模块化的由来" class="headerlink" title="模块化的由来"></a>模块化的由来</h2><ul>
+<li>在团队协作中，经常会不同队员负责不同的文件编写(比如js)，那么如果不同js文件定义了相同的变量，那么如果这些文件都引入在页面中，那么会出问题。-导致了全局变量的污染。</li>
+<li>期望不同的文件之间互不干扰，同时也不会污染到全局变量。—模块化</li>
+</ul>
+<h2 id="什么是模块化"><a href="#什么是模块化" class="headerlink" title="什么是模块化"></a>什么是模块化</h2><ul>
+<li>文件作用域(模块是独立的，在不同的文件使用必须要重新引用)【在node中没有全局作用域，它是文件模块作用域】</li>
+<li>通俗来讲就是将每一个js文件作为一个单独的模块，如果需要使用另一个js文件，需要使用专门的语法，模块内的内容和变量对于其他模块都是不可见的。</li>
+<li>通信规则<ul>
+<li>加载require</li>
+<li>导出exports</li>
+</ul>
+</li>
+</ul>
+<h2 id="common-js"><a href="#common-js" class="headerlink" title="common.js"></a>common.js</h2><blockquote>
+<p>概念：是一个如何实现模块化的规范。规定实现JavaScript模块化应该是什么样子。nodejs根据commonjs实现了一套模块化的语法</p>
+</blockquote>
+<ul>
+<li><code>commonjs</code>和<code>nodejs</code>的关系<ul>
+<li><code>commonjs</code>是模块化的规范，模板。<code>nodejs</code>是<code>commonjs</code>的实现。</li>
+</ul>
+</li>
+</ul>
+<h3 id="common-js模块化内容"><a href="#common-js模块化内容" class="headerlink" title="common.js模块化内容"></a>common.js模块化内容</h3><ul>
+<li><p><code>require</code>：引入,模块的语法。如果需要在一个模块中引入另一个模块,需要使用<code>require</code>语法</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span>  变量名 <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"模块的路径"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li><code>require</code>引入一个模块是指引入模块所暴露出来的内容。并不是模块的全部。</li>
+</ul>
+</li>
+<li><p><code>module</code>：这是每个模块都有的一个变量，指的是模块本身。</p>
+</li>
+<li><p><code>module.exports</code>:一个模块暴露的内容，是一个对象。<code>require</code>语法引入的就这个属性的内容</p>
+</li>
+</ul>
+<blockquote>
+<p>如果一个模块引入的内容比较多，也可以使用解构赋值来优化</p>
+</blockquote>
+<h4 id="module-exports与exports"><a href="#module-exports与exports" class="headerlink" title="module.exports与exports"></a><code>module.exports</code>与<code>exports</code></h4><ul>
+<li><p><code>exports</code> 是<code> module.exports</code> 的引用</p>
+</li>
+<li><p>注意：给 <code>module.exports</code> 赋值会切断与 <code>exports</code> 之间的联系   </p>
+<ol>
+<li><p>直接添加属性两者皆可。</p>
+</li>
+<li><p>赋值操作时，只能使用 <code>module.exports</code></p>
+</li>
+</ol>
+</li>
+</ul>
+<pre class=" language-js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> module<span class="token punctuation">.</span>exports <span class="token operator">===</span> exports <span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// ==> true</span>
+ 
+<span class="token comment" spellcheck="true">// 等价操作</span>
+module<span class="token punctuation">.</span>exports<span class="token punctuation">.</span>num <span class="token operator">=</span> <span class="token number">123</span>
+exports<span class="token punctuation">.</span>num <span class="token operator">=</span> <span class="token number">123</span>
+ 
+<span class="token comment" spellcheck="true">// 赋值操作：不要使用 exports = {}</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre>
+<h3 id="模块路径"><a href="#模块路径" class="headerlink" title="模块路径"></a>模块路径</h3><ul>
+<li><p>相对路径：以该模块的本身所在目录为出发点</p>
+<pre class=" language-js"><code class="language-js"><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./子目录名/'</span><span class="token punctuation">)</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./../'</span><span class="token punctuation">)</span>
+</code></pre>
+<ul>
+<li><code>./</code>指的是的当前模块所在文件夹</li>
+</ul>
+</li>
+<li><p>绝对路径</p>
+<pre class=" language-js"><code class="language-js"><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'/目录名/模块名'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li><code>/</code>指的是当前盘符为起点(C盘、d盘等)</li>
+</ul>
+</li>
+<li><p><code>nodejs</code>本身的模块:</p>
+<pre class=" language-js"><code class="language-js"><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'模块名'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>直接写模块名，不需要写路径</li>
+</ul>
+</li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -949,53 +1031,36 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/93fac3b6.html">
+                <a href="/posts/f07c6a66.html">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/codehan0417/imags/img/20211103233235.png" class="responsive-img" alt="Node.js模块化">
                         
-                        <span class="card-title">Node.js模块化</span>
+                        <img src="/medias/loading.gif" data-original="/medias/featureimages/12.jpg" class="responsive-img" alt="npm(node包管理器)">
+                        
+                        <span class="card-title">npm(node包管理器)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            common.js
+                            
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-03
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-04
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    web前端
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            时光路人
                             
                         </span>
                     </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/node-js%E6%A8%A1%E5%9D%97%E5%8C%96/">
-                        <span class="chip bg-color">node.js模块化</span>
-                    </a>
-                    
-                    <a href="/tags/common-js/">
-                        <span class="chip bg-color">common.js</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -1233,7 +1298,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">95.8k</span>
+                        class="white-color">96.6k</span>
             
             
             
