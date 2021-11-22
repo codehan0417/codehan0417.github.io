@@ -407,21 +407,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-30
+                    2021-11-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    2.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    8 分
                 </div>
                 
 
@@ -483,7 +483,10 @@
 <h2 id="ES6面向对象"><a href="#ES6面向对象" class="headerlink" title="ES6面向对象"></a>ES6面向对象</h2><blockquote>
 <ul>
 <li>类在程序中是以一种特殊的复合型的数据结构存在。类中包含了各种各样的属性和函数(行为).通过类可以创建对应的对象</li>
+<li>类是对象的抽象，对象是类的具体表现</li>
 <li>ES6的面向对象的语法本质上相当于ES5面向对象的语法糖</li>
+<li>ES6面向对象代码编译为ES5代码。默认生成一个IIFE，目的为了隔离作用域</li>
+<li>ES5没有模块化编程，作用域分为全局作用域和函数作用域，模块作用域使用IIFE实现</li>
 </ul>
 </blockquote>
 <h3 id="创建类和对象"><a href="#创建类和对象" class="headerlink" title="创建类和对象"></a>创建类和对象</h3><ul>
@@ -506,6 +509,24 @@
 <span class="token keyword">let</span> p1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">People</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
+</ul>
+<h3 id="属性和行为-1"><a href="#属性和行为-1" class="headerlink" title="属性和行为"></a>属性和行为</h3><pre class=" language-js"><code class="language-js"><span class="token keyword">class</span> <span class="token class-name">People</span><span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token operator">=</span>name<span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//构造函数内行为</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>job<span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">//构造函数外行为</span>
+    <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li>方法可以在构造器中定义，也可以在类中定义</li>
+<li>类中定义的方法，默认放在原型对象身上</li>
 </ul>
 <h3 id="构造器constructor"><a href="#构造器constructor" class="headerlink" title="构造器constructor()"></a>构造器<code>constructor()</code></h3><blockquote>
 <p><code>constructor()</code>方法是类的默认方法，通过<code>new</code>命令生成对象实例时，自动调用该方法。一个类必须有<code>constructor()</code>方法，如果没有显式定义，一个空的<code>constructor()</code>方法会<strong>被默认添加。</strong></p>
@@ -623,7 +644,7 @@
 </ul>
 <h4 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h4><ul>
 <li>extends关键字用于表示是哪一个类继承了父类，子类会拥有父类的行为。</li>
-<li>super()是用于将父类里的属性赋给子类</li>
+<li>super()是用于将父类里的属性赋给子类，调用父类的构造器，</li>
 <li>子类不会继承父类的<code>类属性和类行为</code></li>
 <li>如果子类的属性都是来自于父类，那么子类的<code>构造函数</code>可以省略不写</li>
 <li>减少类的定义代码</li>
@@ -669,6 +690,36 @@
 <li>继承</li>
 <li>重写<br><strong>通俗来讲就是同一个函数，因为传递的参数列表不同，可以实现的不同的功能</strong></li>
 </ol>
+<h2 id="面向对象面试题"><a href="#面向对象面试题" class="headerlink" title="面向对象面试题"></a>面向对象面试题</h2><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 函数名字首字母大写，看成构造函数</span>
+<span class="token keyword">function</span> <span class="token function">Cat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> showName <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span>
+<span class="token punctuation">}</span>
+Cat<span class="token punctuation">.</span>showName <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+Cat<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>showName <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+<span class="token keyword">var</span> showName <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">showName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// 请说出下面代码的结果</span>
+Cat<span class="token punctuation">.</span><span class="token function">showName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//调用的是类属性，结果为2</span>
+<span class="token function">showName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>      <span class="token comment" spellcheck="true">//4</span>
+<span class="token function">Cat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">showName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//4</span>
+<span class="token keyword">new</span> <span class="token class-name">Cat<span class="token punctuation">.</span>showName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//2</span>
+<span class="token keyword">new</span> <span class="token class-name">Cat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">showName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//3</span>
+<span class="token keyword">new</span> <span class="token class-name">new</span> <span class="token function">Cat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">showName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//3</span>
+</code></pre>
+<ul>
+<li>若没有通过关键字定义变量，则默认添加为window的属性</li>
+<li>原型对象new之后，才会创建原型对象</li>
+<li>this 指向问题</li>
+<li>变量函数提升（预解析） 优先级 函数&gt;变量</li>
+</ul>
 
                 
             </div>
@@ -1466,7 +1517,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">98.7k</span>
+                        class="white-color">99.4k</span>
             
             
             
